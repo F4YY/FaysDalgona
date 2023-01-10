@@ -34,7 +34,7 @@ const Features = ({ title, subtitle, desc, button, image }) => {
         <Heading fontFamily="Markazi Text"
                 fontSize="5xl"
                 color="white"
-                size={{base: "2xl", md: "3xl", lg:"5xl"}}>
+                size={{base: "2xl", md: "2xl", lg:"5xl"}}>
             {subtitle}
         </Heading>
         <Text mt={8} maxWidth="350px"

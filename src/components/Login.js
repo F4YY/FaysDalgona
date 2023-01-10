@@ -50,7 +50,7 @@ const Login = () => {
 
   return (
     <Box
-      backgroundColor="rgb(251,218,187)"
+      backgroundColor="crimson"
       justifyContent="center"
       alignItems="flex-start"
       display="flex"
@@ -66,7 +66,7 @@ const Login = () => {
             pb={6}
             zIndex={0}
         >
-          <Heading as="h3" p={2} id="Login-section" fontSize={{base: "25px", md: "30px", lg:"34px"}}>
+          <Heading as="h3" p={2} id="Login-section" fontSize={{base: "25px", md: "30px", lg:"34px"}} color="azure">
             Login to check your reservation data
           </Heading>
           <Box p={5} rounded="xl" backgroundColor="azure">
@@ -94,7 +94,7 @@ const Login = () => {
                       />
                       <FormErrorMessage>{formik.errors.email}</FormErrorMessage>
                   </FormControl>
-                  <Button type="login" disabled={!(formik.isValid && formik.dirty)} colorScheme="blue" width="full" isLoading={isLoading} loadingText='Logging in'>
+                  <Button type="login" disabled={!(formik.isValid && formik.dirty)} colorScheme="red" width="full" isLoading={isLoading} loadingText='Logging in'>
                       Login
                   </Button>
                 </VStack>

@@ -34,8 +34,8 @@ const Highlight = () => {
                 </Heading>
                 <a href="#Menu" onClick={handleClick("Menu")}>
                     <Button zIndex={0} fontSize={{base: "16px", md: "19px", lg:"22px"}}
-                    color="#333333" fontWeight="bold"
-                    backgroundColor="rgb(244,206,20)"
+                    color="darkblue" fontWeight="bold"
+                    backgroundColor="yellow"
                     w={200}
                     borderRadius={10}
                     id="Order Online">Order Online</Button>
@@ -48,7 +48,7 @@ const Highlight = () => {
                 mr={{ base: "auto",sm: "1rem", md: "4rem", lg: "10rem" }}
                 flexDirection={{base:"column", sm: "column",md:"row", lg:"row"}}
                 justifyContent="flex-start"
-                spacing={{base:'auto', md:"auto", lg:2}}
+                spacing={{base:'2', md:"2", lg:2}}
                 gap={7}
                 display="flex"
                 flex={1}
@@ -57,9 +57,10 @@ const Highlight = () => {
                 overflowX="scroll"
                 ref={scrollRef}
                 zIndex={0}
+                pb={5}
             >
                 <VStack
-                    backgroundColor="rgb(217,217,217)"
+                    backgroundColor="orange.100"
                     borderRadius={20}
                     display="flex"
                     alignItems="center"
@@ -71,17 +72,17 @@ const Highlight = () => {
                         width={{base: "280px", md: "280px", lg:"320px"}}
                         borderRadius={30}
                         src={FD_DalgChocSilv}
-                        alt="Greek Salad"
+                        alt="DalgChocSilv"
                     />
                     <TopMenu
                         title="Dalgona Choco Silverqueen"
                         subtitle="Order a delivery"
-                        desc='The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons.'
-                        price="$1.99"
+                        desc='Minuman Dalgona rasa cokelat silverqueen iced susu full cream dipadu dengan brown sugar dan boba.'
+                        price="Rp16.000/cup"
                     />
                 </VStack>
                 <VStack
-                    backgroundColor="rgb(217,217,217)"
+                    backgroundColor="orange.100"
                     borderRadius={20}
                     display="flex"
                     alignItems="center"
@@ -90,20 +91,20 @@ const Highlight = () => {
                 >
                     <Image
                         width={{base: "280px", md: "280px", lg:"320px"}}
-                        height={{base: "280px", md: "340px", lg:"410px"}}
+                        height={{base: "280px", md: "370px", lg:"390px"}}
                         borderRadius={30}
                         src={FD_Croffle}
-                        alt="bruschetta"
+                        alt="Croffle"
                         />
                     <TopMenu
-                        title='Croffle'
+                        title='Croffle Original'
                         subtitle="Order a delivery"
-                        desc='Our Bruschetta is made from grilled bread that has been smeared with garlic and seasoned with salt and olive oil. Topped with choptomatoes,bazil.'
-                        price="$0.69"
+                        desc='Croissant waffle baked dengan butter margarine, taburan gula aren dan gula pasir.'
+                        price="Rp8000/pcs"
                     />
                 </VStack>
                 <VStack
-                    backgroundColor="rgb(217,217,217)"
+                    backgroundColor="orange.100"
                     borderRadius={20}
                     display="flex"
                     alignItems="center"
@@ -111,16 +112,16 @@ const Highlight = () => {
                 >
                     <Image
                         width={{base: "280px", md: "280px", lg:"320px"}}
-                        height={{base: "auto", md: "320px", lg:"390px"}}
+                        height={{base: "auto", md: "320px", lg:"370px"}}
                         borderRadius={30}
                         src={FD_SateBaksoSeafood}
-                        alt="pasta"
+                        alt="SateBaksoSeafood"
                         />
                     <TopMenu
                         title='Sate Bakso Seafood'
                         subtitle="Order a delivery"
-                        desc='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet nec in ornare and Lorem ipsumconsectetur adipiscing elit. Aliquet nec in ornare.'
-                        price="$0.49"
+                        desc='Sate dari berbagai macam olahan bakso seafood baked dan ditaburi dengan saos barbeque, mayonaise, keju dan sambal.'
+                        price="Rp3000/tusuk"
                     />
                 </VStack>
             </HStack>

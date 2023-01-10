@@ -66,7 +66,7 @@ const ReserveTable = (onSubmit) => {
   }
 
   return (
-    <Box backgroundColor="rgb(238,153,114)"
+    <Box backgroundColor="orange.300"
           justifyContent="center"
           alignItems="flex-start"
           display="flex"
@@ -157,7 +157,7 @@ const ReserveTable = (onSubmit) => {
                 />
                 <FormErrorMessage>{formik.errors.notes}</FormErrorMessage>
               </FormControl>
-              <Button type="submit" disabled={!(formik.isValid && formik.dirty)} colorScheme="purple" width="full" isLoading={isLoading} loadingText='Submitting'>
+              <Button type="submit" disabled={!(formik.isValid && formik.dirty)} colorScheme="orange" width="full" isLoading={isLoading} loadingText='Submitting'>
                 Submit
               </Button>
             </VStack>

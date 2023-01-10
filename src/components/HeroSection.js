@@ -6,7 +6,7 @@ import Features from './Features';
 const HeroSection = () => {
   return (
     <Box
-      backgroundColor="rgb(255,101,14)"
+      backgroundColor="orange.600"
       zIndex={-1}
     >
       <HStack
@@ -18,7 +18,7 @@ const HeroSection = () => {
         mr={{ base: "1rem",sm: "1rem", md: "7rem", lg: "15rem" }}
         sizes={{base: '100%',md: '80%',xl: '50%'}}
         gap={5}
-        pt={{base:3,md:5,lg:20}}
+        pt={{base:2,md:5,lg:20}}
         pb={5}
         flexDirection={{base:"column", md:"row", lg:"row"}}
         justifyContent="space-between"

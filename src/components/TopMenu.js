@@ -7,7 +7,7 @@ const TopMenu = ({ title, price, subtitle, desc }) => {
     return (
     <VStack
        color="rgb(51,51,51)"
-       backgroundColor="orange.200"
+       backgroundColor="orange.100"
        cursor="pointer"
        width={{base: "280px", md: "280px", lg:"320px"}}
     >
