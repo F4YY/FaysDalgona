@@ -37,12 +37,12 @@ const Features = ({ title, subtitle, desc, button, image }) => {
                 size={{base: "2xl", md: "2xl", lg:"5xl"}}>
             {subtitle}
         </Heading>
-        <Text mt={8} maxWidth="350px"
+        <Text mt={8} mb={12} maxWidth="350px"
               color="white">
             {desc}
         </Text>
         <a href="#Reservation-section" onClick={handleClick("Reservation")}>
-          <Button zIndex={0} mt={12}
+          <Button zIndex={0}
                   color="darkblue"
                   backgroundColor="yellow"
                   fontSize={{base: "16px", md: "19px", lg:"22px"}}
