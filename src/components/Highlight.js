@@ -6,16 +6,6 @@ import { Heading, Box, Button, Image, VStack, HStack } from "@chakra-ui/react";
 import TopMenu from './TopMenu';
 
 const Highlight = () => {
-    const handleClick = (anchor) => () => {
-        const id = `${anchor}-section`;
-        const element = document.getElementById(id);
-        if (element) {
-          element.scrollIntoView({
-            behavior: "smooth",
-            block: "start",
-          });
-        }
-      };
 
     const scrollRef = React.useRef(null);
 
@@ -32,13 +22,16 @@ const Highlight = () => {
                 <Heading as="h1" id="Menu-section" fontSize={{base: "25px", md: "30px", lg:"36px"}} color="rgb(51,51,51)">
                     This Weeks Specials!
                 </Heading>
-                <a href="#Menu" onClick={handleClick("Menu")}>
+                <a href="https://gofood.link/a/yHFDprE" target="_blank" rel="noreferrer">
                     <Button zIndex={0} fontSize={{base: "16px", md: "19px", lg:"22px"}}
                     color="darkblue" fontWeight="bold"
                     backgroundColor="yellow"
                     w={200}
                     borderRadius={10}
-                    id="Order Online">Order Online</Button>
+                    id="Order Online"
+                    >
+                    Order Online
+                    </Button>
                 </a>
             </HStack>
             <HStack
