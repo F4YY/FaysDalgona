@@ -8,22 +8,25 @@ import Main from './components/Main';
 import FootNav from "./components/FootNav";
 import {AlertProvider} from "./context/alertContext";
 import Alert from "./components/Alert";
+import {AuthContextProvider} from "./context/authContext";
+import './index.css';
 
 function App() {
-    return (
-        <ChakraProvider>
-          <AlertProvider>
-          <>
-            <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
-            <NavBar/>
-            <HeroSection/>
-            <Highlight/>
-            <Main/>
-            <FootNav />
-            <Alert />
-          </>
-        </AlertProvider>
-      </ChakraProvider>
-    );
-  }
+  return (
+    <ChakraProvider>
+      <AlertProvider>
+        <AuthContextProvider>
+          <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+          <NavBar/>
+          <HeroSection/>
+          <Highlight/>
+          <Main/>
+          <FootNav />
+          <Alert />
+        </AuthContextProvider>
+      </AlertProvider>
+    </ChakraProvider>
+  );
+};
+
 export default App;

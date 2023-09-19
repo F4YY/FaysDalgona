@@ -1,16 +1,20 @@
-import React, { useEffect, useRef } from "react";
+import React ,{ useContext, useEffect, useRef } from "react";
 import FD_Header from "./images/FD_Header.png";
 import { GiHamburgerMenu } from 'react-icons/gi';
-import { MdOutlineRestaurantMenu } from 'react-icons/md';
-import { Heading, Text, HStack, Image, VStack } from "@chakra-ui/react";
+import { MdOutlineLogin, MdOutlineLogout, MdOutlineRestaurantMenu } from 'react-icons/md';
+import { Heading, Text, VStack, Button } from "@chakra-ui/react";
 import { useNavigate } from 'react-router-dom';
+import AuthContext from "../context/authContext";
+import { StyledHeading, StyledImage, StyledLink, StyledNavbar } from "./styled/styled_navbar";
 
 const NavBar = () => {
     const NavBarRef = useRef(null);
 
+    const {user, login, logout, authReady} = useContext(AuthContext);
+    console.log(user);
+
     useEffect(() => {
         let prevScrollPos = window.scrollY;
-
     const handleScroll = () => {
       const currentScrollPos = window.scrollY;
       const NavBarElement = NavBarRef.current;
@@ -46,34 +50,46 @@ const NavBar = () => {
   const [toggleMenu, setToggleMenu] = React.useState(false);
   const navigate = useNavigate();
 
+  const NavLink = ({ href, onClick, children }) => {
+    return (
+      <StyledHeading as="h1">
+        <StyledLink href={href} onClick={onClick}>
+          {children}
+        </StyledLink>
+      </StyledHeading>
+    );
+  };
+
   return (
-    <HStack
+    <StyledNavbar
       ref={NavBarRef}
-      top='0'
-      left='0'
-      right='0'
-      width='100%'
-      justifyContent="space-between"
-      alignItems="center"
-      backgroundColor="azure"
-      padding="0.5rem 2.5rem"
-      position="fixed"
       translateY="0"
-      transitionProperty="transform"
-      transitionDuration=".3s"
-      transitionTimingFunction="ease-in-out"
-      fontWeight="bold"
-      fontSize="18px"
-      color="rgb(73,94,87)"
-      zIndex={5}
     >
-      <Image src={FD_Header} alt="app__logo" display="flex" width={{base:"45px",md:"50px",lg:"70px"}}/>
-      <Heading as="h1" fontSize={{base: "10px", md: "13px", lg:"20px"}} display={{base:"none",md:"flex",lg:"flex"}}>
-        <a href="#Home" onClick={handleClick("Home")}>
-          Home
-        </a>
-      </Heading>
-      <Heading as="h1" fontSize={{base: "10px", md: "13px", lg:"20px"}} display={{base:"none",md:"flex",lg:"flex"}}>
+      <StyledImage
+        src={FD_Header}
+        alt="app__logo"
+      />
+      {authReady && (
+      <>
+      <NavLink href="#Home" onClick={handleClick("Home")}>
+        Home
+      </NavLink>
+      <NavLink href="#Menu" onClick={handleClick("Menu")}>
+        Menu
+      </NavLink>
+      <NavLink href="#OrderOnline" onClick={handleClick("OrderOnline")}>
+        Order Online
+      </NavLink>
+      <NavLink href="#Testimonials-section" onClick={handleClick("Testimonials")}>
+        Testimonials
+      </NavLink>
+      <NavLink href="#About-section" onClick={handleClick("About")}>
+        About
+      </NavLink>
+      <NavLink href="#Reservation-section" onClick={handleClick("Reservation")}>
+        Reserve a Table
+      </NavLink>
+      {/* <Heading as="h1" fontSize={{base: "10px", md: "13px", lg:"20px"}} display={{base:"none",md:"flex",lg:"flex"}}>
         <a href="#Menu"  onClick={handleClick("Menu")}>
           Menu
         </a>
@@ -88,21 +104,62 @@ const NavBar = () => {
           Testimonials
         </a>
       </Heading>
-      <Heading as="h1" fontSize={{base: "10px", md: "13px", lg:"20px"}} display={{base:"none",md:"flex",lg:"flex"}} pr={10}>
+      <Heading as="h1" fontSize={{base: "10px", md: "13px", lg:"20px"}} display={{base:"none",md:"flex",lg:"flex"}}>
         <a href="#About-section" onClick={handleClick("About")}>
           About
         </a>
       </Heading>
-      <Text as="h1" fontSize={{base: "10px", md: "13px", lg:"20px"}} display={{base:"none",md:"flex",lg:"flex"}} pr={{md:5,lg:12}} shadow="2xl" borderRight="1px solid">
+      <Heading
+        as="h1"
+        fontSize={{base: "10px", md: "13px", lg:"20px"}} display={{base:"none",md:"flex",lg:"flex"}} pr={{md:5,lg:12}} shadow="2xl" borderRight="1px solid">
         <a href="#Reservation-section" onClick={handleClick("Reservation")}>
           Reserve a Table
         </a>
-      </Text>
-      <Text as="h1" fontSize={{base: "16px", md: "13px", lg:"20px"}} display={{base:"none",md:"flex",lg:"flex"}}>
-        <a href="#Login-section" onClick={handleClick("Login")}>
-          Login
-        </a>
-      </Text>
+      </Heading> */}
+      {!user?(
+        <Button
+          size='md'
+          colorScheme="blue"
+          variant={"outline"}
+          borderRadius={"20px"}
+          leftIcon={<MdOutlineLogin/>}
+          as="h2"
+          fontSize={{base: "16px", md: "13px", lg:"20px"}}
+          display={{base:"none",md:"flex",lg:"flex"}}
+          cursor={"pointer"}
+          onClick={login}
+        >
+          Login/Sign Up
+        </Button>
+      ) : (
+        <VStack>
+          <Button
+            size='md'
+            colorScheme="red"
+            variant={"outline"}
+            borderRadius={"20px"}
+            leftIcon={<MdOutlineLogout/>}
+            as="h2"
+            fontSize={{base: "16px", md: "13px", lg:"20px"}}
+            display={{base:"none",md:"flex",lg:"flex"}}
+            cursor={"pointer"}
+            onClick={logout}
+          >
+            logout
+          </Button>
+          <Text
+            fontSize={{base: "10px", md: "12px", lg:"15px"}}
+            fontWeight='light'
+            color='orange.600'
+            marginTop={{base:"0.1rem",md:"0.1rem",lg:"0.2rem"}}
+          >
+            Welcome <b>{user.user_metadata.full_name}</b>
+          </Text>
+        </VStack>
+      )
+      }
+      </>
+      )}
       <Heading display={{base:"flex",md:"none",lg:"none"}}>
         <GiHamburgerMenu color="rgb(73,94,87)"  fontSize={27} onClick={() => setToggleMenu(true)} />
       </Heading>
@@ -246,19 +303,18 @@ const NavBar = () => {
                 fontSize:"2rem",
                 textAlign:"center",
                 fontFamily:"calibri"}}
-              >
-                <a href="#Login-section" onClick={() => {
+                onClick={() => {
                   setToggleMenu(false);
-                  navigate("/Login")
-                  }}
-                >
-                  Login
-                </a>
+                  login()
+                }}
+              >
+                Login/Sign Up
               </li>
             </ul>
         </VStack>
-      )}
-    </HStack>
+          )}
+      </StyledNavbar>
+      // </HStack>
   );
 };
 

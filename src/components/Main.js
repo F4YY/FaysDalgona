@@ -1,6 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import ReserveTable from './ReserveTable';
-import Login from './Login';
+// import Login from './Login';
+// import LoginForm from './LoginNetlify';
 import Testimonials from './Testimonials';
 import About from './About';
 
@@ -11,7 +12,7 @@ function Main() {
         <Route path="/Testimonials" element={<Testimonials />} />
         <Route path="/About" element={<About />} />
         <Route path="/Reservation" element={<ReserveTable />} />
-        <Route path="/Login" element={<Login />} />
+        {/* <Route path="/Login" element={<LoginForm />} /> */}
       </Routes>
     </main>
   );

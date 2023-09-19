@@ -14,7 +14,7 @@ const HeroSection = () => {
         display="flex"
         mt={{ base: "4rem", md: '4rem', lg: '1rem'}}
         mb={{ base: "1rem", md: '2rem', lg: '2rem'}}
-        ml={{ base: "1rem",sm: "1rem", md: "7rem", lg: "15rem" }}
+        ml={{ base: ".5rem",sm: "1rem", md: "4rem", lg: "8rem" }}
         mr={{ base: "1rem",sm: "1rem", md: "7rem", lg: "15rem" }}
         sizes={{base: '100%',md: '80%',xl: '50%'}}
         gap={5}

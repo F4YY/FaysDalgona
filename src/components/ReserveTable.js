@@ -1,6 +1,10 @@
-import React, {useEffect, useState} from "react";
+import React, {useContext, useEffect, useState} from "react";
 import { useFormik } from "formik";
 import {
+  Alert,
+  AlertDescription,
+  AlertIcon,
+  AlertTitle,
   Box,
   Button,
   FormControl,
@@ -18,10 +22,12 @@ import {useAlertContext} from "../context/alertContext";
 import axios from "axios";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import AuthContext from "../context/authContext";
 
 const ReserveTable = (onSubmit) => {
   const {isLoading, response, submit} = useSubmit();
   const { onOpen } = useAlertContext();
+  const {user} = useContext(AuthContext);
 
   const formik = useFormik({
     initialValues: {
@@ -63,7 +69,7 @@ const ReserveTable = (onSubmit) => {
   const handleSubmit = async values => {
     await sleep(500)
     onSubmit(values)
-  }
+    }
 
   return (
     <Box backgroundColor="orange.300"
@@ -71,20 +77,34 @@ const ReserveTable = (onSubmit) => {
           alignItems="flex-start"
           display="flex"
           onSubmit={handleSubmit}
+          id="Reservation-section"
     >
+      {!user? (
+        <Alert
+          status='error'
+          justifyContent='center'
+          minH='60vh'
+          display={{base:"flex",md:"flex",lg:"flex"}}
+          flexDir={{base:'column', md:'row', lg:'row'}}
+        >
+          <AlertIcon />
+          <AlertTitle>You're not logged in!</AlertTitle>
+          <AlertDescription>Please login to reserve a table.</AlertDescription>
+        </Alert>
+      ) : (
       <VStack w="1024px" p={10} zIndex={0}>
-        <Heading as="h1" id="Reservation-section" fontSize={{base: "25px", md: "30px", lg:"36px"}} pb={4}>
+        <Heading as="h1" fontSize={{base: "25px", md: "30px", lg:"36px"}} pb={4}>
           Reserve a Table
         </Heading>
         <Box p={4} rounded="xl" width={{base: "100%", md: "50%", lg:"50%"}} backgroundColor="azure">
           <form onSubmit={formik.handleSubmit} display="flex">
             <VStack spacing={6}>
-              <FormControl isInvalid={!!formik.errors.Name && formik.touched.Name}>
+                          <FormControl isInvalid={!!formik.errors.Name && formik.touched.Name}>
                 <FormLabel htmlFor="Name">Name</FormLabel>
                 <Input
-                  id="Name"
-                  name="Name"
-                  {...formik.getFieldProps("Name")}
+                                  id="Name"
+                                  name="Name"
+                                  {...formik.getFieldProps("Name")}
                 />
                 <FormErrorMessage>{formik.errors.Name}</FormErrorMessage>
               </FormControl>
@@ -123,29 +143,29 @@ const ReserveTable = (onSubmit) => {
               </FormControl>
               <FormControl isInvalid={!!formik.errors.no_of_guests && formik.touched.no_of_guests}>
                 <FormLabel htmlFor="guests">Number of guests</FormLabel>
-                <Select id="guests" name="no_of_guests" w="60%" {...formik.getFieldProps("no_of_guests")} required>
-                    <option disabled>--select no of guests--</option>
-                    <option>1 - 2 persons</option>
-                    <option>3 - 4 persons</option>
-                    <option>5 - 6 persons</option>
-                    <option>7 - 8 persons</option>
-                    <option>9 - 10 persons</option>
-                    <option>more than 11 persons</option>
-                    <FormErrorMessage>{formik.errors.no_of_guests}</FormErrorMessage>
-                </Select>
+                    <Select id="guests" name="no_of_guests" w="60%" {...formik.getFieldProps("no_of_guests")} required>
+                        <option disabled>--select no of guests--</option>
+                        <option>1 - 2 persons</option>
+                        <option>3 - 4 persons</option>
+                        <option>5 - 6 persons</option>
+                        <option>7 - 8 persons</option>
+                        <option>9 - 10 persons</option>
+                        <option>more than 11 persons</option>
+                        <FormErrorMessage>{formik.errors.no_of_guests}</FormErrorMessage>
+                    </Select>
               </FormControl>
               <FormControl isInvalid={!!formik.errors.occasion && formik.touched.occasion}>
                 <FormLabel htmlFor="occasion">Occasion</FormLabel>
-                <Select id="occasion" name="occasion" w="60%" {...formik.getFieldProps("occasion")} required>
-                    <option disabled>--select occasion--</option>
-                    <option>Birthday</option>
-                    <option>Anniversary</option>
-                    <option>Engagement</option>
-                    <option>Family Gathering</option>
-                    <option>Corporate event</option>
-                    <option>Other</option>
-                    <FormErrorMessage>{formik.errors.occasion}</FormErrorMessage>
-                </Select>
+                    <Select id="occasion" name="occasion" w="60%" {...formik.getFieldProps("occasion")} required>
+                        <option disabled>--select occasion--</option>
+                        <option>Birthday</option>
+                        <option>Anniversary</option>
+                        <option>Engagement</option>
+                        <option>Family Gathering</option>
+                        <option>Corporate event</option>
+                        <option>Other</option>
+                        <FormErrorMessage>{formik.errors.occasion}</FormErrorMessage>
+                    </Select>
               </FormControl>
               <FormControl isInvalid={!!formik.errors.notes && formik.touched.notes}>
                 <FormLabel htmlFor="notes">Add notes</FormLabel>
@@ -164,6 +184,7 @@ const ReserveTable = (onSubmit) => {
           </form>
         </Box>
       </VStack>
+      )}
     </Box>
   );
 };

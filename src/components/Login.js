@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, {useEffect, useState} from "react";
 import { useFormik } from "formik";
 import {
   Box,
@@ -34,8 +34,8 @@ const Login = () => {
       }))
     },
     validationSchema: Yup.object({
-        Name: Yup.string().required("Required"),
-        email: Yup.string().email("Invalid email address").required("Required"),
+        Name: Yup.string(),
+        email: Yup.string()
     }),
   });
     useEffect(() => {
@@ -47,6 +47,44 @@ const Login = () => {
         }
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [response]);
+
+    const [isinama,setIsinama]=useState()
+    const [shownama,setShownama]=useState(isinama)
+
+    const [isiemail,setIsiemail]=useState()
+    const [showemail,setShowemail]=useState(isiemail)
+
+    const ketikNama=(event)=>{
+      setIsinama(event.target.value);
+    }
+
+    const ketikEmail=(event)=>{
+      setIsiemail(event.target.value);
+    }
+
+    const klikButton=(event)=>{
+      setShowemail(isiemail)
+      setIsiemail('')
+      setShownama(isinama)
+      setIsinama('')
+    }
+
+    // const [form, setState] = useState({
+    //   name: '',
+    //   email: ''
+    // });
+
+    // const printValues = e => {
+    //   e.preventDefault();
+    //   console.log(form.name, form.email);
+    // };
+
+    // const updateField = e => {
+    //   setState({
+    //     ...form,
+    //     [e.target.name]: e.target.value
+    //   });
+    // };
 
   return (
     <Box
@@ -77,26 +115,32 @@ const Login = () => {
                 <VStack spacing={4}>
                   <FormControl isInvalid={!!formik.errors.Name && formik.touched.Name}>
                       <FormLabel htmlFor="Name">Name</FormLabel>
-                      <Input
-                      id="Name"
-                      name="Name"
-                      {...formik.getFieldProps("Name")}
-                      />
+                        <Input
+                          placeholder="Your name"
+                          id="Name"
+                          name="Name"
+                          {...formik.getFieldProps("Name")}
+                          value={isinama}
+                          onChange={ketikNama}
+                        />
                       <FormErrorMessage>{formik.errors.Name}</FormErrorMessage>
                   </FormControl>
                   <FormControl isInvalid={!!formik.errors.email && formik.touched.email}>
                       <FormLabel htmlFor="email">email</FormLabel>
-                      <Input
-                      id="email"
-                      name="email"
-                      type="email"
-                      {...formik.getFieldProps("email")}
-                      />
+                        <Input
+                          placeholder="Your email"
+                          id="email"
+                          name="email"
+                          type="email"
+                          value={isiemail}
+                          onChange={ketikEmail}
+                          {...formik.getFieldProps("email")}
+                        />
                       <FormErrorMessage>{formik.errors.email}</FormErrorMessage>
                   </FormControl>
-                  <Button type="login" disabled={!(formik.isValid && formik.dirty)} colorScheme="red" width="full" isLoading={isLoading} loadingText='Logging in'>
+                    <Button type="login" onClick={klikButton} disabled={!(formik.isValid && formik.dirty)} colorScheme="red" width="full" isLoading={isLoading} loadingText='Logging in'>
                       Login
-                  </Button>
+                    </Button>
                 </VStack>
                 <Box
                     p={3}
@@ -105,16 +149,111 @@ const Login = () => {
                     columns={{ sm: 2, md: 4 }}
                     w="sm" h="auto"
                     >
-                    <Heading fontFamily="Markazi Text" fontSize="xl" color="black">{formik.Name}</Heading>
-                    <Heading fontFamily="Markazi Text" fontSize="xl" color="black">{formik.email}</Heading>
+                    <Heading fontFamily="Markazi Text" fontSize="xl" color="black">Nama  : {shownama}</Heading>
+                    <Heading fontFamily="Markazi Text" fontSize="xl" color="black">email : {showemail}</Heading>
                     <Text mt={0} color="white">{formik.date}</Text>
                 </Box>
             </HStack>
           </form>
         </Box>
+          <Box>
+            <input
+              placeholder="Your name"
+              value={isinama}
+              onChange={ketikNama}
+            /><br/>
+            <input
+              placeholder="Your email"
+              value={isiemail}
+              onChange={ketikEmail}
+            /><br/>
+            <Button onClick={klikButton} backgroundColor='yellow'>Login</Button>
+            <p>Nama : {shownama}</p>
+            <p>email : {showemail}</p>
+          </Box>
       </VStack>
     </Box>
   );
 };
 
 export default Login;
+
+// class Login extends Component {
+//   constructor (props) {
+//     super(props);
+//     this.state={
+//       isinama:'',
+//       shownama:''
+//     }
+//   }
+
+//   ketikNama=(event)=>{
+//     this.setState({
+//       isinama: event.target.value
+//     })
+//   }
+//   klikButton=(event)=>{
+//     event.preventDefault()
+//     this.setState({
+//       shownama: this.state.isinama,
+//       isinama : ''
+//     })
+//   }
+
+//   render() {
+//     return (
+//       <div>
+//         <form>
+//              <input value={this.state.isinama} onChange={this.ketikNama} type="text" name="name" />
+//           </form>
+//           <Button onClick={this.klikButton} backgroundColor='yellow'>Login</Button>
+//           <p> Name: {this.state.shownama}</p>
+//       </div>
+//     );
+//    }
+//   }
+
+// export default Login;
+
+// const Login = () => {
+
+//   const [isinama,setIsinama]=useState('')
+//   const [shownama,setShownama]=useState(isinama)
+
+//   const ketikNama=(event)=>{
+//     setIsinama(event.target.value)
+//   }
+
+//   const klikButton=()=>{
+//     setShownama(isinama)
+//     setIsinama('')
+//   }
+//   return (
+//     <Box
+//       backgroundColor="crimson"
+//       justifyContent="center"
+//       alignItems="flex-start"
+//       display="flex"
+//     >
+//       <VStack alignItems="center" width={{base: "95%", md: "50%", lg:"50%"}}
+//         display="flex"
+//         justifyContent="center"
+//         flexDirection="column"
+//         mt={{ base: "0.5rem", md: '1rem', lg: '2rem'}}
+//         mb={{ base: "0.5rem", md: '1rem', lg: '1rem'}}
+//         ml={{ base: "1rem",sm: "1rem", md: "5rem", lg: "7rem" }}
+//         mr={{ base: "1rem",sm: "1rem", md: "5rem", lg: "7rem" }}
+//         pb={6}
+//         zIndex={0}
+//       >
+//         <form id="Login-section">
+//         <input value={isinama} onChange={ketikNama} type="text" name="name"/>
+//         </form>
+//         <Button onClick={klikButton} backgroundColor='yellow'>Login</Button>
+//         <p> Name: {shownama}</p>
+//       </VStack>
+//     </Box>
+//   )
+// }
+
+// export default Login
