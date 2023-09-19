@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { HStack, Heading, Image } from "@chakra-ui/react";
+import { Button, HStack, Heading, Image } from "@chakra-ui/react";
 
 export const StyledNavbar = styled(HStack)`
   position: fixed;
@@ -44,8 +44,31 @@ export const StyledHeading = styled(Heading)`
     display: flex;
   }
 `;
-
 export const StyledLink = styled.a`
   text-decoration: none;
   color: inherit;
 `;
+export const StyledButton = styled(Button).attrs({
+  size: "md",
+  colorScheme: "blue",
+  variant: "outline",
+  as: "h2",
+})`
+  display: none;
+  font-size: 16px;
+  border-radius: 20px;
+  @media (min-width: 768px) {
+    font-size: 13px;
+  }
+  @media (min-width: 1024px) {
+    font-size: 20px;
+  }
+  @media (min-width: 768px) {
+    display: flex;
+  }
+  @media (min-width: 1024px) {
+    display: flex;
+  }
+  cursor: pointer;
+`;
+
