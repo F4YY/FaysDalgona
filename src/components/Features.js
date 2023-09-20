@@ -43,10 +43,10 @@ const Features = ({ title, subtitle, desc, button, image }) => {
         </Text>
         <a href="#Reservation-section" onClick={handleClick("Reservation")}>
           <Button zIndex={0}
-                  color="darkblue"
-                  backgroundColor="yellow"
-                  fontSize={{base: "16px", md: "19px", lg:"22px"}}
-                  borderRadius={10}>{button}
+            color="darkblue"
+            backgroundColor="yellow"
+            fontSize={{base: "16px", md: "19px", lg:"22px"}}
+            borderRadius={10}>{button}
           </Button>
         </a>
         <Image>{image}</Image>

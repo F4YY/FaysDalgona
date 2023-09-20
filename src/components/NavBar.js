@@ -73,24 +73,14 @@ const NavBar = () => {
     };
 
     return (
-      <ListItem
-        // padding=".5rem 3rem"
-        // margin="1rem"
-        // cursor="pointer"
-        // color="azure"
-        // fontSize="1.2rem"
-        // textAlign="center"
-        // fontFamily="calibri"
-        // border="1px solid azure"
-        // borderRadius="15px"
-
-      >
+      <ListItem>
         <MobileMenuButton
           onClick={handleClick}
           colorScheme="orange"
           variant="outline"
+          minWidth='280px'
         >
-          <Link href={href} >
+          <Link href={href}>
             {children}
           </Link>
         </MobileMenuButton>
@@ -199,34 +189,34 @@ const NavBar = () => {
         />
         <List style={{ margin: "5rem auto", display: "fixed", listStyle: "none" }}>
           <MenuItem href="#Home-section" onClick={() => navigate("/Home")}>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Home&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            Home
           </MenuItem>
           <MenuItem href="#Menu-section" onClick={() => navigate("/Menu")}>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Menu&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            Menu
           </MenuItem>
           <MenuItem href="#Menu-section" onClick={() => navigate("/Menu")}>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Order Online&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            Order Online
           </MenuItem>
           <MenuItem href="#Testimonials-section" onClick={() => navigate("/Testimonials")}>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Testimonials&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            Testimonials
           </MenuItem>
           <MenuItem href="#About-section" onClick={() => navigate("/About")}>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;About Us&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            About Us
           </MenuItem>
           <MenuItem href="#Reservation-section" onClick={() => navigate("/Reservation")}>
-            &nbsp;&nbsp;&nbsp;Reserve a Table&nbsp;&nbsp;&nbsp;
+            Reserve a Table
           </MenuItem>
           {!user ? (
             <MenuItem
             onClick={login}
             >
-              &nbsp;&nbsp;&nbsp;Login / Sign Up&nbsp;&nbsp;&nbsp;&nbsp;
+              Login / Sign Up
             </MenuItem>
             ) : (
             <MenuItem
             onClick={logout}
             >
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Logout&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              Logout
             </MenuItem>
             )
           }
