@@ -67,7 +67,7 @@ const NavBar = () => {
   };
 
   const MenuItem = ({ href, onClick, children }) => {
-    const handleClick = () => {
+    const buttonClick = () => {
       setToggleMenu(false);
       onClick();
     };
@@ -75,7 +75,7 @@ const NavBar = () => {
     return (
       <ListItem>
         <MobileMenuButton
-          onClick={handleClick}
+          onClick={buttonClick}
           colorScheme="orange"
           variant="outline"
           minWidth='280px'
@@ -105,7 +105,7 @@ const NavBar = () => {
         <NavLink href="#Menu" onClick={handleClick("Menu")}>
           Menu
         </NavLink>
-        <NavLink href="#OrderOnline" onClick={handleClick("OrderOnline")}>
+        <NavLink href="#OrderOnline" onClick={handleClick("Menu")}>
           Order Online
         </NavLink>
         <NavLink href="#Testimonials-section" onClick={handleClick("Testimonials")}>
@@ -188,22 +188,23 @@ const NavBar = () => {
           onClick={() => setToggleMenu(false)}
         />
         <List style={{ margin: "5rem auto", display: "fixed", listStyle: "none" }}>
-          <MenuItem href="#Home-section" onClick={() => navigate("/Home")}>
+          <MenuItem href="#Home" onClick={handleClick("Home")}>
             Home
           </MenuItem>
-          <MenuItem href="#Menu-section" onClick={() => navigate("/Menu")}>
+          <MenuItem href="#Menu" onClick={handleClick("Menu")}>
             Menu
           </MenuItem>
-          <MenuItem href="#Menu-section" onClick={() => navigate("/Menu")}>
+          <MenuItem href="#OrderOnline" onClick={handleClick("Menu")}>
             Order Online
           </MenuItem>
-          <MenuItem href="#Testimonials-section" onClick={() => navigate("/Testimonials")}>
+          <MenuItem
+            href="#Testimonials-section" onClick={handleClick("Testimonials")}>
             Testimonials
           </MenuItem>
-          <MenuItem href="#About-section" onClick={() => navigate("/About")}>
+          <MenuItem href="#About-section" onClick={handleClick("About")}>
             About Us
           </MenuItem>
-          <MenuItem href="#Reservation-section" onClick={() => navigate("/Reservation")}>
+          <MenuItem href="#Reservation-section" onClick={handleClick("Reservation")}>
             Reserve a Table
           </MenuItem>
           {!user ? (

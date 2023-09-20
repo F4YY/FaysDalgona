@@ -6,9 +6,7 @@ import { Heading, Box, Button, Image, VStack, HStack } from "@chakra-ui/react";
 import TopMenu from './TopMenu';
 
 const Highlight = () => {
-
     const scrollRef = React.useRef(null);
-
     return(
         <Box>
             <HStack
