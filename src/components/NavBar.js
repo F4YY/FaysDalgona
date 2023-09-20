@@ -6,6 +6,7 @@ import { Button, Heading, Link, List, ListItem, Text, VStack } from "@chakra-ui/
 import { useNavigate } from 'react-router-dom';
 import AuthContext from "../context/authContext";
 import {
+  MobileMenuButton,
   StyledHeading,
   StyledImage,
   StyledLink,
@@ -73,19 +74,26 @@ const NavBar = () => {
 
     return (
       <ListItem
-        padding=".5rem 3rem"
-        margin="1rem"
-        cursor="pointer"
-        color="azure"
-        fontSize="1.2rem"
-        textAlign="center"
-        fontFamily="calibri"
-        border="1px solid azure"
-        borderRadius="15px"
+        // padding=".5rem 3rem"
+        // margin="1rem"
+        // cursor="pointer"
+        // color="azure"
+        // fontSize="1.2rem"
+        // textAlign="center"
+        // fontFamily="calibri"
+        // border="1px solid azure"
+        // borderRadius="15px"
+
       >
-        <Link href={href} onClick={handleClick}>
-          {children}
-        </Link>
+        <MobileMenuButton
+          onClick={handleClick}
+          colorScheme="orange"
+          variant="outline"
+        >
+          <Link href={href} >
+            {children}
+          </Link>
+        </MobileMenuButton>
       </ListItem>
     );
   };
@@ -149,7 +157,7 @@ const NavBar = () => {
               logout
             </Button>
             <Text
-              fontSize={{base: "10px", md: "12px", lg:"15px"}}
+              fontSize={{base: "13px", md: "14px", lg:"15px"}}
               fontWeight='light'
               color='orange.600'
               marginTop={{base:"0.1rem",md:"0.1rem",lg:"0.2rem"}}
@@ -170,13 +178,10 @@ const NavBar = () => {
         top="0"
         left="0"
         width="100%"
-        height="150vh"
-        transition=".5s ease"
-        flexDirection="column"
+        height="180vh"
         zIndex="5"
-        background="red.800"
+        background="azure"
         justifyContent="flex-start"
-        alignItems="flex-end"
         style={{
           animation: toggleMenu ? 'slide-in 0.5s ease-out forwards' : 'slide-out 0.5s ease-out forwards',
         }}
@@ -184,38 +189,47 @@ const NavBar = () => {
         <MdOutlineRestaurantMenu
           fontSize={27}
           style={{
-            color: "azure",
+            color: "darkorange",
             cursor: "pointer",
             position: "absolute",
-            top: "15px",
-            right: "40px",
+            top: "17px",
+            right: "28px",
           }}
           onClick={() => setToggleMenu(false)}
         />
         <List style={{ margin: "5rem auto", display: "fixed", listStyle: "none" }}>
           <MenuItem href="#Home-section" onClick={() => navigate("/Home")}>
-            Home
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Home&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           </MenuItem>
           <MenuItem href="#Menu-section" onClick={() => navigate("/Menu")}>
-            Menu
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Menu&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           </MenuItem>
           <MenuItem href="#Menu-section" onClick={() => navigate("/Menu")}>
-            Order Online
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Order Online&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           </MenuItem>
           <MenuItem href="#Testimonials-section" onClick={() => navigate("/Testimonials")}>
-            Testimonials
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Testimonials&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           </MenuItem>
           <MenuItem href="#About-section" onClick={() => navigate("/About")}>
-            About Us
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;About Us&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           </MenuItem>
           <MenuItem href="#Reservation-section" onClick={() => navigate("/Reservation")}>
-            Reserve a Table
+            &nbsp;&nbsp;&nbsp;Reserve a Table&nbsp;&nbsp;&nbsp;
           </MenuItem>
-          <MenuItem
+          {!user ? (
+            <MenuItem
             onClick={login}
-          >
-            Login/Sign Up
-          </MenuItem>
+            >
+              &nbsp;&nbsp;&nbsp;Login / Sign Up&nbsp;&nbsp;&nbsp;&nbsp;
+            </MenuItem>
+            ) : (
+            <MenuItem
+            onClick={logout}
+            >
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Logout&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </MenuItem>
+            )
+          }
         </List>
       </VStack>
     )}

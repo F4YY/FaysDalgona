@@ -11,7 +11,7 @@ export const StyledNavbar = styled(HStack)`
   justify-content: space-between;
   align-items: center;
   background-color: azure;
-  padding: 0.5rem 2rem;
+  padding: 0.5rem 1.2rem;
   transition: transform 0.3s ease-in-out;
   font-weight: bold;
   font-size: 18px;
@@ -70,5 +70,14 @@ export const StyledButton = styled(Button).attrs({
     display: flex;
   }
   cursor: pointer;
+`;
+export const MobileMenuButton = styled(Button)`
+  padding: .5rem 3rem;
+  margin: .5rem;
+  cursor: pointer;
+  color: red;
+  font-size: 1.2rem;
+  text-align: center;
+  font-family: calibri;
 `;
 
