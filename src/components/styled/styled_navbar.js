@@ -11,7 +11,7 @@ export const StyledNavbar = styled(HStack)`
   justify-content: space-between;
   align-items: center;
   background-color: azure;
-  padding: 0.5rem 2.5rem;
+  padding: 0.5rem 2rem;
   transition: transform 0.3s ease-in-out;
   font-weight: bold;
   font-size: 18px;

@@ -2,7 +2,7 @@ import React ,{ useContext, useEffect, useRef } from "react";
 import FD_Header from "./images/FD_Header.png";
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { MdOutlineLogin, MdOutlineLogout, MdOutlineRestaurantMenu } from 'react-icons/md';
-import { Button, Heading, Text, VStack } from "@chakra-ui/react";
+import { Button, Heading, Link, List, ListItem, Text, VStack } from "@chakra-ui/react";
 import { useNavigate } from 'react-router-dom';
 import AuthContext from "../context/authContext";
 import {
@@ -62,6 +62,31 @@ const NavBar = () => {
           {children}
         </StyledLink>
       </StyledHeading>
+    );
+  };
+
+  const MenuItem = ({ href, onClick, children }) => {
+    const handleClick = () => {
+      setToggleMenu(false);
+      onClick();
+    };
+
+    return (
+      <ListItem
+        padding=".5rem 3rem"
+        margin="1rem"
+        cursor="pointer"
+        color="azure"
+        fontSize="1.2rem"
+        textAlign="center"
+        fontFamily="calibri"
+        border="1px solid azure"
+        borderRadius="15px"
+      >
+        <Link href={href} onClick={handleClick}>
+          {children}
+        </Link>
+      </ListItem>
     );
   };
 
@@ -140,172 +165,61 @@ const NavBar = () => {
         <GiHamburgerMenu color="rgb(183,94,87)"  fontSize={27} onClick={() => setToggleMenu(true)} />
       </Heading>
       {toggleMenu && (
-        <VStack
+      <VStack
+        position="fixed"
+        top="0"
+        left="0"
+        width="100%"
+        height="150vh"
+        transition=".5s ease"
+        flexDirection="column"
+        zIndex="5"
+        background="red.800"
+        justifyContent="flex-start"
+        alignItems="flex-end"
+        style={{
+          animation: toggleMenu ? 'slide-in 0.5s ease-out forwards' : 'slide-out 0.5s ease-out forwards',
+        }}
+      >
+        <MdOutlineRestaurantMenu
+          fontSize={27}
           style={{
-            position:"fixed",
-            top:"0",
-            left:"0",
-            width:"100%",
-            height:"130vh",
-            transition:".5s ease",
-            flexDirection:"column",
-            zIndex:"5",
-            background:"black",
-            justifyContent:"flex-start",
-            alignItems:"center",
+            color: "azure",
+            cursor: "pointer",
+            position: "absolute",
+            top: "15px",
+            right: "40px",
           }}
-        >
-          <MdOutlineRestaurantMenu fontSize={27} className="overlay__close"
-            style={{color:"azure",
-              cursor:"pointer",
-              position:"absolute",
-              top:"15px",
-              right:"40px"}}
-              onClick={() => setToggleMenu(false)} />
-            <ul
-              style={{
-                margin:"5rem auto",
-                display:"fixed",
-                listStyle:"none",
-              }}
-            >
-              <li
-                style={{
-                margin:"1rem",
-                cursor:"pointer",
-                color:"azure",
-                fontSize:"1.5rem",
-                textAlign:"center",
-                fontFamily:"calibri",
-                border:"1px solid azure",
-              }}
-              >
-                <a href="#Home-section" onClick={()=>{
-                  setToggleMenu(false);
-                  navigate("/Home")
-                }}
-                >
-                  Home
-                </a>
-              </li>
-              <li
-                style={{
-                margin:"1rem",
-                cursor:"pointer",
-                color:"azure",
-                fontSize:"1.5rem",
-                textAlign:"center",
-                fontFamily:"calibri",
-                border:"1px solid azure",
-              }}
-              >
-                <a href="#Menu-section" onClick={() => {
-                  setToggleMenu(false);
-                  navigate("/Menu")
-                  }}
-                >
-                  Menu
-                </a>
-              </li>
-              <li
-                style={{
-                margin:"1rem",
-                cursor:"pointer",
-                color:"azure",
-                fontSize:"1.5rem",
-                textAlign:"center",
-                fontFamily:"calibri",
-                border:"1px solid azure",
-              }}
-              >
-                <a href="#Menu-section" onClick={() => {
-                  setToggleMenu(false);
-                  navigate("/Menu")
-                  }}
-                >
-                  Order Online
-                </a>
-              </li>
-              <li
-                style={{
-                margin:"1rem",
-                cursor:"pointer",
-                color:"azure",
-                fontSize:"1.5rem",
-                textAlign:"center",
-                fontFamily:"calibri",
-                border:"1px solid azure",
-              }}
-              >
-                <a href="#Testimonials-section" onClick={() => {
-                  setToggleMenu(false);
-                  navigate("/Testimonials")
-                  }}
-                >
-                  Testimonials
-                </a>
-              </li>
-              <li
-                style={{
-                margin:"1rem",
-                cursor:"pointer",
-                color:"azure",
-                fontSize:"1.5rem",
-                textAlign:"center",
-                fontFamily:"calibri",
-                border:"1px solid azure",
-              }}
-              >
-                <a href="#About-section" onClick={() => {
-                  setToggleMenu(false);
-                  navigate("/About")
-                  }}
-                >
-                  About Us
-                </a>
-              </li>
-              <li
-                style={{
-                margin:"1rem",
-                cursor:"pointer",
-                color:"azure",
-                fontSize:"1.5rem",
-                textAlign:"center",
-                fontFamily:"calibri",
-                border:"1px solid azure",
-              }}
-              >
-                <a href="#Reservation-section" onClick={() => {
-                  setToggleMenu(false);
-                  navigate("/Reservation")
-                  }}
-                >
-                  Reserve a Table
-                </a>
-              </li>
-              <li
-                style={{
-                padding:"0 3rem",
-                margin:"1rem",
-                cursor:"pointer",
-                color:"azure",
-                fontSize:"1.5rem",
-                textAlign:"center",
-                fontFamily:"calibri",
-                border:"1px solid azure",
-              }}
-                onClick={() => {
-                  setToggleMenu(false);
-                  login()
-                }}
-              >
-                Login/Sign Up
-              </li>
-            </ul>
-        </VStack>
-          )}
-      </StyledNavbar>
-      // </HStack>
+          onClick={() => setToggleMenu(false)}
+        />
+        <List style={{ margin: "5rem auto", display: "fixed", listStyle: "none" }}>
+          <MenuItem href="#Home-section" onClick={() => navigate("/Home")}>
+            Home
+          </MenuItem>
+          <MenuItem href="#Menu-section" onClick={() => navigate("/Menu")}>
+            Menu
+          </MenuItem>
+          <MenuItem href="#Menu-section" onClick={() => navigate("/Menu")}>
+            Order Online
+          </MenuItem>
+          <MenuItem href="#Testimonials-section" onClick={() => navigate("/Testimonials")}>
+            Testimonials
+          </MenuItem>
+          <MenuItem href="#About-section" onClick={() => navigate("/About")}>
+            About Us
+          </MenuItem>
+          <MenuItem href="#Reservation-section" onClick={() => navigate("/Reservation")}>
+            Reserve a Table
+          </MenuItem>
+          <MenuItem
+            onClick={login}
+          >
+            Login/Sign Up
+          </MenuItem>
+        </List>
+      </VStack>
+    )}
+    </StyledNavbar>
   );
 };
 
