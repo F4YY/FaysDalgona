@@ -49,10 +49,13 @@ const Features = ({ title, subtitle, desc, button, image }) => {
           <Button
             variant='outline'
             zIndex={0}
-            colorScheme="whiteAlpha"
+            color="yellow"
+            outline={"1px solid yellow"}
             fontSize={{base: "16px", md: "19px", lg:"22px"}}
             fontFamily={"calibri light, sans-serif"}
+            letterSpacing={1.2}
             borderRadius={10}
+            _hover={{color:"azure", border:"2px solid azure"}}
           >
             {button}
           </Button>
