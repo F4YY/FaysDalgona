@@ -10,6 +10,7 @@ const Highlight = () => {
     return(
         <Box
          bgGradient={'linear(to-br, orange.500, orange.700, orange.500)'}
+         minH={'100vh'}
         >
             <HStack
                 display="flex"
@@ -19,7 +20,10 @@ const Highlight = () => {
                 flexDirection={{base:"column", md:"row", lg:"row"}}
                 p={4}
             >
-                <Heading as="h1" id="Menu-section" fontSize={{base: "25px", md: "30px", lg:"36px"}} color="blue.100">
+                <Heading as="h1" id="Menu-section" 
+                    fontSize={{base: "25px", md: "30px", lg:"36px"}} color="blue.100"
+                    mb={5}
+                >
                     This Weeks Specials!
                 </Heading>
                 <a href="https://gofood.link/a/yHFDprE" target="_blank" rel="noreferrer">
@@ -32,6 +36,7 @@ const Highlight = () => {
                         borderRadius={10}
                         _hover={{color:"azure", border:"2px solid azure"}}
                         id="Order Online"
+                        mb={5}
                     >
                         Order Online
                     </Button>
@@ -61,11 +66,12 @@ const Highlight = () => {
                     display="flex"
                     alignItems="center"
                     _hover={{opacity:"80%"}}
-                    width={{base:"280px",md:"280px", lg:"auto"}}
+                    width={{base:"auto",md:"auto", lg:"auto"}}
+                    m='0 1rem'
                 >
                     <Image
                         display="flex"
-                        width={{base: "280px", md: "280px", lg:"320px"}}
+                        width={{base: "auto", md: "auto", lg:"auto"}}
                         borderRadius={30}
                         src={FD_DalgChocSilv}
                         alt="DalgChocSilv"
@@ -83,11 +89,12 @@ const Highlight = () => {
                     display="flex"
                     alignItems="center"
                     _hover={{opacity:"80%"}}
-                    width={{base:"280px",md:"280px", lg:"auto"}}
+                    width={{base:"auto",md:"auto", lg:"auto"}}
                 >
                     <Image
-                        width={{base: "280px", md: "280px", lg:"320px"}}
-                        height={{base: "280px", md: "370px", lg:"390px"}}
+                        display="flex"
+                        width={{base: "340px", md: "auto", lg:"auto"}}
+                        height={{base: "auto", md: "370px", lg:"390px"}}
                         borderRadius={30}
                         src={FD_Croffle}
                         alt="Croffle"
@@ -107,7 +114,7 @@ const Highlight = () => {
                     _hover={{opacity:"80%"}}
                 >
                     <Image
-                        width={{base: "280px", md: "280px", lg:"320px"}}
+                        width={{base: "340px", md: "auto", lg:"auto"}}
                         height={{base: "auto", md: "320px", lg:"370px"}}
                         borderRadius={30}
                         src={FD_SateBaksoSeafood}

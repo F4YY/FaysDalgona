@@ -14,13 +14,13 @@ const HeroSection = () => {
         id="Home-section"
         display="flex"
         mt={{ base: "4rem", md: '4rem', lg: '1rem'}}
-        mb={{ base: "1rem", md: '2rem', lg: '2rem'}}
+        mb={0}
         ml={{ base: ".5rem",sm: "1rem", md: "4rem", lg: "8rem" }}
         mr={{ base: "1rem",sm: "1rem", md: "7rem", lg: "15rem" }}
         sizes={{base: '100%',md: '80%',xl: '50%'}}
         gap={5}
         pt={{base:2,md:5,lg:20}}
-        pb={5}
+        pb={{base:5,md:10,lg:20}}
         flexDirection={{base:"column", md:"row", lg:"row"}}
         justifyContent="space-between"
       >
