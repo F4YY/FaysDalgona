@@ -28,7 +28,7 @@ const Features = ({ title, subtitle, desc, button, image }) => {
           fontWeight='400'
           fontSize="8xl"
           color="ghostwhite"
-          size={{base: "3xl", md: "4xl", lg:"7xl"}}
+          size={{base: "4xl", md: "5xl", lg:"8xl"}}
           letterSpacing={3}
         >
           {title}
