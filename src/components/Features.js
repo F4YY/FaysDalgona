@@ -52,7 +52,7 @@ const Features = ({ title, subtitle, desc, button, image }) => {
             variant='outline'
             zIndex={0}
             color="yellow"
-            outline={"1px solid yellow"}
+            outline="1px solid yellow"
             fontSize={{base: "16px", md: "19px", lg:"22px"}}
             fontFamily={"calibri light, sans-serif"}
             letterSpacing={1.2}

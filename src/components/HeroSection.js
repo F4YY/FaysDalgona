@@ -6,7 +6,7 @@ import Features from './Features';
 const HeroSection = () => {
   return (
     <Box
-      bgGradient={'linear(to-tl, orange.500, orange.800)'}
+      bgGradient={'linear(to-tl, orange.700, orange.500, orange.900)'}
       minH={'100vh'}
       zIndex={-1}
     >

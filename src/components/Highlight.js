@@ -8,7 +8,9 @@ import TopMenu from './TopMenu';
 const Highlight = () => {
     const scrollRef = React.useRef(null);
     return(
-        <Box>
+        <Box
+         bgGradient={'linear(to-br, orange.500, orange.700, orange.500)'}
+        >
             <HStack
                 display="flex"
                 justifyContent="space-between"
@@ -17,18 +19,21 @@ const Highlight = () => {
                 flexDirection={{base:"column", md:"row", lg:"row"}}
                 p={4}
             >
-                <Heading as="h1" id="Menu-section" fontSize={{base: "25px", md: "30px", lg:"36px"}} color="rgb(51,51,51)">
+                <Heading as="h1" id="Menu-section" fontSize={{base: "25px", md: "30px", lg:"36px"}} color="blue.100">
                     This Weeks Specials!
                 </Heading>
                 <a href="https://gofood.link/a/yHFDprE" target="_blank" rel="noreferrer">
                     <Button zIndex={0} fontSize={{base: "16px", md: "19px", lg:"22px"}}
-                    color="darkblue" fontWeight="bold"
-                    backgroundColor="yellow"
-                    w={200}
-                    borderRadius={10}
-                    id="Order Online"
+                        variant='outline'
+                        outline="1px solid yellow"
+                        color="yellow"
+                        fontWeight="bold"
+                        w={200}
+                        borderRadius={10}
+                        _hover={{color:"azure", border:"2px solid azure"}}
+                        id="Order Online"
                     >
-                    Order Online
+                        Order Online
                     </Button>
                 </a>
             </HStack>
