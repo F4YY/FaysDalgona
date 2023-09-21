@@ -6,7 +6,8 @@ import Features from './Features';
 const HeroSection = () => {
   return (
     <Box
-      backgroundColor="orange.600"
+      bgGradient={'linear(to-tl, orange.500, orange.800)'}
+      minH={'100vh'}
       zIndex={-1}
     >
       <HStack
@@ -29,7 +30,7 @@ const HeroSection = () => {
           desc="Fay's Dalgona offers you happiness and glorious by serving tasty authentic Dalgona drink.
                 There are 10 different taste of Dalgona that can sweeten your every day.
                 Try them all and have your happiness feels complete."
-          button="Reserve a Table"
+          button="Reserve a table"
         />
         <Image
             display="flex"

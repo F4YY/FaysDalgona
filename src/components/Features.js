@@ -23,30 +23,38 @@ const Features = ({ title, subtitle, desc, button, image }) => {
           flexDirection="column"
           size={{base: "sm", md: "md", lg:"md"}}
         >
-        <Heading fontFamily="Montez"
-                fontSize="7xl"
-                color="ghostwhite"
-                size={{base: "3xl", md: "4xl", lg:"7xl"}}
-                letterSpacing={3}
-                >
-            {title}
+        <Heading
+          fontFamily='Montez, cursive'
+          fontWeight='400'
+          fontSize="8xl"
+          color="ghostwhite"
+          size={{base: "3xl", md: "4xl", lg:"7xl"}}
+          letterSpacing={3}
+        >
+          {title}
         </Heading>
-        <Heading fontFamily="Markazi Text"
-                fontSize="5xl"
-                color="white"
-                size={{base: "2xl", md: "2xl", lg:"5xl"}}>
-            {subtitle}
+        <Heading
+          fontFamily="calibri light, sans-serif"
+          fontSize="5xl"
+          color="goldenrod"
+          size={{base: "xl", md: "xl", lg:"5xl"}}
+        >
+          {subtitle}
         </Heading>
         <Text mt={8} mb={12} maxWidth="350px"
               color="white">
             {desc}
         </Text>
         <a href="#Reservation-section" onClick={handleClick("Reservation")}>
-          <Button zIndex={0}
-            color="darkblue"
-            backgroundColor="yellow"
+          <Button
+            variant='outline'
+            zIndex={0}
+            colorScheme="whiteAlpha"
             fontSize={{base: "16px", md: "19px", lg:"22px"}}
-            borderRadius={10}>{button}
+            fontFamily={"calibri light, sans-serif"}
+            borderRadius={10}
+          >
+            {button}
           </Button>
         </a>
         <Image>{image}</Image>

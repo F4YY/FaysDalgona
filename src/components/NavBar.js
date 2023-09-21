@@ -106,16 +106,16 @@ const NavBar = () => {
           Menu
         </NavLink>
         <NavLink href="#OrderOnline" onClick={handleClick("Menu")}>
-          Order Online
+          Order online
         </NavLink>
         <NavLink href="#Testimonials-section" onClick={handleClick("Testimonials")}>
           Testimonials
         </NavLink>
         <NavLink href="#About-section" onClick={handleClick("About")}>
-          About
+          About us
         </NavLink>
         <NavLink href="#Reservation-section" onClick={handleClick("Reservation")}>
-          Reserve a Table
+          Reserve a table
         </NavLink>
         {!user?(
           <Button
@@ -195,17 +195,17 @@ const NavBar = () => {
             Menu
           </MenuItem>
           <MenuItem href="#OrderOnline" onClick={handleClick("Menu")}>
-            Order Online
+            Order online
           </MenuItem>
           <MenuItem
             href="#Testimonials-section" onClick={handleClick("Testimonials")}>
             Testimonials
           </MenuItem>
           <MenuItem href="#About-section" onClick={handleClick("About")}>
-            About Us
+            About us
           </MenuItem>
           <MenuItem href="#Reservation-section" onClick={handleClick("Reservation")}>
-            Reserve a Table
+            Reserve a table
           </MenuItem>
           {!user ? (
             <MenuItem
