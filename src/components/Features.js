@@ -37,12 +37,14 @@ const Features = ({ title, subtitle, desc, button, image }) => {
           fontFamily="calibri light, sans-serif"
           fontSize="5xl"
           color="goldenrod"
-          size={{base: "xl", md: "xl", lg:"5xl"}}
+          size={{base: "lg", md: "xl", lg:"5xl"}}
+          mt={{base: "10px", md: "12px", lg:"2px"}}
         >
           {subtitle}
         </Heading>
-        <Text mt={8} mb={12} maxWidth="350px"
-              color="white">
+        <Text mt={8} mb={12} width={{base: "auto", md: "auto", lg:"50%"}}
+          color="white"
+        >
             {desc}
         </Text>
         <a href="#Reservation-section" onClick={handleClick("Reservation")}>

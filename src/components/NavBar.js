@@ -147,8 +147,9 @@ const NavBar = () => {
               logout
             </Button>
             <Text
-              fontSize={{base: "13px", md: "14px", lg:"15px"}}
+              fontSize={{base: "14px", md: "14px", lg:"15px"}}
               fontWeight='light'
+              fontFamily="calibri light, sans-serif"
               color='orange.600'
               marginTop={{base:"0.1rem",md:"0.1rem",lg:"0.2rem"}}
             >

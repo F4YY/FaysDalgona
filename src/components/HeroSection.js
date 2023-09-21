@@ -27,9 +27,8 @@ const HeroSection = () => {
         <Features
           title="Fay's Dalgona"
           subtitle="Indonesia"
-          desc="Fay's Dalgona offers you happiness and glorious by serving tasty authentic Dalgona drink.
-                There are 10 different taste of Dalgona that can sweeten your every day.
-                Try them all and have your happiness feels complete."
+          desc="Fay's Dalgona offers you happiness and glory by serving tasty authentic Dalgona drinks. Explore our selection of 10 different flavors of Dalgona that can sweeten your every day. Try them all and experience the complete feeling of happiness. 
+          Additionally, we also serve delicious food options such as Mie Nyemek, Croffle Original, and Sate Bakso Seafood, perfect to accompany your Dalgona experience"
           button="Reserve a table"
         />
         <Image
