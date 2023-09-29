@@ -4,12 +4,9 @@ import FD_Croffle from "../images/FD_Croffle.jpg";
 import FD_SateBaksoSeafood from "../images/FD_SateBaksoSeafood.jpg";
 import { Heading, Box, Button, Image, VStack, HStack } from "@chakra-ui/react";
 import TopMenu from './TopMenu';
-import { motion, useViewportScroll, useTransform } from 'framer-motion';
 
 const Highlight = () => {
-    const scrollRef = React.useRef(null);
-    const { scrollYProgress } = useViewportScroll();
-    const opacity = useTransform(scrollYProgress, [0, 1], [0, 1]);
+    const scrollRef = React.useRef(null)
     return(
         <Box
          bgGradient={'linear(to-br, orange.500, orange.700, orange.500)'}
@@ -23,16 +20,13 @@ const Highlight = () => {
                 flexDirection={{base:"column", md:"row", lg:"row"}}
                 p={4}
             >
-                <motion.div style={{opacity}}>
                 <Heading as="h1" id="Menu-section"
-                    fontSize={{base: "25px", md: "30px", lg:"36px"}} color="blue.100"
+                    fontSize={{base: "25px", md: "30px", lg:"36px"}} color="azure"
                     mb={5}
                 >
                     This Weeks Specials!
                 </Heading>
-                </motion.div>
                 <a href="https://gofood.link/a/yHFDprE" target="_blank" rel="noreferrer">
-                    <motion.div style={{opacity}}>
                     <Button zIndex={0} fontSize={{base: "16px", md: "19px", lg:"22px"}}
                         variant='outline'
                         outline="1px solid yellow"
@@ -46,7 +40,6 @@ const Highlight = () => {
                     >
                         Order Online
                     </Button>
-                    </motion.div>
                 </a>
             </HStack>
             <HStack

@@ -192,7 +192,7 @@ const NavBar = () => {
           <MenuItem href="#Home" onClick={handleClick("Home")}>
             Home
           </MenuItem>
-          <MenuItem href="#Menu" onClick={handleClick("Menu")}>
+          <MenuItem href="#AllMenu-section" onClick={handleClick("AllMenu")}>
             Menu
           </MenuItem>
           <MenuItem href="#OrderOnline" onClick={handleClick("Menu")}>

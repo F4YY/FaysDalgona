@@ -6,7 +6,7 @@ export default function MyComponent() {
       <div className="flex flex-col self-stretch mt-5 mb-32 max-md:max-w-full">
         <div className="flex max-w-full w-[1280px] flex-col self-center px-5">
           <div className="flex flex-row justify-end items-center max-md:flex max-sm:hidden">
-            <div id='AllMenu-section' className="flex max-w-full w-[427px] flex-row items-start self-center justify-between gap-5 max-md:flex-wrap max-md:gap-2.5 max-md:w-auto max-md:grow-0">
+            <div className="flex max-w-full w-[427px] flex-row items-start self-center justify-between gap-5 max-md:flex-wrap max-md:gap-2.5 max-md:w-auto max-md:grow-0">
               <img alt='alt text'
                 loading="lazy"
                 src={require('../images/FD_Header.png')}
@@ -89,7 +89,7 @@ export default function MyComponent() {
               </a>
             </div>
           </div>
-          <div className="flex flex-col items-stretch mt-8 mb-5 max-md:ml-5">
+          <div id='AllMenu-section' className="flex flex-col items-stretch mt-8 mb-5 max-md:ml-5">
             <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
               <div className="flex flex-col items-stretch leading-[normal] w-[33%] max-md:w-full">
                 <div className="flex flex-col h-auto self-stretch gap-10 ml-10 max-md:hidden max-md:mr-auto max-sm:hidden">
