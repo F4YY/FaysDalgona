@@ -184,7 +184,7 @@ export default function MyComponent() {
                   </div>
                 </div>
               </div>
-              <div className="flex flex-col items-stretch leading-[normal] w-[67%] ml-5 max-md:w-full">
+              <div className="flex flex-col items-stretch leading-[normal] w-[67%] max-md:w-full">
                 <a
                   href="..."
                   className="text-black text-opacity-90 tracking-normal text-3xl"
@@ -292,7 +292,7 @@ export default function MyComponent() {
                   Combo
                 </a>
                 <div className="gap-5 self-center flex flex-row flex-wrap mr-auto mt-8">
-                  <div className="flex flex-row items-start gap-2.5 max-md:mt-12">
+                  <div className="flex flex-row items-start gap-2.5">
                     <img alt='alt text'
                       loading="lazy"
                       srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/136cb68a-a6bb-4a8a-bbd3-5a8197595777?&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/136cb68a-a6bb-4a8a-bbd3-5a8197595777?&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/136cb68a-a6bb-4a8a-bbd3-5a8197595777?&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/136cb68a-a6bb-4a8a-bbd3-5a8197595777?&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/136cb68a-a6bb-4a8a-bbd3-5a8197595777?&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/136cb68a-a6bb-4a8a-bbd3-5a8197595777?&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/136cb68a-a6bb-4a8a-bbd3-5a8197595777?&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/136cb68a-a6bb-4a8a-bbd3-5a8197595777?"
@@ -302,10 +302,10 @@ export default function MyComponent() {
                       href="..."
                       className="text-black text-opacity-90 tracking-normal text-lg w-[135px] self-center mt-px"
                     >
-                      SImple DalCdro
+                      Simple DalCdro
                     </a>
                   </div>
-                  <div className="flex flex-row items-start gap-2.5 max-md:mt-12">
+                  <div className="flex flex-row items-start gap-2.5">
                     <img alt='alt text'
                       loading="lazy"
                       srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/d92f2a84-40ca-4420-bd65-d3f4458f62b2?&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/d92f2a84-40ca-4420-bd65-d3f4458f62b2?&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/d92f2a84-40ca-4420-bd65-d3f4458f62b2?&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/d92f2a84-40ca-4420-bd65-d3f4458f62b2?&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/d92f2a84-40ca-4420-bd65-d3f4458f62b2?&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/d92f2a84-40ca-4420-bd65-d3f4458f62b2?&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/d92f2a84-40ca-4420-bd65-d3f4458f62b2?&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/d92f2a84-40ca-4420-bd65-d3f4458f62b2?"
