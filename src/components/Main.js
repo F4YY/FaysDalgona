@@ -1,18 +1,17 @@
 import { Routes, Route } from 'react-router-dom';
-import ReserveTable from './ReserveTable';
-// import Login from './Login';
-// import LoginForm from './LoginNetlify';
-import Testimonials from './Testimonials';
-import About from './About';
+import ReserveTable from './pages/ReserveTable';
+import Testimonials from './pages/Testimonials';
+import About from './pages/About';
+import AllMenu from './pages/AllMenu';
 
 function Main() {
   return (
     <main>
       <Routes>
+        <Route path="/AllMenu" element={<AllMenu />} />
         <Route path="/Testimonials" element={<Testimonials />} />
         <Route path="/About" element={<About />} />
         <Route path="/Reservation" element={<ReserveTable />} />
-        {/* <Route path="/Login" element={<LoginForm />} /> */}
       </Routes>
     </main>
   );

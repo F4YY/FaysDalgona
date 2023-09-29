@@ -1,15 +1,13 @@
 import React from 'react';
-import './App.css';
 import {ChakraProvider} from "@chakra-ui/react";
-import NavBar from "./components/NavBar";
-import HeroSection from "./components/HeroSection";
-import Highlight from "./components/Highlight";
-import Main from './components/Main';
-import FootNav from "./components/FootNav";
 import {AlertProvider} from "./context/alertContext";
-import Alert from "./components/Alert";
 import {AuthContextProvider} from "./context/authContext";
-import './index.css';
+import Main from './components/Main';
+import NavBar from './components/pages/NavBar';
+import HeroSection from './components/pages/HeroSection';
+import Highlight from './components/pages/Highlight';
+import FootNav from './components/pages/FootNav';
+import Alert from './components/alert/Alert';
 
 function App() {
   return (
@@ -17,8 +15,8 @@ function App() {
       <AlertProvider>
         <AuthContextProvider>
           <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
-          <NavBar/>
-          <HeroSection/>
+          <NavBar />
+          <HeroSection />
           <Highlight/>
           <Main/>
           <FootNav />

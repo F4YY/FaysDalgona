@@ -1,0 +1,44 @@
+{
+  "Reservation_guest": [
+    {
+      "id": 1,
+      "Name": "json-server",
+      "email": "json@server.com",
+      "date": "",
+      "time": "",
+      "no_of_guests": "",
+      "occasion": "",
+      "notes": ""
+    },
+    {
+      "Name": "farrel",
+      "email": "rivano@sibuea.com",
+      "date": "",
+      "time": "17:00",
+      "no_of_guests": "1 - 2 persons",
+      "occasion": "Birthday",
+      "notes": "pilihin yg cozy",
+      "id": 2
+    },
+    {
+      "Name": "Fay Thai Tea",
+      "email": "rikiwendri@gmail.com",
+      "date": "",
+      "time": "18:30",
+      "no_of_guests": "3 - 4 persons",
+      "occasion": "Engagement",
+      "notes": "what a cozyy",
+      "id": 3
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
