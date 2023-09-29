@@ -187,17 +187,17 @@ export default function MyComponent() {
               <div className="flex flex-col items-stretch leading-[normal] w-[67%] max-md:w-full">
                 <a
                   href="..."
-                  className="text-black text-opacity-90 tracking-normal text-3xl"
+                  className="text-white text-opacity-90 tracking-normal text-3xl bg-orange-700 bg-opacity-100 flex max-w-full w-full flex-col self-center rounded-r-md"
                 >
                   Menu
                 </a>
                 <a
                   href="..."
-                  className="text-black text-opacity-90 tracking-normal text-2xl mt-10"
+                  className="text-orange-700 font-bold text-opacity-90 tracking-normal text-2xl border-t border-orange-300 flex-col mt-10"
                 >
                   Drinks
                 </a>
-                <div className="flex flex-row flex-wrap gap-5 grow-0 mt-8">
+                <div className="flex flex-row flex-wrap gap-5 grow-0 mt-8 shadow-orange-200 shadow-md rounded-md">
                   <div className="flex max-w-full w-[235px] flex-row items-start gap-2.5">
                     <img alt='alt text'
                       loading="lazy"
@@ -206,7 +206,7 @@ export default function MyComponent() {
                     />
                     <a
                       href="..."
-                      className="text-black text-opacity-90 tracking-normal text-base w-[106px] self-center mt-px"
+                      className="text-orange-800 font-semibold text-opacity-80 tracking-normal text-lg w-[auto] self-center mt-px"
                     >
                       Dalgona Iced
                     </a>
@@ -219,7 +219,7 @@ export default function MyComponent() {
                     />
                     <a
                       href="..."
-                      className="text-black text-opacity-90 tracking-normal text-lg w-[107px] self-center mt-px"
+                      className="text-orange-800 font-semibold text-opacity-80 tracking-normal text-lg w-[107px] self-center mt-px"
                     >
                       Regular Iced
                     </a>
@@ -232,7 +232,7 @@ export default function MyComponent() {
                     />
                     <a
                       href="..."
-                      className="text-black text-opacity-90 tracking-normal text-lg w-[102px] self-center mt-px"
+                      className="text-orange-800 font-semibold text-opacity-80 tracking-normal text-lg w-[102px] self-center mt-px"
                     >
                       Regular Hot
                     </a>
@@ -240,11 +240,11 @@ export default function MyComponent() {
                 </div>
                 <a
                   href="..."
-                  className="text-black text-opacity-90 tracking-normal text-2xl mt-10"
+                  className="text-orange-700 font-bold text-opacity-90 tracking-normal text-2xl mt-10 border-t border-orange-300"
                 >
                   Food
                 </a>
-                <div className="flex flex-row flex-wrap gap-5 mt-8">
+                <div className="flex flex-row flex-wrap gap-5 mt-8 shadow-orange-200 shadow-md rounded-md">
                   <div className="flex flex-row items-start self-stretch gap-2.5">
                     <img alt='alt text'
                       loading="lazy"
@@ -253,7 +253,7 @@ export default function MyComponent() {
                     />
                     <a
                       href="..."
-                      className="text-black text-opacity-90 tracking-normal text-lg w-[106px] self-center mt-px"
+                      className="text-orange-800 font-semibold text-opacity-80 tracking-normal text-lg w-[106px] self-center mt-px"
                     >
                       Mie Nyemek
                     </a>
@@ -266,7 +266,7 @@ export default function MyComponent() {
                     />
                     <a
                       href="..."
-                      className="text-black text-opacity-90 tracking-normal text-lg w-[127px] self-center mt-px"
+                      className="text-orange-800 font-semibold text-opacity-80 tracking-normal text-lg w-[127px] self-center mt-px"
                     >
                       Croffle Original
                     </a>
@@ -279,7 +279,7 @@ export default function MyComponent() {
                     />
                     <a
                       href="..."
-                      className="text-black text-opacity-90 tracking-normal text-lg self-center"
+                      className="text-orange-800 font-semibold text-opacity-80 tracking-normal text-lg self-center"
                     >
                       Sate Bakso Seafood
                     </a>
@@ -287,11 +287,11 @@ export default function MyComponent() {
                 </div>
                 <a
                   href="..."
-                  className="text-black text-opacity-90 tracking-normal text-2xl mt-10 pt-0.5"
+                  className="text-orange-700 font-bold text-opacity-90 tracking-normal text-2xl mt-10 pt-0.5 border-t border-orange-300 flex-col"
                 >
                   Combo
                 </a>
-                <div className="gap-5 self-center flex flex-row flex-wrap mr-auto mt-8">
+                <div className="gap-5 self-center flex flex-row flex-wrap mr-auto mt-8 shadow-orange-200 shadow-md rounded-md">
                   <div className="flex flex-row items-start gap-2.5">
                     <img alt='alt text'
                       loading="lazy"
@@ -300,7 +300,7 @@ export default function MyComponent() {
                     />
                     <a
                       href="..."
-                      className="text-black text-opacity-90 tracking-normal text-lg w-[135px] self-center mt-px"
+                      className="text-orange-800 font-semibold text-opacity-80 tracking-normal text-lg w-[135px] self-center mt-px"
                     >
                       Simple DalCdro
                     </a>
@@ -313,7 +313,7 @@ export default function MyComponent() {
                     />
                     <a
                       href="..."
-                      className="text-black text-opacity-90 tracking-normal text-base self-center -mt-px"
+                      className="text-orange-800 font-semibold text-opacity-80 tracking-normal text-base self-center -mt-px"
                     >
                       Combo 123
                     </a>
@@ -321,18 +321,18 @@ export default function MyComponent() {
                 </div>
                 <a
                   href="..."
-                  className="text-black text-opacity-90 tracking-normal text-2xl mt-10"
+                  className="text-orange-700 font-bold text-opacity-90 tracking-normal text-2xl mt-10 border-t border-orange-300 flex-col"
                 >
                   Topping
                 </a>
-                <div className="flex flex-row flex-wrap gap-5 mt-8">
+                <div className="flex flex-row flex-wrap gap-5 mt-8 shadow-orange-200 shadow-md rounded-md">
                   <div className="flex max-w-full w-[244px] flex-row items-start gap-2.5">
                     <img alt='alt text'
                       loading="lazy"
                       srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/f5bd4811-c772-4197-bc65-da9ffb198317?&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/f5bd4811-c772-4197-bc65-da9ffb198317?&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/f5bd4811-c772-4197-bc65-da9ffb198317?&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/f5bd4811-c772-4197-bc65-da9ffb198317?&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/f5bd4811-c772-4197-bc65-da9ffb198317?&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/f5bd4811-c772-4197-bc65-da9ffb198317?&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/f5bd4811-c772-4197-bc65-da9ffb198317?&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/f5bd4811-c772-4197-bc65-da9ffb198317?"
                       className="aspect-[1] object-contain object-center w-28 h-28 shrink-0 self-center"
                     />
-                    <div className="text-black text-opacity-90 tracking-normal text-base w-[115px] self-center my-auto">
+                    <div className="text-orange-800 font-semibold text-opacity-80 tracking-normal text-base w-[115px] self-center my-auto">
                       Lotus Bischoff Crumbles
                     </div>
                   </div>
@@ -345,7 +345,7 @@ export default function MyComponent() {
                       />
                       <a
                         href="..."
-                        className="text-black text-opacity-90 tracking-normal text-lg w-[115px] text-left my-auto"
+                        className="text-orange-800 font-semibold text-opacity-80 tracking-normal text-lg w-[115px] text-left my-auto"
                       >
                         Choco Crispy Balls
                       </a>
