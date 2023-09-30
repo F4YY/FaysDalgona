@@ -1,6 +1,118 @@
 import * as React from "react";
 
 export default function MyComponent() {
+  const data = [
+    {
+      category: "Drinks",
+      items: [
+        {
+          name: "Dalgona Iced",
+          href: "...",
+          imageUrl:
+            "https://cdn.builder.io/api/v1/image/assets/TEMP/51844c7b-8db0-4db7-acd7-600559b65b9a",
+          title: "Dalgona Iced",
+          width: "235px",
+          link: "/your-destination-url",
+        },
+        {
+          name: "Regular Iced",
+          href: "...",
+          imageUrl:
+            "https://cdn.builder.io/api/v1/image/assets/TEMP/e50ea884-e766-419e-a700-21551c98c7c3",
+          title: "Regular Iced",
+          width: "236px",
+          link: "/your-destination-url",
+        },
+        {
+          name: "Regular Hot",
+          href: "...",
+          imageUrl:
+            "https://cdn.builder.io/api/v1/image/assets/TEMP/dc335bdf-822a-4010-8f7b-1b258de0664a",
+          title: "Regular Hot",
+          width: "231px",
+          link: "/your-destination-url",
+        },
+      ],
+    },
+    {
+      category: "Food",
+      items: [
+        {
+          name: "Mie Nyemek",
+          href: "...",
+          imageUrl:
+          "https://cdn.builder.io/api/v1/image/assets/TEMP/d1a67e46-1bf3-46d2-98fd-8d3c5c444b50?&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/d1a67e46-1bf3-46d2-98fd-8d3c5c444b50?&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/d1a67e46-1bf3-46d2-98fd-8d3c5c444b50?&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/d1a67e46-1bf3-46d2-98fd-8d3c5c444b50?&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/d1a67e46-1bf3-46d2-98fd-8d3c5c444b50?&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/d1a67e46-1bf3-46d2-98fd-8d3c5c444b50?&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/d1a67e46-1bf3-46d2-98fd-8d3c5c444b50?&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/d1a67e46-1bf3-46d2-98fd-8d3c5c444b50?",
+          title: "Mie Nyemek",
+          width: "235px",
+          link: "/your-destination-url",
+        },
+        {
+          name: "Croffle Original",
+          href: "...",
+          imageUrl:
+          "https://cdn.builder.io/api/v1/image/assets/TEMP/62ce8a1c-36a6-40c5-9d3e-45ad88dbddcf?&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/62ce8a1c-36a6-40c5-9d3e-45ad88dbddcf?&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/62ce8a1c-36a6-40c5-9d3e-45ad88dbddcf?&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/62ce8a1c-36a6-40c5-9d3e-45ad88dbddcf?&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/62ce8a1c-36a6-40c5-9d3e-45ad88dbddcf?&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/62ce8a1c-36a6-40c5-9d3e-45ad88dbddcf?&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/62ce8a1c-36a6-40c5-9d3e-45ad88dbddcf?&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/62ce8a1c-36a6-40c5-9d3e-45ad88dbddcf?",
+          title: "Croffle Original",
+          width: "235px",
+          link: "/your-destination-url",
+        },
+        {
+          name: "Sate Bakso Seafood",
+          href: "...",
+          imageUrl:
+          "https://cdn.builder.io/api/v1/image/assets/TEMP/2fc1725a-fc70-4991-bd94-83a44d345899?&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/2fc1725a-fc70-4991-bd94-83a44d345899?&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/2fc1725a-fc70-4991-bd94-83a44d345899?&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/2fc1725a-fc70-4991-bd94-83a44d345899?&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/2fc1725a-fc70-4991-bd94-83a44d345899?&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/2fc1725a-fc70-4991-bd94-83a44d345899?&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/2fc1725a-fc70-4991-bd94-83a44d345899?&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/2fc1725a-fc70-4991-bd94-83a44d345899?",
+          title: "Sate Bakso Seafood",
+          width: "235px",
+          link: "/your-destination-url",
+        }
+      ]
+    },
+    {
+      category: "Combo",
+      items: [
+        {
+          name: "Simple DalCro",
+          href: "...",
+          imageUrl:
+          "https://cdn.builder.io/api/v1/image/assets/TEMP/136cb68a-a6bb-4a8a-bbd3-5a8197595777?&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/136cb68a-a6bb-4a8a-bbd3-5a8197595777?&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/136cb68a-a6bb-4a8a-bbd3-5a8197595777?&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/136cb68a-a6bb-4a8a-bbd3-5a8197595777?&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/136cb68a-a6bb-4a8a-bbd3-5a8197595777?&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/136cb68a-a6bb-4a8a-bbd3-5a8197595777?&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/136cb68a-a6bb-4a8a-bbd3-5a8197595777?&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/136cb68a-a6bb-4a8a-bbd3-5a8197595777?",
+          title: "Simple DalCro",
+          width: "235px",
+          link: "/your-destination-url",
+        },
+        {
+          name: "Combo 123",
+          href: "...",
+          imageUrl:
+          "https://cdn.builder.io/api/v1/image/assets/TEMP/d92f2a84-40ca-4420-bd65-d3f4458f62b2?&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/d92f2a84-40ca-4420-bd65-d3f4458f62b2?&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/d92f2a84-40ca-4420-bd65-d3f4458f62b2?&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/d92f2a84-40ca-4420-bd65-d3f4458f62b2?&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/d92f2a84-40ca-4420-bd65-d3f4458f62b2?&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/d92f2a84-40ca-4420-bd65-d3f4458f62b2?&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/d92f2a84-40ca-4420-bd65-d3f4458f62b2?&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/d92f2a84-40ca-4420-bd65-d3f4458f62b2?",
+          title: "Combo 123",
+          width: "235px",
+          link: "/your-destination-url",
+        }
+      ]
+    },
+    {
+      category: "Topping",
+      items: [
+        {
+          name: "Lotus Biscoff Crumbles",
+          href: "...",
+          imageUrl:
+          "https://cdn.builder.io/api/v1/image/assets/TEMP/f5bd4811-c772-4197-bc65-da9ffb198317?&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/f5bd4811-c772-4197-bc65-da9ffb198317?&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/f5bd4811-c772-4197-bc65-da9ffb198317?&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/f5bd4811-c772-4197-bc65-da9ffb198317?&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/f5bd4811-c772-4197-bc65-da9ffb198317?&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/f5bd4811-c772-4197-bc65-da9ffb198317?&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/f5bd4811-c772-4197-bc65-da9ffb198317?&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/f5bd4811-c772-4197-bc65-da9ffb198317?",
+          title: "Lotus Biscoff Crumbles",
+          width: "235px",
+          link: "/your-destination-url",
+        },
+        {
+          name: "Choco Crispy Balls",
+          href: "...",
+          imageUrl:
+          "https://cdn.builder.io/api/v1/image/assets/TEMP/c2332bad-49fa-4eba-bacd-e082f9f1e639?&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/c2332bad-49fa-4eba-bacd-e082f9f1e639?&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/c2332bad-49fa-4eba-bacd-e082f9f1e639?&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/c2332bad-49fa-4eba-bacd-e082f9f1e639?&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/c2332bad-49fa-4eba-bacd-e082f9f1e639?&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/c2332bad-49fa-4eba-bacd-e082f9f1e639?&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/c2332bad-49fa-4eba-bacd-e082f9f1e639?&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/c2332bad-49fa-4eba-bacd-e082f9f1e639?",
+          title: "Choco Crispy Balls",
+          width: "235px",
+          link: "/your-destination-url",
+        }
+      ]
+    }
+  ];
   return (
     <div className="bg-white flex flex-col mb-10 max-md:max-w-full">
       <div className="flex flex-col self-stretch mt-5 mb-32 max-md:max-w-full">
@@ -91,98 +203,19 @@ export default function MyComponent() {
           </div>
           <div id='AllMenu-section' className="flex flex-col items-stretch mt-8 mb-5 max-md:ml-5">
             <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
-              <div className="flex flex-col items-stretch leading-[normal] w-[33%] max-md:w-full">
-                <div className="flex flex-col h-auto self-stretch gap-10 ml-10 max-md:hidden max-md:mr-auto max-sm:hidden">
-                  <div className="flex flex-col max-md:w-auto">
-                    <a
-                      href="..."
-                      className="text-black text-opacity-90 tracking-normal text-xl"
-                    >
-                      Drinks
+              <div className="hidden md:flex flex-col items-stretch w-[33%] max-md:w-full md:ml-4">
+                {data.map((category, index) => (
+                  <div className="flex flex-col max-md:w-auto" key={category.category}>
+                    <a href="..." className={`text-xl ${index === 0 ? 'mt-0' : 'mt-10'}`}>
+                      {category.category}
                     </a>
-                    <a
-                      href="..."
-                      className="text-black text-opacity-60 tracking-normal text-base w-[106px] mt-7"
-                    >
-                      Dalgona Iced
-                    </a>
-                    <a
-                      href="..."
-                      className="text-black text-opacity-60 tracking-normal text-base w-[102px] mt-6"
-                    >
-                      Regular Iced
-                    </a>
-                    <a
-                      href="..."
-                      className="text-black text-opacity-60 tracking-normal text-base mt-6"
-                    >
-                      Regular Hot
-                    </a>
+                    {category.items.map((item) => (
+                      <a href={item.href} className="text-base mt-6" key={item.name}>
+                        {item.name}
+                      </a>
+                    ))}
                   </div>
-                  <div className="flex flex-col grow-0 max-md:w-auto">
-                    <a
-                      href="..."
-                      className="text-black text-opacity-90 tracking-normal text-xl"
-                    >
-                      Food
-                    </a>
-                    <a
-                      href="..."
-                      className="text-black text-opacity-60 tracking-normal text-base w-[100px] mt-6"
-                    >
-                      Mie Nyemek
-                    </a>
-                    <a
-                      href="..."
-                      className="text-black text-opacity-60 tracking-normal text-sm w-[107px] mt-6"
-                    >
-                      Croffle Original
-                    </a>
-                    <a
-                      href="..."
-                      className="text-black text-opacity-60 tracking-normal text-base w-[165px] mt-6"
-                    >
-                      Sate Bakso Seafood
-                    </a>
-                  </div>
-                  <div className="flex flex-col items-stretch h-auto max-md:w-auto">
-                    <a
-                      href="..."
-                      className="text-black text-opacity-90 tracking-normal text-xl"
-                    >
-                      Combo
-                    </a>
-                    <a
-                      href="..."
-                      className="text-black text-opacity-60 tracking-normal text-base w-[116px] mt-6"
-                    >
-                      Simple DalCro
-                    </a>
-                    <a
-                      href="..."
-                      className="text-black text-opacity-60 tracking-normal text-base mt-6"
-                    >
-                      Combo 123
-                    </a>
-                  </div>
-                  <div className="flex flex-col items-stretch h-auto max-md:w-auto">
-                    <a
-                      href="..."
-                      className="text-black text-opacity-90 tracking-normal text-xl"
-                    >
-                      Topping
-                    </a>
-                    <div className="text-black text-opacity-60 tracking-normal text-base w-[197px] mt-5">
-                      Lotus Bischoff Crumbles
-                    </div>
-                    <a
-                      href="..."
-                      className="text-black text-opacity-60 tracking-normal text-base w-[153px] mt-7"
-                    >
-                      Choco Crispy Balls
-                    </a>
-                  </div>
-                </div>
+                ))}
               </div>
               <div className="flex flex-col items-stretch leading-[normal] w-[67%] max-md:w-full">
                 <a
@@ -191,172 +224,36 @@ export default function MyComponent() {
                 >
                   Menu
                 </a>
-                <a
-                  href="..."
-                  className="text-orange-700 font-bold text-opacity-90 tracking-normal text-2xl border-t border-orange-300 flex-col mt-10"
-                >
-                  Drinks
-                </a>
-                <div className="flex flex-row flex-wrap gap-5 grow-0 mt-8 rounded-md">
-                  <div className="flex max-w-full w-[235px] flex-row items-start gap-2.5">
-                    <img alt='alt text'
-                      loading="lazy"
-                      srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/51844c7b-8db0-4db7-acd7-600559b65b9a?&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/51844c7b-8db0-4db7-acd7-600559b65b9a?&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/51844c7b-8db0-4db7-acd7-600559b65b9a?&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/51844c7b-8db0-4db7-acd7-600559b65b9a?&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/51844c7b-8db0-4db7-acd7-600559b65b9a?&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/51844c7b-8db0-4db7-acd7-600559b65b9a?&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/51844c7b-8db0-4db7-acd7-600559b65b9a?&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/51844c7b-8db0-4db7-acd7-600559b65b9a?"
-                      className="aspect-[1] object-contain object-center w-28 h-28 shrink-0 self-center"
-                    />
-                    <a
-                      href="..."
-                      className="text-orange-800 font-semibold text-opacity-80 tracking-normal text-lg w-[auto] self-center mt-px"
-                    >
-                      Dalgona Iced
+                <div className="flex flex-col max-md:w-auto">
+                {data.map((category) => (
+                  <div key={category.category} className="border-t border-orange-300 flex-col mt-10">
+                    <a href="..." className="text-orange-700 font-bold text-opacity-90 tracking-normal text-2xl border-t border-orange-300 flex-col mt-10">
+                      {category.category}
                     </a>
-                  </div>
-                  <div className="flex max-w-full w-[236px] flex-row items-start gap-2.5">
-                    <img alt='alt text'
-                      loading="lazy"
-                      srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/e50ea884-e766-419e-a700-21551c98c7c3?&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/e50ea884-e766-419e-a700-21551c98c7c3?&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/e50ea884-e766-419e-a700-21551c98c7c3?&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/e50ea884-e766-419e-a700-21551c98c7c3?&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/e50ea884-e766-419e-a700-21551c98c7c3?&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/e50ea884-e766-419e-a700-21551c98c7c3?&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/e50ea884-e766-419e-a700-21551c98c7c3?&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/e50ea884-e766-419e-a700-21551c98c7c3?"
-                      className="aspect-[1] object-contain object-center w-28 h-28 shrink-0 self-center"
-                    />
-                    <a
-                      href="..."
-                      className="text-orange-800 font-semibold text-opacity-80 tracking-normal text-lg w-[107px] self-center mt-px"
-                    >
-                      Regular Iced
-                    </a>
-                  </div>
-                  <div className="flex max-w-full w-[231px] flex-row items-start gap-2.5">
-                    <img alt='alt text'
-                      loading="lazy"
-                      srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/dc335bdf-822a-4010-8f7b-1b258de0664a?&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/dc335bdf-822a-4010-8f7b-1b258de0664a?&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/dc335bdf-822a-4010-8f7b-1b258de0664a?&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/dc335bdf-822a-4010-8f7b-1b258de0664a?&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/dc335bdf-822a-4010-8f7b-1b258de0664a?&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/dc335bdf-822a-4010-8f7b-1b258de0664a?&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/dc335bdf-822a-4010-8f7b-1b258de0664a?&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/dc335bdf-822a-4010-8f7b-1b258de0664a?"
-                      className="aspect-[1] object-contain object-center w-28 h-28 shrink-0 self-center"
-                    />
-                    <a
-                      href="..."
-                      className="text-orange-800 font-semibold text-opacity-80 tracking-normal text-lg w-[102px] self-center mt-px"
-                    >
-                      Regular Hot
-                    </a>
-                  </div>
-                </div>
-                <a
-                  href="..."
-                  className="text-orange-700 font-bold text-opacity-90 tracking-normal text-2xl mt-10 border-t border-orange-300"
-                >
-                  Food
-                </a>
-                <div className="flex flex-row flex-wrap gap-5 mt-8 rounded-md">
-                  <div className="flex flex-row items-start self-stretch gap-2.5">
-                    <img alt='alt text'
-                      loading="lazy"
-                      srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/d1a67e46-1bf3-46d2-98fd-8d3c5c444b50?&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/d1a67e46-1bf3-46d2-98fd-8d3c5c444b50?&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/d1a67e46-1bf3-46d2-98fd-8d3c5c444b50?&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/d1a67e46-1bf3-46d2-98fd-8d3c5c444b50?&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/d1a67e46-1bf3-46d2-98fd-8d3c5c444b50?&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/d1a67e46-1bf3-46d2-98fd-8d3c5c444b50?&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/d1a67e46-1bf3-46d2-98fd-8d3c5c444b50?&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/d1a67e46-1bf3-46d2-98fd-8d3c5c444b50?"
-                      className="aspect-[1] object-contain object-center w-28 h-28 shrink-0 self-center"
-                    />
-                    <a
-                      href="..."
-                      className="text-orange-800 font-semibold text-opacity-80 tracking-normal text-lg w-[106px] self-center mt-px"
-                    >
-                      Mie Nyemek
-                    </a>
-                  </div>
-                  <div className="flex max-w-full w-64 flex-row items-start gap-2.5">
-                    <img alt='alt text'
-                      loading="lazy"
-                      srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/62ce8a1c-36a6-40c5-9d3e-45ad88dbddcf?&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/62ce8a1c-36a6-40c5-9d3e-45ad88dbddcf?&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/62ce8a1c-36a6-40c5-9d3e-45ad88dbddcf?&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/62ce8a1c-36a6-40c5-9d3e-45ad88dbddcf?&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/62ce8a1c-36a6-40c5-9d3e-45ad88dbddcf?&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/62ce8a1c-36a6-40c5-9d3e-45ad88dbddcf?&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/62ce8a1c-36a6-40c5-9d3e-45ad88dbddcf?&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/62ce8a1c-36a6-40c5-9d3e-45ad88dbddcf?"
-                      className="aspect-[1] object-contain object-center w-28 h-28 shrink-0 self-center"
-                    />
-                    <a
-                      href="..."
-                      className="text-orange-800 font-semibold text-opacity-80 tracking-normal text-lg w-[127px] self-center mt-px"
-                    >
-                      Croffle Original
-                    </a>
-                  </div>
-                  <div className="flex max-w-full w-[226px] flex-row items-start gap-2.5">
-                    <img alt='alt text'
-                      loading="lazy"
-                      srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/2fc1725a-fc70-4991-bd94-83a44d345899?&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/2fc1725a-fc70-4991-bd94-83a44d345899?&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/2fc1725a-fc70-4991-bd94-83a44d345899?&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/2fc1725a-fc70-4991-bd94-83a44d345899?&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/2fc1725a-fc70-4991-bd94-83a44d345899?&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/2fc1725a-fc70-4991-bd94-83a44d345899?&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/2fc1725a-fc70-4991-bd94-83a44d345899?&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/2fc1725a-fc70-4991-bd94-83a44d345899?"
-                      className="aspect-[1] object-contain object-center w-28 h-28 shrink-0 self-center"
-                    />
-                    <a
-                      href="..."
-                      className="text-orange-800 font-semibold text-opacity-80 tracking-normal text-lg self-center"
-                    >
-                      Sate Bakso Seafood
-                    </a>
-                  </div>
-                </div>
-                <a
-                  href="..."
-                  className="text-orange-700 font-bold text-opacity-90 tracking-normal text-2xl mt-10 pt-0.5 border-t border-orange-300 flex-col"
-                >
-                  Combo
-                </a>
-                <div className="gap-5 self-center flex flex-row flex-wrap mr-auto mt-8 rounded-md">
-                  <div className="flex flex-row items-start gap-2.5">
-                    <img alt='alt text'
-                      loading="lazy"
-                      srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/136cb68a-a6bb-4a8a-bbd3-5a8197595777?&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/136cb68a-a6bb-4a8a-bbd3-5a8197595777?&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/136cb68a-a6bb-4a8a-bbd3-5a8197595777?&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/136cb68a-a6bb-4a8a-bbd3-5a8197595777?&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/136cb68a-a6bb-4a8a-bbd3-5a8197595777?&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/136cb68a-a6bb-4a8a-bbd3-5a8197595777?&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/136cb68a-a6bb-4a8a-bbd3-5a8197595777?&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/136cb68a-a6bb-4a8a-bbd3-5a8197595777?"
-                      className="aspect-[1] object-contain object-center w-28 h-28 shrink-0 self-center"
-                    />
-                    <a
-                      href="..."
-                      className="text-orange-800 font-semibold text-opacity-80 tracking-normal text-lg w-[135px] self-center mt-px"
-                    >
-                      Simple DalCro
-                    </a>
-                  </div>
-                  <div className="flex flex-row items-start gap-2.5">
-                    <img alt='alt text'
-                      loading="lazy"
-                      srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/d92f2a84-40ca-4420-bd65-d3f4458f62b2?&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/d92f2a84-40ca-4420-bd65-d3f4458f62b2?&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/d92f2a84-40ca-4420-bd65-d3f4458f62b2?&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/d92f2a84-40ca-4420-bd65-d3f4458f62b2?&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/d92f2a84-40ca-4420-bd65-d3f4458f62b2?&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/d92f2a84-40ca-4420-bd65-d3f4458f62b2?&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/d92f2a84-40ca-4420-bd65-d3f4458f62b2?&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/d92f2a84-40ca-4420-bd65-d3f4458f62b2?"
-                      className="aspect-[1] object-contain object-center w-28 h-28 shrink-0 self-center"
-                    />
-                    <a
-                      href="..."
-                      className="text-orange-800 font-semibold text-opacity-80 tracking-normal text-lg self-center -mt-px"
-                    >
-                      Combo 123
-                    </a>
-                  </div>
-                </div>
-                <a
-                  href="..."
-                  className="text-orange-700 font-bold text-opacity-90 tracking-normal text-2xl mt-10 border-t border-orange-300 flex-col"
-                >
-                  Topping
-                </a>
-                <div className="flex flex-row flex-wrap gap-5 mt-8 rounded-md">
-                  <div className="flex max-w-full w-[244px] flex-row items-start gap-2.5">
-                    <img alt='alt text'
-                      loading="lazy"
-                      srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/f5bd4811-c772-4197-bc65-da9ffb198317?&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/f5bd4811-c772-4197-bc65-da9ffb198317?&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/f5bd4811-c772-4197-bc65-da9ffb198317?&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/f5bd4811-c772-4197-bc65-da9ffb198317?&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/f5bd4811-c772-4197-bc65-da9ffb198317?&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/f5bd4811-c772-4197-bc65-da9ffb198317?&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/f5bd4811-c772-4197-bc65-da9ffb198317?&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/f5bd4811-c772-4197-bc65-da9ffb198317?"
-                      className="aspect-[1] object-contain object-center w-28 h-28 shrink-0 self-center"
-                    />
-                    <div className="text-orange-800 font-semibold text-opacity-80 tracking-normal text-lg w-[115px] self-center my-auto">
-                      Lotus Bischoff Crumbles
+                    <div className="flex flex-row flex-wrap gap-3 mt-8 rounded-md">
+                    {category.items.map((item) => (
+                      <>
+                        <a href={item.link}>
+                          <img
+                            alt="alt text"
+                            loading="lazy"
+                            srcSet={`${item.imageUrl}?&width=100 100w, ${item.imageUrl}?&width=200 200w, ${item.imageUrl}?&width=400 400w, ${item.imageUrl}?&width=800 800w, ${item.imageUrl}?&width=1200 1200w, ${item.imageUrl}?&width=1600 1600w, ${item.imageUrl}?&width=2000 2000w`}
+                            className="aspect-[1] object-contain object-center w-28 h-28 shrink-0 self-center hover:scale-105 transition-transform duration-300"
+                          />
+                        </a>
+                        <a href="..." className="text-orange-800 font-semibold text-opacity-80 tracking-normal text-lg w-[130px] self-center mt-px">
+                          {item.title}
+                        </a>
+                      </>
+                    ))}
                     </div>
                   </div>
-                  <div className="flex flex-col items-stretch h-auto">
-                    <div className="flex flex-row gap-2.5 grow-0">
-                      <img alt='alt text'
-                        loading="lazy"
-                        srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/c2332bad-49fa-4eba-bacd-e082f9f1e639?&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/c2332bad-49fa-4eba-bacd-e082f9f1e639?&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/c2332bad-49fa-4eba-bacd-e082f9f1e639?&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/c2332bad-49fa-4eba-bacd-e082f9f1e639?&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/c2332bad-49fa-4eba-bacd-e082f9f1e639?&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/c2332bad-49fa-4eba-bacd-e082f9f1e639?&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/c2332bad-49fa-4eba-bacd-e082f9f1e639?&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/c2332bad-49fa-4eba-bacd-e082f9f1e639?"
-                        className="aspect-[1] object-contain object-center w-28 h-28 shrink-0"
-                      />
-                      <a
-                        href="..."
-                        className="text-orange-800 font-semibold text-opacity-80 tracking-normal text-lg w-[115px] text-left my-auto"
-                      >
-                        Choco Crispy Balls
-                      </a>
-                    </div>
-                  </div>
+                ))}
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div className="flex max-w-full w-[534px] ml-0 flex-col self-center mt-16 px-5" />
       </div>
     </div>
   );
