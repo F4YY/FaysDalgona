@@ -4,7 +4,7 @@ export default function MyComponent() {
   return (
     <div className="bg-white flex flex-col mb-10 max-md:max-w-full">
       <div className="flex flex-col self-stretch mt-5 mb-32 max-md:max-w-full">
-        <div className="flex max-w-full w-[1280px] flex-col self-center px-5">
+        <div className="flex max-w-full w-[1280px] flex-col self-center lg:px-5 sm:pl-0 pr-4">
           <div className="flex flex-row justify-end items-center max-md:flex max-sm:hidden">
             <div className="flex max-w-full w-[427px] flex-row items-start self-center justify-between gap-5 max-md:flex-wrap max-md:gap-2.5 max-md:w-auto max-md:grow-0">
               <img alt='alt text'
@@ -197,7 +197,7 @@ export default function MyComponent() {
                 >
                   Drinks
                 </a>
-                <div className="flex flex-row flex-wrap gap-5 grow-0 mt-8 shadow-orange-200 shadow-md rounded-md">
+                <div className="flex flex-row flex-wrap gap-5 grow-0 mt-8 rounded-md">
                   <div className="flex max-w-full w-[235px] flex-row items-start gap-2.5">
                     <img alt='alt text'
                       loading="lazy"
@@ -244,7 +244,7 @@ export default function MyComponent() {
                 >
                   Food
                 </a>
-                <div className="flex flex-row flex-wrap gap-5 mt-8 shadow-orange-200 shadow-md rounded-md">
+                <div className="flex flex-row flex-wrap gap-5 mt-8 rounded-md">
                   <div className="flex flex-row items-start self-stretch gap-2.5">
                     <img alt='alt text'
                       loading="lazy"
@@ -291,7 +291,7 @@ export default function MyComponent() {
                 >
                   Combo
                 </a>
-                <div className="gap-5 self-center flex flex-row flex-wrap mr-auto mt-8 shadow-orange-200 shadow-md rounded-md">
+                <div className="gap-5 self-center flex flex-row flex-wrap mr-auto mt-8 rounded-md">
                   <div className="flex flex-row items-start gap-2.5">
                     <img alt='alt text'
                       loading="lazy"
@@ -302,7 +302,7 @@ export default function MyComponent() {
                       href="..."
                       className="text-orange-800 font-semibold text-opacity-80 tracking-normal text-lg w-[135px] self-center mt-px"
                     >
-                      Simple DalCdro
+                      Simple DalCro
                     </a>
                   </div>
                   <div className="flex flex-row items-start gap-2.5">
@@ -313,7 +313,7 @@ export default function MyComponent() {
                     />
                     <a
                       href="..."
-                      className="text-orange-800 font-semibold text-opacity-80 tracking-normal text-base self-center -mt-px"
+                      className="text-orange-800 font-semibold text-opacity-80 tracking-normal text-lg self-center -mt-px"
                     >
                       Combo 123
                     </a>
@@ -325,14 +325,14 @@ export default function MyComponent() {
                 >
                   Topping
                 </a>
-                <div className="flex flex-row flex-wrap gap-5 mt-8 shadow-orange-200 shadow-md rounded-md">
+                <div className="flex flex-row flex-wrap gap-5 mt-8 rounded-md">
                   <div className="flex max-w-full w-[244px] flex-row items-start gap-2.5">
                     <img alt='alt text'
                       loading="lazy"
                       srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/f5bd4811-c772-4197-bc65-da9ffb198317?&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/f5bd4811-c772-4197-bc65-da9ffb198317?&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/f5bd4811-c772-4197-bc65-da9ffb198317?&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/f5bd4811-c772-4197-bc65-da9ffb198317?&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/f5bd4811-c772-4197-bc65-da9ffb198317?&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/f5bd4811-c772-4197-bc65-da9ffb198317?&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/f5bd4811-c772-4197-bc65-da9ffb198317?&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/f5bd4811-c772-4197-bc65-da9ffb198317?"
                       className="aspect-[1] object-contain object-center w-28 h-28 shrink-0 self-center"
                     />
-                    <div className="text-orange-800 font-semibold text-opacity-80 tracking-normal text-base w-[115px] self-center my-auto">
+                    <div className="text-orange-800 font-semibold text-opacity-80 tracking-normal text-lg w-[115px] self-center my-auto">
                       Lotus Bischoff Crumbles
                     </div>
                   </div>
