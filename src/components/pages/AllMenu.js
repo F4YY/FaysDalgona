@@ -1,7 +1,13 @@
 import * as React from "react";
 import data from "../database/menu.json";
+import { animated, useTransition, config } from "react-spring";
 
 export default function MyComponent() {
+  const categoryTransitions = useTransition(data, {
+    from: { opacity: 0, transform: "translateY(-20px)" },
+    enter: { opacity: 1, transform: "translateY(0px)" },
+    config: {...config.default,delay: 1000},
+  });
   return (
     <div className="bg-white flex flex-col max-md:max-w-full">
       <div className="flex flex-col self-stretch mt-5 mb-32 max-md:max-w-full">
@@ -93,17 +99,17 @@ export default function MyComponent() {
           <div id='AllMenu-section' className="flex flex-col items-stretch mt-8 mb-5 max-md:ml-5">
             <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
               <div className="hidden md:flex flex-col items-stretch w-[33%] max-md:w-full md:ml-4">
-                {data.map((category, index) => (
-                  <div className="flex flex-col max-md:w-auto" key={category.category}>
-                    <a href="..." className={`text-xl ${index === 0 ? 'mt-0' : 'mt-10'}`}>
-                      {category.category}
+                {categoryTransitions((style, item) => (
+                  <animated.div style={style} className="flex flex-col max-md:w-auto" key={item.category}>
+                    <a href="..." className={`text-xl ${item === data[0] ? 'mt-0' : 'mt-10'}`}>
+                      {item.category}
                     </a>
-                    {category.items.map((item) => (
+                    {item.items.map((item) => (
                       <a href={item.href} className="text-base mt-6" key={item.name}>
                         {item.name}
                       </a>
                     ))}
-                  </div>
+                  </animated.div>
                 ))}
               </div>
               <div className="flex flex-col items-stretch leading-[normal] w-[67%] max-md:w-full">
@@ -114,16 +120,16 @@ export default function MyComponent() {
                   Menu
                 </a>
                 <div className="flex flex-col max-md:w-auto">
-                {data.map((category) => (
-                  <div key={category.category} className="border-t border-orange-300 flex-col mt-10">
+                {categoryTransitions((style, item) => (
+                  <animated.div style={style} key={item.category} className="border-t border-orange-300 flex-col mt-10">
                     <a href="..." className="text-orange-700 font-bold text-opacity-90 tracking-normal text-2xl flex-col mt-10">
-                      {category.category}
+                      {item.category}
                     </a>
                     <div className="flex flex-row flex-wrap gap-4 mt-8 rounded-md">
-                    {category.items.map((item) => (
+                    {item.items.map((item) => (
                       <div className="flex gap-x-1">
                         <a href={item.link}>
-                          <img
+                          <animated.img
                             alt="alt text"
                             loading="lazy"
                             srcSet={`${item.imageUrl}?&width=100 100w, ${item.imageUrl}?&width=200 200w, ${item.imageUrl}?&width=400 400w, ${item.imageUrl}?&width=800 800w, ${item.imageUrl}?&width=1200 1200w, ${item.imageUrl}?&width=1600 1600w, ${item.imageUrl}?&width=2000 2000w`}
@@ -136,7 +142,7 @@ export default function MyComponent() {
                       </div>
                     ))}
                     </div>
-                  </div>
+                  </animated.div>
                 ))}
                 </div>
               </div>
