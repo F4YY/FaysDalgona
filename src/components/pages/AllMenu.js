@@ -1,120 +1,9 @@
 import * as React from "react";
+import data from "../database/menu.json";
 
 export default function MyComponent() {
-  const data = [
-    {
-      category: "Drinks",
-      items: [
-        {
-          name: "Dalgona Iced",
-          href: "...",
-          imageUrl:
-            "https://cdn.builder.io/api/v1/image/assets/TEMP/51844c7b-8db0-4db7-acd7-600559b65b9a",
-          title: "Dalgona Iced",
-          width: "235px",
-          link: "/your-destination-url",
-        },
-        {
-          name: "Regular Iced",
-          href: "...",
-          imageUrl:
-            "https://cdn.builder.io/api/v1/image/assets/TEMP/e50ea884-e766-419e-a700-21551c98c7c3",
-          title: "Regular Iced",
-          width: "236px",
-          link: "/your-destination-url",
-        },
-        {
-          name: "Regular Hot",
-          href: "...",
-          imageUrl:
-            "https://cdn.builder.io/api/v1/image/assets/TEMP/dc335bdf-822a-4010-8f7b-1b258de0664a",
-          title: "Regular Hot",
-          width: "231px",
-          link: "/your-destination-url",
-        },
-      ],
-    },
-    {
-      category: "Food",
-      items: [
-        {
-          name: "Mie Nyemek",
-          href: "...",
-          imageUrl:
-          "https://cdn.builder.io/api/v1/image/assets/TEMP/d1a67e46-1bf3-46d2-98fd-8d3c5c444b50?&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/d1a67e46-1bf3-46d2-98fd-8d3c5c444b50?&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/d1a67e46-1bf3-46d2-98fd-8d3c5c444b50?&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/d1a67e46-1bf3-46d2-98fd-8d3c5c444b50?&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/d1a67e46-1bf3-46d2-98fd-8d3c5c444b50?&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/d1a67e46-1bf3-46d2-98fd-8d3c5c444b50?&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/d1a67e46-1bf3-46d2-98fd-8d3c5c444b50?&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/d1a67e46-1bf3-46d2-98fd-8d3c5c444b50?",
-          title: "Mie Nyemek",
-          width: "235px",
-          link: "/your-destination-url",
-        },
-        {
-          name: "Croffle Original",
-          href: "...",
-          imageUrl:
-          "https://cdn.builder.io/api/v1/image/assets/TEMP/62ce8a1c-36a6-40c5-9d3e-45ad88dbddcf?&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/62ce8a1c-36a6-40c5-9d3e-45ad88dbddcf?&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/62ce8a1c-36a6-40c5-9d3e-45ad88dbddcf?&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/62ce8a1c-36a6-40c5-9d3e-45ad88dbddcf?&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/62ce8a1c-36a6-40c5-9d3e-45ad88dbddcf?&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/62ce8a1c-36a6-40c5-9d3e-45ad88dbddcf?&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/62ce8a1c-36a6-40c5-9d3e-45ad88dbddcf?&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/62ce8a1c-36a6-40c5-9d3e-45ad88dbddcf?",
-          title: "Croffle Original",
-          width: "235px",
-          link: "/your-destination-url",
-        },
-        {
-          name: "Sate Bakso Seafood",
-          href: "...",
-          imageUrl:
-          "https://cdn.builder.io/api/v1/image/assets/TEMP/2fc1725a-fc70-4991-bd94-83a44d345899?&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/2fc1725a-fc70-4991-bd94-83a44d345899?&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/2fc1725a-fc70-4991-bd94-83a44d345899?&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/2fc1725a-fc70-4991-bd94-83a44d345899?&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/2fc1725a-fc70-4991-bd94-83a44d345899?&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/2fc1725a-fc70-4991-bd94-83a44d345899?&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/2fc1725a-fc70-4991-bd94-83a44d345899?&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/2fc1725a-fc70-4991-bd94-83a44d345899?",
-          title: "Sate Bakso Seafood",
-          width: "235px",
-          link: "/your-destination-url",
-        }
-      ]
-    },
-    {
-      category: "Combo",
-      items: [
-        {
-          name: "Simple DalCro",
-          href: "...",
-          imageUrl:
-          "https://cdn.builder.io/api/v1/image/assets/TEMP/136cb68a-a6bb-4a8a-bbd3-5a8197595777?&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/136cb68a-a6bb-4a8a-bbd3-5a8197595777?&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/136cb68a-a6bb-4a8a-bbd3-5a8197595777?&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/136cb68a-a6bb-4a8a-bbd3-5a8197595777?&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/136cb68a-a6bb-4a8a-bbd3-5a8197595777?&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/136cb68a-a6bb-4a8a-bbd3-5a8197595777?&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/136cb68a-a6bb-4a8a-bbd3-5a8197595777?&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/136cb68a-a6bb-4a8a-bbd3-5a8197595777?",
-          title: "Simple DalCro",
-          width: "235px",
-          link: "/your-destination-url",
-        },
-        {
-          name: "Combo 123",
-          href: "...",
-          imageUrl:
-          "https://cdn.builder.io/api/v1/image/assets/TEMP/d92f2a84-40ca-4420-bd65-d3f4458f62b2?&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/d92f2a84-40ca-4420-bd65-d3f4458f62b2?&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/d92f2a84-40ca-4420-bd65-d3f4458f62b2?&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/d92f2a84-40ca-4420-bd65-d3f4458f62b2?&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/d92f2a84-40ca-4420-bd65-d3f4458f62b2?&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/d92f2a84-40ca-4420-bd65-d3f4458f62b2?&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/d92f2a84-40ca-4420-bd65-d3f4458f62b2?&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/d92f2a84-40ca-4420-bd65-d3f4458f62b2?",
-          title: "Combo 123",
-          width: "235px",
-          link: "/your-destination-url",
-        }
-      ]
-    },
-    {
-      category: "Topping",
-      items: [
-        {
-          name: "Lotus Biscoff Crumbles",
-          href: "...",
-          imageUrl:
-          "https://cdn.builder.io/api/v1/image/assets/TEMP/f5bd4811-c772-4197-bc65-da9ffb198317?&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/f5bd4811-c772-4197-bc65-da9ffb198317?&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/f5bd4811-c772-4197-bc65-da9ffb198317?&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/f5bd4811-c772-4197-bc65-da9ffb198317?&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/f5bd4811-c772-4197-bc65-da9ffb198317?&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/f5bd4811-c772-4197-bc65-da9ffb198317?&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/f5bd4811-c772-4197-bc65-da9ffb198317?&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/f5bd4811-c772-4197-bc65-da9ffb198317?",
-          title: "Lotus Biscoff Crumbles",
-          width: "235px",
-          link: "/your-destination-url",
-        },
-        {
-          name: "Choco Crispy Balls",
-          href: "...",
-          imageUrl:
-          "https://cdn.builder.io/api/v1/image/assets/TEMP/c2332bad-49fa-4eba-bacd-e082f9f1e639?&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/c2332bad-49fa-4eba-bacd-e082f9f1e639?&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/c2332bad-49fa-4eba-bacd-e082f9f1e639?&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/c2332bad-49fa-4eba-bacd-e082f9f1e639?&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/c2332bad-49fa-4eba-bacd-e082f9f1e639?&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/c2332bad-49fa-4eba-bacd-e082f9f1e639?&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/c2332bad-49fa-4eba-bacd-e082f9f1e639?&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/c2332bad-49fa-4eba-bacd-e082f9f1e639?",
-          title: "Choco Crispy Balls",
-          width: "235px",
-          link: "/your-destination-url",
-        }
-      ]
-    }
-  ];
   return (
-    <div className="bg-white flex flex-col mb-10 max-md:max-w-full">
+    <div className="bg-white flex flex-col max-md:max-w-full">
       <div className="flex flex-col self-stretch mt-5 mb-32 max-md:max-w-full">
         <div className="flex max-w-full w-[1280px] flex-col self-center lg:px-5 sm:pl-0 pr-4">
           <div className="flex flex-row justify-end items-center max-md:flex max-sm:hidden">
@@ -227,12 +116,12 @@ export default function MyComponent() {
                 <div className="flex flex-col max-md:w-auto">
                 {data.map((category) => (
                   <div key={category.category} className="border-t border-orange-300 flex-col mt-10">
-                    <a href="..." className="text-orange-700 font-bold text-opacity-90 tracking-normal text-2xl border-t border-orange-300 flex-col mt-10">
+                    <a href="..." className="text-orange-700 font-bold text-opacity-90 tracking-normal text-2xl flex-col mt-10">
                       {category.category}
                     </a>
-                    <div className="flex flex-row flex-wrap gap-3 mt-8 rounded-md">
+                    <div className="flex flex-row flex-wrap gap-4 mt-8 rounded-md">
                     {category.items.map((item) => (
-                      <>
+                      <div className="flex gap-x-1">
                         <a href={item.link}>
                           <img
                             alt="alt text"
@@ -244,7 +133,7 @@ export default function MyComponent() {
                         <a href="..." className="text-orange-800 font-semibold text-opacity-80 tracking-normal text-lg w-[130px] self-center mt-px">
                           {item.title}
                         </a>
-                      </>
+                      </div>
                     ))}
                     </div>
                   </div>

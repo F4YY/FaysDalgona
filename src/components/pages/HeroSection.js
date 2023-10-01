@@ -36,7 +36,7 @@ const HeroSection = () => (
         top="130px"
         left="750px"
         height={{base: 350, md: "auto", lg:440}}
-        w={400}
+        w={440}
         borderRadius={20}
         src={FD_homepage}
         alt="homepage"
