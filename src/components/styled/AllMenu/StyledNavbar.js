@@ -31,8 +31,4 @@ export const NavLink = styled.a`
   line-height: 19.5px;
   letter-spacing: 0.16px;
   align-self: stretch;
-
-  @media (max-width: 991px) {
-    font-size: 14px;
-  }
 `;

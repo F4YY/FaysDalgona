@@ -38,21 +38,17 @@ export const Category = styled.div`
 export const Link = styled.a`
   color: rgba(0, 0, 0, 0.87);
   font-family: Roboto Condensed, sans-serif;
-  font-size: 18px;
-  font-weight: 600;
+  font-size: 20px;
+  font-weight: 700;
   line-height: 28.5px;
   letter-spacing: 0.16px;
   align-self: start;
-
-  @media (max-width: 991px) {
-    font-size: 16px;
-  }
 `;
 
 export const Text = styled.div`
   color: rgba(0, 0, 0, 0.58);
   font-family: Roboto Condensed, sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 400;
   line-height: 18px;
   letter-spacing: 0.16px;
@@ -62,7 +58,6 @@ export const Text = styled.div`
 
   @media (max-width: 991px) {
     width: 165px;
-    font-size: 14px;
   }
 `;
 
@@ -84,7 +79,7 @@ export const StyledTextMenu = styled.a`
   flex: 1 0 0;
   color: azure;
   font-family: Roboto, sans-serif;
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 500;
   line-height: 38.78px;
   letter-spacing: 0.16px;
@@ -95,7 +90,6 @@ export const StyledTextMenu = styled.a`
 
   @media (max-width: 991px) {
     max-width: 100%;
-    font-size: 20px;
     padding: 2px 0 2px 20px;
   }
 `;
@@ -103,8 +97,8 @@ export const StyledTextMenu = styled.a`
 export const StyledTextCategory = styled.a`
   color: rgba(0, 0, 0, 0.87);
   font-family: Roboto Condensed, sans-serif;
-  font-size: 18px;
-  font-weight: 600;
+  font-size: 20px;
+  font-weight: 700;
   line-height: 36px;
   letter-spacing: 0.16px;
   align-self: start;
@@ -113,7 +107,6 @@ export const StyledTextCategory = styled.a`
   margin: 20px 0 10px;
 
   @media (max-width: 991px) {
-    font-size: 16px;
     margin: 20px 0 0;
   }
 
@@ -169,12 +162,17 @@ export const DrinkImage = styled.img`
   border-radius: 20px;
   background-blend-mode: pass_through;
   align-self: center;
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+  }
 `;
 
 export const DrinkLink = styled.a`
   color: rgba(0, 0, 0, 0.58);
   font-family: Roboto Condensed, sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 400;
   line-height: 28.5px;
   letter-spacing: 0.16px;
