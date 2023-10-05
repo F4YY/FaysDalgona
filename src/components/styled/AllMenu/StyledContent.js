@@ -38,7 +38,7 @@ export const Category = styled.div`
 export const Link = styled.a`
   color: rgba(0, 0, 0, 0.87);
   font-family: Roboto Condensed, sans-serif;
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 700;
   line-height: 28.5px;
   letter-spacing: 0.16px;
@@ -97,7 +97,7 @@ export const StyledTextMenu = styled.a`
 export const StyledTextCategory = styled.a`
   color: rgba(0, 0, 0, 0.87);
   font-family: Roboto Condensed, sans-serif;
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 700;
   line-height: 36px;
   letter-spacing: 0.16px;
