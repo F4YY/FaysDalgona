@@ -1,13 +1,29 @@
 import * as React from "react";
 import data from "../database/menu.json";
 import { animated, useTransition, config } from "react-spring";
+import { useNavigate } from "react-router-dom";
 
 export default function MyComponent() {
+  const handleClick = (anchor) => () => {
+    navigate(anchor)
+    const id = `${anchor}-section`;
+    const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+        });
+        }
+      };
+
+  const navigate = useNavigate();
+
   const categoryTransitions = useTransition(data, {
     from: { opacity: 0, transform: "translateY(-20px)" },
     enter: { opacity: 1, transform: "translateY(0px)" },
     config: {...config.default,delay: 1000},
   });
+
   return (
     <div className="bg-white flex flex-col max-md:max-w-full">
       <div className="flex flex-col self-stretch mt-5 mb-32 max-md:max-w-full">
@@ -136,7 +152,7 @@ export default function MyComponent() {
                             className="aspect-[1] object-contain object-center w-28 h-28 shrink-0 self-center hover:scale-105 transition-transform duration-300"
                           />
                         </a>
-                        <a href="..." className="text-orange-800 font-semibold text-opacity-80 tracking-normal text-lg w-[130px] self-center mt-px">
+                        <a href={item.href} onClick={handleClick(item.href)} className="text-orange-800 font-semibold text-opacity-80 tracking-normal text-lg w-[130px] self-center mt-px">
                           {item.title}
                         </a>
                       </div>

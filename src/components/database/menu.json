@@ -4,15 +4,15 @@
     "items": [
       {
         "name": "Dalgona Iced",
-        "href": "...",
+        "href": "#About-section",
         "imageUrl": "https://cdn.builder.io/api/v1/image/assets/TEMP/51844c7b-8db0-4db7-acd7-600559b65b9a",
         "title": "Dalgona Iced",
         "width": "235px",
-        "link": "/your-destination-url"
+        "link": "/About#About-section"
       },
       {
         "name": "Regular Iced",
-        "href": "...",
+        "href": "#OrderOnline",
         "imageUrl": "https://cdn.builder.io/api/v1/image/assets/TEMP/e50ea884-e766-419e-a700-21551c98c7c3",
         "title": "Regular Iced",
         "width": "236px",
