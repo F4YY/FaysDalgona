@@ -181,10 +181,6 @@ export const DrinkLink = styled.a`
   max-width: 140px;
   margin-top: 1px;
 
-  @media (max-width: 991px) {
-    font-size: 14px;
-  }
-
   @media (max-width: 640px) {
     flex-grow: 1;
     max-width: 200px;
