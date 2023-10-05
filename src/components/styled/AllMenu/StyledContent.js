@@ -104,15 +104,10 @@ export const StyledTextCategory = styled.a`
   align-self: start;
   border-style: none;
   border-width: 1px;
-  margin: 20px 0 10px;
+  margin: 20px 0;
 
   @media (max-width: 991px) {
-    margin: 20px 0 0;
-  }
-
-  @media (max-width: 640px) {
-    margin-bottom: 0;
-    margin-top: 30px;
+    margin: 20px 0 10px;
   }
 `;
 
@@ -122,7 +117,7 @@ export const DrinksContainer = styled.div`
   position: relative;
   flex-wrap: wrap;
   gap: 20px;
-  padding: 0 0 20px;
+  padding: 0 0 30px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.22);
 
   @media (max-width: 991px) {
