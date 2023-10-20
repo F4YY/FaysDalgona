@@ -77,27 +77,6 @@
         "link": "/your-destination-url"
       }
     ]
-  },
-  {
-    "category": "Topping",
-    "items": [
-      {
-        "name": "Lotus Biscoff Crumbles",
-        "href": "...",
-        "imageUrl": "https://cdn.builder.io/api/v1/image/assets/TEMP/f5bd4811-c772-4197-bc65-da9ffb198317",
-        "title": "Lotus Biscoff Crumbles",
-        "width": "235px",
-        "link": "/your-destination-url"
-      },
-      {
-        "name": "Choco Crispy Balls",
-        "href": "...",
-        "imageUrl": "https://cdn.builder.io/api/v1/image/assets/TEMP/c2332bad-49fa-4eba-bacd-e082f9f1e639",
-        "title": "Choco Crispy Balls",
-        "width": "235px",
-        "link": "/your-destination-url"
-      }
-    ]
   }
 ]
 

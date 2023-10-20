@@ -5,6 +5,7 @@ export const Container = styled.div`
   flex-direction: row;
   align-items: flex-start;
   margin: 0 0 40px;
+  background-color: rebeccapurple;
   `;
 
 export const LeftContent = styled.div`
@@ -13,6 +14,7 @@ export const LeftContent = styled.div`
   align-self: stretch;
   min-width: 300px;
   margin: 10px 0 40px 12px;
+  background-color: beige;
 
   @media (max-width: 991px) {
     margin-top: 20px;
@@ -67,6 +69,7 @@ export const RightContent = styled.div`
   width: 100%;
   height: auto;
   margin: 30px 0 0;
+  background-color: aquamarine;
   @media (max-width: 991px) {
     margin: 20px 0 0;
   }

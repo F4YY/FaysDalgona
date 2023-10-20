@@ -50,8 +50,8 @@ const NavBar = () => {
         behavior: "smooth",
         block: "start",
         });
-        }
-      };
+      }
+  };
 
   const [toggleMenu, setToggleMenu] = React.useState(false);
   const navigate = useNavigate();
