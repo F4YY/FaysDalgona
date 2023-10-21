@@ -17,6 +17,7 @@ import {
   MenuItem,
   MenuItemGroup,
   MenuItemImage,
+  MenuItemList,
   MenuItemText,
   MenuSection,
   MenuTitle,
@@ -62,7 +63,7 @@ export default function Menu() {
                 {menu.category}
               </MenuTitle>
               {menu.items.map((item) => (
-              <MenuItem key={item.name}>{item.name}</MenuItem>
+              <MenuItemList key={item.name}>{item.name}</MenuItemList>
               ))}
             </MenuSection>
           ))}
