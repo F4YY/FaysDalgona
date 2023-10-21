@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 export const Wrapper = styled.div`
   display: flex;
@@ -208,6 +208,17 @@ export const MenuTitle = styled.div`
   max-width: 100%;
 `;
 
+export const fadeInLeft = keyframes`
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+`;
+
 export const RightMenu = styled.div`
   display: flex;
   width:100%;
@@ -275,6 +286,7 @@ export const MenuItemImage = styled.img`
   max-width: 112px;
   aspect-ratio: 1;
   cursor: pointer;
+  animation: ${fadeInLeft} 0.7s ease-in-out;
   &:hover {
     transform: scale(1.05);
     transition: all 0.2s ease-in-out;
@@ -291,6 +303,7 @@ export const MenuItemText = styled.h2`
   align-self: center;
   max-width: 160px;
   cursor: pointer;
+  animation: ${fadeInLeft} 1s ease-in-out;
   &:hover {
     color: #000;
   }
