@@ -324,7 +324,7 @@ export const MenuItemGroup = styled.div`
   min-width: 270px;
   gap: 10px;
   @media (max-width: 991px) {
-    min-width: 210px;
+    min-width: 170px;
   }
 `;
 
