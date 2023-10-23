@@ -13,11 +13,7 @@ function Main() {
     <main>
       <Routes>
         <Route path="/AllMenu" element={<Menu/>}>
-          <Route path="MainMenu" element={<MainMenu />} >
-            <Route path="Dalgona Iced" element={<DalgonaIced />} />
-            <Route path="Regular Iced" element={<RegularIced />} />
-            <Route path="Regular Hot" element={<RegularHot />} />
-          </Route>
+          <Route path="MainMenu" element={<MainMenu />} />
           <Route path="Dalgona Iced" element={<DalgonaIced />} />
           <Route path="Regular Iced" element={<RegularIced />} />
           <Route path="Regular Hot" element={<RegularHot />} />

@@ -26,7 +26,7 @@ export const MainMenu = () => {
           <MenuItemGroup key={item.name}>
             <MenuItemImage src={require(`../../images/${item.imageUrl}`)} alt={item.name}/>
             <MenuItemText
-              onClick={() => handleClick(item.name)}
+              onClick={() => handleClick('/AllMenu/' + item.name)}
             >
               {item.name}
             </MenuItemText>

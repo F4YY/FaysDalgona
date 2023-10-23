@@ -82,11 +82,10 @@ export default function Menu() {
             Menu
           </MenuHeader>
           <Routes>
-            <Route path="/" element={<MainMenu />} />
-            <Route path="/MainMenu" element={<MainMenu />} />
-            <Route path="/Dalgona Iced" element={<DalgonaIced />} />
-            <Route path="/Regular Iced" element={<RegularIced />} />
-            <Route path="/Regular Hot" element={<RegularHot />} />
+            <Route path="MainMenu" element={<MainMenu />} />
+            <Route path="Dalgona Iced" element={<DalgonaIced />} />
+            <Route path="Regular Iced" element={<RegularIced />} />
+            <Route path="Regular Hot" element={<RegularHot />} />
           </Routes>
         </RightMenu>
       </MainContent>
