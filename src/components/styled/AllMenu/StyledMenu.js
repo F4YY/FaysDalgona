@@ -298,11 +298,14 @@ export const MenuCategoryGroup = styled.div`
   width: 100%;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 40px;
-  row-gap: 20px;
+  gap: 38px;
+  row-gap: 40px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.27);
   padding: 0 0 20px;
   margin: 20px 0 0;
+  @media (max-width: 991px) {
+    row-gap: 30px;
+  }
 `
 export const MenuCategory = styled.div`
   color: var(--Very-dark-desaturated-blue);
@@ -318,13 +321,17 @@ export const MenuCategory = styled.div`
 export const MenuItemGroup = styled.div`
   display: flex;
   flex-direction: row;
-  gap: 12px;
+  min-width: 270px;
+  gap: 10px;
 `;
 
 export const MenuItemImage = styled.img`
   max-width: 112px;
+  border-radius: 20px;
+  object-fit: cover;
   aspect-ratio: 1;
   cursor: pointer;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
   animation: ${fadeInLeft} 0.7s ease-in-out;
   &:hover {
     transform: scale(1.05);
@@ -339,7 +346,7 @@ export const MenuItemText = styled.h2`
   line-height: 142.5%;
   letter-spacing: 0.16px;
   align-self: center;
-  max-width: 160px;
+  max-width: 150px;
   cursor: pointer;
   animation: ${fadeInLeft} 1s ease-in-out;
   &:hover {

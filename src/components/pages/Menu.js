@@ -11,14 +11,9 @@ import {
   LocationText,
   Logo,
   MainContent,
-  MenuCategory,
-  MenuCategoryGroup,
   MenuHeader,
   MenuItem,
-  MenuItemGroup,
-  MenuItemImage,
   MenuItemList,
-  MenuItemText,
   MenuSection,
   MenuTitle,
   RightMenu,
@@ -27,14 +22,23 @@ import {
   TopNavigation,
   Wrapper,
 } from "../styled/AllMenu/StyledMenu";
+import { MainMenu } from "./AllMenu/MainMenu";
+import { Route, Routes, useNavigate } from "react-router-dom";
+import { DalgonaIced } from "./AllMenu/DalgonaIced";
+import { RegularIced } from "./AllMenu/RegularIced";
+import { RegularHot } from "./AllMenu/RegularHot";
 
 export default function Menu() {
+  const navigate = useNavigate();
+  const handleClick = (anchor) => {
+    navigate(anchor);
+  }
   return (
     <Wrapper id='AllMenu-section'>
       <TopNavigation >
         <LeftNav>
           <Logo loading="lazy" srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/dc0728cf-66a4-4138-a841-90f1c4a2627d?apiKey=1bea62adcf07414aa16974ab6f37361e&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/dc0728cf-66a4-4138-a841-90f1c4a2627d?apiKey=1bea62adcf07414aa16974ab6f37361e&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/dc0728cf-66a4-4138-a841-90f1c4a2627d?apiKey=1bea62adcf07414aa16974ab6f37361e&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/dc0728cf-66a4-4138-a841-90f1c4a2627d?apiKey=1bea62adcf07414aa16974ab6f37361e&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/dc0728cf-66a4-4138-a841-90f1c4a2627d?apiKey=1bea62adcf07414aa16974ab6f37361e&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/dc0728cf-66a4-4138-a841-90f1c4a2627d?apiKey=1bea62adcf07414aa16974ab6f37361e&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/dc0728cf-66a4-4138-a841-90f1c4a2627d?apiKey=1bea62adcf07414aa16974ab6f37361e&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/dc0728cf-66a4-4138-a841-90f1c4a2627d?apiKey=1bea62adcf07414aa16974ab6f37361e&"/>
-          <MenuItem>Menu</MenuItem>
+          <MenuItem onClick={() => handleClick("MainMenu")}>Menu</MenuItem>
           <MenuItem>Rewards</MenuItem>
           <MenuItem>Gift Cards</MenuItem>
         </LeftNav>
@@ -49,7 +53,7 @@ export default function Menu() {
       </TopNavigation>
       <AuxiliaryNavigation>
         <AuxNavList>
-          <MenuItem>Menu</MenuItem>
+          <MenuItem onClick={() => handleClick("MainMenu")}>Menu</MenuItem>
           <MenuItem>Featured</MenuItem>
           <MenuItem>Previous</MenuItem>
           <MenuItem>Favorites</MenuItem>
@@ -63,7 +67,12 @@ export default function Menu() {
                 {menu.category}
               </MenuTitle>
               {menu.items.map((item) => (
-              <MenuItemList key={item.name}>{item.name}</MenuItemList>
+              <MenuItemList
+                key={item.name}
+                onClick={() => handleClick(item.name)}
+              >
+                {item.name}
+              </MenuItemList>
               ))}
             </MenuSection>
           ))}
@@ -72,23 +81,13 @@ export default function Menu() {
           <MenuHeader>
             Menu
           </MenuHeader>
-          {menudata.map((menu) => (
-            <>
-              <MenuCategory>
-                {menu.category}
-              </MenuCategory>
-              <MenuCategoryGroup>
-                {menu.items.map((item) => (
-                <MenuItemGroup key={item.name}>
-                  <MenuItemImage src={item.imageUrl} alt={item.name}/>
-                  <MenuItemText>
-                    {item.name}
-                  </MenuItemText>
-                </MenuItemGroup>
-                ))}
-              </MenuCategoryGroup>
-            </>
-          ))}
+          <Routes>
+            <Route path="/" element={<MainMenu />} />
+            <Route path="/MainMenu" element={<MainMenu />} />
+            <Route path="/Dalgona Iced" element={<DalgonaIced />} />
+            <Route path="/Regular Iced" element={<RegularIced />} />
+            <Route path="/Regular Hot" element={<RegularHot />} />
+          </Routes>
         </RightMenu>
       </MainContent>
     </Wrapper>

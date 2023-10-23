@@ -5,26 +5,242 @@
       {
         "name": "Dalgona Iced",
         "href": "#About-section",
-        "imageUrl": "https://cdn.builder.io/api/v1/image/assets/TEMP/51844c7b-8db0-4db7-acd7-600559b65b9a",
-        "title": "Dalgona Iced",
+        "imageUrl": "Dalgona.jpg",
+        "title": "DalgonaIced",
         "width": "235px",
-        "link": "/About#About-section"
+        "link": "/About#About-section",
+        "list": [
+          {
+            "name": "Dalgona Choco Silverqueen",
+            "image": "Dalg_ChocSilv.jpg",
+            "stars": "200",
+            "description": "Dalgona drink with chocolate SilverQueen flavor mixed with brown sugar and boba pearl",
+            "calories": "380 calories, 19g sugar, 34g fat"
+          },
+          {
+            "name": "Dalgona Capuccino",
+            "image": "Dalg_Capu.jpg",
+            "stars": "190",
+            "description": "Dalgona drink with capuccino  flavor mixed with brown sugar and boba pearl",
+            "calories": "380 calories, 19g sugar, 34g fat"
+          },
+          {
+            "name": "Dalgona Green Tea",
+            "image": "Dalg_Greentea.jpg",
+            "stars": "170",
+            "description": "Dalgona drink with Green tea flavor mixed with brown sugar and boba pearl",
+            "calories": "380 calories, 19g sugar, 34g fat"
+          },
+          {
+            "name": "Dalgona Original Thai Tea",
+            "image": "Dalg_Orithaitea.jpg",
+            "stars": "100",
+            "description": "Dalgona drink with Original thai tea flavor mixed with brown sugar and boba pearl",
+            "calories": "380 calories, 19g sugar, 34g fat"
+          },
+          {
+            "name": "Dalgona Choco Milo",
+            "image": "Dalg_ChocMilo.jpg",
+            "stars": "140",
+            "description": "Dalgona drink with Chocolate milo flavor mixed with brown sugar and boba pearl",
+            "calories": "380 calories, 19g sugar, 34g fat"
+          },
+          {
+            "name": "Dalgona Moccaccino",
+            "image": "Dalg_Moca.jpg",
+            "stars": "110",
+            "description": "Dalgona drink with Moccaccino flavor mixed with brown sugar and boba pearl",
+            "calories": "380 calories, 19g sugar, 34g fat"
+          },
+          {
+            "name": "Dalgona Red Velvet",
+            "image": "Dalg_RedV.png",
+            "stars": "170",
+            "description": "Dalgona drink with Red velvet flavor mixed with brown sugar and boba pearl",
+            "calories": "380 calories, 19g sugar, 34g fat"
+          },
+          {
+            "name": "Dalgona Taro",
+            "image": "Dalg_Taro.jpg",
+            "stars": "160",
+            "description": "Dalgona drink with Taro flavor mixed with brown sugar and boba pearl",
+            "calories": "380 calories, 19g sugar, 34g fat"
+          },
+          {
+            "name": "Dalgona Nescafe Classic",
+            "image": "Dalg_Nescafe.jpg",
+            "stars": "120",
+            "description": "Dalgona drink with Nescafe coffee flavor mixed with brown sugar and boba pearl",
+            "calories": "380 calories, 19g sugar, 34g fat"
+          },
+          {
+            "name": "Dalgona Tiramisu",
+            "image": "Dalg_Tira.jpg",
+            "stars": "100",
+            "description": "Dalgona drink with Tiramisu flavor mixed with brown sugar and boba pearl",
+            "calories": "380 calories, 19g sugar, 34g fat"
+          }
+        ]
       },
       {
         "name": "Regular Iced",
         "href": "#OrderOnline",
-        "imageUrl": "https://cdn.builder.io/api/v1/image/assets/TEMP/e50ea884-e766-419e-a700-21551c98c7c3",
+        "imageUrl": "Regular_iced.jpeg",
         "title": "Regular Iced",
         "width": "236px",
-        "link": "/your-destination-url"
+        "link": "/your-destination-url",
+        "list": [
+          {
+            "name": "Choco Silverqueen Iced",
+            "image": "ReguIced_ChocSilv.jpg",
+            "stars": "180",
+            "description": "Regular iced drink with chocolate SilverQueen flavor mixed with milk, brown sugar and boba pearl",
+            "calories": "340 calories, 18g sugar, 31g fat"
+          },
+          {
+            "name": "Capuccino Iced",
+            "image": "ReguIced_Capu.jpg",
+            "stars": "180",
+            "description": "Regular iced drink with capuccino flavor mixed with milk, brown sugar and boba pearl",
+            "calories": "340 calories, 18g sugar, 31g fat"
+          },
+          {
+            "name": "Green Tea Iced",
+            "image": "ReguIced_Greentea.jpg",
+            "stars": "170",
+            "description": "Regular iced drink with green tea flavor mixed with milk, brown sugar and boba pearl",
+            "calories": "340 calories, 18g sugar, 31g fat"
+          },
+          {
+            "name": "Original Thai Tea Iced",
+            "image": "ReguIced_Orithaitea.jpg",
+            "stars": "100",
+            "description": "Regular iced drink with original thai tea flavor mixed with milk, brown sugar and boba pearl",
+            "calories": "340 calories, 18g sugar, 31g fat"
+          },
+          {
+            "name": "Choco Milo Iced",
+            "image": "ReguIced_ChocMilo.jpg",
+            "stars": "160",
+            "description": "Regular iced drink with chocolate milo flavor mixed with milk, brown sugar and boba pearl",
+            "calories": "340 calories, 18g sugar, 31g fat"
+          },
+          {
+            "name": "Moccaccino Iced",
+            "image": "ReguIced_Moca.jpg",
+            "stars": "130",
+            "description": "Regular iced drink with moccaccino flavor mixed with milk, brown sugar and boba pearl",
+            "calories": "340 calories, 18g sugar, 31g fat"
+          },
+          {
+            "name": "Red Velvet Iced",
+            "image": "ReguIced_RedV.png",
+            "stars": "170",
+            "description": "Regular iced drink with red velvet flavor mixed with milk, brown sugar and boba pearl",
+            "calories": "340 calories, 18g sugar, 31g fat"
+          },
+          {
+            "name": "Taro Iced",
+            "image": "ReguIced_Taro.jpg",
+            "stars": "160",
+            "description": "Regular iced drink with taro flavor mixed with milk, brown sugar and boba pearl",
+            "calories": "340 calories, 18g sugar, 31g fat"
+          },
+          {
+            "name": "Nescafe Classic Iced",
+            "image": "ReguIced_Nescafe.jpeg",
+            "stars": "120",
+            "description": "Regular iced drink with nescafe classic flavor mixed with milk, brown sugar and boba pearl",
+            "calories": "340 calories, 18g sugar, 31g fat"
+          },
+          {
+            "name": "Tiramisu Iced",
+            "image": "ReguIced_Tira.jpg",
+            "stars": "130",
+            "description": "Regular iced drink with tiramisu flavor mixed with milk, brown sugar and boba pearl",
+            "calories": "340 calories, 18g sugar, 31g fat"
+          }
+        ]
       },
       {
         "name": "Regular Hot",
         "href": "...",
-        "imageUrl": "https://cdn.builder.io/api/v1/image/assets/TEMP/dc335bdf-822a-4010-8f7b-1b258de0664a",
+        "imageUrl": "Regular_hot.jpeg",
         "title": "Regular Hot",
         "width": "231px",
-        "link": "/your-destination-url"
+        "link": "/your-destination-url",
+        "list": [
+          {
+            "name": "Hot Choco Silverqueen",
+            "image": "ReguHot_ChocSilv.jpg",
+            "stars": "180",
+            "description": "Regular hot drink with chocolate SilverQueen flavor mixed with milk, brown sugar and boba pearl",
+            "calories": "340 calories, 18g sugar, 31g fat"
+          },
+          {
+            "name": "Capuccino Iced",
+            "image": "ReguHot_Capu.jpg",
+            "stars": "180",
+            "description": "Regular hot drink with capuccino flavor mixed with milk, brown sugar and boba pearl",
+            "calories": "340 calories, 18g sugar, 31g fat"
+          },
+          {
+            "name": "Green Tea Iced",
+            "image": "ReguHot_Greentea.jpg",
+            "stars": "170",
+            "description": "Regular hot drink with green tea flavor mixed with milk, brown sugar and boba pearl",
+            "calories": "340 calories, 18g sugar, 31g fat"
+          },
+          {
+            "name": "Original Thai Tea Iced",
+            "image": "ReguHot_Orithaitea.jpg",
+            "stars": "100",
+            "description": "Regular hot drink with original thai tea flavor mixed with milk, brown sugar and boba pearl",
+            "calories": "340 calories, 18g sugar, 31g fat"
+          },
+          {
+            "name": "Choco Milo Iced",
+            "image": "ReguHot_ChocMilo.jpg",
+            "stars": "160",
+            "description": "Regular hot drink with chocolate milo flavor mixed with milk, brown sugar and boba pearl",
+            "calories": "340 calories, 18g sugar, 31g fat"
+          },
+          {
+            "name": "Moccaccino Iced",
+            "image": "ReguHot_Moca.jpg",
+            "stars": "130",
+            "description": "Regular hot drink with moccaccino flavor mixed with milk, brown sugar and boba pearl",
+            "calories": "340 calories, 18g sugar, 31g fat"
+          },
+          {
+            "name": "Red Velvet Iced",
+            "image": "ReguHot_RedV.jpg",
+            "stars": "170",
+            "description": "Regular hot drink with red velvet flavor mixed with milk, brown sugar and boba pearl",
+            "calories": "340 calories, 18g sugar, 31g fat"
+          },
+          {
+            "name": "Taro Iced",
+            "image": "ReguHot_Taro.jpg",
+            "stars": "160",
+            "description": "Regular hot drink with taro flavor mixed with milk, brown sugar and boba pearl",
+            "calories": "340 calories, 18g sugar, 31g fat"
+          },
+          {
+            "name": "Nescafe Classic Iced",
+            "image": "ReguHot_Nescafe.jpg",
+            "stars": "120",
+            "description": "Regular hot drink with nescafe classic flavor mixed with milk, brown sugar and boba pearl",
+            "calories": "340 calories, 18g sugar, 31g fat"
+          },
+          {
+            "name": "Tiramisu Iced",
+            "image": "ReguHot_Tira.jpg",
+            "stars": "130",
+            "description": "Regular hot drink with tiramisu flavor mixed with milk, brown sugar and boba pearl",
+            "calories": "340 calories, 18g sugar, 31g fat"
+          }
+        ]
       }
     ]
   },
@@ -34,7 +250,7 @@
       {
         "name": "Mie Nyemek",
         "href": "...",
-        "imageUrl": "https://cdn.builder.io/api/v1/image/assets/TEMP/d1a67e46-1bf3-46d2-98fd-8d3c5c444b50",
+        "imageUrl": "mie_nyemek.jpg",
         "title": "Mie Nyemek",
         "width": "235px",
         "link": "/your-destination-url"
@@ -42,7 +258,7 @@
       {
         "name": "Croffle Original",
         "href": "...",
-        "imageUrl": "https://cdn.builder.io/api/v1/image/assets/TEMP/62ce8a1c-36a6-40c5-9d3e-45ad88dbddcf",
+        "imageUrl": "Croffle2.jpg",
         "title": "Croffle Original",
         "width": "235px",
         "link": "/your-destination-url"
@@ -50,7 +266,7 @@
       {
         "name": "Sate Bakso Seafood",
         "href": "...",
-        "imageUrl": "https://cdn.builder.io/api/v1/image/assets/TEMP/2fc1725a-fc70-4991-bd94-83a44d345899",
+        "imageUrl": "FD_SateBaksoSeafood.jpg",
         "title": "Sate Bakso Seafood",
         "width": "235px",
         "link": "/your-destination-url"
@@ -63,7 +279,7 @@
       {
         "name": "Simple DalCro",
         "href": "...",
-        "imageUrl": "https://cdn.builder.io/api/v1/image/assets/TEMP/136cb68a-a6bb-4a8a-bbd3-5a8197595777",
+        "imageUrl": "DalCro.png",
         "title": "Simple DalCro",
         "width": "235px",
         "link": "/your-destination-url"
@@ -71,7 +287,7 @@
       {
         "name": "Combo 123",
         "href": "...",
-        "imageUrl": "https://cdn.builder.io/api/v1/image/assets/TEMP/d92f2a84-40ca-4420-bd65-d3f4458f62b2",
+        "imageUrl": "Combo123.png",
         "title": "Combo 123",
         "width": "235px",
         "link": "/your-destination-url"
