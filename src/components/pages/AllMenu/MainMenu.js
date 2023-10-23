@@ -24,7 +24,12 @@ export const MainMenu = () => {
         <MenuCategoryGroup>
           {menu.items.map((item) => (
           <MenuItemGroup key={item.name}>
-            <MenuItemImage loading="lazy" src={require(`../../images/${item.imageUrl}`)} alt={item.name}/>
+            <MenuItemImage
+              loading="lazy"
+              src={require(`../../images/${item.imageUrl}`)}
+              alt={item.name}
+              onClick={() => handleClick('/AllMenu/' + item.name)}
+            />
             <MenuItemText
               onClick={() => handleClick('/AllMenu/' + item.name)}
             >

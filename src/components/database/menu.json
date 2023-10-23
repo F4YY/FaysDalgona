@@ -33,7 +33,7 @@
           },
           {
             "name": "Dalgona Original Thai Tea",
-            "image": "Dalg_Orithaitea.jpg",
+            "image": "Dalg_Orithaitea.webp",
             "stars": "100",
             "description": "Dalgona drink with Original thai tea flavor mixed with brown sugar and boba pearl",
             "calories": "380 calories, 19g sugar, 34g fat"
@@ -54,14 +54,14 @@
           },
           {
             "name": "Dalgona Red Velvet",
-            "image": "Dalg_RedV.png",
+            "image": "Dalg_RedV.webp",
             "stars": "170",
             "description": "Dalgona drink with Red velvet flavor mixed with brown sugar and boba pearl",
             "calories": "380 calories, 19g sugar, 34g fat"
           },
           {
             "name": "Dalgona Taro",
-            "image": "Dalg_Taro.jpg",
+            "image": "Dalg_Taro.webp",
             "stars": "160",
             "description": "Dalgona drink with Taro flavor mixed with brown sugar and boba pearl",
             "calories": "380 calories, 19g sugar, 34g fat"
@@ -75,7 +75,7 @@
           },
           {
             "name": "Dalgona Tiramisu",
-            "image": "Dalg_Tira.jpg",
+            "image": "Dalg_Tira.webp",
             "stars": "100",
             "description": "Dalgona drink with Tiramisu flavor mixed with brown sugar and boba pearl",
             "calories": "380 calories, 19g sugar, 34g fat"

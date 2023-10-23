@@ -324,7 +324,7 @@ export const MenuItemGroup = styled.div`
   min-width: 270px;
   gap: 10px;
   @media (max-width: 991px) {
-    min-width: 200px;
+    min-width: 210px;
   }
 `;
 
@@ -354,5 +354,8 @@ export const MenuItemText = styled.h2`
   animation: ${fadeInLeft} 1s ease-in-out;
   &:hover {
     color: #D15B05;
+  }
+  @media (max-width: 991px) {
+    max-width: 130px;
   }
 `;
