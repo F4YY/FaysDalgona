@@ -21,7 +21,7 @@ export const DalgonaIced = () => {
       <MenuCategoryGroup>
         {dalgonaIced.items[0].list.map((item) => (
           <MenuItemGroup key={item.name}>
-            <MenuItemImage src={require(`../../images/${item.image}`)} alt={item.name} />
+            <MenuItemImage loading="lazy" src={require(`../../images/${item.image}`)} alt={item.name} />
             <MenuItemText>
               {item.name}
             </MenuItemText>
