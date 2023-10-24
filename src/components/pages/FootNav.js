@@ -7,7 +7,6 @@ import {
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 import { Box, Heading, HStack, VStack } from "@chakra-ui/react";
-import FD_Footer from "../images/FD_Footer.png";
 
 const socials = [
   {
@@ -80,8 +79,8 @@ const FootNav = () => {
                 <p>Eid Fitri : Close</p>
               </VStack>
               <HStack spacing={1}>
-                <p>• Fay's Dalgona ©2023 •</p>
-                <img src={FD_Footer} alt="LL_Footer" width="25%"/>
+                <img src={require("../images/FooterFD.png")} alt="LL_Footer" width="25%"/>
+                <p>© 2023</p>
               </HStack>
             </HStack>
           </footer>
