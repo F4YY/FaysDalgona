@@ -27,6 +27,7 @@ import { Route, Routes, useNavigate } from "react-router-dom";
 import { DalgonaIced } from "./AllMenu/DalgonaIced";
 import { RegularIced } from "./AllMenu/RegularIced";
 import { RegularHot } from "./AllMenu/RegularHot";
+import { MieNyemek } from "./AllMenu/MieNyemek";
 
 export default function Menu() {
   const navigate = useNavigate();
@@ -87,6 +88,7 @@ export default function Menu() {
             <Route path="Dalgona Iced" element={<DalgonaIced />} />
             <Route path="Regular Iced" element={<RegularIced />} />
             <Route path="Regular Hot" element={<RegularHot />} />
+            <Route path="Mie Nyemek" element={<MieNyemek />} />
           </Routes>
         </RightMenu>
       </MainContent>

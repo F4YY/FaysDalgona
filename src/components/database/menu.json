@@ -33,7 +33,7 @@
           },
           {
             "name": "Dalgona Original Thai Tea",
-            "image": "Dalg_Orithaitea.webp",
+            "image": "Dalg_Orithaitea.jpg",
             "stars": "100",
             "description": "Dalgona drink with Original thai tea flavor mixed with brown sugar and boba pearl",
             "calories": "380 calories, 19g sugar, 34g fat"
@@ -54,14 +54,14 @@
           },
           {
             "name": "Dalgona Red Velvet",
-            "image": "Dalg_RedV.webp",
+            "image": "Dalg_RedV.jpg",
             "stars": "170",
             "description": "Dalgona drink with Red velvet flavor mixed with brown sugar and boba pearl",
             "calories": "380 calories, 19g sugar, 34g fat"
           },
           {
             "name": "Dalgona Taro",
-            "image": "Dalg_Taro.webp",
+            "image": "Dalg_Taro.jpg",
             "stars": "160",
             "description": "Dalgona drink with Taro flavor mixed with brown sugar and boba pearl",
             "calories": "380 calories, 19g sugar, 34g fat"
@@ -75,7 +75,7 @@
           },
           {
             "name": "Dalgona Tiramisu",
-            "image": "Dalg_Tira.webp",
+            "image": "Dalg_Tira.jpg",
             "stars": "100",
             "description": "Dalgona drink with Tiramisu flavor mixed with brown sugar and boba pearl",
             "calories": "380 calories, 19g sugar, 34g fat"
@@ -134,7 +134,7 @@
           },
           {
             "name": "Red Velvet Iced",
-            "image": "ReguIced_RedV.png",
+            "image": "ReguIced_RedV.jpg",
             "stars": "170",
             "description": "Regular iced drink with red velvet flavor mixed with milk, brown sugar and boba pearl",
             "calories": "340 calories, 18g sugar, 31g fat"
@@ -253,7 +253,30 @@
         "imageUrl": "mie_nyemek.jpg",
         "title": "Mie Nyemek",
         "width": "235px",
-        "link": "/your-destination-url"
+        "link": "/your-destination-url",
+        "list": [
+          {
+            "name": "Mie Nyemek Original",
+            "image": "mienyemek_ori.jpg",
+            "stars": "230",
+            "description": "Indonesian tasty noodles mixed with vegetables and chicken egg",
+            "calories": "410 calories, 10g sugar, 22g fat"
+          },
+          {
+            "name": "Mie Nyemek Bakso Sapi Sosis",
+            "image": "mienyemek_baksosapi.jpg",
+            "stars": "240",
+            "description": "Indonesian tasty noodles mixed with vegetables, chicken egg, beef meatball and sausage",
+            "calories": "440 calories, 10g sugar, 22g fat"
+          },
+          {
+            "name": "Mie Nyemek Bakso Seafood",
+            "image": "mienyemek_baksoseafood.jpg",
+            "stars": "240",
+            "description": "Indonesian tasty noodles mixed with vegetables, chicken egg, seafood meatballs.",
+            "calories": "440 calories, 10g sugar, 22g fat"
+          }
+        ]
       },
       {
         "name": "Croffle Original",
@@ -279,15 +302,87 @@
       {
         "name": "Simple DalCro",
         "href": "...",
-        "imageUrl": "DalCro.png",
+        "imageUrl": "DalCro.jpg",
         "title": "Simple DalCro",
         "width": "235px",
-        "link": "/your-destination-url"
+        "link": "/your-destination-url",
+        "list": [
+          {
+            "name": "DalCro Choco Silverqueen",
+            "image": "DalCro_ChocSilv.jpg",
+            "stars": "190",
+            "description": "1 cup Dalgona chocolate silverqueen flavor +  1 dough Croffle original",
+            "calories": "440 calories, 28g sugar, 34g fat"
+          },
+          {
+            "name": "DalCro Capuccino",
+            "image": "DalCro_Capu.jpg",
+            "stars": "180",
+            "description": "1 cup Dalgona chocolate silverqueen flavor +  1 dough Croffle original",
+            "calories": "340 calories, 18g sugar, 31g fat"
+          },
+          {
+            "name": "DalCro Green Tea",
+            "image": "DalCro_Greentea.jpg",
+            "stars": "170",
+            "description": "1 cup Dalgona chocolate silverqueen flavor +  1 dough Croffle original",
+            "calories": "340 calories, 18g sugar, 31g fat"
+          },
+          {
+            "name": "DalCro Original Thai Tea",
+            "image": "DalCro_Orithaitea.jpg",
+            "stars": "100",
+            "description": "1 cup Dalgona chocolate silverqueen flavor +  1 dough Croffle original",
+            "calories": "340 calories, 18g sugar, 31g fat"
+          },
+          {
+            "name": "DalCro Choco Milo",
+            "image": "DalCro_ChocMilo.jpg",
+            "stars": "160",
+            "description": "1 cup Dalgona chocolate silverqueen flavor +  1 dough Croffle original",
+            "calories": "340 calories, 18g sugar, 31g fat"
+          },
+          {
+            "name": "DalCro Moccaccino",
+            "image": "DalCro_Moca.jpg",
+            "stars": "130",
+            "description": "1 cup Dalgona chocolate silverqueen flavor +  1 dough Croffle original",
+            "calories": "340 calories, 18g sugar, 31g fat"
+          },
+          {
+            "name": "DalCro Red Velvet",
+            "image": "DalCro_RedV.jpg",
+            "stars": "170",
+            "description": "1 cup Dalgona chocolate silverqueen flavor +  1 dough Croffle original",
+            "calories": "340 calories, 18g sugar, 31g fat"
+          },
+          {
+            "name": "DalCro Taro",
+            "image": "DalCro_Taro.jpg",
+            "stars": "160",
+            "description": "1 cup Dalgona chocolate silverqueen flavor +  1 dough Croffle original",
+            "calories": "340 calories, 18g sugar, 31g fat"
+          },
+          {
+            "name": "DalCro Nescafe Classic",
+            "image": "DalCro_Nescafe.jpg",
+            "stars": "120",
+            "description": "1 cup Dalgona chocolate silverqueen flavor +  1 dough Croffle original",
+            "calories": "340 calories, 18g sugar, 31g fat"
+          },
+          {
+            "name": "DalCro Tiramisu",
+            "image": "DalCro_Tira.jpg",
+            "stars": "130",
+            "description": "1 cup Dalgona chocolate silverqueen flavor +  1 dough Croffle original",
+            "calories": "340 calories, 18g sugar, 31g fat"
+          }
+        ]
       },
       {
         "name": "Combo 123",
         "href": "...",
-        "imageUrl": "Combo123.png",
+        "imageUrl": "Combo123.jpg",
         "title": "Combo 123",
         "width": "235px",
         "link": "/your-destination-url"

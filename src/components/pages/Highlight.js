@@ -1,5 +1,4 @@
 import React from 'react';
-import FD_DalgChocSilv from "../images/FD_DalgChocSilv.png";
 import FD_Croffle from "../images/FD_Croffle.jpg";
 import FD_SateBaksoSeafood from "../images/FD_SateBaksoSeafood.jpg";
 import { Heading, Box, Button, Image, VStack, HStack } from "@chakra-ui/react";
@@ -73,7 +72,7 @@ const Highlight = () => {
                         display="flex"
                         width={{base: "auto", md: "auto", lg:"auto"}}
                         borderRadius={30}
-                        src={FD_DalgChocSilv}
+                        src={require(`../images/Dalg_ChocSilv.jpg`)}
                         alt="DalgChocSilv"
                     />
                     <TopMenu
