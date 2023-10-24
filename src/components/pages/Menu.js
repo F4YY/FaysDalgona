@@ -28,6 +28,8 @@ import { DalgonaIced } from "./AllMenu/DalgonaIced";
 import { RegularIced } from "./AllMenu/RegularIced";
 import { RegularHot } from "./AllMenu/RegularHot";
 import { MieNyemek } from "./AllMenu/MieNyemek";
+import { DalCro } from "./AllMenu/DalCro";
+import { Combo123 } from "./AllMenu/Combo123";
 
 export default function Menu() {
   const navigate = useNavigate();
@@ -89,6 +91,8 @@ export default function Menu() {
             <Route path="Regular Iced" element={<RegularIced />} />
             <Route path="Regular Hot" element={<RegularHot />} />
             <Route path="Mie Nyemek" element={<MieNyemek />} />
+            <Route path="Simple DalCro" element={<DalCro />} />
+            <Route path="Combo 123" element={<Combo123 />} />
           </Routes>
         </RightMenu>
       </MainContent>

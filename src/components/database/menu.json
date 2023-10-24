@@ -318,7 +318,7 @@
             "name": "DalCro Capuccino",
             "image": "DalCro_Capu.jpg",
             "stars": "180",
-            "description": "1 cup Dalgona chocolate silverqueen flavor +  1 dough Croffle original",
+            "description": "1 cup Dalgona Capuccino flavor +  1 dough Croffle original",
             "calories": "340 calories, 18g sugar, 31g fat"
           },
           {
@@ -332,49 +332,49 @@
             "name": "DalCro Original Thai Tea",
             "image": "DalCro_Orithaitea.jpg",
             "stars": "100",
-            "description": "1 cup Dalgona chocolate silverqueen flavor +  1 dough Croffle original",
+            "description": "1 cup Dalgona Green Tea flavor +  1 dough Croffle original",
             "calories": "340 calories, 18g sugar, 31g fat"
           },
           {
             "name": "DalCro Choco Milo",
             "image": "DalCro_ChocMilo.jpg",
             "stars": "160",
-            "description": "1 cup Dalgona chocolate silverqueen flavor +  1 dough Croffle original",
+            "description": "1 cup Dalgona Chocolate Milo flavor +  1 dough Croffle original",
             "calories": "340 calories, 18g sugar, 31g fat"
           },
           {
             "name": "DalCro Moccaccino",
-            "image": "DalCro_Moca.jpg",
+            "image": "DalCro_Mocca.jpg",
             "stars": "130",
-            "description": "1 cup Dalgona chocolate silverqueen flavor +  1 dough Croffle original",
+            "description": "1 cup Dalgona Moccaccino flavor +  1 dough Croffle original",
             "calories": "340 calories, 18g sugar, 31g fat"
           },
           {
             "name": "DalCro Red Velvet",
             "image": "DalCro_RedV.jpg",
             "stars": "170",
-            "description": "1 cup Dalgona chocolate silverqueen flavor +  1 dough Croffle original",
+            "description": "1 cup Dalgona Red Velvet flavor +  1 dough Croffle original",
             "calories": "340 calories, 18g sugar, 31g fat"
           },
           {
             "name": "DalCro Taro",
             "image": "DalCro_Taro.jpg",
             "stars": "160",
-            "description": "1 cup Dalgona chocolate silverqueen flavor +  1 dough Croffle original",
+            "description": "1 cup Dalgona Taro flavor +  1 dough Croffle original",
             "calories": "340 calories, 18g sugar, 31g fat"
           },
           {
             "name": "DalCro Nescafe Classic",
             "image": "DalCro_Nescafe.jpg",
             "stars": "120",
-            "description": "1 cup Dalgona chocolate silverqueen flavor +  1 dough Croffle original",
+            "description": "1 cup Dalgona Nescafe Classic flavor +  1 dough Croffle original",
             "calories": "340 calories, 18g sugar, 31g fat"
           },
           {
             "name": "DalCro Tiramisu",
             "image": "DalCro_Tira.jpg",
             "stars": "130",
-            "description": "1 cup Dalgona chocolate silverqueen flavor +  1 dough Croffle original",
+            "description": "1 cup Dalgona Tiramisu flavor +  1 dough Croffle original",
             "calories": "340 calories, 18g sugar, 31g fat"
           }
         ]
@@ -385,7 +385,51 @@
         "imageUrl": "Combo123.jpg",
         "title": "Combo 123",
         "width": "235px",
-        "link": "/your-destination-url"
+        "link": "/your-destination-url",
+        "list": [
+          {
+            "name": "Combo Solo 1",
+            "image": "ComboSolo1.jpg",
+            "stars": "140",
+            "description": "1 cup Dalgona +  2 dough Croffle original + 1 dalgona dipping sauce (When placing an order, please include a note in the information column specifying your preferred Dalgona drink and dipping sauce flavor)",
+            "calories": "520 calories, 34g sugar, 39g fat"
+          },
+          {
+            "name": "Combo Solo 2",
+            "image": "ComboSolo2.jpg",
+            "stars": "140",
+            "description": "1 cup Regular iced +  2 dough Croffle original + 1 dalgona dipping sauce (When placing an order, please include a note in the information column specifying your preferred regular iced drink and dipping sauce flavor)",
+            "calories": "520 calories, 34g sugar, 39g fat"
+          },
+          {
+            "name": "Combo Duo 1",
+            "image": "ComboDuo1.jpg",
+            "stars": "140",
+            "description": "2 cup Dalgona +  3 dough Croffle original + 1 dalgona dipping sauce (When placing an order, please include a note in the information column specifying your preferred Dalgona drink and dipping sauce flavor)",
+            "calories": "520 calories, 34g sugar, 39g fat"
+          },
+          {
+            "name": "Combo Duo 2",
+            "image": "ComboDuo2.jpg",
+            "stars": "140",
+            "description": "2 cup Regular iced +  3 dough Croffle original + 1 dalgona dipping sauce (When placing an order, please include a note in the information column specifying your preferred regular iced drink and dipping sauce flavor)",
+            "calories": "520 calories, 34g sugar, 39g fat"
+          },
+          {
+            "name": "Combo Trio 1",
+            "image": "ComboTrio1.jpg",
+            "stars": "140",
+            "description": "3 cup Dalgona +  5 dough Croffle original + 2 dalgona dipping sauce (When placing an order, please include a note in the information column specifying your preferred Dalgona drink and dipping sauce flavor)",
+            "calories": "520 calories, 34g sugar, 39g fat"
+          },
+          {
+            "name": "Combo Trio 2",
+            "image": "ComboTrio2.jpg",
+            "stars": "140",
+            "description": "3 cup Regular iced +  5 dough Croffle original + 2 dalgona dipping sauce (When placing an order, please include a note in the information column specifying your preferred regular iced drink and dipping sauce flavor)",
+            "calories": "520 calories, 34g sugar, 39g fat"
+          }
+        ]
       }
     ]
   }
