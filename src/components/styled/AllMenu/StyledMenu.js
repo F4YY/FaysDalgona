@@ -321,11 +321,8 @@ export const MenuCategory = styled.div`
 export const MenuItemGroup = styled.div`
   display: flex;
   flex-direction: row;
-  min-width: 270px;
+  width: 235px;
   gap: 10px;
-  @media (max-width: 991px) {
-    min-width: 170px;
-  }
 `;
 
 export const MenuItemImage = styled.img`
@@ -340,6 +337,9 @@ export const MenuItemImage = styled.img`
     transform: scale(1.05);
     transition: all 0.2s ease-in-out;
   }
+  @media (max-width: 991px) {
+    max-width: 100px;
+  }
 `;
 
 export const MenuItemText = styled.h2`
@@ -349,13 +349,13 @@ export const MenuItemText = styled.h2`
   line-height: 142.5%;
   letter-spacing: 0.16px;
   align-self: center;
-  max-width: 150px;
+  width: auto;
   cursor: pointer;
   animation: ${fadeInLeft} 1s ease-in-out;
   &:hover {
     color: #D15B05;
   }
   @media (max-width: 991px) {
-    max-width: 130px;
+
   }
 `;
