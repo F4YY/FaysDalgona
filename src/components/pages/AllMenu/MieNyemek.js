@@ -8,7 +8,7 @@ export const MieNyemek = () => {
         return null;
       }
       return (
-        <div>
+        <>
           <MenuCategory id={`${mieNyemek.items[0].title}-section`}>
             {mieNyemek.items[0].name}
           </MenuCategory>
@@ -22,6 +22,6 @@ export const MieNyemek = () => {
               </MenuItemGroup>
             ))}
           </MenuCategoryGroup>
-        </div>
+        </>
       )
 }

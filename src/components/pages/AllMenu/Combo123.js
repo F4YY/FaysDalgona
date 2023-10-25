@@ -8,7 +8,7 @@ export const Combo123 = () => {
         return null;
       }
       return (
-        <div>
+        <>
           <MenuCategory id={`${combo123.items[1].title}-section`}>
             {combo123.items[1].name}
           </MenuCategory>
@@ -22,6 +22,6 @@ export const Combo123 = () => {
               </MenuItemGroup>
             ))}
           </MenuCategoryGroup>
-        </div>
+        </>
       )
 }

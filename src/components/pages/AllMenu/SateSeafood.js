@@ -8,7 +8,7 @@ export const SateSeafood = () => {
         return null;
       }
       return (
-        <div>
+        <>
           <MenuCategory id={`${sateSeafood.items[2].title}-section`}>
             {sateSeafood.items[2].name}
           </MenuCategory>
@@ -22,6 +22,6 @@ export const SateSeafood = () => {
               </MenuItemGroup>
             ))}
           </MenuCategoryGroup>
-        </div>
+        </>
       )
 }

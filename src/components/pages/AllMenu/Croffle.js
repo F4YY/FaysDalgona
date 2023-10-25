@@ -8,7 +8,7 @@ export const Croffle = () => {
         return null;
       }
       return (
-        <div>
+        <>
           <MenuCategory id={`${croffle.items[1].title}-section`}>
             {croffle.items[1].name}
           </MenuCategory>
@@ -22,6 +22,6 @@ export const Croffle = () => {
               </MenuItemGroup>
             ))}
           </MenuCategoryGroup>
-        </div>
+        </>
       )
 }

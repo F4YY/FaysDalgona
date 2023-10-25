@@ -264,12 +264,7 @@ export const RightMenu = styled.div`
   flex-direction: column;
   @media (max-width: 991px) {
     width: 70%;
-    flex-direction: row;
-    flex-wrap: wrap;
     margin: 30px 20px 50px;
-  }
-  @media (max-width: 640px) {
-    width: 90%;
   }
 `;
 
@@ -292,7 +287,6 @@ export const MenuHeader = styled.div`
     padding-right: 10px;
   }
 `;
-
 export const MenuCategoryGroup = styled.div`
   display: flex;
   width: 100%;
@@ -314,7 +308,6 @@ export const MenuCategory = styled.div`
   font-weight: var(--semibold);
   line-height: 138.46%;
   letter-spacing: 0.16px;
-  align-self: start;
   margin: 30px 0 0;
 `;
 
@@ -354,8 +347,5 @@ export const MenuItemText = styled.h2`
   animation: ${fadeInLeft} 1s ease-in-out;
   &:hover {
     color: #D15B05;
-  }
-  @media (max-width: 991px) {
-
   }
 `;

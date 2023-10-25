@@ -37,7 +37,14 @@ export default function Menu() {
   const navigate = useNavigate();
   const handleClick = (anchor) => {
     navigate(anchor);
+    scrollToTop();
   }
+  const scrollToTop = () => {
+    const mainMenuContainer = document.getElementById("main-menu-container");
+    if (mainMenuContainer) {
+      mainMenuContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
   return (
     <Wrapper id='AllMenu-section'>
       <TopNavigation >
@@ -83,12 +90,12 @@ export default function Menu() {
           ))}
         </LeftMenu>
         <RightMenu>
-          <MenuHeader>
+          <MenuHeader id="main-menu-container">
             Menu
           </MenuHeader>
           <Routes>
-            <Route path="/" element={<MainMenu />} />
-            <Route path="MainMenu" element={<MainMenu />} />
+            <Route path="/" element={<MainMenu scrollToTop={scrollToTop}/>} />
+            <Route path="MainMenu" element={<MainMenu scrollToTop={scrollToTop}/>} />
             <Route path="Dalgona Iced" element={<DalgonaIced />} />
             <Route path="Regular Iced" element={<RegularIced />} />
             <Route path="Regular Hot" element={<RegularHot />} />

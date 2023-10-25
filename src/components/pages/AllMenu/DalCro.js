@@ -8,7 +8,7 @@ export const DalCro = () => {
         return null;
       }
       return (
-        <div>
+        <>
           <MenuCategory id={`${dalCro.items[0].title}-section`}>
             {dalCro.items[0].name}
           </MenuCategory>
@@ -22,6 +22,6 @@ export const DalCro = () => {
               </MenuItemGroup>
             ))}
           </MenuCategoryGroup>
-        </div>
+        </>
       )
 }
