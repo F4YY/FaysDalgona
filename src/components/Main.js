@@ -10,6 +10,8 @@ import { RegularHot } from './pages/AllMenu/RegularHot';
 import { MieNyemek } from './pages/AllMenu/MieNyemek';
 import { DalCro } from './pages/AllMenu/DalCro';
 import { Combo123 } from './pages/AllMenu/Combo123';
+import { Croffle } from './pages/AllMenu/Croffle';
+import { SateSeafood } from './pages/AllMenu/SateSeafood';
 
 function Main() {
   return (
@@ -23,6 +25,8 @@ function Main() {
           <Route path="Mie Nyemek" element={<MieNyemek />} />
           <Route path="Simple DalCro" element={<DalCro />} />
           <Route path="Combo 123" element={<Combo123 />} />
+          <Route path="Croffle Original" element={<Croffle />} />
+          <Route path="Sate Bakso Seafood" element={<SateSeafood />} />
         </Route>
         <Route path="/Testimonials" element={<Testimonials />} />
         <Route path="/About" element={<About />} />

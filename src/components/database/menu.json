@@ -281,10 +281,19 @@
       {
         "name": "Croffle Original",
         "href": "...",
-        "imageUrl": "Croffle2.jpg",
+        "imageUrl": "FD_Croffle.jpg",
         "title": "Croffle Original",
         "width": "235px",
-        "link": "/your-destination-url"
+        "link": "/your-destination-url",
+        "list": [
+          {
+            "name": "Croffle Original",
+            "image": "Croffle2.jpg",
+            "stars": "120",
+            "description": "A delightful fusion of croissants and waffles, created by cooking croissant dough in a waffle iron. The result combines the flaky, buttery layers of a croissant with the grid-like pattern of a waffle",
+            "calories": "190 calories, 15g sugar, 17g fat"
+          }
+        ]
       },
       {
         "name": "Sate Bakso Seafood",
@@ -292,7 +301,16 @@
         "imageUrl": "FD_SateBaksoSeafood.jpg",
         "title": "Sate Bakso Seafood",
         "width": "235px",
-        "link": "/your-destination-url"
+        "link": "/your-destination-url",
+        "list": [
+          {
+            "name": "Sate Bakso Seafood",
+            "image": "SateBakso.jpg",
+            "stars": "90",
+            "description": "A tantalizing dish featuring grilled seafood meatballs infused with aromatic spices. Skewered to perfection, these tender morsels are complemented by a flavorful sauces",
+            "calories": "330 calories, 5g sugar, 27g fat"
+          }
+        ]
       }
     ]
   },

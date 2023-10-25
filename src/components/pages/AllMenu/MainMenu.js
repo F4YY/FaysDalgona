@@ -13,9 +13,16 @@ export const MainMenu = () => {
   const navigate = useNavigate();
   const handleClick = (anchor) => {
     navigate(anchor);
+    scrollToTop();
   }
+  const scrollToTop = () => {
+    const mainMenuContainer = document.getElementById("main-menu-container");
+    if (mainMenuContainer) {
+      mainMenuContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
   return (
-    <>
+    <div id="main-menu-container">
     {menudata.map((menu) => (
       <>
         <MenuCategory>
@@ -40,6 +47,6 @@ export const MainMenu = () => {
         </MenuCategoryGroup>
       </>
     ))}
-    </>
+    </div>
   )
 }

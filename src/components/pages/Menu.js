@@ -30,6 +30,8 @@ import { RegularHot } from "./AllMenu/RegularHot";
 import { MieNyemek } from "./AllMenu/MieNyemek";
 import { DalCro } from "./AllMenu/DalCro";
 import { Combo123 } from "./AllMenu/Combo123";
+import { Croffle } from "./AllMenu/Croffle";
+import { SateSeafood } from "./AllMenu/SateSeafood";
 
 export default function Menu() {
   const navigate = useNavigate();
@@ -93,6 +95,8 @@ export default function Menu() {
             <Route path="Mie Nyemek" element={<MieNyemek />} />
             <Route path="Simple DalCro" element={<DalCro />} />
             <Route path="Combo 123" element={<Combo123 />} />
+            <Route path="Croffle Original" element={<Croffle />} />
+            <Route path="Sate Bakso Seafood" element={<SateSeafood />} />
           </Routes>
         </RightMenu>
       </MainContent>
