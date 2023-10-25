@@ -266,6 +266,9 @@ export const RightMenu = styled.div`
     width: 70%;
     margin: 30px 20px 50px;
   }
+  @media (max-width: 640px) {
+    width: 90%;
+  }
 `;
 
 export const MenuHeader = styled.div`
