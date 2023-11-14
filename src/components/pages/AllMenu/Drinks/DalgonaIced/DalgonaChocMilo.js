@@ -73,7 +73,7 @@ export const DalgonaChocMilo = () => {
           <FontAwesomeIcon icon={faChevronLeft} />&nbsp;Back
         </BackButton>
       </PathAndBackButton>
-      <ProductHero>
+      <ProductHero background={props.items[0].background}>
         <Img loading="lazy" src={require(`../../../../images/${props.items[0].list[4].image}`)} alt={props.items[0].list[4].name} />
         <ProductDesc>
           <ItemName>{props.items[0].list[4].name}</ItemName>

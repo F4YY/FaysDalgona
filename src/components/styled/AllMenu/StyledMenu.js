@@ -341,6 +341,7 @@ export const BackButtontoMain = styled.button`
   }
   @media (max-width: 640px) {
     display: flex;
+    font-size: .95rem;
   }
 `;
 
@@ -518,23 +519,23 @@ export const BackButton = styled.button`
 export const ProductHero = styled.div`
   display: flex;
   width: 100%;
-  background: linear-gradient(
-      135deg, rgba(139, 87, 42, 1) 0%, rgba(150, 89, 6, 0.9) 100%
-    );
-  
+  background: ${props => {
+    console.log('Background Value:', props.background);
+    return props.background;
+  }};
   flex-wrap: wrap;
   justify-content: space-evenly;
 `;
 
 export const Img = styled.img`
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
   width: 30%;
   height: auto;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   overflow: hidden;
   @media (max-width: 991px) {
-    width: 35%;
+    width: 43%;
   }
   @media (max-width: 640px) {
     width: 100%;
@@ -577,7 +578,7 @@ export const Rating = styled.div`
   padding: 4px 6px;
   margin: 6px 0;
   @media (max-width: 991px) {
-    width: 14%;
+    width: 16%;
   }
 `;
 

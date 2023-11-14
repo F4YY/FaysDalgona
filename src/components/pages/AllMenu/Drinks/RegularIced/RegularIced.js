@@ -27,8 +27,15 @@ export const RegularIced = () => {
       <MenuCategoryGroup>
         {regularIced.items[1].list.map((item) => (
           <MenuItemGroup key={item.name}>
-            <MenuItemImage loading="lazy" src={require(`../../../../images/${item.image}`)} alt={item.name} />
-            <MenuItemText>
+            <MenuItemImage
+              loading="lazy"
+              src={require(`../../../../images/${item.image}`)}
+              alt={item.name}
+              onClick={() => handleClick(`/${item.name}`)}
+            />
+            <MenuItemText
+              onClick={() => handleClick(`/${item.name}`)}
+            >
               {item.name}
             </MenuItemText>
           </MenuItemGroup>

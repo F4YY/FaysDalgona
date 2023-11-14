@@ -35,7 +35,7 @@ import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 
-export const DalgonaNescafe = () => {
+export const RegIcedMocca = () => {
   const navigate = useNavigate();
   const handleClick = (anchor) => {
     navigate(anchor);
@@ -52,7 +52,7 @@ export const DalgonaNescafe = () => {
     scrollToTop();
   }, []);
 
-  const props = menudata.find((menu) => menu.category === "Drinks" && menu.items[0].name === "Dalgona Iced" && menu.items[0].list[8].name === "Dalgona Nescafe Classic");
+  const props = menudata.find((menu) => menu.category === "Drinks" && menu.items[1].name === "Regular Iced" && menu.items[1].list[5].name === "Moccaccino Iced");
   return (
     <ProductDetail id="main-menu-container">
       <PathAndBackButton>
@@ -62,24 +62,24 @@ export const DalgonaNescafe = () => {
           <DrinkText>{props.category}</DrinkText>
           <Slash>/</Slash>
           <CategoryText
-            onClick={() => handleClick(`/AllMenu/${props.items[0].name}`)}
-          >{props.items[0].name}</CategoryText>
+            onClick={() => handleClick(`/AllMenu/${props.items[1].name}`)}
+          >{props.items[1].name}</CategoryText>
           <Slash>/</Slash>
-          <ItemText>{props.items[0].list[8].name}</ItemText>
+          <ItemText>{props.items[1].list[5].name}</ItemText>
         </Path>
         <BackButton
-          onClick={() => handleClick(`/AllMenu/${props.items[0].name}`)}
+          onClick={() => handleClick(`/AllMenu/${props.items[1].name}`)}
         >
           <FontAwesomeIcon icon={faChevronLeft} />&nbsp;Back
         </BackButton>
       </PathAndBackButton>
-      <ProductHero background={props.items[0].background}>
-        <Img loading="lazy" src={require(`../../../../images/${props.items[0].list[8].image}`)} alt={props.items[0].list[8].name} />
+      <ProductHero background={props.items[1].background}>
+        <Img loading="lazy" src={require(`../../../../images/${props.items[1].list[5].image}`)} alt={props.items[1].list[5].name} />
         <ProductDesc>
-          <ItemName>{props.items[0].list[8].name}</ItemName>
-          <Rating>{props.items[0].list[8].stars}★</Rating>
-          <DetailDesc>{props.items[0].list[8].description}</DetailDesc>
-          <Calory>{props.items[0].list[8].calories}</Calory>
+          <ItemName>{props.items[1].list[5].name}</ItemName>
+          <Rating>{props.items[1].list[5].stars}★</Rating>
+          <DetailDesc>{props.items[1].list[5].description}</DetailDesc>
+          <Calory>{props.items[1].list[5].calories}</Calory>
         </ProductDesc>
       </ProductHero>
       <ProductInfoOrder>

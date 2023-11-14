@@ -9,6 +9,7 @@
         "title": "DalgonaIced",
         "width": "235px",
         "link": "/About#About-section",
+        "background": "linear-gradient(120deg,rgba(209, 80, 4, 1) 0%,rgba(107, 50, 1, 1) 100%)",
         "list": [
           {
             "name": "Dalgona Choco Silverqueen",
@@ -89,6 +90,7 @@
         "title": "Regular Iced",
         "width": "236px",
         "link": "/your-destination-url",
+        "background": "linear-gradient(180deg,rgba(120, 76, 24, 0.9) 100%,rgba(78, 42, 1, 0.9) 100%)",
         "list": [
           {
             "name": "Choco Silverqueen Iced",
