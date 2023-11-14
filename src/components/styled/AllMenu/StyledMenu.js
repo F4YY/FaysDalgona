@@ -341,7 +341,7 @@ export const BackButtontoMain = styled.button`
   }
   @media (max-width: 640px) {
     display: flex;
-    font-size: .95rem;
+    font-size: .9rem;
   }
 `;
 
@@ -733,6 +733,9 @@ export const ToppingName = styled.div`
   font: 400 19px/150% Arial, sans-serif;
   @media (max-width: 991px) {
     font-size: .9rem;
+  }
+  @media (max-width: 640px) {
+    margin: 8px 0 0;
   }
 `;
 
