@@ -719,6 +719,7 @@ export const ToppingImg = styled.img`
   object-fit: cover;
   object-position: center;
   width: 20%;
+  border-radius: 10px;
 `;
 
 export const ToppingDesc = styled.div`
