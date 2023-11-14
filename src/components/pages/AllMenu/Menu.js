@@ -1,5 +1,5 @@
 import React from "react";
-import menudata from "../database/menu.json";
+import menudata from "../../database/menu.json";
 import {
   AuxNavList,
   AuxiliaryNavigation,
@@ -21,17 +21,17 @@ import {
   SignInButton,
   TopNavigation,
   Wrapper,
-} from "../styled/AllMenu/StyledMenu";
-import { MainMenu } from "./AllMenu/MainMenu";
+} from "../../styled/AllMenu/StyledMenu";
+import { MainMenu } from "./MainMenu";
 import { Route, Routes, useNavigate } from "react-router-dom";
-import { DalgonaIced } from "./AllMenu/DalgonaIced";
-import { RegularIced } from "./AllMenu/RegularIced";
-import { RegularHot } from "./AllMenu/RegularHot";
-import { MieNyemek } from "./AllMenu/MieNyemek";
-import { DalCro } from "./AllMenu/DalCro";
-import { Combo123 } from "./AllMenu/Combo123";
-import { Croffle } from "./AllMenu/Croffle";
-import { SateSeafood } from "./AllMenu/SateSeafood";
+import { DalgonaIced } from "./Drinks/DalgonaIced/DalgonaIced";
+import { RegularIced } from "./Drinks/RegularIced/RegularIced";
+import { RegularHot } from "./Drinks/RegularHot/RegularHot";
+import { MieNyemek } from "./Food/MieNyemek/MieNyemek";
+import { DalCro } from "./Combo/DalCro/DalCro";
+import { Combo123 } from "./Combo/Combo123/Combo123";
+import { Croffle } from "./Food/Croffle/Croffle";
+import { SateSeafood } from "./Food/SateBaksoSeafood/SateSeafood";
 
 export default function Menu() {
   const navigate = useNavigate();
@@ -49,7 +49,7 @@ export default function Menu() {
     <Wrapper id='AllMenu-section'>
       <TopNavigation >
         <LeftNav>
-          <Logo loading="lazy" src={require("../images/FD_Header.png")} alt="logo" />
+          <Logo loading="lazy" src={require("../../images/FD_Header.png")} alt="logo" />
           <MenuItem onClick={() => handleClick("MainMenu")}>Menu</MenuItem>
           <MenuItem>Rewards</MenuItem>
           <MenuItem>Gift Cards</MenuItem>

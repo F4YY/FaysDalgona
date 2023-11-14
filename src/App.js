@@ -2,7 +2,7 @@ import React from 'react';
 import {ChakraProvider} from "@chakra-ui/react";
 import {AlertProvider} from "./context/alertContext";
 import {AuthContextProvider} from "./context/authContext";
-import Main from './components/Main';
+import Main from './components/pages/Main';
 import NavBar from './components/pages/NavBar';
 import HeroSection from './components/pages/HeroSection';
 import Highlight from './components/pages/Highlight';
