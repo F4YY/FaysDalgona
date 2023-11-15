@@ -327,7 +327,7 @@ export const BackButtontoMain = styled.button`
   box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.24);
   align-items: center;
   margin: 0;
-  padding: 5px 10px;
+  padding: 2px 8px;
   cursor: pointer;
   &:hover {
     color: #fff;
@@ -535,7 +535,7 @@ export const Img = styled.img`
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   overflow: hidden;
   @media (max-width: 991px) {
-    width: 43%;
+    width: 35%;
   }
   @media (max-width: 640px) {
     width: 100%;
@@ -547,7 +547,7 @@ export const ProductDesc = styled.div`
   flex-direction: column;
   width: 40%;
   justify-content: space-around;
-  margin: 60px 0;
+  margin: 20px 0;
   @media (max-width: 991px) {
     width: 45%;
   }
@@ -680,7 +680,7 @@ export const OrderNowText = styled.div`
 
 export const Topping = styled.div`
   display: flex;
-  width: 50%;
+  width: 60%;
   flex-direction: column;
   @media (max-width: 640px) {
     width: 90%;
@@ -703,7 +703,6 @@ export const ToppingText = styled.div`
 export const ToppingList = styled.div`
   display: flex;
   flex-direction: row;
-  position: relative;
   gap: 20px;
   margin: 20px 0;
   @media (max-width: 640px) {
@@ -715,10 +714,10 @@ export const ToppingList = styled.div`
 `;
 
 export const ToppingImg = styled.img`
-  aspect-ratio: 1;
   object-fit: cover;
   object-position: center;
   width: 20%;
+  height: auto;
   border-radius: 10px;
 `;
 
