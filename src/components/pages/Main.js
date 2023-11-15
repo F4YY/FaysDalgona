@@ -42,6 +42,9 @@ import { RegHotRedV } from './AllMenu/Drinks/RegularHot/RegHotRedV';
 import { RegHotTaro } from './AllMenu/Drinks/RegularHot/RegHotTaro';
 import { RegHotNescafe } from './AllMenu/Drinks/RegularHot/RegHotNescafe';
 import { RegHotTira } from './AllMenu/Drinks/RegularHot/RegHotTira';
+import { MieNyemekOriginal } from './AllMenu/Food/MieNyemek/MieNyemekOriginal';
+import { MieNyemekBaksoSapi } from './AllMenu/Food/MieNyemek/MieNyemekBaksoSapi';
+import { MieNyemekBaksoSeafood } from './AllMenu/Food/MieNyemek/MieNyemekBaksoSeafood';
 
 function Main() {
   return (
@@ -88,6 +91,9 @@ function Main() {
         <Route path="Hot Taro" element={<RegHotTaro />} />
         <Route path="Hot Nescafe Classic" element={<RegHotNescafe />} />
         <Route path="Hot Tiramisu" element={<RegHotTira />} />
+        <Route path="Mie Nyemek Original" element={<MieNyemekOriginal />} />
+        <Route path="Mie Nyemek Bakso Sapi Sosis" element={<MieNyemekBaksoSapi />} />
+        <Route path="Mie Nyemek Bakso Seafood" element={<MieNyemekBaksoSeafood />} />
         <Route path="/Testimonials" element={<Testimonials />} />
         <Route path="/About" element={<About />} />
         <Route path="/Reservation" element={<ReserveTable />} />

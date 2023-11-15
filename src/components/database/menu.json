@@ -257,6 +257,7 @@
         "title": "Mie Nyemek",
         "width": "235px",
         "link": "/your-destination-url",
+        "background": "linear-gradient(135deg,rgba(153, 147, 0, 0.9) 0%,rgba(95, 103, 0, 1) 100%)",
         "list": [
           {
             "name": "Mie Nyemek Original",

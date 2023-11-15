@@ -700,6 +700,16 @@ export const ToppingText = styled.div`
   }
 `;
 
+export const SpicyText = styled.div`
+  color: rgba(0, 0, 0, 0.87);
+  letter-spacing: 0.16px;
+  font: 400 24px/150% Barlow, sans-serif;
+  text-align: center;
+  @media (max-width: 991px) {
+    font-size: 1.2rem;
+  }
+`;
+
 export const ToppingList = styled.div`
   display: flex;
   flex-direction: row;
@@ -717,6 +727,14 @@ export const ToppingImg = styled.img`
   object-fit: cover;
   object-position: center;
   width: 20%;
+  height: auto;
+  border-radius: 10px;
+`;
+
+export const SpicyImg = styled.img`
+  object-fit: cover;
+  object-position: center;
+  width: auto;
   height: auto;
   border-radius: 10px;
 `;
