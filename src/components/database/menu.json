@@ -9,7 +9,7 @@
         "title": "DalgonaIced",
         "width": "235px",
         "link": "/About#About-section",
-        "background": "linear-gradient(120deg,rgba(209, 80, 4, 1) 0%,rgba(107, 50, 1, 1) 100%)",
+        "background": "linear-gradient(135deg,rgba(209, 80, 4, 1) 0%,rgba(107, 50, 1, 1) 100%)",
         "list": [
           {
             "name": "Dalgona Choco Silverqueen",
@@ -90,7 +90,7 @@
         "title": "Regular Iced",
         "width": "236px",
         "link": "/your-destination-url",
-        "background": "linear-gradient(180deg,rgba(120, 76, 24, 0.9) 100%,rgba(78, 42, 1, 0.9) 100%)",
+        "background": "linear-gradient(135deg,rgba(120, 76, 24, 0.9) 0%,rgba(78, 42, 1, 0.9) 100%)",
         "list": [
           {
             "name": "Choco Silverqueen Iced",
@@ -171,6 +171,7 @@
         "title": "Regular Hot",
         "width": "231px",
         "link": "/your-destination-url",
+        "background": "linear-gradient(135deg,rgba(137, 50, 22, 0.9) 0%,rgba(90, 22, 0.9, 1) 100%)",
         "list": [
           {
             "name": "Hot Choco Silverqueen",
@@ -180,63 +181,63 @@
             "calories": "340 calories, 18g sugar, 31g fat"
           },
           {
-            "name": "Capuccino Iced",
+            "name": "Hot Capuccino",
             "image": "ReguHot_Capu.jpg",
             "stars": "180",
             "description": "Regular hot drink with capuccino flavor mixed with milk, brown sugar and boba pearl",
             "calories": "340 calories, 18g sugar, 31g fat"
           },
           {
-            "name": "Green Tea Iced",
+            "name": "Hot Green Tea",
             "image": "ReguHot_Greentea.jpg",
             "stars": "170",
             "description": "Regular hot drink with green tea flavor mixed with milk, brown sugar and boba pearl",
             "calories": "340 calories, 18g sugar, 31g fat"
           },
           {
-            "name": "Original Thai Tea Iced",
+            "name": "Hot Original Thai Tea",
             "image": "ReguHot_Orithaitea.jpg",
             "stars": "100",
             "description": "Regular hot drink with original thai tea flavor mixed with milk, brown sugar and boba pearl",
             "calories": "340 calories, 18g sugar, 31g fat"
           },
           {
-            "name": "Choco Milo Iced",
+            "name": "Hot Choco Milo",
             "image": "ReguHot_ChocMilo.jpg",
             "stars": "160",
             "description": "Regular hot drink with chocolate milo flavor mixed with milk, brown sugar and boba pearl",
             "calories": "340 calories, 18g sugar, 31g fat"
           },
           {
-            "name": "Moccaccino Iced",
+            "name": "Hot Moccaccino",
             "image": "ReguHot_Moca.jpg",
             "stars": "130",
             "description": "Regular hot drink with moccaccino flavor mixed with milk, brown sugar and boba pearl",
             "calories": "340 calories, 18g sugar, 31g fat"
           },
           {
-            "name": "Red Velvet Iced",
+            "name": "Hot Red Velvet",
             "image": "ReguHot_RedV.jpg",
             "stars": "170",
             "description": "Regular hot drink with red velvet flavor mixed with milk, brown sugar and boba pearl",
             "calories": "340 calories, 18g sugar, 31g fat"
           },
           {
-            "name": "Taro Iced",
+            "name": "Hot Taro",
             "image": "ReguHot_Taro.jpg",
             "stars": "160",
             "description": "Regular hot drink with taro flavor mixed with milk, brown sugar and boba pearl",
             "calories": "340 calories, 18g sugar, 31g fat"
           },
           {
-            "name": "Nescafe Classic Iced",
+            "name": "Hot Nescafe Classic",
             "image": "ReguHot_Nescafe.jpg",
             "stars": "120",
             "description": "Regular hot drink with nescafe classic flavor mixed with milk, brown sugar and boba pearl",
             "calories": "340 calories, 18g sugar, 31g fat"
           },
           {
-            "name": "Tiramisu Iced",
+            "name": "Hot Tiramisu",
             "image": "ReguHot_Tira.jpg",
             "stars": "130",
             "description": "Regular hot drink with tiramisu flavor mixed with milk, brown sugar and boba pearl",

@@ -32,6 +32,16 @@ import { RegIcedRedV } from './AllMenu/Drinks/RegularIced/RegIcedRedV';
 import { RegIcedTaro } from './AllMenu/Drinks/RegularIced/RegIcedTaro';
 import { RegIcedNescafe } from './AllMenu/Drinks/RegularIced/RegIcedNescafe';
 import { RegIcedTira } from './AllMenu/Drinks/RegularIced/RegIcedTira';
+import { RegHotChocSilv } from './AllMenu/Drinks/RegularHot/RegHotChocSilv';
+import { RegHotCapu } from './AllMenu/Drinks/RegularHot/RegHotCapu';
+import { RegHotGreenTea } from './AllMenu/Drinks/RegularHot/RegHotGreenTea';
+import { RegHotOriThaiTea } from './AllMenu/Drinks/RegularHot/RegHotOriThaiTea';
+import { RegHotChocMilo } from './AllMenu/Drinks/RegularHot/RegHotChocMilo';
+import { RegHotMocca } from './AllMenu/Drinks/RegularHot/RegHotMocca';
+import { RegHotRedV } from './AllMenu/Drinks/RegularHot/RegHotRedV';
+import { RegHotTaro } from './AllMenu/Drinks/RegularHot/RegHotTaro';
+import { RegHotNescafe } from './AllMenu/Drinks/RegularHot/RegHotNescafe';
+import { RegHotTira } from './AllMenu/Drinks/RegularHot/RegHotTira';
 
 function Main() {
   return (
@@ -68,6 +78,16 @@ function Main() {
         <Route path="Taro Iced" element={<RegIcedTaro />} />
         <Route path="Nescafe Classic Iced" element={<RegIcedNescafe />} />
         <Route path="Tiramisu Iced" element={<RegIcedTira />} />
+        <Route path="Hot Choco Silverqueen" element={<RegHotChocSilv />} />
+        <Route path="Hot Capuccino" element={<RegHotCapu />} />
+        <Route path="Hot Green Tea" element={<RegHotGreenTea />} />
+        <Route path="Hot Original Thai Tea" element={<RegHotOriThaiTea />} />
+        <Route path="Hot Choco Milo" element={<RegHotChocMilo />} />
+        <Route path="Hot Moccaccino" element={<RegHotMocca />} />
+        <Route path="Hot Red Velvet" element={<RegHotRedV />} />
+        <Route path="Hot Taro" element={<RegHotTaro />} />
+        <Route path="Hot Nescafe Classic" element={<RegHotNescafe />} />
+        <Route path="Hot Tiramisu" element={<RegHotTira />} />
         <Route path="/Testimonials" element={<Testimonials />} />
         <Route path="/About" element={<About />} />
         <Route path="/Reservation" element={<ReserveTable />} />
