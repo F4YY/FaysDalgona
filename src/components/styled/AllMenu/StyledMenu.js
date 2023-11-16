@@ -529,7 +529,6 @@ export const ProductHero = styled.div`
 
 export const Img = styled.img`
   object-fit: contain;
-  aspect-ratio: 1;
   object-position: center;
   width: 30%;
   height: auto;
