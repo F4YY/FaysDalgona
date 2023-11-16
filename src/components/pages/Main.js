@@ -46,6 +46,7 @@ import { MieNyemekOriginal } from './AllMenu/Food/MieNyemek/MieNyemekOriginal';
 import { MieNyemekBaksoSapi } from './AllMenu/Food/MieNyemek/MieNyemekBaksoSapi';
 import { MieNyemekBaksoSeafood } from './AllMenu/Food/MieNyemek/MieNyemekBaksoSeafood';
 import { CroffleOriginal } from './AllMenu/Food/Croffle/CroffleOriginal';
+import { SateBaksoSeafood } from './AllMenu/Food/SateBaksoSeafood/SateBaksoSeafood';
 
 function Main() {
   return (
@@ -96,6 +97,7 @@ function Main() {
         <Route path="Mie Nyemek Bakso Sapi Sosis" element={<MieNyemekBaksoSapi />} />
         <Route path="Mie Nyemek Bakso Seafood" element={<MieNyemekBaksoSeafood />} />
         <Route path="Croffle Original" element={<CroffleOriginal />} />
+        <Route path="Sate Bakso Seafood" element={<SateBaksoSeafood />} />
         <Route path="/Testimonials" element={<Testimonials />} />
         <Route path="/About" element={<About />} />
         <Route path="/Reservation" element={<ReserveTable />} />

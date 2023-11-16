@@ -86,7 +86,7 @@ export const RegHotMocca = () => {
         <SizeAndOrder>
           <SizeText>Size options</SizeText>
           <SizeDesc>
-            Size : Oval cup 16 oz
+            Size : Paper cup 8 oz
           </SizeDesc>
           <ButtonOrder>
             <OrderNowText>Order Now</OrderNowText>

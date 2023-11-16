@@ -529,9 +529,10 @@ export const ProductHero = styled.div`
 
 export const Img = styled.img`
   object-fit: contain;
+  aspect-ratio: 1;
   object-position: center;
   width: 30%;
-  height: 100%;
+  height: auto;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   overflow: hidden;
   @media (max-width: 991px) {

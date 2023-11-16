@@ -23,19 +23,15 @@ import {
   SizeDesc,
   SizeText,
   Slash,
+  SpicyImg,
+  SpicyText,
   Topping,
-  ToppingDesc,
-  ToppingDetailDesc,
-  ToppingImg,
-  ToppingList,
-  ToppingName,
-  ToppingText,
 } from '../../../../styled/AllMenu/StyledMenu';
 import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 
-export const RegHotGreenTea = () => {
+export const SateBaksoSeafood = () => {
   const navigate = useNavigate();
   const handleClick = (anchor) => {
     navigate(anchor);
@@ -52,7 +48,7 @@ export const RegHotGreenTea = () => {
     scrollToTop();
   }, []);
 
-  const props = menudata.find((menu) => menu.category === "Drinks" && menu.items[2].name === "Regular Hot" && menu.items[2].list[2].name === "Hot Green Tea");
+  const props = menudata.find((menu) => menu.category === "Food" && menu.items[2].name === "Sate Bakso Seafood" && menu.items[2].list[0].name === "Sate Bakso Seafood");
   return (
     <ProductDetail id="main-menu-container">
       <PathAndBackButton>
@@ -65,7 +61,7 @@ export const RegHotGreenTea = () => {
             onClick={() => handleClick(`/AllMenu/${props.items[2].name}`)}
           >{props.items[2].name}</CategoryText>
           <Slash>/</Slash>
-          <ItemText>{props.items[2].list[2].name}</ItemText>
+          <ItemText>{props.items[2].list[0].name}</ItemText>
         </Path>
         <BackButton
           onClick={() => handleClick(`/AllMenu/${props.items[2].name}`)}
@@ -74,46 +70,27 @@ export const RegHotGreenTea = () => {
         </BackButton>
       </PathAndBackButton>
       <ProductHero background={props.items[2].background}>
-        <Img loading="lazy" src={require(`../../../../images/${props.items[2].list[2].image}`)} alt={props.items[2].list[2].name} />
+        <Img loading="lazy" src={require(`../../../../images/${props.items[2].list[0].image}`)} alt={props.items[2].list[0].name} />
         <ProductDesc>
-          <ItemName>{props.items[2].list[2].name}</ItemName>
-          <Rating>{props.items[2].list[2].stars}★</Rating>
-          <DetailDesc>{props.items[2].list[2].description}</DetailDesc>
-          <Calory>{props.items[2].list[2].calories}</Calory>
+          <ItemName>{props.items[2].list[0].name}</ItemName>
+          <Rating>{props.items[2].list[0].stars}★</Rating>
+          <DetailDesc>{props.items[2].list[0].description}</DetailDesc>
+          <Calory>{props.items[2].list[0].calories}</Calory>
         </ProductDesc>
       </ProductHero>
       <ProductInfoOrder>
         <SizeAndOrder>
           <SizeText>Size options</SizeText>
           <SizeDesc>
-            Size : Paper cup 8 oz
+            Size : 5 skewers of satay
           </SizeDesc>
           <ButtonOrder>
             <OrderNowText>Order Now</OrderNowText>
           </ButtonOrder>
         </SizeAndOrder>
         <Topping>
-          <ToppingText>Add-ins Topping</ToppingText>
-          <ToppingList>
-            <ToppingImg loading="lazy" src={require('../../../../images/lotus_bischoff.jpg')} alt='lotus bischoff' />
-            <ToppingDesc>
-              <ToppingName>Lotus Biscoff Crumbles</ToppingName>
-              <ToppingDetailDesc>
-                cookie crumbs made from Lotus Biscoff cookies, known for their
-                caramelized flavor and hint of cinnamon.
-              </ToppingDetailDesc>
-            </ToppingDesc>
-          </ToppingList>
-          <ToppingList>
-            <ToppingImg loading="lazy" src={require('../../../../images/Choco_crispyballs.jpg')} alt='choco crispy ball' />
-            <ToppingDesc>
-              <ToppingName>Choco Crispy Balls</ToppingName>
-              <ToppingDetailDesc>
-                delicious bite-sized treats made from crispy rice cereal coated
-                in rich chocolate
-              </ToppingDetailDesc>
-            </ToppingDesc>
-          </ToppingList>
+          <SpicyText>Spicy Levels</SpicyText>
+          <SpicyImg loading="lazy" src={require('../../../../images/Spicy_level.jpg')} alt='spicy level' />
         </Topping>
       </ProductInfoOrder>
     </ProductDetail>
