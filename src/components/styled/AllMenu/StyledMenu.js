@@ -531,7 +531,7 @@ export const Img = styled.img`
   object-fit: contain;
   object-position: center;
   width: 30%;
-  height: auto;
+  height: 100%;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   overflow: hidden;
   @media (max-width: 991px) {
