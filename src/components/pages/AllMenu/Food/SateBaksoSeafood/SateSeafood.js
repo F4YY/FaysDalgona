@@ -1,7 +1,9 @@
 import React from 'react';
 import menudata from "../../../../database/menu.json";
-import { MenuCategory, MenuCategoryGroup, MenuItemGroup, MenuItemImage, MenuItemText } from '../../../../styled/AllMenu/StyledMenu';
+import { BackButtontoMain, MenuCategory, MenuCategoryGroup, MenuItemGroup, MenuItemImage, MenuItemText } from '../../../../styled/AllMenu/StyledMenu';
 import { useNavigate } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 
 export const SateSeafood = () => {
   const navigate = useNavigate();
@@ -16,6 +18,11 @@ export const SateSeafood = () => {
     <>
       <MenuCategory id={`${sateSeafood.items[2].title}-section`}>
         {sateSeafood.items[2].name}
+        <BackButtontoMain
+          onClick={() => handleClick(`/AllMenu/MainMenu`)}
+        >
+          <FontAwesomeIcon icon={faChevronLeft} />&nbsp;Back
+        </BackButtontoMain>
       </MenuCategory>
       <MenuCategoryGroup>
         {sateSeafood.items[2].list.map((item) => (
