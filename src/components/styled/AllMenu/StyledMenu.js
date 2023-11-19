@@ -519,6 +519,7 @@ export const BackButton = styled.button`
 export const ProductHero = styled.div`
   display: flex;
   width: 100%;
+  height: auto;
   background: ${props => {
     console.log('Background Value:', props.background);
     return props.background;
@@ -528,7 +529,7 @@ export const ProductHero = styled.div`
 `;
 
 export const Img = styled.img`
-  object-fit: contain;
+  object-fit: cover;
   object-position: center;
   width: 30%;
   height: auto;
