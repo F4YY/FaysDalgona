@@ -536,7 +536,7 @@ export const Img = styled.img`
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   overflow: hidden;
   @media (max-width: 991px) {
-    min-width: 43%;
+    min-width: 40%;
   }
   @media (max-width: 640px) {
     width: 100%;
