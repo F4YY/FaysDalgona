@@ -330,6 +330,7 @@
         "title": "Simple DalCro",
         "width": "235px",
         "link": "/your-destination-url",
+        "background": "linear-gradient(135deg,rgba(152, 30, 110, 0.9) 0%,rgba(71, 1, 68, 1) 100%)",
         "list": [
           {
             "name": "DalCro Choco Silverqueen",

@@ -47,6 +47,16 @@ import { MieNyemekBaksoSapi } from './AllMenu/Food/MieNyemek/MieNyemekBaksoSapi'
 import { MieNyemekBaksoSeafood } from './AllMenu/Food/MieNyemek/MieNyemekBaksoSeafood';
 import { CroffleOriginal } from './AllMenu/Food/Croffle/CroffleOriginal';
 import { SateBaksoSeafood } from './AllMenu/Food/SateBaksoSeafood/SateBaksoSeafood';
+import { DalCroChocSilv } from './AllMenu/Combo/DalCro/DalCroChocSIlv';
+import { DalCroCapu } from './AllMenu/Combo/DalCro/DalCroCapu';
+import { DalCroGreenTea } from './AllMenu/Combo/DalCro/DalCroGreenTea';
+import { DalCroOriThaiTea } from './AllMenu/Combo/DalCro/DalCroOriThaiTea';
+import { DalCroChocMilo } from './AllMenu/Combo/DalCro/DalCroChocMilo';
+import { DalCroMocca } from './AllMenu/Combo/DalCro/DalCroMocca';
+import { DalCroRedV } from './AllMenu/Combo/DalCro/DalCroRedV';
+import { DalCroTaro } from './AllMenu/Combo/DalCro/DalCroTaro';
+import { DalCroNescafe } from './AllMenu/Combo/DalCro/DalCroNescafe';
+import { DalCroTira } from './AllMenu/Combo/DalCro/DalCroTira';
 
 function Main() {
   return (
@@ -98,6 +108,16 @@ function Main() {
         <Route path="Mie Nyemek Bakso Seafood" element={<MieNyemekBaksoSeafood />} />
         <Route path="Croffle Original" element={<CroffleOriginal />} />
         <Route path="Sate Bakso Seafood" element={<SateBaksoSeafood />} />
+        <Route path="DalCro Choco Silverqueen" element={<DalCroChocSilv />} />
+        <Route path="DalCro Capuccino" element={<DalCroCapu />} />
+        <Route path="DalCro Green Tea" element={<DalCroGreenTea />} />
+        <Route path="DalCro Original Thai Tea" element={<DalCroOriThaiTea />} />
+        <Route path="DalCro Choco Milo" element={<DalCroChocMilo />} />
+        <Route path="DalCro Moccaccino" element={<DalCroMocca />} />
+        <Route path="DalCro Red Velvet" element={<DalCroRedV />} />
+        <Route path="DalCro Taro" element={<DalCroTaro />} />
+        <Route path="DalCro Nescafe Classic" element={<DalCroNescafe />} />
+        <Route path="DalCro Tiramisu" element={<DalCroTira />} />
         <Route path="/Testimonials" element={<Testimonials />} />
         <Route path="/About" element={<About />} />
         <Route path="/Reservation" element={<ReserveTable />} />

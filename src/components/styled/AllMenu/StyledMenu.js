@@ -631,8 +631,13 @@ export const SizeText = styled.div`
 
 export const SizeDesc = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: center;
   margin: 20px 0;
+  h3{
+    color: rgba(0, 0, 0, 0.58);
+    line-height: 1.8rem;
+  }
   @media (max-width: 991px) {
     justify-content: center;
   }
