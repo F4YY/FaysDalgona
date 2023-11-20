@@ -84,7 +84,7 @@ export const SateBaksoSeafood = () => {
           <SizeDesc>
             Size : 5 skewers of satay
           </SizeDesc>
-          <ButtonOrder>
+          <ButtonOrder href="https://gofood.link/a/yHFDprE" target="_blank" rel="noreferrer">
             <OrderNowText>Order Now</OrderNowText>
           </ButtonOrder>
         </SizeAndOrder>

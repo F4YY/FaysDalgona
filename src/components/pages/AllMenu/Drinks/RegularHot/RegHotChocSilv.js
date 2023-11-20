@@ -88,7 +88,7 @@ export const RegHotChocSilv = () => {
           <SizeDesc>
             Size : Paper cup 8 oz
           </SizeDesc>
-          <ButtonOrder>
+          <ButtonOrder href="https://gofood.link/a/yHFDprE" target="_blank" rel="noreferrer">
             <OrderNowText>Order Now</OrderNowText>
           </ButtonOrder>
         </SizeAndOrder>

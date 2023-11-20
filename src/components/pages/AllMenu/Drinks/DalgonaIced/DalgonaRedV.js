@@ -88,11 +88,9 @@ export const DalgonaRedV = () => {
           <SizeDesc>
             Size : Oval cup 16 oz
           </SizeDesc>
-          <a href="https://gofood.link/a/yHFDprE" target="_blank" rel="noreferrer">
-            <ButtonOrder>
-              <OrderNowText>Order Now</OrderNowText>
-            </ButtonOrder>
-          </a>
+          <ButtonOrder href="https://gofood.link/a/yHFDprE" target="_blank" rel="noreferrer">
+            <OrderNowText>Order Now</OrderNowText>
+          </ButtonOrder>
         </SizeAndOrder>
         <Topping>
           <ToppingText>Add-ins Topping</ToppingText>

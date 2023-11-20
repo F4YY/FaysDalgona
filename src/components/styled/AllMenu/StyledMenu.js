@@ -633,7 +633,7 @@ export const SizeDesc = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 20px 0;
+  margin: 20px auto;
   h3{
     color: rgba(0, 0, 0, 0.58);
     line-height: 1.8rem;
@@ -643,7 +643,7 @@ export const SizeDesc = styled.div`
   }
 `;
 
-export const ButtonOrder = styled.button`
+export const ButtonOrder = styled.a`
   justify-content: center;
   border-radius: 10px;
   background: linear-gradient(

@@ -84,7 +84,7 @@ export const MieNyemekOriginal = () => {
           <SizeDesc>
             Size : Paper bowl 650 ml
           </SizeDesc>
-          <ButtonOrder>
+          <ButtonOrder href="https://gofood.link/a/yHFDprE" target="_blank" rel="noreferrer">
             <OrderNowText>Order Now</OrderNowText>
           </ButtonOrder>
         </SizeAndOrder>

@@ -88,7 +88,7 @@ export const CroffleOriginal = () => {
           <SizeDesc>
             Size : Croffle 30 g
           </SizeDesc>
-          <ButtonOrder>
+          <ButtonOrder href="https://gofood.link/a/yHFDprE" target="_blank" rel="noreferrer">
             <OrderNowText>Order Now</OrderNowText>
           </ButtonOrder>
         </SizeAndOrder>

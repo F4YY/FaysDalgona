@@ -90,7 +90,7 @@ export const DalCroRedV = () => {
             <h3><b>Croffle</b> : croissant dough 30 g</h3>
             <h3><b>Dipping sauce</b> : cup 60 ml</h3>
           </SizeDesc>
-          <ButtonOrder>
+          <ButtonOrder href="https://gofood.link/a/yHFDprE" target="_blank" rel="noreferrer">
             <OrderNowText>Order Now</OrderNowText>
           </ButtonOrder>
         </SizeAndOrder>

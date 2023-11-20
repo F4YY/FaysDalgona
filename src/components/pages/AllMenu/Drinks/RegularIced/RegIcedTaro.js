@@ -88,7 +88,7 @@ export const RegIcedTaro = () => {
           <SizeDesc>
             Size : Oval cup 16 oz
           </SizeDesc>
-          <ButtonOrder>
+          <ButtonOrder href="https://gofood.link/a/yHFDprE" target="_blank" rel="noreferrer">
             <OrderNowText>Order Now</OrderNowText>
           </ButtonOrder>
         </SizeAndOrder>
