@@ -6,6 +6,7 @@ import Features from './Features';
 const HeroSection = () => (
   <Box
     bgGradient={'linear(to-tl, orange.700, orange.500, orange.900)'}
+    w='100%'
     minH='100vh'
     zIndex={-1}
   >
@@ -14,13 +15,13 @@ const HeroSection = () => (
       display="flex"
       mt={{ base: "4rem", md: '4rem', lg: '1rem'}}
       mb={0}
-      ml={{ base: ".5rem",sm: "1rem", md: "4rem", lg: "8rem" }}
-      mr={{ base: "1rem",sm: "1rem", md: "7rem", lg: "15rem" }}
+      ml={{ base: ".5rem",sm: "1rem", md: "2rem", lg: "8rem" }}
+      mr={{ base: "1rem",sm: "1rem", md: "2rem", lg: "15rem" }}
       sizes={{base: '100%',md: '80%',xl: '50%'}}
       gap={5}
       pt={{base:2,md:5,lg:20}}
       pb={{base:5,md:10,lg:20}}
-      flexDirection={{base:"column", md:"row", lg:"row"}}
+      flexDirection={{base:"column", sm:"row", md:"row", lg:"row"}}
       justifyContent="space-between"
     >
       <Features
@@ -35,7 +36,7 @@ const HeroSection = () => (
         position={{base:"auto", md:"auto",lg:"absolute"}}
         top="130px"
         left="750px"
-        height={{base: 350, md: "auto", lg:440}}
+        height={{base: 350, md: 400, lg:440}}
         w={440}
         borderRadius={20}
         src={FD_homepage}

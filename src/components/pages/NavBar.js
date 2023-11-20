@@ -14,32 +14,32 @@ import {
 } from "../styled/styled_navbar";
 
 const NavBar = () => {
-    const NavBarRef = useRef(null);
+  const NavBarRef = useRef(null);
 
-    const {user, login, logout, authReady} = useContext(AuthContext);
-    console.log(user);
+  const {user, login, logout, authReady} = useContext(AuthContext);
+  console.log(user);
 
-    useEffect(() => {
-        let prevScrollPos = window.scrollY;
-    const handleScroll = () => {
-      const currentScrollPos = window.scrollY;
-      const NavBarElement = NavBarRef.current;
-      if (!NavBarElement) {
-        return;
-        }
-      if (prevScrollPos > currentScrollPos) {
-        NavBarElement.style.transform = "translateY(0)";
-        } else {
-        NavBarElement.style.transform = "translateY(-200px)";
-        }
-        prevScrollPos = currentScrollPos;
+  useEffect(() => {
+    let prevScrollPos = window.scrollY;
+  const handleScroll = () => {
+    const currentScrollPos = window.scrollY;
+    const NavBarElement = NavBarRef.current;
+    if (!NavBarElement) {
+      return;
       }
-        window.addEventListener('scroll', handleScroll)
+    if (prevScrollPos > currentScrollPos) {
+      NavBarElement.style.transform = "translateY(0)";
+      } else {
+      NavBarElement.style.transform = "translateY(-200px)";
+      }
+      prevScrollPos = currentScrollPos;
+    }
+      window.addEventListener('scroll', handleScroll)
 
-        return() => {
-            window.removeEventListener('scroll', handleScroll)
-        }
-    },[]);
+      return() => {
+          window.removeEventListener('scroll', handleScroll)
+      }
+  },[]);
 
   const handleClick = (anchor) => () => {
     navigate(anchor)
@@ -74,16 +74,16 @@ const NavBar = () => {
 
     return (
       <ListItem>
-        <MobileMenuButton
-          onClick={buttonClick}
-          colorScheme="orange"
-          variant="outline"
-          minWidth='280px'
-        >
-          <Link href={href}>
+        <Link href={href}>
+          <MobileMenuButton
+            onClick={buttonClick}
+            colorScheme="orange"
+            variant="outline"
+            minWidth='280px'
+          >
             {children}
-          </Link>
-        </MobileMenuButton>
+          </MobileMenuButton>
+        </Link>
       </ListItem>
     );
   };
