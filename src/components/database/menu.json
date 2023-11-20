@@ -411,6 +411,7 @@
         "title": "Combo 123",
         "width": "235px",
         "link": "/your-destination-url",
+        "background": "linear-gradient(135deg,rgba(30, 145, 152, 0.9) 0%,rgba(1, 59, 71, 1) 100%)",
         "list": [
           {
             "name": "Combo Solo 1",

@@ -35,7 +35,7 @@ import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 
-export const DalgonaTira = () => {
+export const ComboSolo1 = () => {
   const navigate = useNavigate();
   const handleClick = (anchor) => {
     navigate(anchor);
@@ -52,7 +52,7 @@ export const DalgonaTira = () => {
     scrollToTop();
   }, []);
 
-  const props = menudata.find((menu) => menu.category === "Drinks" && menu.items[0].name === "Dalgona Iced" && menu.items[0].list[9].name === "Dalgona Tiramisu");
+  const props = menudata.find((menu) => menu.category === "Combo" && menu.items[1].name === "Combo 123" && menu.items[1].list[0].name === "Combo Solo 1");
   return (
     <ProductDetail id="main-menu-container">
       <PathAndBackButton>
@@ -62,37 +62,37 @@ export const DalgonaTira = () => {
           <DrinkText>{props.category}</DrinkText>
           <Slash>/</Slash>
           <CategoryText
-            onClick={() => handleClick(`/AllMenu/${props.items[0].name}`)}
-          >{props.items[0].name}</CategoryText>
+            onClick={() => handleClick(`/AllMenu/${props.items[1].name}`)}
+          >{props.items[1].name}</CategoryText>
           <Slash>/</Slash>
-          <ItemText>{props.items[0].list[9].name}</ItemText>
+          <ItemText>{props.items[1].list[0].name}</ItemText>
         </Path>
         <BackButton
-          onClick={() => handleClick(`/AllMenu/${props.items[0].name}`)}
+          onClick={() => handleClick(`/AllMenu/${props.items[1].name}`)}
         >
           <FontAwesomeIcon icon={faChevronLeft} />&nbsp;Back
         </BackButton>
       </PathAndBackButton>
-      <ProductHero background={props.items[0].background}>
-        <Img loading="lazy" src={require(`../../../../images/${props.items[0].list[9].image}`)} alt={props.items[0].list[9].name} />
+      <ProductHero background={props.items[1].background}>
+        <Img loading="lazy" src={require(`../../../../images/${props.items[1].list[0].image}`)} alt={props.items[1].list[0].name} />
         <ProductDesc>
-          <ItemName>{props.items[0].list[9].name}</ItemName>
-          <Rating>{props.items[0].list[9].stars}★</Rating>
-          <DetailDesc>{props.items[0].list[9].description}</DetailDesc>
-          <Calory>{props.items[0].list[9].calories}</Calory>
+          <ItemName>{props.items[1].list[0].name}</ItemName>
+          <Rating>{props.items[1].list[0].stars}★</Rating>
+          <DetailDesc>{props.items[1].list[0].description}</DetailDesc>
+          <Calory>{props.items[1].list[0].calories}</Calory>
         </ProductDesc>
       </ProductHero>
       <ProductInfoOrder>
         <SizeAndOrder>
           <SizeText>Size options</SizeText>
           <SizeDesc>
-            Size : Oval cup 16 oz
+            <h3><b>Dalgona</b> : cup oval 16 oz</h3>
+            <h3><b>Croffle</b> : croissant dough 30 g</h3>
+            <h3><b>Dipping sauce</b> : cup 60 ml</h3>
           </SizeDesc>
-          <a href="https://gofood.link/a/yHFDprE" target="_blank" rel="noreferrer">
-            <ButtonOrder>
-              <OrderNowText>Order Now</OrderNowText>
-            </ButtonOrder>
-          </a>
+          <ButtonOrder>
+            <OrderNowText>Order Now</OrderNowText>
+          </ButtonOrder>
         </SizeAndOrder>
         <Topping>
           <ToppingText>Add-ins Topping</ToppingText>
@@ -113,6 +113,16 @@ export const DalgonaTira = () => {
               <ToppingDetailDesc>
                 delicious bite-sized treats made from crispy rice cereal coated
                 in rich chocolate
+              </ToppingDetailDesc>
+            </ToppingDesc>
+          </ToppingList>
+          <ToppingText style={{ marginTop: "20px" }}>Add-ins Dipping Sauce</ToppingText>
+          <ToppingList>
+            <ToppingImg loading="lazy" src={require('../../../../images/Dipping_sauce.png')} alt='dipping sauce' />
+            <ToppingDesc>
+              <ToppingName>Dalgona dipping sauce</ToppingName>
+              <ToppingDetailDesc>
+                  Delicious dalgona-shaped dipping sauces for every dalgona flavour to enjoy with croffle.
               </ToppingDetailDesc>
             </ToppingDesc>
           </ToppingList>

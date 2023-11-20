@@ -57,6 +57,12 @@ import { DalCroRedV } from './AllMenu/Combo/DalCro/DalCroRedV';
 import { DalCroTaro } from './AllMenu/Combo/DalCro/DalCroTaro';
 import { DalCroNescafe } from './AllMenu/Combo/DalCro/DalCroNescafe';
 import { DalCroTira } from './AllMenu/Combo/DalCro/DalCroTira';
+import { ComboSolo1 } from './AllMenu/Combo/Combo123/ComboSolo1';
+import { ComboSolo2 } from './AllMenu/Combo/Combo123/ComboSolo2';
+import { ComboDuo1 } from './AllMenu/Combo/Combo123/ComboDuo1';
+import { ComboDuo2 } from './AllMenu/Combo/Combo123/ComboDuo2';
+import { ComboTrio1 } from './AllMenu/Combo/Combo123/ComboTrio1';
+import { ComboTrio2 } from './AllMenu/Combo/Combo123/ComboTrio2';
 
 function Main() {
   return (
@@ -118,6 +124,12 @@ function Main() {
         <Route path="DalCro Taro" element={<DalCroTaro />} />
         <Route path="DalCro Nescafe Classic" element={<DalCroNescafe />} />
         <Route path="DalCro Tiramisu" element={<DalCroTira />} />
+        <Route path="Combo Solo 1" element={<ComboSolo1 />} />
+        <Route path="Combo Solo 2" element={<ComboSolo2 />} />
+        <Route path="Combo Duo 1" element={<ComboDuo1 />} />
+        <Route path="Combo Duo 2" element={<ComboDuo2 />} />
+        <Route path="Combo Trio 1" element={<ComboTrio1 />} />
+        <Route path="Combo Trio 2" element={<ComboTrio2 />} />
         <Route path="/Testimonials" element={<Testimonials />} />
         <Route path="/About" element={<About />} />
         <Route path="/Reservation" element={<ReserveTable />} />

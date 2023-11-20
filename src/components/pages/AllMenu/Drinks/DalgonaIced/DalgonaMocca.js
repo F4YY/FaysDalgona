@@ -88,9 +88,11 @@ export const DalgonaMocca = () => {
           <SizeDesc>
             Size : Oval cup 16 oz
           </SizeDesc>
-          <ButtonOrder>
-            <OrderNowText>Order Now</OrderNowText>
-          </ButtonOrder>
+          <a href="https://gofood.link/a/yHFDprE" target="_blank" rel="noreferrer">
+            <ButtonOrder>
+              <OrderNowText>Order Now</OrderNowText>
+            </ButtonOrder>
+          </a>
         </SizeAndOrder>
         <Topping>
           <ToppingText>Add-ins Topping</ToppingText>
