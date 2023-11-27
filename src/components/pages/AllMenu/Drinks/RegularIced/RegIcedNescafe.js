@@ -19,6 +19,7 @@ import {
   ProductHero,
   ProductInfoOrder,
   Rating,
+  RatingWrap,
   SizeAndOrder,
   SizeDesc,
   SizeText,
@@ -77,7 +78,14 @@ export const RegIcedNescafe = () => {
         <Img loading="lazy" src={require(`../../../../images/${props.items[1].list[8].image}`)} alt={props.items[1].list[8].name} />
         <ProductDesc>
           <ItemName>{props.items[1].list[8].name}</ItemName>
-          <Rating>{props.items[1].list[8].stars}★</Rating>
+          <RatingWrap>
+            <Rating>
+              {props.items[1].list[8].stars}★
+            </Rating>
+            <text>
+              {props.items[1].list[8].reviews}&nbsp;reviews
+            </text>
+          </RatingWrap>
           <DetailDesc>{props.items[1].list[8].description}</DetailDesc>
           <Calory>{props.items[1].list[8].calories}</Calory>
         </ProductDesc>

@@ -19,6 +19,7 @@ import {
   ProductHero,
   ProductInfoOrder,
   Rating,
+  RatingWrap,
   SizeAndOrder,
   SizeDesc,
   SizeText,
@@ -77,7 +78,14 @@ export const DalgonaGreenTea = () => {
         <Img loading="lazy" src={require(`../../../../images/${props.items[0].list[2].image}`)} alt={props.items[0].list[2].name} />
         <ProductDesc>
           <ItemName>{props.items[0].list[2].name}</ItemName>
-          <Rating>{props.items[0].list[2].stars}★</Rating>
+          <RatingWrap>
+            <Rating>
+              {props.items[0].list[2].stars}★
+            </Rating>
+            <text>
+              {props.items[0].list[2].reviews}&nbsp;reviews
+            </text>
+          </RatingWrap>
           <DetailDesc>{props.items[0].list[2].description}</DetailDesc>
           <Calory>{props.items[0].list[2].calories}</Calory>
         </ProductDesc>

@@ -19,6 +19,7 @@ import {
   ProductHero,
   ProductInfoOrder,
   Rating,
+  RatingWrap,
   SizeAndOrder,
   SizeDesc,
   SizeText,
@@ -73,7 +74,14 @@ export const SateBaksoSeafood = () => {
         <Img loading="lazy" src={require(`../../../../images/${props.items[2].list[0].image}`)} alt={props.items[2].list[0].name} />
         <ProductDesc>
           <ItemName>{props.items[2].list[0].name}</ItemName>
-          <Rating>{props.items[2].list[0].stars}★</Rating>
+          <RatingWrap>
+            <Rating>
+              {props.items[2].list[0].stars}★
+            </Rating>
+            <text>
+              {props.items[2].list[0].reviews}&nbsp;reviews
+            </text>
+          </RatingWrap>
           <DetailDesc>{props.items[2].list[0].description}</DetailDesc>
           <Calory>{props.items[2].list[0].calories}</Calory>
         </ProductDesc>

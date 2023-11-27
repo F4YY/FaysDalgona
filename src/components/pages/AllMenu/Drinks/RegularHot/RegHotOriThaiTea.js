@@ -19,6 +19,7 @@ import {
   ProductHero,
   ProductInfoOrder,
   Rating,
+  RatingWrap,
   SizeAndOrder,
   SizeDesc,
   SizeText,
@@ -77,7 +78,14 @@ export const RegHotOriThaiTea = () => {
         <Img loading="lazy" src={require(`../../../../images/${props.items[2].list[3].image}`)} alt={props.items[2].list[3].name} />
         <ProductDesc>
           <ItemName>{props.items[2].list[3].name}</ItemName>
-          <Rating>{props.items[2].list[3].stars}★</Rating>
+          <RatingWrap>
+            <Rating>
+              {props.items[2].list[3].stars}★
+            </Rating>
+            <text>
+              {props.items[2].list[3].reviews}&nbsp;reviews
+            </text>
+          </RatingWrap>
           <DetailDesc>{props.items[2].list[3].description}</DetailDesc>
           <Calory>{props.items[2].list[3].calories}</Calory>
         </ProductDesc>

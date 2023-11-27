@@ -19,6 +19,7 @@ import {
   ProductHero,
   ProductInfoOrder,
   Rating,
+  RatingWrap,
   SizeAndOrder,
   SizeDesc,
   SizeText,
@@ -77,7 +78,14 @@ export const DalgonaCapu = () => {
         <Img loading="lazy" src={require(`../../../../images/${props.items[0].list[1].image}`)} alt={props.items[0].list[1].name} />
         <ProductDesc>
           <ItemName>{props.items[0].list[1].name}</ItemName>
-          <Rating>{props.items[0].list[1].stars}★</Rating>
+          <RatingWrap>
+            <Rating>
+              {props.items[0].list[1].stars}★
+            </Rating>
+            <text>
+              {props.items[0].list[1].reviews}&nbsp;reviews
+            </text>
+          </RatingWrap>
           <DetailDesc>{props.items[0].list[1].description}</DetailDesc>
           <Calory>{props.items[0].list[1].calories}</Calory>
         </ProductDesc>

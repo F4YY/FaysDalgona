@@ -571,17 +571,22 @@ export const ItemName = styled.div`
   }
 `;
 
+export const RatingWrap = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: .5rem;
+  color: #aeb0b0;
+`;
+
 export const Rating = styled.div`
   display: flex;
-  width: 10%;
+  width: auto;
   color: #aeb0b0;
   border: 1px solid #aeb0b0;
   border-radius: 6px;
-  padding: 4px 6px;
+  padding: 3px 6px;
   margin: 6px 0;
-  @media (max-width: 991px) {
-    width: 16%;
-  }
 `;
 
 export const DetailDesc = styled.div`

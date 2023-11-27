@@ -19,6 +19,7 @@ import {
   ProductHero,
   ProductInfoOrder,
   Rating,
+  RatingWrap,
   SizeAndOrder,
   SizeDesc,
   SizeText,
@@ -77,7 +78,14 @@ export const DalCroMocca = () => {
         <Img loading="lazy" src={require(`../../../../images/${props.items[0].list[5].image}`)} alt={props.items[0].list[5].name} />
         <ProductDesc>
           <ItemName>{props.items[0].list[5].name}</ItemName>
-          <Rating>{props.items[0].list[5].stars}★</Rating>
+          <RatingWrap>
+            <Rating>
+              {props.items[0].list[5].stars}★
+            </Rating>
+            <text>
+              {props.items[0].list[5].reviews}&nbsp;reviews
+            </text>
+          </RatingWrap>
           <DetailDesc>{props.items[0].list[5].description}</DetailDesc>
           <Calory>{props.items[0].list[5].calories}</Calory>
         </ProductDesc>
