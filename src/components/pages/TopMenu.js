@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCar } from "@fortawesome/free-solid-svg-icons";
+import { faMotorcycle } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
-import { BottomRow, MenuDescription, NameAndPrice, OrderDelivery, TopMenuDesc } from "../styled/styled_highlight";
+import { BottomRow, MenuDescription, MotorcyleIcon, NameAndPrice, OrderDelivery, TopMenuDesc } from "../styled/styled_highlight";
 
 const TopMenu = ({ title, price, subtitle, desc }) => {
     return (
@@ -18,10 +18,12 @@ const TopMenu = ({ title, price, subtitle, desc }) => {
         {desc}
       </MenuDescription>
       <BottomRow>
-        <OrderDelivery>
+        <OrderDelivery href="https://gofood.link/a/yHFDprE" target="_blank" rel="noreferrer">
           {subtitle}
         </OrderDelivery>
-          <FontAwesomeIcon icon={faCar} size="1x" />
+        <MotorcyleIcon href="https://gofood.link/a/yHFDprE" target="_blank" rel="noreferrer">
+          <FontAwesomeIcon icon={faMotorcycle} className="faMotorcyle" />
+        </MotorcyleIcon>
       </BottomRow>
     </TopMenuDesc>
   )

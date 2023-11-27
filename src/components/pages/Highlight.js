@@ -11,9 +11,22 @@ import {
   StyledImage,
   ThisWeekandOrder
 } from '../styled/styled_highlight';
+import { useNavigate } from 'react-router-dom';
 
 const Highlight = () => {
   const scrollRef = React.useRef(null);
+  const navigate = useNavigate();
+  const handleClick = (anchor) => {
+    navigate(anchor);
+    scrollToTop();
+  }
+  const scrollToTop = () => {
+    const mainMenuContainer = document.getElementById("main-menu-container");
+    if (mainMenuContainer) {
+      mainMenuContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   return (
     <HighlightContainer>
       <ThisWeekandOrder>
@@ -26,30 +39,42 @@ const Highlight = () => {
       </ThisWeekandOrder>
       <SpecialMenu ref={scrollRef}>
         <SpecialItem>
-          <StyledImage src={DalgChocSilv} alt="DalgChocSilv" />
+          <StyledImage
+            src={DalgChocSilv}
+            alt="DalgChocSilv"
+            onClick={() => handleClick(`/Dalgona Choco Silverqueen`)}
+          />
           <TopMenu
             title="Dalgona Choco Silverqueen"
             subtitle="Order a delivery"
-            desc='Minuman Dalgona rasa cokelat silverqueen iced susu full cream dipadu dengan brown sugar dan boba.'
-            price="Rp16.000/cup"
+            desc='Dalgona drink with chocolate SilverQueen flavor mixed with brown sugar and boba pearl.'
+            price="IDR 15999"
           />
         </SpecialItem>
         <SpecialItem>
-          <StyledImage src={FD_Croffle} alt="Croffle" />
+          <StyledImage
+            src={FD_Croffle}
+            alt="Croffle"
+            onClick={() => handleClick(`/Croffle Original`)}
+          />
           <TopMenu
             title='Croffle Original'
             subtitle="Order a delivery"
-            desc='Croissant waffle baked dengan butter margarine, taburan gula aren dan gula pasir.'
-            price="Rp8000/pcs"
+            desc='A delightful fusion of croissants and waffles, created by cooking croissant dough in a waffle iron.'
+            price="IDR 10999"
           />
         </SpecialItem>
         <SpecialItem>
-          <StyledImage src={require('../images/mienyemek_baksoseafood.jpg')} alt="Mie Nyemek Bakso Seafood" />
+          <StyledImage
+            src={require('../images/mienyemek_baksoseafood.jpg')}
+            alt="Mie Nyemek Bakso Seafood"
+            onClick={() => handleClick(`/Mie Nyemek Bakso Seafood`)}
+          />
           <TopMenu
             title='Mie Nyemek Bakso Seafood'
             subtitle="Order a delivery"
             desc='Indonesian tasty noodles mixed with vegetables, chicken egg, seafood meatballs.'
-            price="Rp15000/bowl"
+            price="IDR 17999"
           />
         </SpecialItem>
       </SpecialMenu>

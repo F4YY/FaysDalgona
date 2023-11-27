@@ -72,11 +72,7 @@ export const SpecialItem = styled.div`
   display: flex;
   flex-direction: column;
   background-color: azure;
-  cursor: pointer;
   border-radius: 20px 20px 0 0;
-  &:hover {
-    opacity: 80%;
-  }
   @media (max-width: 640px) {
     width: 95%;
   }
@@ -89,6 +85,10 @@ export const StyledImage = styled.img`
   object-fit: cover;
   object-position: center;
   border-radius: 20px 20px 0 0;
+  cursor: pointer;
+  &:hover {
+    opacity: 80%;
+  }
   @media (max-width: 640px) {
     width: 100%;
   }
@@ -116,16 +116,16 @@ export const NameAndPrice = styled.div`
   width: 100%;
   height: auto;
   h3{
-    font-size: 20px;
+    font-size: 1.15rem;
   }
   h4{
-    font-size: 20px;
+    font-size: 1.12rem;
     color: rgba(238,153,114,1);
   }
 `
 export const MenuDescription = styled.div`
   display: flex;
-  font-size: 14px;
+  font-size: .95rem;
   color: #64748b;
 `;
 
@@ -138,9 +138,30 @@ export const BottomRow = styled.div`
   height: auto;
 `;
 
-export const OrderDelivery = styled.div`
+export const OrderDelivery = styled.a`
   display: flex;
-  font-size: 22px;
+  font-size: 1.3rem;
   color: #333333;
-  font-family: Karla;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  &:hover {
+    color: rgba(238,153,114,1);
+  }
+  &:active {
+    transform: scale(0.98);
+  }
 `;
+export const MotorcyleIcon = styled.a`
+  display: flex;
+  .faMotorcyle {
+    width: 1.4rem;
+    height: auto;
+    cursor: pointer;
+    &:hover {
+      color: rgba(238,153,114,1);
+    }
+    &:active {
+      transform: scale(0.95);
+    }
+  }
+`

@@ -19,6 +19,7 @@ export const Wrapper = styled.div`
   --semibold: 500;
   --bold: 700;
   --bg_joinbutton: linear-gradient(180deg, #D15B05, #963F01 100%);
+  margin: 20px 0 0;
 `;
 
 export const TopNavigation = styled.div`
@@ -390,9 +391,9 @@ export const ProductDetail = styled.div`
   background-color: #fff;
   display: flex;
   flex-direction: column;
-  margin: 0 0 100px;
+  margin: 20px 0 100px;
   @media (max-width: 640px) {
-    margin: 0 0 50px;
+    margin: 20px 0 50px;
   }
 `;
 
