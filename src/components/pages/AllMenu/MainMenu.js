@@ -6,7 +6,7 @@ import {
   MenuItemGroup,
   MenuItemImage,
   MenuItemText,
-} from "../../styled/AllMenu/StyledMenu";
+} from "../../styled/styled_menu";
 import { useNavigate } from "react-router-dom";
 
 export const MainMenu = ({scrollToTop}) => {

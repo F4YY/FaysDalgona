@@ -21,7 +21,7 @@ import {
   SignInButton,
   TopNavigation,
   Wrapper,
-} from "../../styled/AllMenu/StyledMenu";
+} from "../../styled/styled_menu";
 import { MainMenu } from "./MainMenu";
 import { Route, Routes, useNavigate } from "react-router-dom";
 import { DalgonaIced } from "./Drinks/DalgonaIced/DalgonaIced";

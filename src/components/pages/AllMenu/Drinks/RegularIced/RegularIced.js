@@ -1,6 +1,13 @@
 import React from 'react';
 import menudata from "../../../../database/menu.json";
-import { BackButtontoMain, MenuCategory, MenuCategoryGroup, MenuItemGroup, MenuItemImage, MenuItemText } from '../../../../styled/AllMenu/StyledMenu';
+import {
+  BackButtontoMain,
+  MenuCategory,
+  MenuCategoryGroup,
+  MenuItemGroup,
+  MenuItemImage,
+  MenuItemText
+} from '../../../../styled/styled_menu';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 import { useNavigate } from 'react-router-dom';
