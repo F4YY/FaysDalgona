@@ -32,7 +32,7 @@ export const VisitSosmed = styled.div`
   gap: 1rem;
   color: #fff;
   @media screen and (max-width: 991px) {
-    font-size: .8rem;
+    font-size: 1rem;
   }
 `
 export const SocialMedia = styled.div`
@@ -65,10 +65,10 @@ export const Contact = styled.div`
   }
   @media screen and (max-width: 991px) {
     h1{
-      font-size: .9rem;
+      font-size: 1rem;
     }
     p{
-      font-size: .8rem;
+      font-size: .9rem;
     }
   }
   @media screen and (max-width: 640px) {
@@ -90,10 +90,10 @@ export const OpenHours = styled.div`
   }
   @media screen and (max-width: 991px) {
     h2{
-      font-size: .9rem;
+      font-size: 1rem;
     }
     p{
-      font-size: .8rem;
+      font-size: .9rem;
     }
   }
   @media screen and (max-width: 640px) {
@@ -113,6 +113,6 @@ export const FDlogo = styled.img`
   width: 15%;
   height: auto;
   @media screen and (max-width: 640px) {
-    width: 30%;
+    width: 35%;
   }
 `

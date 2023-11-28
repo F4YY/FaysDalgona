@@ -391,10 +391,6 @@ export const ProductDetail = styled.div`
   background-color: #fff;
   display: flex;
   flex-direction: column;
-  margin: 20px 0 100px;
-  @media (max-width: 640px) {
-    margin: 20px 0 50px;
-  }
 `;
 
 export const PathAndBackButton = styled.div`
@@ -660,7 +656,7 @@ export const ButtonOrder = styled.a`
   box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.24);
   align-self: center;
   display: flex;
-  margin-top: 50px;
+  margin: 50px 0;
   flex-direction: column;
   gap: 0px;
   padding: 15px;
@@ -687,6 +683,86 @@ export const OrderNowText = styled.div`
     Helvetica, sans-serif;
   @media (max-width: 991px) {
     font-size: 1.3rem;
+  }
+`;
+
+export const RatingStar = styled.div`
+  display: flex;
+  width: auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #E1E4E3;
+  border-radius: 1rem;
+  padding: 10px;
+  margin: 20px 0;
+  h2{
+    color: #fff;
+    border: 1px solid grey;
+    border-radius: 6px;
+    font-family: -apple-system, Roboto, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    background-color: #aeb0b0;
+    padding: 3px 6px;
+    margin: 6px 0;
+  }
+  p{
+    color: #aeb0b0;
+    font-family: -apple-system, Roboto, Helvetica, sans-serif;
+    font-size: 1rem;
+    text-align: center;
+    @media (max-width: 991px) {
+      font-size: 1rem;
+    }
+  }
+`;
+
+export const FeedbackArea = styled.textarea`
+  display: flex;
+  width: 100%;
+  height: 100px;
+  border: 1px solid grey;
+  border-radius: 6px;
+  padding: 8px 10px;
+`;
+
+export const YellowStars = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+  .star{
+    width: 40px;
+    height: 40px;
+    margin: 0 5px;
+  }
+`;
+
+export const SubmitRating = styled.a`
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  border-radius: 5px;
+  color: darkcyan;
+  background: linear-gradient(
+    180deg,
+    rgba(197, 208, 205, 1) 0%,
+    rgba(151, 183, 174, 0.9) 100%
+  );
+  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.24);
+  cursor: pointer;
+  padding: 10px;
+  margin: 20px;
+  &:hover {
+    color: #fff;
+    background: linear-gradient(
+      180deg, darkgrey 0%, grey 100%
+    )
+  }
+  &:active {
+    transform: scale(0.98);
+    transition: all 0.2s ease-in-out;
   }
 `;
 

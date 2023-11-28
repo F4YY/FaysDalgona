@@ -7,6 +7,7 @@ import {
   CategoryText,
   DetailDesc,
   DrinkText,
+  FeedbackArea,
   Img,
   ItemName,
   ItemText,
@@ -19,11 +20,13 @@ import {
   ProductHero,
   ProductInfoOrder,
   Rating,
+  RatingStar,
   RatingWrap,
   SizeAndOrder,
   SizeDesc,
   SizeText,
   Slash,
+  SubmitRating,
   Topping,
   ToppingDesc,
   ToppingDetailDesc,
@@ -31,10 +34,12 @@ import {
   ToppingList,
   ToppingName,
   ToppingText,
+  YellowStars,
 } from '../../../../styled/styled_menu';
 import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
+import { faStar } from '@fortawesome/free-solid-svg-icons';
 
 export const DalgonaCapu = () => {
   const navigate = useNavigate();
@@ -48,10 +53,12 @@ export const DalgonaCapu = () => {
       mainMenuContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   };
-
   useEffect(() => {
     scrollToTop();
   }, []);
+  const stars = Array(5).fill(0);
+  const [currentRating, setCurrentRating] = React.useState(0);
+  const [hoverRating, setHoverRating] = React.useState(undefined);
 
   const props = menudata.find((menu) => menu.category === "Drinks" && menu.items[0].name === "Dalgona Iced" && menu.items[0].list[1].name === "Dalgona Capuccino");
   return (
@@ -99,6 +106,32 @@ export const DalgonaCapu = () => {
           <ButtonOrder href="https://gofood.link/a/yHFDprE" target="_blank" rel="noreferrer">
             <OrderNowText>Order Now</OrderNowText>
           </ButtonOrder>
+          <RatingStar>
+            <h2>Rate this menu</h2>
+            <p>Tell others what you think.</p>
+            <YellowStars>
+              {stars.map((_, index) => {
+                return (
+                  <FontAwesomeIcon
+                    className="star"
+                    icon={faStar}
+                    key={index}
+                    color={(hoverRating || currentRating) > index ? "#ffc107" : "#e4e5e9"}
+                    onClick={() => setCurrentRating(index + 1)}
+                    onMouseEnter={() => setHoverRating(index + 1)}
+                    onMouseLeave={() => setHoverRating(undefined)}
+                  />
+                );
+              })}
+            </YellowStars>
+            <FeedbackArea
+              placeholder="Leave your review here..."
+            >
+            </FeedbackArea>
+            <SubmitRating>
+              Submit
+            </SubmitRating>
+          </RatingStar>
         </SizeAndOrder>
         <Topping>
           <ToppingText>Add-ins Topping</ToppingText>
