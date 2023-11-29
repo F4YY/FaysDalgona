@@ -20,12 +20,16 @@ import {
   ProductHero,
   ProductInfoOrder,
   Rating,
+  RatingImg,
+  RatingItemName,
+  RatingMenuWrap,
   RatingStar,
   RatingWrap,
   SizeAndOrder,
   SizeDesc,
   SizeText,
   Slash,
+  StarsReview,
   SubmitRating,
   Topping,
   ToppingDesc,
@@ -40,8 +44,17 @@ import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
+import { faClose } from '@fortawesome/free-solid-svg-icons';
 
-export const DalgonaCapu = () => {
+export const DalgonaCapu = ({
+  stars,
+  rateMenu,
+  setRateMenu,
+  currentRating,
+  setCurrentRating,
+  hoverRating,
+  setHoverRating
+}) => {
   const navigate = useNavigate();
   const handleClick = (anchor) => {
     navigate(anchor);
@@ -56,13 +69,10 @@ export const DalgonaCapu = () => {
   useEffect(() => {
     scrollToTop();
   }, []);
-  const stars = Array(5).fill(0);
-  const [currentRating, setCurrentRating] = React.useState(0);
-  const [hoverRating, setHoverRating] = React.useState(undefined);
-
   const props = menudata.find((menu) => menu.category === "Drinks" && menu.items[0].name === "Dalgona Iced" && menu.items[0].list[1].name === "Dalgona Capuccino");
   return (
-    <ProductDetail id="main-menu-container">
+    <>
+    <ProductDetail id="main-menu-container" rateMenu={rateMenu}>
       <PathAndBackButton>
         <Path>
           <MenuText onClick={() => handleClick("/AllMenu")}>Menu</MenuText>
@@ -86,12 +96,19 @@ export const DalgonaCapu = () => {
         <ProductDesc>
           <ItemName>{props.items[0].list[1].name}</ItemName>
           <RatingWrap>
-            <Rating>
-              {props.items[0].list[1].stars}★
-            </Rating>
-            <text>
-              {props.items[0].list[1].reviews}&nbsp;reviews
-            </text>
+            <StarsReview>
+              <Rating>
+                {props.items[0].list[1].stars}★
+              </Rating>
+              <text>
+                {props.items[0].list[1].reviews}&nbsp;reviews
+              </text>
+            </StarsReview>
+            <h2
+              onClick={() => setRateMenu(true)}
+            >
+              Rate this menu
+            </h2>
           </RatingWrap>
           <DetailDesc>{props.items[0].list[1].description}</DetailDesc>
           <Calory>{props.items[0].list[1].calories}</Calory>
@@ -106,32 +123,6 @@ export const DalgonaCapu = () => {
           <ButtonOrder href="https://gofood.link/a/yHFDprE" target="_blank" rel="noreferrer">
             <OrderNowText>Order Now</OrderNowText>
           </ButtonOrder>
-          <RatingStar>
-            <h2>Rate this menu</h2>
-            <p>Tell others what you think.</p>
-            <YellowStars>
-              {stars.map((_, index) => {
-                return (
-                  <FontAwesomeIcon
-                    className="star"
-                    icon={faStar}
-                    key={index}
-                    color={(hoverRating || currentRating) > index ? "#ffc107" : "#e4e5e9"}
-                    onClick={() => setCurrentRating(index + 1)}
-                    onMouseEnter={() => setHoverRating(index + 1)}
-                    onMouseLeave={() => setHoverRating(undefined)}
-                  />
-                );
-              })}
-            </YellowStars>
-            <FeedbackArea
-              placeholder="Leave your review here..."
-            >
-            </FeedbackArea>
-            <SubmitRating>
-              Submit
-            </SubmitRating>
-          </RatingStar>
         </SizeAndOrder>
         <Topping>
           <ToppingText>Add-ins Topping</ToppingText>
@@ -158,5 +149,44 @@ export const DalgonaCapu = () => {
         </Topping>
       </ProductInfoOrder>
     </ProductDetail>
+    {rateMenu && (
+      <RatingStar>
+        <FontAwesomeIcon
+          className="close"
+          icon={faClose}
+          onClick={() => setRateMenu(false)}
+        />
+        <p>Tell others what you think.</p>
+        <RatingMenuWrap>
+          <RatingImg loading="lazy" src={require('../../../../images/Dalg_Capu.jpg')} alt='dalgona capuccino' />
+          <RatingItemName>{props.items[0].list[1].name}</RatingItemName>
+        </RatingMenuWrap>
+        <YellowStars>
+          {stars.map((_, index) => {
+            return (
+              <FontAwesomeIcon
+                className="star"
+                icon={faStar}
+                key={index}
+                color={(hoverRating || currentRating) > index ? "#ffc107" : "#D6D7C5"}
+                onClick={() => setCurrentRating(index + 1)}
+                onMouseEnter={() => setHoverRating(index + 1)}
+                onMouseLeave={() => setHoverRating(undefined)}
+              />
+            );
+          })}
+        </YellowStars>
+        <FeedbackArea
+          placeholder="Leave your review here..."
+        >
+        </FeedbackArea>
+        <SubmitRating
+          onClick={() => { setRateMenu(false); setCurrentRating(0)}}
+        >
+          Submit
+        </SubmitRating>
+      </RatingStar>
+    )}
+    </>
   )
 }

@@ -1,4 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
+import React from 'react';
 import ReserveTable from './ReserveTable';
 import Testimonials from './Testimonials';
 import About from './About';
@@ -65,6 +66,10 @@ import { ComboTrio1 } from './AllMenu/Combo/Combo123/ComboTrio1';
 import { ComboTrio2 } from './AllMenu/Combo/Combo123/ComboTrio2';
 
 function Main() {
+  const stars = Array(5).fill(0);
+  const [currentRating, setCurrentRating] = React.useState(0);
+  const [hoverRating, setHoverRating] = React.useState(undefined);
+  const [rateMenu, setRateMenu] = React.useState(false);
   return (
     <main>
       <Routes>
@@ -79,57 +84,57 @@ function Main() {
           <Route path="Croffle Original" element={<Croffle />} />
           <Route path="Sate Bakso Seafood" element={<SateSeafood />} />
         </Route>
-        <Route path="Dalgona Choco Silverqueen" element={<DalgonaChocSilv />} />
-        <Route path="Dalgona Capuccino" element={<DalgonaCapu />} />
-        <Route path="Dalgona Green Tea" element={<DalgonaGreenTea />} />
-        <Route path="Dalgona Original Thai Tea" element={<DalgonaOriThaiTea />} />
-        <Route path="Dalgona Choco Milo" element={<DalgonaChocMilo />} />
-        <Route path="Dalgona Moccaccino" element={<DalgonaMocca />} />
-        <Route path="Dalgona Red Velvet" element={<DalgonaRedV />} />
-        <Route path="Dalgona Taro" element={<DalgonaTaro />} />
-        <Route path="Dalgona Nescafe Classic" element={<DalgonaNescafe />} />
-        <Route path="Dalgona Tiramisu" element={<DalgonaTira />} />
-        <Route path="Choco Silverqueen Iced" element={<RegIcedChocSilv />} />
-        <Route path="Capuccino Iced" element={<RegIcedCapu />} />
-        <Route path="Green Tea Iced" element={<RegIcedGreenTea />} />
-        <Route path="Original Thai Tea Iced" element={<RegIcedOriThaiTea />} />
-        <Route path="Choco Milo Iced" element={<RegIcedChocMilo />} />
-        <Route path="Moccaccino Iced" element={<RegIcedMocca />} />
-        <Route path="Red Velvet Iced" element={<RegIcedRedV />} />
-        <Route path="Taro Iced" element={<RegIcedTaro />} />
-        <Route path="Nescafe Classic Iced" element={<RegIcedNescafe />} />
-        <Route path="Tiramisu Iced" element={<RegIcedTira />} />
-        <Route path="Hot Choco Silverqueen" element={<RegHotChocSilv />} />
-        <Route path="Hot Capuccino" element={<RegHotCapu />} />
-        <Route path="Hot Green Tea" element={<RegHotGreenTea />} />
-        <Route path="Hot Original Thai Tea" element={<RegHotOriThaiTea />} />
-        <Route path="Hot Choco Milo" element={<RegHotChocMilo />} />
-        <Route path="Hot Moccaccino" element={<RegHotMocca />} />
-        <Route path="Hot Red Velvet" element={<RegHotRedV />} />
-        <Route path="Hot Taro" element={<RegHotTaro />} />
-        <Route path="Hot Nescafe Classic" element={<RegHotNescafe />} />
-        <Route path="Hot Tiramisu" element={<RegHotTira />} />
-        <Route path="Mie Nyemek Original" element={<MieNyemekOriginal />} />
-        <Route path="Mie Nyemek Bakso Sapi Sosis" element={<MieNyemekBaksoSapi />} />
-        <Route path="Mie Nyemek Bakso Seafood" element={<MieNyemekBaksoSeafood />} />
-        <Route path="Croffle Original" element={<CroffleOriginal />} />
-        <Route path="Sate Bakso Seafood" element={<SateBaksoSeafood />} />
-        <Route path="DalCro Choco Silverqueen" element={<DalCroChocSilv />} />
-        <Route path="DalCro Capuccino" element={<DalCroCapu />} />
-        <Route path="DalCro Green Tea" element={<DalCroGreenTea />} />
-        <Route path="DalCro Original Thai Tea" element={<DalCroOriThaiTea />} />
-        <Route path="DalCro Choco Milo" element={<DalCroChocMilo />} />
-        <Route path="DalCro Moccaccino" element={<DalCroMocca />} />
-        <Route path="DalCro Red Velvet" element={<DalCroRedV />} />
-        <Route path="DalCro Taro" element={<DalCroTaro />} />
-        <Route path="DalCro Nescafe Classic" element={<DalCroNescafe />} />
-        <Route path="DalCro Tiramisu" element={<DalCroTira />} />
-        <Route path="Combo Solo 1" element={<ComboSolo1 />} />
-        <Route path="Combo Solo 2" element={<ComboSolo2 />} />
-        <Route path="Combo Duo 1" element={<ComboDuo1 />} />
-        <Route path="Combo Duo 2" element={<ComboDuo2 />} />
-        <Route path="Combo Trio 1" element={<ComboTrio1 />} />
-        <Route path="Combo Trio 2" element={<ComboTrio2 />} />
+        <Route path="Dalgona Choco Silverqueen" element={<DalgonaChocSilv stars={stars} rateMenu={rateMenu} setRateMenu={setRateMenu} currentRating={currentRating} setCurrentRating={setCurrentRating} hoverRating={hoverRating} setHoverRating={setHoverRating} />} />
+        <Route path="Dalgona Capuccino" element={<DalgonaCapu stars={stars} rateMenu={rateMenu} setRateMenu={setRateMenu} currentRating={currentRating} setCurrentRating={setCurrentRating} hoverRating={hoverRating} setHoverRating={setHoverRating} />} />
+        <Route path="Dalgona Green Tea" element={<DalgonaGreenTea stars={stars} rateMenu={rateMenu} setRateMenu={setRateMenu} currentRating={currentRating} setCurrentRating={setCurrentRating} hoverRating={hoverRating} setHoverRating={setHoverRating} />} />
+        <Route path="Dalgona Original Thai Tea" element={<DalgonaOriThaiTea stars={stars} rateMenu={rateMenu} setRateMenu={setRateMenu} currentRating={currentRating} setCurrentRating={setCurrentRating} hoverRating={hoverRating} setHoverRating={setHoverRating} />} />
+        <Route path="Dalgona Choco Milo" element={<DalgonaChocMilo stars={stars} rateMenu={rateMenu} setRateMenu={setRateMenu} currentRating={currentRating} setCurrentRating={setCurrentRating} hoverRating={hoverRating} setHoverRating={setHoverRating} />} />
+        <Route path="Dalgona Moccaccino" element={<DalgonaMocca stars={stars} rateMenu={rateMenu} setRateMenu={setRateMenu} currentRating={currentRating} setCurrentRating={setCurrentRating} hoverRating={hoverRating} setHoverRating={setHoverRating} />} />
+        <Route path="Dalgona Red Velvet" element={<DalgonaRedV stars={stars} rateMenu={rateMenu} setRateMenu={setRateMenu} currentRating={currentRating} setCurrentRating={setCurrentRating} hoverRating={hoverRating} setHoverRating={setHoverRating} />} />
+        <Route path="Dalgona Taro" element={<DalgonaTaro stars={stars} rateMenu={rateMenu} setRateMenu={setRateMenu} currentRating={currentRating} setCurrentRating={setCurrentRating} hoverRating={hoverRating} setHoverRating={setHoverRating} />} />
+        <Route path="Dalgona Nescafe Classic" element={<DalgonaNescafe stars={stars} rateMenu={rateMenu} setRateMenu={setRateMenu} currentRating={currentRating} setCurrentRating={setCurrentRating} hoverRating={hoverRating} setHoverRating={setHoverRating} />} />
+        <Route path="Dalgona Tiramisu" element={<DalgonaTira stars={stars} rateMenu={rateMenu} setRateMenu={setRateMenu} currentRating={currentRating} setCurrentRating={setCurrentRating} hoverRating={hoverRating} setHoverRating={setHoverRating} />} />
+        <Route path="Choco Silverqueen Iced" element={<RegIcedChocSilv stars={stars} rateMenu={rateMenu} setRateMenu={setRateMenu} currentRating={currentRating} setCurrentRating={setCurrentRating} hoverRating={hoverRating} setHoverRating={setHoverRating} />} />
+        <Route path="Capuccino Iced" element={<RegIcedCapu stars={stars} rateMenu={rateMenu} setRateMenu={setRateMenu} currentRating={currentRating} setCurrentRating={setCurrentRating} hoverRating={hoverRating} setHoverRating={setHoverRating} />} />
+        <Route path="Green Tea Iced" element={<RegIcedGreenTea stars={stars} rateMenu={rateMenu} setRateMenu={setRateMenu} currentRating={currentRating} setCurrentRating={setCurrentRating} hoverRating={hoverRating} setHoverRating={setHoverRating} />} />
+        <Route path="Original Thai Tea Iced" element={<RegIcedOriThaiTea stars={stars} rateMenu={rateMenu} setRateMenu={setRateMenu} currentRating={currentRating} setCurrentRating={setCurrentRating} hoverRating={hoverRating} setHoverRating={setHoverRating} />} />
+        <Route path="Choco Milo Iced" element={<RegIcedChocMilo stars={stars} rateMenu={rateMenu} setRateMenu={setRateMenu} currentRating={currentRating} setCurrentRating={setCurrentRating} hoverRating={hoverRating} setHoverRating={setHoverRating} />} />
+        <Route path="Moccaccino Iced" element={<RegIcedMocca stars={stars} rateMenu={rateMenu} setRateMenu={setRateMenu} currentRating={currentRating} setCurrentRating={setCurrentRating} hoverRating={hoverRating} setHoverRating={setHoverRating} />} />
+        <Route path="Red Velvet Iced" element={<RegIcedRedV stars={stars} rateMenu={rateMenu} setRateMenu={setRateMenu} currentRating={currentRating} setCurrentRating={setCurrentRating} hoverRating={hoverRating} setHoverRating={setHoverRating} />} />
+        <Route path="Taro Iced" element={<RegIcedTaro stars={stars} rateMenu={rateMenu} setRateMenu={setRateMenu} currentRating={currentRating} setCurrentRating={setCurrentRating} hoverRating={hoverRating} setHoverRating={setHoverRating} />} />
+        <Route path="Nescafe Classic Iced" element={<RegIcedNescafe stars={stars} rateMenu={rateMenu} setRateMenu={setRateMenu} currentRating={currentRating} setCurrentRating={setCurrentRating} hoverRating={hoverRating} setHoverRating={setHoverRating} />} />
+        <Route path="Tiramisu Iced" element={<RegIcedTira stars={stars} rateMenu={rateMenu} setRateMenu={setRateMenu} currentRating={currentRating} setCurrentRating={setCurrentRating} hoverRating={hoverRating} setHoverRating={setHoverRating} />} />
+        <Route path="Hot Choco Silverqueen" element={<RegHotChocSilv stars={stars} rateMenu={rateMenu} setRateMenu={setRateMenu} currentRating={currentRating} setCurrentRating={setCurrentRating} hoverRating={hoverRating} setHoverRating={setHoverRating} />} />
+        <Route path="Hot Capuccino" element={<RegHotCapu stars={stars} rateMenu={rateMenu} setRateMenu={setRateMenu} currentRating={currentRating} setCurrentRating={setCurrentRating} hoverRating={hoverRating} setHoverRating={setHoverRating} />} />
+        <Route path="Hot Green Tea" element={<RegHotGreenTea stars={stars} rateMenu={rateMenu} setRateMenu={setRateMenu} currentRating={currentRating} setCurrentRating={setCurrentRating} hoverRating={hoverRating} setHoverRating={setHoverRating} />} />
+        <Route path="Hot Original Thai Tea" element={<RegHotOriThaiTea stars={stars} rateMenu={rateMenu} setRateMenu={setRateMenu} currentRating={currentRating} setCurrentRating={setCurrentRating} hoverRating={hoverRating} setHoverRating={setHoverRating} />} />
+        <Route path="Hot Choco Milo" element={<RegHotChocMilo stars={stars} rateMenu={rateMenu} setRateMenu={setRateMenu} currentRating={currentRating} setCurrentRating={setCurrentRating} hoverRating={hoverRating} setHoverRating={setHoverRating} />} />
+        <Route path="Hot Moccaccino" element={<RegHotMocca stars={stars} rateMenu={rateMenu} setRateMenu={setRateMenu} currentRating={currentRating} setCurrentRating={setCurrentRating} hoverRating={hoverRating} setHoverRating={setHoverRating} />} />
+        <Route path="Hot Red Velvet" element={<RegHotRedV stars={stars} rateMenu={rateMenu} setRateMenu={setRateMenu} currentRating={currentRating} setCurrentRating={setCurrentRating} hoverRating={hoverRating} setHoverRating={setHoverRating} />} />
+        <Route path="Hot Taro" element={<RegHotTaro stars={stars} rateMenu={rateMenu} setRateMenu={setRateMenu} currentRating={currentRating} setCurrentRating={setCurrentRating} hoverRating={hoverRating} setHoverRating={setHoverRating} />} />
+        <Route path="Hot Nescafe Classic" element={<RegHotNescafe stars={stars} rateMenu={rateMenu} setRateMenu={setRateMenu} currentRating={currentRating} setCurrentRating={setCurrentRating} hoverRating={hoverRating} setHoverRating={setHoverRating} />} />
+        <Route path="Hot Tiramisu" element={<RegHotTira stars={stars} rateMenu={rateMenu} setRateMenu={setRateMenu} currentRating={currentRating} setCurrentRating={setCurrentRating} hoverRating={hoverRating} setHoverRating={setHoverRating} />} />
+        <Route path="Mie Nyemek Original" element={<MieNyemekOriginal stars={stars} rateMenu={rateMenu} setRateMenu={setRateMenu} currentRating={currentRating} setCurrentRating={setCurrentRating} hoverRating={hoverRating} setHoverRating={setHoverRating} />} />
+        <Route path="Mie Nyemek Bakso Sapi Sosis" element={<MieNyemekBaksoSapi stars={stars} rateMenu={rateMenu} setRateMenu={setRateMenu} currentRating={currentRating} setCurrentRating={setCurrentRating} hoverRating={hoverRating} setHoverRating={setHoverRating} />} />
+        <Route path="Mie Nyemek Bakso Seafood" element={<MieNyemekBaksoSeafood stars={stars} rateMenu={rateMenu} setRateMenu={setRateMenu} currentRating={currentRating} setCurrentRating={setCurrentRating} hoverRating={hoverRating} setHoverRating={setHoverRating} />} />
+        <Route path="Croffle Original" element={<CroffleOriginal stars={stars} rateMenu={rateMenu} setRateMenu={setRateMenu} currentRating={currentRating} setCurrentRating={setCurrentRating} hoverRating={hoverRating} setHoverRating={setHoverRating} />} />
+        <Route path="Sate Bakso Seafood" element={<SateBaksoSeafood stars={stars} rateMenu={rateMenu} setRateMenu={setRateMenu} currentRating={currentRating} setCurrentRating={setCurrentRating} hoverRating={hoverRating} setHoverRating={setHoverRating} />} />
+        <Route path="DalCro Choco Silverqueen" element={<DalCroChocSilv stars={stars} rateMenu={rateMenu} setRateMenu={setRateMenu} currentRating={currentRating} setCurrentRating={setCurrentRating} hoverRating={hoverRating} setHoverRating={setHoverRating} />} />
+        <Route path="DalCro Capuccino" element={<DalCroCapu stars={stars} rateMenu={rateMenu} setRateMenu={setRateMenu} currentRating={currentRating} setCurrentRating={setCurrentRating} hoverRating={hoverRating} setHoverRating={setHoverRating} />} />
+        <Route path="DalCro Green Tea" element={<DalCroGreenTea stars={stars} rateMenu={rateMenu} setRateMenu={setRateMenu} currentRating={currentRating} setCurrentRating={setCurrentRating} hoverRating={hoverRating} setHoverRating={setHoverRating} />} />
+        <Route path="DalCro Original Thai Tea" element={<DalCroOriThaiTea stars={stars} rateMenu={rateMenu} setRateMenu={setRateMenu} currentRating={currentRating} setCurrentRating={setCurrentRating} hoverRating={hoverRating} setHoverRating={setHoverRating} />} />
+        <Route path="DalCro Choco Milo" element={<DalCroChocMilo stars={stars} rateMenu={rateMenu} setRateMenu={setRateMenu} currentRating={currentRating} setCurrentRating={setCurrentRating} hoverRating={hoverRating} setHoverRating={setHoverRating} />} />
+        <Route path="DalCro Moccaccino" element={<DalCroMocca stars={stars} rateMenu={rateMenu} setRateMenu={setRateMenu} currentRating={currentRating} setCurrentRating={setCurrentRating} hoverRating={hoverRating} setHoverRating={setHoverRating} />} />
+        <Route path="DalCro Red Velvet" element={<DalCroRedV stars={stars} rateMenu={rateMenu} setRateMenu={setRateMenu} currentRating={currentRating} setCurrentRating={setCurrentRating} hoverRating={hoverRating} setHoverRating={setHoverRating} />} />
+        <Route path="DalCro Taro" element={<DalCroTaro stars={stars} rateMenu={rateMenu} setRateMenu={setRateMenu} currentRating={currentRating} setCurrentRating={setCurrentRating} hoverRating={hoverRating} setHoverRating={setHoverRating} />} />
+        <Route path="DalCro Nescafe Classic" element={<DalCroNescafe stars={stars} rateMenu={rateMenu} setRateMenu={setRateMenu} currentRating={currentRating} setCurrentRating={setCurrentRating} hoverRating={hoverRating} setHoverRating={setHoverRating} />} />
+        <Route path="DalCro Tiramisu" element={<DalCroTira stars={stars} rateMenu={rateMenu} setRateMenu={setRateMenu} currentRating={currentRating} setCurrentRating={setCurrentRating} hoverRating={hoverRating} setHoverRating={setHoverRating} />} />
+        <Route path="Combo Solo 1" element={<ComboSolo1 stars={stars} rateMenu={rateMenu} setRateMenu={setRateMenu} currentRating={currentRating} setCurrentRating={setCurrentRating} hoverRating={hoverRating} setHoverRating={setHoverRating} />} />
+        <Route path="Combo Solo 2" element={<ComboSolo2 stars={stars} rateMenu={rateMenu} setRateMenu={setRateMenu} currentRating={currentRating} setCurrentRating={setCurrentRating} hoverRating={hoverRating} setHoverRating={setHoverRating} />} />
+        <Route path="Combo Duo 1" element={<ComboDuo1 stars={stars} rateMenu={rateMenu} setRateMenu={setRateMenu} currentRating={currentRating} setCurrentRating={setCurrentRating} hoverRating={hoverRating} setHoverRating={setHoverRating} />} />
+        <Route path="Combo Duo 2" element={<ComboDuo2 stars={stars} rateMenu={rateMenu} setRateMenu={setRateMenu} currentRating={currentRating} setCurrentRating={setCurrentRating} hoverRating={hoverRating} setHoverRating={setHoverRating} />} />
+        <Route path="Combo Trio 1" element={<ComboTrio1 stars={stars} rateMenu={rateMenu} setRateMenu={setRateMenu} currentRating={currentRating} setCurrentRating={setCurrentRating} hoverRating={hoverRating} setHoverRating={setHoverRating} />} />
+        <Route path="Combo Trio 2" element={<ComboTrio2 stars={stars} rateMenu={rateMenu} setRateMenu={setRateMenu} currentRating={currentRating} setCurrentRating={setCurrentRating} hoverRating={hoverRating} setHoverRating={setHoverRating} />} />
         <Route path="/Testimonials" element={<Testimonials />} />
         <Route path="/About" element={<About />} />
         <Route path="/Reservation" element={<ReserveTable />} />

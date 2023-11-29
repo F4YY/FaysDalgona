@@ -388,9 +388,13 @@ export const MenuItemText = styled.h2`
 //For Product Detail:
 
 export const ProductDetail = styled.div`
+  position: relative;
+  z-index: 0;
   background-color: #fff;
   display: flex;
   flex-direction: column;
+  pointer-events: ${({ rateMenu }) => (rateMenu ? 'none' : 'auto')};
+  filter: brightness(${({ rateMenu }) => (rateMenu ? '0.5' : '1')});
 `;
 
 export const PathAndBackButton = styled.div`
@@ -398,7 +402,7 @@ export const PathAndBackButton = styled.div`
   width: auto;
   justify-content: space-between;
   align-items: center;
-  margin: 0 40px 20px;
+  margin: 20px 40px;
   @media (max-width: 991px) {
     margin: 20px 20px;
   }
@@ -570,9 +574,35 @@ export const ItemName = styled.div`
 export const RatingWrap = styled.div`
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   align-items: center;
   gap: .5rem;
   color: #aeb0b0;
+  h2{
+    color: rgba(150, 63, 1, 0.9);
+    border: 1px solid gold;
+    border-radius: 6px;
+    font-family: -apple-system, Roboto, Helvetica, sans-serif;
+    font-size: 1rem;
+    background-color: #F8FB68;
+    cursor: pointer;
+    padding: 3px 6px;
+    margin: 6px 0;
+    &:hover {
+      color: darkorange;
+      border: 1px solid darkorange;
+    }
+    &:active {
+      transform: scale(0.98);
+    }
+  }
+`;
+
+export const StarsReview = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: .5rem;
 `;
 
 export const Rating = styled.div`
@@ -687,27 +717,22 @@ export const OrderNowText = styled.div`
 `;
 
 export const RatingStar = styled.div`
-  display: flex;
-  width: auto;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40%;
+  height: auto;
+  z-index: 5;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #E1E4E3;
+  background-color: #E3E3E1;
   border-radius: 1rem;
   padding: 10px;
   margin: 20px 0;
-  h2{
-    color: #fff;
-    border: 1px solid grey;
-    border-radius: 6px;
-    font-family: -apple-system, Roboto, Helvetica, sans-serif;
-    font-size: 1.2rem;
-    background-color: #aeb0b0;
-    padding: 3px 6px;
-    margin: 6px 0;
-  }
   p{
-    color: #aeb0b0;
+    color: rgba(0, 0, 0, 0.67);
     font-family: -apple-system, Roboto, Helvetica, sans-serif;
     font-size: 1rem;
     text-align: center;
@@ -715,12 +740,51 @@ export const RatingStar = styled.div`
       font-size: 1rem;
     }
   }
+  .close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 10px;
+    cursor: pointer;
+    color: darkslategrey;
+    font-size: 1.5rem;
+  }
+  @media (max-width: 640px) {
+    width: 95%;
+  }
+`;
+
+export const RatingMenuWrap = styled.div`
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: .7rem;
+  margin: 20px 0;
+`;
+
+export const RatingImg = styled.img`
+  width: 10%;
+  height: auto;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+`;
+
+export const RatingItemName = styled.div`
+  color: rgba(0, 0, 0, 0.57);
+  font-size: 1rem;
+  text-align: center;
 `;
 
 export const FeedbackArea = styled.textarea`
   display: flex;
   width: 100%;
-  height: 100px;
+  min-height: 90px;
+  color: darkslategrey;
   border: 1px solid grey;
   border-radius: 6px;
   padding: 8px 10px;
@@ -729,12 +793,13 @@ export const FeedbackArea = styled.textarea`
 export const YellowStars = styled.div`
   display: flex;
   flex-direction: row;
+  width: auto;
   align-items: center;
   justify-content: center;
-  margin: 20px;
+  margin: 20px 0;
   .star{
-    width: 40px;
-    height: 40px;
+    width: 2rem;
+    height: auto;
     margin: 0 5px;
   }
 `;
@@ -752,8 +817,8 @@ export const SubmitRating = styled.a`
   );
   box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.24);
   cursor: pointer;
-  padding: 10px;
-  margin: 20px;
+  padding: 5px;
+  margin: 20px auto;
   &:hover {
     color: #fff;
     background: linear-gradient(

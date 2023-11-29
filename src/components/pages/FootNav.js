@@ -40,9 +40,9 @@ const socials = [
   },
 ];
 
-const FootNav = () => {
+const FootNav = ({rateMenu}) => {
   return (
-    <Footer>
+    <Footer rateMenu={rateMenu}>
       <FootWrapper>
         <VisitSosmed>
           <p>Visit our social media:</p>
