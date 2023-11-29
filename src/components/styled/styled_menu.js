@@ -762,7 +762,7 @@ export const RatingMenuWrap = styled.div`
   justify-content: center;
   align-items: center;
   gap: .7rem;
-  margin: 20px 0;
+  margin: 10px 0;
 `;
 
 export const RatingImg = styled.img`
@@ -783,7 +783,7 @@ export const RatingItemName = styled.div`
 export const FeedbackArea = styled.textarea`
   display: flex;
   width: 100%;
-  min-height: 90px;
+  min-height: 5rem;
   color: darkslategrey;
   border: 1px solid grey;
   border-radius: 6px;
@@ -796,7 +796,7 @@ export const YellowStars = styled.div`
   width: auto;
   align-items: center;
   justify-content: center;
-  margin: 20px 0;
+  margin: 10px 0 15px;
   .star{
     width: 2rem;
     height: auto;
@@ -809,20 +809,20 @@ export const SubmitRating = styled.a`
   width: 100%;
   justify-content: center;
   border-radius: 5px;
-  color: darkcyan;
+  color: #fff;
   background: linear-gradient(
-    180deg,
-    rgba(197, 208, 205, 1) 0%,
-    rgba(151, 183, 174, 0.9) 100%
+    180deg, darkgrey 0%, grey 100%
   );
   box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.24);
   cursor: pointer;
   padding: 5px;
-  margin: 20px auto;
+  margin: 15px auto;
   &:hover {
-    color: #fff;
+    color: darkcyan;
     background: linear-gradient(
-      180deg, darkgrey 0%, grey 100%
+      180deg,
+      rgba(197, 208, 205, 1) 0%,
+      rgba(151, 183, 174, 0.9) 100%
     )
   }
   &:active {
