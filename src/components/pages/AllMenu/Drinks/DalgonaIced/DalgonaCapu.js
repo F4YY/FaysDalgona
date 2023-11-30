@@ -45,6 +45,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import { faClose } from '@fortawesome/free-solid-svg-icons';
+import { Alert, AlertDescription, AlertIcon, AlertTitle } from '@chakra-ui/react';
 
 export const DalgonaCapu = ({
   stars,
@@ -53,7 +54,12 @@ export const DalgonaCapu = ({
   currentRating,
   setCurrentRating,
   hoverRating,
-  setHoverRating
+  setHoverRating,
+  authReady,
+  handleRateMenu,
+  handleSubmit,
+  showAlert,
+  setShowAlert
 }) => {
   const navigate = useNavigate();
   const handleClick = (anchor) => {
@@ -72,7 +78,11 @@ export const DalgonaCapu = ({
   const props = menudata.find((menu) => menu.category === "Drinks" && menu.items[0].name === "Dalgona Iced" && menu.items[0].list[1].name === "Dalgona Capuccino");
   return (
     <>
-    <ProductDetail id="main-menu-container" rateMenu={rateMenu}>
+    <ProductDetail
+      id="main-menu-container"
+      rateMenu={rateMenu}
+      showAlert={showAlert}
+    >
       <PathAndBackButton>
         <Path>
           <MenuText onClick={() => handleClick("/AllMenu")}>Menu</MenuText>
@@ -104,11 +114,13 @@ export const DalgonaCapu = ({
                 {props.items[0].list[1].reviews}&nbsp;reviews
               </text>
             </StarsReview>
-            <h2
-              onClick={() => setRateMenu(true)}
-            >
-              Rate this menu
-            </h2>
+            {authReady && (
+              <h2
+                onClick={handleRateMenu}
+              >
+                Rate this menu
+              </h2>
+            )}
           </RatingWrap>
           <DetailDesc>{props.items[0].list[1].description}</DetailDesc>
           <Calory>{props.items[0].list[1].calories}</Calory>
@@ -181,11 +193,43 @@ export const DalgonaCapu = ({
         >
         </FeedbackArea>
         <SubmitRating
-          onClick={() => { setRateMenu(false); setCurrentRating(0)}}
+          onClick={handleSubmit}
         >
           Submit
         </SubmitRating>
       </RatingStar>
+    )}
+    {showAlert && (
+      <Alert
+        position='fixed'
+        top='50%'
+        left='50%'
+        transform='translate(-50%, -50%)'
+        status='error'
+        justifyContent='center'
+        w={{base:"95%",md:"60%",lg:"40%"}}
+        minH={{base:"30%",md:"40%",lg:"40%"}}
+        borderRadius='1rem'
+        display={{base:"flex",md:"flex",lg:"flex"}}
+        flexDir={{base:'column', md:'row', lg:'row'}}
+      >
+        <div style={{
+          position: 'absolute',
+          top: '1rem',
+          right: '1rem',
+          }}
+        >
+          <FontAwesomeIcon
+            size='lg'
+            cursor="pointer"
+            icon={faClose}
+            onClick={() => setShowAlert(false)}
+          />
+        </div>
+        <AlertIcon />
+        <AlertTitle>You're not logged in!</AlertTitle>
+        <AlertDescription>Please login to rate a menu.</AlertDescription>
+      </Alert>
     )}
     </>
   )

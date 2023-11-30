@@ -393,8 +393,8 @@ export const ProductDetail = styled.div`
   background-color: #fff;
   display: flex;
   flex-direction: column;
-  pointer-events: ${({ rateMenu }) => (rateMenu ? 'none' : 'auto')};
-  filter: brightness(${({ rateMenu }) => (rateMenu ? '0.5' : '1')});
+  pointer-events: ${({ rateMenu, showAlert }) => (rateMenu || showAlert ? 'none' : 'auto')};
+  filter: brightness(${({ rateMenu, showAlert }) => (rateMenu || showAlert ? '0.5' : '1')});
 `;
 
 export const PathAndBackButton = styled.div`
@@ -566,6 +566,7 @@ export const ItemName = styled.div`
   max-width: 100%;
   font: 600 36px/129% Barlow Semi Condensed, -apple-system, Roboto, Helvetica,
     sans-serif;
+  margin: 0 0 10px;
   @media (max-width: 991px) {
     font-size: 1.4rem;
   }
