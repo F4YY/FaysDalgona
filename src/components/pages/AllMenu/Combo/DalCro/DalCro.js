@@ -17,7 +17,7 @@ export const DalCro = () => {
   const handleClick = (anchor) => {
     navigate(anchor);
   };
-  const dalCro = menudata.find((menu) => menu.category === "Combo" && menu.items[0].name === "Simple DalCro");
+  const dalCro = menudata.menu.find((menu) => menu.category === "Combo" && menu.items[0].name === "Simple DalCro");
   if (!dalCro) {
     return null;
   }

@@ -71,7 +71,7 @@ export const MieNyemekBaksoSapi = ({
     scrollToTop();
   }, []);
 
-  const props = menudata.find((menu) => menu.category === "Food" && menu.items[0].name === "Mie Nyemek" && menu.items[0].list[1].name === "Mie Nyemek Bakso Sapi Sosis");
+  const props = menudata.menu.find((menu) => menu.category === "Food" && menu.items[0].name === "Mie Nyemek" && menu.items[0].list[1].name === "Mie Nyemek Bakso Sapi Sosis");
   return (
     <>
     <ProductDetail

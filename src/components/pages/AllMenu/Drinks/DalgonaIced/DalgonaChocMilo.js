@@ -75,7 +75,7 @@ export const DalgonaChocMilo = ({
     scrollToTop();
   }, []);
 
-  const props = menudata.find((menu) => menu.category === "Drinks" && menu.items[0].name === "Dalgona Iced" && menu.items[0].list[4].name === "Dalgona Choco Milo");
+  const props = menudata.menu.find((menu) => menu.category === "Drinks" && menu.items[0].name === "Dalgona Iced" && menu.items[0].list[4].name === "Dalgona Choco Milo");
   return (
     <>
     <ProductDetail

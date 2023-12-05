@@ -75,7 +75,7 @@ export const DalCroGreenTea = ({
     scrollToTop();
   }, []);
 
-  const props = menudata.find((menu) => menu.category === "Combo" && menu.items[0].name === "Simple DalCro" && menu.items[0].list[2].name === "DalCro Green Tea");
+  const props = menudata.menu.find((menu) => menu.category === "Combo" && menu.items[0].name === "Simple DalCro" && menu.items[0].list[2].name === "DalCro Green Tea");
   return (
     <>
     <ProductDetail

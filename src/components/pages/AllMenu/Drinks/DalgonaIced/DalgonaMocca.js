@@ -75,7 +75,7 @@ export const DalgonaMocca = ({
     scrollToTop();
   }, []);
 
-  const props = menudata.find((menu) => menu.category === "Drinks" && menu.items[0].name === "Dalgona Iced" && menu.items[0].list[5].name === "Dalgona Moccaccino");
+  const props = menudata.menu.find((menu) => menu.category === "Drinks" && menu.items[0].name === "Dalgona Iced" && menu.items[0].list[5].name === "Dalgona Moccaccino");
   return (
     <>
     <ProductDetail

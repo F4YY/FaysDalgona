@@ -75,7 +75,7 @@ export const RegIcedGreenTea = ({
     scrollToTop();
   }, []);
 
-  const props = menudata.find((menu) => menu.category === "Drinks" && menu.items[1].name === "Regular Iced" && menu.items[1].list[2].name === "Green Tea Iced");
+  const props = menudata.menu.find((menu) => menu.category === "Drinks" && menu.items[1].name === "Regular Iced" && menu.items[1].list[2].name === "Green Tea Iced");
   return (
     <>
     <ProductDetail

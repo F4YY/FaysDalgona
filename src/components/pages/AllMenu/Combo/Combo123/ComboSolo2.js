@@ -75,7 +75,7 @@ export const ComboSolo2 = ({
     scrollToTop();
   }, []);
 
-  const props = menudata.find((menu) => menu.category === "Combo" && menu.items[1].name === "Combo 123" && menu.items[1].list[1].name === "Combo Solo 2");
+  const props = menudata.menu.find((menu) => menu.category === "Combo" && menu.items[1].name === "Combo 123" && menu.items[1].list[1].name === "Combo Solo 2");
   return (
     <>
     <ProductDetail

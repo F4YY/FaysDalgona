@@ -75,7 +75,7 @@ export const DalCroCapu = ({
     scrollToTop();
   }, []);
 
-  const props = menudata.find((menu) => menu.category === "Combo" && menu.items[0].name === "Simple DalCro" && menu.items[0].list[1].name === "DalCro Capuccino");
+  const props = menudata.menu.find((menu) => menu.category === "Combo" && menu.items[0].name === "Simple DalCro" && menu.items[0].list[1].name === "DalCro Capuccino");
   return (
     <>
     <ProductDetail

@@ -17,7 +17,7 @@ export const MainMenu = ({scrollToTop}) => {
   }
   return (
     <div>
-    {menudata.map((menu) => (
+    {menudata.menu.map((menu) => (
       <>
         <MenuCategory>
           {menu.category}

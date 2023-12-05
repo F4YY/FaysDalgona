@@ -75,7 +75,7 @@ export const RegIcedTira = ({
     scrollToTop();
   }, []);
 
-  const props = menudata.find((menu) => menu.category === "Drinks" && menu.items[1].name === "Regular Iced" && menu.items[1].list[9].name === "Tiramisu Iced");
+  const props = menudata.menu.find((menu) => menu.category === "Drinks" && menu.items[1].name === "Regular Iced" && menu.items[1].list[9].name === "Tiramisu Iced");
   return (
     <>
     <ProductDetail

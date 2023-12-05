@@ -75,7 +75,7 @@ export const DalgonaRedV = ({
     scrollToTop();
   }, []);
 
-  const props = menudata.find((menu) => menu.category === "Drinks" && menu.items[0].name === "Dalgona Iced" && menu.items[0].list[6].name === "Dalgona Red Velvet");
+  const props = menudata.menu.find((menu) => menu.category === "Drinks" && menu.items[0].name === "Dalgona Iced" && menu.items[0].list[6].name === "Dalgona Red Velvet");
   return (
     <>
     <ProductDetail

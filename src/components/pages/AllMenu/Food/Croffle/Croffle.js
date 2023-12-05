@@ -17,7 +17,7 @@ export const Croffle = () => {
   const handleClick = (anchor) => {
     navigate(anchor);
   };
-  const croffle = menudata.find((menu) => menu.category === "Food" && menu.items[1].name === "Croffle Original");
+  const croffle = menudata.menu.find((menu) => menu.category === "Food" && menu.items[1].name === "Croffle Original");
   if (!croffle) {
     return null;
   }

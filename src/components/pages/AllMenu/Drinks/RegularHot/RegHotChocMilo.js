@@ -75,7 +75,7 @@ export const RegHotChocMilo = ({
     scrollToTop();
   }, []);
 
-  const props = menudata.find((menu) => menu.category === "Drinks" && menu.items[2].name === "Regular Hot" && menu.items[2].list[4].name === "Hot Choco Milo");
+  const props = menudata.menu.find((menu) => menu.category === "Drinks" && menu.items[2].name === "Regular Hot" && menu.items[2].list[4].name === "Hot Choco Milo");
   return (
     <>
     <ProductDetail

@@ -75,7 +75,7 @@ export const DalgonaOriThaiTea = ({
     scrollToTop();
   }, []);
 
-  const props = menudata.find((menu) => menu.category === "Drinks" && menu.items[0].name === "Dalgona Iced" && menu.items[0].list[3].name === "Dalgona Original Thai Tea");
+  const props = menudata.menu.find((menu) => menu.category === "Drinks" && menu.items[0].name === "Dalgona Iced" && menu.items[0].list[3].name === "Dalgona Original Thai Tea");
   return (
     <>
     <ProductDetail

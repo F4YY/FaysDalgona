@@ -75,7 +75,7 @@ export const CroffleOriginal = ({
     scrollToTop();
   }, []);
 
-  const props = menudata.find((menu) => menu.category === "Food" && menu.items[1].name === "Croffle Original" && menu.items[1].list[0].name === "Croffle Original");
+  const props = menudata.menu.find((menu) => menu.category === "Food" && menu.items[1].name === "Croffle Original" && menu.items[1].list[0].name === "Croffle Original");
   return (
     <>
     <ProductDetail

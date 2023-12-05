@@ -75,7 +75,7 @@ export const DalgonaCapu = ({
   useEffect(() => {
     scrollToTop();
   }, []);
-  const props = menudata.find((menu) => menu.category === "Drinks" && menu.items[0].name === "Dalgona Iced" && menu.items[0].list[1].name === "Dalgona Capuccino");
+  const props = menudata.menu.find((menu) => menu.category === "Drinks" && menu.items[0].name === "Dalgona Iced" && menu.items[0].list[1].name === "Dalgona Capuccino");
   return (
     <>
     <ProductDetail

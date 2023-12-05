@@ -17,7 +17,7 @@ export const MieNyemek = () => {
   const handleClick = (anchor) => {
     navigate(anchor);
   };
-  const mieNyemek = menudata.find((menu) => menu.category === "Food" && menu.items[0].name === "Mie Nyemek");
+  const mieNyemek = menudata.menu.find((menu) => menu.category === "Food" && menu.items[0].name === "Mie Nyemek");
   if (!mieNyemek) {
     return null;
   }

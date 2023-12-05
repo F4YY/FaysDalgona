@@ -75,7 +75,7 @@ export const RegHotOriThaiTea = ({
     scrollToTop();
   }, []);
 
-  const props = menudata.find((menu) => menu.category === "Drinks" && menu.items[2].name === "Regular Hot" && menu.items[2].list[3].name === "Hot Original Thai Tea");
+  const props = menudata.menu.find((menu) => menu.category === "Drinks" && menu.items[2].name === "Regular Hot" && menu.items[2].list[3].name === "Hot Original Thai Tea");
   return (
     <>
     <ProductDetail

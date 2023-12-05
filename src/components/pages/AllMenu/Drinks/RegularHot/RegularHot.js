@@ -17,7 +17,7 @@ export const RegularHot = () => {
   const handleClick = (anchor) => {
     navigate(anchor);
   };
-  const regularHot = menudata.find((menu) => menu.category === "Drinks" && menu.items[2].name === "Regular Hot");
+  const regularHot = menudata.menu.find((menu) => menu.category === "Drinks" && menu.items[2].name === "Regular Hot");
   if (!regularHot) {
     return null;
   }

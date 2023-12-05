@@ -75,7 +75,7 @@ export const RegIcedOriThaiTea = ({
     scrollToTop();
   }, []);
 
-  const props = menudata.find((menu) => menu.category === "Drinks" && menu.items[1].name === "Regular Iced" && menu.items[1].list[3].name === "Original Thai Tea Iced");
+  const props = menudata.menu.find((menu) => menu.category === "Drinks" && menu.items[1].name === "Regular Iced" && menu.items[1].list[3].name === "Original Thai Tea Iced");
   return (
     <>
     <ProductDetail

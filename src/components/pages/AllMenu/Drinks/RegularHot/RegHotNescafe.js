@@ -75,7 +75,7 @@ export const RegHotNescafe = ({
     scrollToTop();
   }, []);
 
-  const props = menudata.find((menu) => menu.category === "Drinks" && menu.items[2].name === "Regular Hot" && menu.items[2].list[8].name === "Hot Nescafe Classic");
+  const props = menudata.menu.find((menu) => menu.category === "Drinks" && menu.items[2].name === "Regular Hot" && menu.items[2].list[8].name === "Hot Nescafe Classic");
   return (
     <>
     <ProductDetail

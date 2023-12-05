@@ -71,7 +71,7 @@ export const MieNyemekOriginal = ({
     scrollToTop();
   }, []);
 
-  const props = menudata.find((menu) => menu.category === "Food" && menu.items[0].name === "Mie Nyemek" && menu.items[0].list[0].name === "Mie Nyemek Original");
+  const props = menudata.menu.find((menu) => menu.category === "Food" && menu.items[0].name === "Mie Nyemek" && menu.items[0].list[0].name === "Mie Nyemek Original");
   return (
     <>
     <ProductDetail

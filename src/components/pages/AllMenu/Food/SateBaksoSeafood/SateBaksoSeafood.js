@@ -71,7 +71,7 @@ export const SateBaksoSeafood = ({
     scrollToTop();
   }, []);
 
-  const props = menudata.find((menu) => menu.category === "Food" && menu.items[2].name === "Sate Bakso Seafood" && menu.items[2].list[0].name === "Sate Bakso Seafood");
+  const props = menudata.menu.find((menu) => menu.category === "Food" && menu.items[2].name === "Sate Bakso Seafood" && menu.items[2].list[0].name === "Sate Bakso Seafood");
   return (
     <>
     <ProductDetail

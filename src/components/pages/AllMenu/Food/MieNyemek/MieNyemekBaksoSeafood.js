@@ -71,7 +71,7 @@ export const MieNyemekBaksoSeafood = ({
     scrollToTop();
   }, []);
 
-  const props = menudata.find((menu) => menu.category === "Food" && menu.items[0].name === "Mie Nyemek" && menu.items[0].list[2].name === "Mie Nyemek Bakso Seafood");
+  const props = menudata.menu.find((menu) => menu.category === "Food" && menu.items[0].name === "Mie Nyemek" && menu.items[0].list[2].name === "Mie Nyemek Bakso Seafood");
   return (
     <>
     <ProductDetail

@@ -75,7 +75,7 @@ export const RegIcedMocca = ({
     scrollToTop();
   }, []);
 
-  const props = menudata.find((menu) => menu.category === "Drinks" && menu.items[1].name === "Regular Iced" && menu.items[1].list[5].name === "Moccaccino Iced");
+  const props = menudata.menu.find((menu) => menu.category === "Drinks" && menu.items[1].name === "Regular Iced" && menu.items[1].list[5].name === "Moccaccino Iced");
   return (
     <>
     <ProductDetail

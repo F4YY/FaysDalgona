@@ -73,7 +73,7 @@ export default function Menu() {
       </AuxiliaryNavigation>
       <MainContent>
         <LeftMenu>
-          {menudata.map((menu) => (
+          {menudata.menu.map((menu) => (
             <MenuSection key={menu.category}>
               <MenuTitle>
                 {menu.category}

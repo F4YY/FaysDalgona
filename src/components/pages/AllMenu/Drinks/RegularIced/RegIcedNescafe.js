@@ -75,7 +75,7 @@ export const RegIcedNescafe = ({
     scrollToTop();
   }, []);
 
-  const props = menudata.find((menu) => menu.category === "Drinks" && menu.items[1].name === "Regular Iced" && menu.items[1].list[8].name === "Nescafe Classic Iced");
+  const props = menudata.menu.find((menu) => menu.category === "Drinks" && menu.items[1].name === "Regular Iced" && menu.items[1].list[8].name === "Nescafe Classic Iced");
   return (
     <>
     <ProductDetail

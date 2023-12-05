@@ -75,7 +75,7 @@ export const RegIcedCapu = ({
     scrollToTop();
   }, []);
 
-  const props = menudata.find((menu) => menu.category === "Drinks" && menu.items[1].name === "Regular Iced" && menu.items[1].list[1].name === "Capuccino Iced");
+  const props = menudata.menu.find((menu) => menu.category === "Drinks" && menu.items[1].name === "Regular Iced" && menu.items[1].list[1].name === "Capuccino Iced");
   return (
     <>
     <ProductDetail

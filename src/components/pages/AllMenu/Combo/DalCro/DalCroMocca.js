@@ -75,7 +75,7 @@ export const DalCroMocca = ({
     scrollToTop();
   }, []);
 
-  const props = menudata.find((menu) => menu.category === "Combo" && menu.items[0].name === "Simple DalCro" && menu.items[0].list[5].name === "DalCro Moccaccino");
+  const props = menudata.menu.find((menu) => menu.category === "Combo" && menu.items[0].name === "Simple DalCro" && menu.items[0].list[5].name === "DalCro Moccaccino");
   return (
     <>
     <ProductDetail

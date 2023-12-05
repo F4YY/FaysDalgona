@@ -75,7 +75,7 @@ export const ComboTrio1 = ({
     scrollToTop();
   }, []);
 
-  const props = menudata.find((menu) => menu.category === "Combo" && menu.items[1].name === "Combo 123" && menu.items[1].list[4].name === "Combo Trio 1");
+  const props = menudata.menu.find((menu) => menu.category === "Combo" && menu.items[1].name === "Combo 123" && menu.items[1].list[4].name === "Combo Trio 1");
   return (
     <>
     <ProductDetail

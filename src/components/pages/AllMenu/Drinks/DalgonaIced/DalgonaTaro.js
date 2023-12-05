@@ -75,7 +75,7 @@ export const DalgonaTaro = ({
     scrollToTop();
   }, []);
 
-  const props = menudata.find((menu) => menu.category === "Drinks" && menu.items[0].name === "Dalgona Iced" && menu.items[0].list[7].name === "Dalgona Taro");
+  const props = menudata.menu.find((menu) => menu.category === "Drinks" && menu.items[0].name === "Dalgona Iced" && menu.items[0].list[7].name === "Dalgona Taro");
   return (
     <>
     <ProductDetail

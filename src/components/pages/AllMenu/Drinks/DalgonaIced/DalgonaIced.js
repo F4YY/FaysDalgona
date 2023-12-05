@@ -17,7 +17,7 @@ export const DalgonaIced = () => {
   const handleClick = (anchor) => {
     navigate(anchor);
   };
-  const dalgonaIced = menudata.find((menu) => menu.category === "Drinks" && menu.items[0].name === "Dalgona Iced");
+  const dalgonaIced = menudata.menu.find((menu) => menu.category === "Drinks" && menu.items[0].name === "Dalgona Iced");
   if (!dalgonaIced) {
     return null;
   }

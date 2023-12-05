@@ -75,7 +75,7 @@ export const DalCroNescafe = ({
     scrollToTop();
   }, []);
 
-  const props = menudata.find((menu) => menu.category === "Combo" && menu.items[0].name === "Simple DalCro" && menu.items[0].list[8].name === "DalCro Nescafe Classic");
+  const props = menudata.menu.find((menu) => menu.category === "Combo" && menu.items[0].name === "Simple DalCro" && menu.items[0].list[8].name === "DalCro Nescafe Classic");
   return (
     <>
     <ProductDetail

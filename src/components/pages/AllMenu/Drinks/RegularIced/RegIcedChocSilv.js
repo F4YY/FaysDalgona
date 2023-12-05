@@ -75,7 +75,7 @@ export const RegIcedChocSilv = ({
     scrollToTop();
   }, []);
 
-  const props = menudata.find((menu) => menu.category === "Drinks" && menu.items[1].name === "Regular Iced" && menu.items[1].list[0].name === "Choco Silverqueen Iced");
+  const props = menudata.menu.find((menu) => menu.category === "Drinks" && menu.items[1].name === "Regular Iced" && menu.items[1].list[0].name === "Choco Silverqueen Iced");
   return (
     <>
     <ProductDetail

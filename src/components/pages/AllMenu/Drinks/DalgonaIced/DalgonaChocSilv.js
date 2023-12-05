@@ -75,7 +75,7 @@ export const DalgonaChocSilv = ({
     scrollToTop();
   }, []);
 
-  const props = menudata.find((menu) => menu.category === "Drinks" && menu.items[0].name === "Dalgona Iced" && menu.items[0].list[0].name === "Dalgona Choco Silverqueen");
+  const props = menudata.menu.find((menu) => menu.category === "Drinks" && menu.items[0].name === "Dalgona Iced" && menu.items[0].list[0].name === "Dalgona Choco Silverqueen");
   return (
     <>
     <ProductDetail

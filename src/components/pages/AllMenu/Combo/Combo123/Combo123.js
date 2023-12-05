@@ -17,7 +17,7 @@ export const Combo123 = () => {
   const handleClick = (anchor) => {
     navigate(anchor);
   };
-  const combo123 = menudata.find((menu) => menu.category === "Combo" && menu.items[1].name === "Combo 123");
+  const combo123 = menudata.menu.find((menu) => menu.category === "Combo" && menu.items[1].name === "Combo 123");
   if (!combo123) {
     return null;
   }

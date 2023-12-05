@@ -73,6 +73,7 @@ function Main() {
   const [rateMenu, setRateMenu] = React.useState(false);
   const {user, authReady} = useContext(AuthContext);
   const [showAlert, setShowAlert] = React.useState(false);
+  const [feedbackValue, setFeedbackValue] = React.useState('');
   const handleRateMenu = (e) => {
     if(user){
       e.preventDefault();
@@ -81,10 +82,49 @@ function Main() {
       setShowAlert(true);
     }
   }
-  const handleSubmit = (e) => {
-    setRateMenu(false);
-    setCurrentRating(0);
-  }
+  // const handleSubmit = (e) => {
+  //   setRateMenu(false);
+  //   setCurrentRating(0);
+  // }
+
+  const handleSubmit = async () => {
+    // Get the rating and feedback values
+    const rating = currentRating;
+    const feedback = feedbackValue;
+  
+    // Create an object with the rating and feedback
+    const data = {
+      rating,
+      feedback
+    };
+  
+    try {
+      // Send a POST request to the server endpoint
+      const response = await fetch('/api/feedback', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      });
+  
+      // Check if the request was successful
+      if (response.ok) {
+        // Display a success message to the user
+        setShowAlert(true);
+        setFeedbackValue('');
+        setRateMenu(false);
+        setCurrentRating(0);
+      } else {
+        // Display an error message to the user
+        setShowAlert(false);
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      // Display an error message to the user
+      setShowAlert(false);
+    }
+  };
   return (
     <main>
       <Routes>

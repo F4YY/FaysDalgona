@@ -75,7 +75,7 @@ export const RegHotTira = ({
     scrollToTop();
   }, []);
 
-  const props = menudata.find((menu) => menu.category === "Drinks" && menu.items[2].name === "Regular Hot" && menu.items[2].list[9].name === "Hot Tiramisu");
+  const props = menudata.menu.find((menu) => menu.category === "Drinks" && menu.items[2].name === "Regular Hot" && menu.items[2].list[9].name === "Hot Tiramisu");
   return (
     <>
     <ProductDetail

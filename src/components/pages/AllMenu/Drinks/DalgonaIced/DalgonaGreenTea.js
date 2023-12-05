@@ -75,7 +75,7 @@ export const DalgonaGreenTea = ({
     scrollToTop();
   }, []);
 
-  const props = menudata.find((menu) => menu.category === "Drinks" && menu.items[0].name === "Dalgona Iced" && menu.items[0].list[2].name === "Dalgona Green Tea");
+  const props = menudata.menu.find((menu) => menu.category === "Drinks" && menu.items[0].name === "Dalgona Iced" && menu.items[0].list[2].name === "Dalgona Green Tea");
   return (
     <>
     <ProductDetail

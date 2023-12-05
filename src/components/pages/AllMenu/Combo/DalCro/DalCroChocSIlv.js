@@ -75,7 +75,7 @@ export const DalCroChocSilv = ({
     scrollToTop();
   }, []);
 
-  const props = menudata.find((menu) => menu.category === "Combo" && menu.items[0].name === "Simple DalCro" && menu.items[0].list[0].name === "DalCro Choco Silverqueen");
+  const props = menudata.menu.find((menu) => menu.category === "Combo" && menu.items[0].name === "Simple DalCro" && menu.items[0].list[0].name === "DalCro Choco Silverqueen");
   return (
     <>
     <ProductDetail

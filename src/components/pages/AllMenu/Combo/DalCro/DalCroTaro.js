@@ -75,7 +75,7 @@ export const DalCroTaro = ({
     scrollToTop();
   }, []);
 
-  const props = menudata.find((menu) => menu.category === "Combo" && menu.items[0].name === "Simple DalCro" && menu.items[0].list[7].name === "DalCro Taro");
+  const props = menudata.menu.find((menu) => menu.category === "Combo" && menu.items[0].name === "Simple DalCro" && menu.items[0].list[7].name === "DalCro Taro");
   return (
     <>
     <ProductDetail

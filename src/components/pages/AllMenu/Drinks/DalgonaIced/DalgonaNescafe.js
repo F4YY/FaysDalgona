@@ -75,7 +75,7 @@ export const DalgonaNescafe = ({
     scrollToTop();
   }, []);
 
-  const props = menudata.find((menu) => menu.category === "Drinks" && menu.items[0].name === "Dalgona Iced" && menu.items[0].list[8].name === "Dalgona Nescafe Classic");
+  const props = menudata.menu.find((menu) => menu.category === "Drinks" && menu.items[0].name === "Dalgona Iced" && menu.items[0].list[8].name === "Dalgona Nescafe Classic");
   return (
     <>
     <ProductDetail

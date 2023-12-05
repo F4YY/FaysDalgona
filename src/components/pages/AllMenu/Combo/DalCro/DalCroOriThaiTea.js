@@ -75,7 +75,7 @@ export const DalCroOriThaiTea = ({
     scrollToTop();
   }, []);
 
-  const props = menudata.find((menu) => menu.category === "Combo" && menu.items[0].name === "Simple DalCro" && menu.items[0].list[3].name === "DalCro Original Thai Tea");
+  const props = menudata.menu.find((menu) => menu.category === "Combo" && menu.items[0].name === "Simple DalCro" && menu.items[0].list[3].name === "DalCro Original Thai Tea");
   return (
     <>
     <ProductDetail

@@ -17,7 +17,7 @@ export const SateSeafood = () => {
   const handleClick = (anchor) => {
     navigate(anchor);
   };
-  const sateSeafood = menudata.find((menu) => menu.category === "Food" && menu.items[2].name === "Sate Bakso Seafood");
+  const sateSeafood = menudata.menu.find((menu) => menu.category === "Food" && menu.items[2].name === "Sate Bakso Seafood");
   if (!sateSeafood) {
     return null;
   }
