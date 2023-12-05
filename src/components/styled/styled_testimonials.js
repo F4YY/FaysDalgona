@@ -63,7 +63,7 @@ export const Testicard = styled.div`
     font-size:2em;
     text-align:center;
     color: hsl(217, 19%, 24%);
-    margin: 0 30px;
+    margin: 0 1rem;
   }
   @media (max-width: 991px) {
     min-height: auto;
@@ -97,15 +97,20 @@ export const Profpic = styled.img`
     width: 40%;
   }
 `
+export const MenuAndRating = styled.div`
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  background-color: hsl(193, 38%, 86%);
+  padding: 1rem 0;
+`;
 export const MenuPicName = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
   width: 100%;
-  height: auto;
-  background-color: hsl(193, 38%, 86%);
-  border-radius: 10px;
+  height: 100%;
   gap: 1rem;
   padding: 1rem;
 `;
@@ -138,5 +143,5 @@ export const StarRating = styled.div`
   flex-direction: row;
   width: 100%;
   height: auto;
-  gap: 1rem;
+  gap: .5rem;
 `

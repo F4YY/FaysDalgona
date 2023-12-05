@@ -1,6 +1,6 @@
 import React from 'react';
 import '../styles/Testimonials.css';
-import { MenuNameRating, MenuPicName, Menupic, Profpic, StarRating, TestiProfpicName, Testicard, Testifeeds, Testipage } from '../styled/styled_testimonials';
+import { MenuAndRating, MenuNameRating, MenuPicName, Menupic, Profpic, StarRating, TestiProfpicName, Testicard, Testifeeds, Testipage } from '../styled/styled_testimonials';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 
@@ -50,16 +50,18 @@ return (
             <Profpic loading='lazy' src={require(`../images/${feedback.prof_pic}`)} alt={feedback.name} />
             <p>{feedback.name}</p>
           </TestiProfpicName>
-          <MenuPicName>
-            <Menupic loading='lazy' src={require(`../images/${feedback.menu_pic}`)} alt={feedback.menu_name} />
-            <MenuNameRating>
-              <p>{feedback.menu_name}</p>
-              <StarRating>
-                {renderStarRating(parseInt(feedback.star_rating))}
-              </StarRating>
-            </MenuNameRating>
-          </MenuPicName>
-          <q>{feedback.review}</q>
+          <MenuAndRating>
+            <MenuPicName>
+              <Menupic loading='lazy' src={require(`../images/${feedback.menu_pic}`)} alt={feedback.menu_name} />
+              <MenuNameRating>
+                <p>{feedback.menu_name}</p>
+                <StarRating>
+                  {renderStarRating(parseInt(feedback.star_rating))}
+                </StarRating>
+              </MenuNameRating>
+            </MenuPicName>
+            <q>{feedback.review}</q>
+          </MenuAndRating>
         </Testicard>
       ))}
     </Testifeeds>
