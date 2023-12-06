@@ -14,15 +14,15 @@ root.render(
   </React.StrictMode>
 );
 
-const jsonServer = require('json-server');
-const server = jsonServer.create();
-const router = jsonServer.router('src/components/database/testi.json');
-const middlewares = jsonServer.defaults();
-const port = process.env.PORT || 8000;
+// const jsonServer = require('json-server');
+// const server = jsonServer.create();
+// const router = jsonServer.router('src/components/database/testi.json');
+// const middlewares = jsonServer.defaults();
+// const port = process.env.PORT || 8000;
 
-server.use(middlewares);
-server.use(router);
-server.listen(port);
+// server.use(middlewares);
+// server.use(router);
+// server.listen(port);
 
 reportWebVitals();
 
