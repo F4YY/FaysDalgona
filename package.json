@@ -17,6 +17,7 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.2.1",
+    "body-parser": "^1.20.2",
     "bootstrap": "^5.3.2",
     "chakra-dayzed-datepicker": "^0.2.6",
     "formik": "^2.2.9",
@@ -37,7 +38,7 @@
     "yup": "^0.32.11"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "node index.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
