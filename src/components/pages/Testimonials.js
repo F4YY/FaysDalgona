@@ -9,7 +9,7 @@ const Testimonials = () => {
   const [testi, setTesti] = React.useState([]);
 
 React.useEffect(() => {
-  fetch('http://localhost:8000/Testimonials')
+  fetch('/Testimonials')
     .then(res => {
       return res.json();
     })
@@ -20,7 +20,6 @@ React.useEffect(() => {
 
 const renderStarRating = (rating) => {
   const starIcons = [];
-
   for (let i = 0; i < rating; i++) {
     starIcons.push(
       <FontAwesomeIcon
@@ -31,7 +30,6 @@ const renderStarRating = (rating) => {
       />
     );
   }
-
   return starIcons;
 };
 
