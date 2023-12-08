@@ -9,7 +9,7 @@ const Testimonials = () => {
   const [testi, setTesti] = React.useState([]);
 
 React.useEffect(() => {
-  fetch('/Testimonials')
+  fetch('http://localhost:3000/Testimonials')
     .then(res => {
       return res.json();
     })
