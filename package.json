@@ -19,6 +19,7 @@
     "body-parser": "^1.20.2",
     "bootstrap": "^5.3.2",
     "chakra-dayzed-datepicker": "^0.2.6",
+    "cors": "^2.8.5",
     "formik": "^2.2.9",
     "framer-motion": "^8.5.5",
     "netlify-identity-widget": "^1.9.2",
@@ -41,7 +42,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "server": "json-server --watch src/components/database/testi.json"
+    "server": "json-server --watch src/components/database/testi.json --middleware src/json-server.js"
   },
   "eslintConfig": {
     "extends": [
