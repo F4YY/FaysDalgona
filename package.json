@@ -2,7 +2,6 @@
   "name": "fays_dalgona",
   "version": "0.1.0",
   "private": true,
-  "proxy": "https://192.168.184.240:3000",
   "dependencies": {
     "@chakra-ui/react": "^2.4.4",
     "@chakra-ui/system": "^2.3.5",
@@ -43,7 +42,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "server": "json-server --watch src/components/database/testi.json --middleware src/json-server.js --port 3001"
+    "server": "json-server --watch src/components/database/testi.json --middleware src/json-server.js"
   },
   "eslintConfig": {
     "extends": [
