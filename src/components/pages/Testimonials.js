@@ -1,6 +1,17 @@
 import React from 'react';
 import '../styles/Testimonials.css';
-import { MenuAndRating, MenuNameRating, MenuPicName, Menupic, Profpic, StarRating, TestiProfpicName, Testicard, Testifeeds, Testipage } from '../styled/styled_testimonials';
+import {
+  MenuAndRating,
+  MenuNameRating,
+  MenuPicName,
+  Menupic,
+  Profpic,
+  StarRating,
+  TestiProfpicName,
+  Testicard,
+  Testifeeds,
+  Testipage
+} from '../styled/styled_testimonials';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 

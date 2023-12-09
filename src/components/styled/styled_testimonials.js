@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import bgintrodesktop from "../images/bg-pattern-intro-desktop.svg";
 
 export const Testipage = styled.div`
   display: flex;
@@ -57,7 +58,7 @@ export const Testicard = styled.div`
   gap: 1rem;
   padding: 1rem;
   border-radius: 10px;
-  background-color: hsl(150, 100%, 66%);
+  background-image: url(${bgintrodesktop}),linear-gradient(135deg, hsl(273, 75%, 66%), hsl(240, 73%, 65%));
   box-shadow: 0 10px 15px 5px rgba(0, 0, 0, 0.2);
   q{
     font-size:2em;
@@ -71,38 +72,46 @@ export const Testicard = styled.div`
 `
 export const TestiProfpicName = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   width: auto;
   height: auto;
+  border-radius: 3rem;
+  background-color: azure;
   p{
     font-size: 1.5rem;
     color: hsl(217, 19%, 24%);
+    padding: 0 .5rem 0 0;
   }
 `;
 export const Profpic = styled.img`
   display: flex;
-  width: 40%;
+  width: 100px;
   height: auto;
   object-fit: cover;
   object-position: center;
-  border: 2px solid hsl(217, 19%, 38%);
   border-radius: 50%;
   aspect-ratio: 1/1;
+  padding: 0.5rem;
   @media (max-width: 991px) {
-    width: 20%;
-  }
-  @media (max-width: 640px) {
-    width: 40%;
+    width: 90px;
   }
 `
 export const MenuAndRating = styled.div`
   display: flex;
   flex-direction: column;
-  border-radius: 10px;
+  border-radius: 1rem;
+  border: .4rem solid hsl(240, 53%, 65%);
   background-color: hsl(193, 38%, 86%);
-  padding: 1rem 0;
+  padding: .5rem 0;
+  q{
+    font-size: 1.8rem;
+    font-family: Ubuntu, sans-serif;
+    @media (max-width: 991px) {
+      font-size: 1.5rem;
+    }
+  }
 `;
 export const MenuPicName = styled.div`
   display: flex;
@@ -126,7 +135,7 @@ export const Menupic = styled.img`
     width: 10%;
   }
   @media (max-width: 640px) {
-    width: 20%;
+    width: 22%;
   }
 `
 export const MenuNameRating = styled.div`
