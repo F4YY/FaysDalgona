@@ -86,28 +86,28 @@ function Main() {
   //   setRateMenu(false);
   //   setCurrentRating(0);
   // }
-
   const handleSubmit = async () => {
-    // Get the rating and feedback values
-    const rating = currentRating;
-    const feedback = feedbackValue;
-  
-    // Create an object with the rating and feedback
     const data = {
-      rating,
-      feedback
+      id: user?._id,
+      name: user && user.user_metadata.full_name,
+      prof_pic: user && user.user_metadata.avatar_url,
+      email: user && user.app_metadata.email,
+      menu_pic: rateMenu && user.menu_pic,
+      menu_name: user?.menu_name,
+      star_rating: currentRating,
+      review: feedbackValue
     };
-  
+
     try {
       // Send a POST request to the server endpoint
-      const response = await fetch('/api/feedback', {
+      const response = await fetch('https://fays-dalgona.onrender.com/Testimonials', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify(data)
       });
-  
+
       // Check if the request was successful
       if (response.ok) {
         // Display a success message to the user
