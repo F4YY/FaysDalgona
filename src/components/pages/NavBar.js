@@ -3,7 +3,7 @@ import FD_Header from "../images/FD_Header.png";
 import avatar from "../images/avatar.jpg";
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { MdOutlineLogin, MdOutlineLogout, MdOutlineRestaurantMenu } from 'react-icons/md';
-import { Button, Heading, Link, List, ListItem, Text, VStack } from "@chakra-ui/react";
+import { Button, HStack, Heading, Link, List, ListItem, Text, VStack } from "@chakra-ui/react";
 import { useNavigate } from 'react-router-dom';
 import AuthContext from "../../context/authContext";
 import {
@@ -149,25 +149,28 @@ const NavBar = () => {
             >
               logout
             </Button>
-            <Text
-              fontSize={{base: "14px", md: "14px", lg:"15px"}}
-              fontWeight='light'
-              fontFamily="calibri light, sans-serif"
-              color='orange.600'
-              marginTop={{base:"0.1rem",md:"0.1rem",lg:"0.2rem"}}
-            >
-              Welcome <b>{user.user_metadata.full_name}</b>
-            </Text>
-            {user.user_metadata.avatar_url ? (
-              <UserPicture
-                src={user.user_metadata.avatar_url}
-                alt="avatar"
-              />):(
+            <HStack>
+              <Text
+                fontSize={{base: "14px", md: "14px", lg:"15px"}}
+                fontWeight='light'
+                fontFamily="calibri light, sans-serif"
+                color='orange.600'
+                marginTop={{base:"0.1rem",md:"0.1rem",lg:"0.2rem"}}
+              >
+                Welcome <b>{user.user_metadata.full_name}</b>
+              </Text>
+              {user.user_metadata.avatar_url ? (
+                <UserPicture
+                  src={user.user_metadata.avatar_url}
+                  alt="avatar"
+                />
+                ):(
                 <UserPicture
                   src={avatar}
                   alt="avatar"
                 />
               )}
+            </HStack>
           </VStack>
           )
         }
@@ -223,7 +226,7 @@ const NavBar = () => {
           </MenuItem>
           {!user ? (
             <MenuItem
-            onClick={login}
+              onClick={login}
             >
               Login / Sign Up
             </MenuItem>

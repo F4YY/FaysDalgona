@@ -32,7 +32,7 @@ export const StyledImage = styled(Image)`
 `
 export const UserPicture = styled(Image)`
   display: flex;
-  width: 20px;
+  width: 30px;
   height:auto;
   border-radius: 50%;
 `;
