@@ -21,6 +21,8 @@ export const StyledNavbar = styled(HStack)`
 export const StyledImage = styled(Image)`
   display: flex;
   width: 45px;
+  height:auto;
+  border-radius: 50%;
   @media (min-width: 768px) {
     width: 50px;
   }
@@ -28,6 +30,12 @@ export const StyledImage = styled(Image)`
     width: 70px;
   }
 `
+export const UserPicture = styled(Image)`
+  display: flex;
+  width: 20px;
+  height:auto;
+  border-radius: 50%;
+`;
 export const StyledHeading = styled(Heading)`
   font-size: 10px;
   @media (min-width: 768px) {

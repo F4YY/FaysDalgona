@@ -1,5 +1,6 @@
 import React ,{ useContext, useEffect, useRef } from "react";
 import FD_Header from "../images/FD_Header.png";
+import avatar from "../images/avatar.jpg";
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { MdOutlineLogin, MdOutlineLogout, MdOutlineRestaurantMenu } from 'react-icons/md';
 import { Button, Heading, Link, List, ListItem, Text, VStack } from "@chakra-ui/react";
@@ -10,7 +11,8 @@ import {
   StyledHeading,
   StyledImage,
   StyledLink,
-  StyledNavbar
+  StyledNavbar,
+  UserPicture
 } from "../styled/styled_navbar";
 
 const NavBar = () => {
@@ -93,12 +95,13 @@ const NavBar = () => {
       ref={NavBarRef}
       translateY="0"
     >
-      <StyledImage
-        src={FD_Header}
-        alt="app__logo"
-      />
+
       {authReady && (
       <>
+        <StyledImage
+          src={FD_Header}
+          alt="app__logo"
+        />
         <NavLink href="#Home" onClick={handleClick("Home")}>
           Home
         </NavLink>
@@ -155,6 +158,16 @@ const NavBar = () => {
             >
               Welcome <b>{user.user_metadata.full_name}</b>
             </Text>
+            {user.user_metadata.avatar_url ? (
+              <UserPicture
+                src={user.user_metadata.avatar_url}
+                alt="avatar"
+              />):(
+                <UserPicture
+                  src={avatar}
+                  alt="avatar"
+                />
+              )}
           </VStack>
           )
         }

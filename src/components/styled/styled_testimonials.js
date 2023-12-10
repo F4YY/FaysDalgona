@@ -102,12 +102,12 @@ export const MenuAndRating = styled.div`
   display: flex;
   flex-direction: column;
   border-radius: 1rem;
-  border: .4rem solid hsl(240, 53%, 65%);
-  background-color: hsl(193, 38%, 86%);
+  border: .3rem solid hsl(240, 53%, 75%);
   padding: .5rem 0;
   q{
     font-size: 1.8rem;
     font-family: Ubuntu, sans-serif;
+    color: azure;
     @media (max-width: 991px) {
       font-size: 1.5rem;
     }
@@ -146,6 +146,9 @@ export const MenuNameRating = styled.div`
   width: 100%;
   height: auto;
   gap: .7rem;
+  p{
+    color: ghostwhite;
+  }
 `;
 export const StarRating = styled.div`
   display: flex;
