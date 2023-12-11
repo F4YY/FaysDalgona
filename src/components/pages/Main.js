@@ -91,7 +91,7 @@ function Main() {
     try {
       const response = await fetch("https://fays-dalgona.onrender.com/Testimonials");
       const responseData = await response.json();
-      const testimonials = responseData.Testimonials;
+      const testimonials = responseData;
 
       // Get the last ID
       const lastId = testimonials[testimonials.length - 1].id;
@@ -168,18 +168,15 @@ function Main() {
 
       // Check if the request was successful
       if (postResponse.ok) {
-        // Display a success message to the user
         alert("Thank you for your feedback!");
         setFeedbackValue("");
         setRateMenu(false);
         setCurrentRating(0);
       } else {
-        // Display an error message to the user
         alert("Error submitting feedback. Please try again.");
       }
     } catch (error) {
       console.error("Error:", error);
-      // Display an error message to the user
       alert("Error submitting feedback. Please try again.");
     }
   };
