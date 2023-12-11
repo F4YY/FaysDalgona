@@ -149,8 +149,8 @@ function Main() {
       const postData = {
         id: newId,
         name: user?.user_metadata.full_name,
-        prof_pic: user?.user_metadata.avatar_url,
-        email: user?.user_metadata?.email || "NA",
+        prof_pic: user?.user_metadata.avatar_url || "avatar.jpg",
+        email: user?.email || "NA",
         menu_pic: menuPic,
         menu_name: menuName,
         star_rating: currentRating,
