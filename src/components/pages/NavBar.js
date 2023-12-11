@@ -95,13 +95,12 @@ const NavBar = () => {
       ref={NavBarRef}
       translateY="0"
     >
-
+      <StyledImage
+        src={FD_Header}
+        alt="app__logo"
+      />
       {authReady && (
       <>
-        <StyledImage
-          src={FD_Header}
-          alt="app__logo"
-        />
         <NavLink href="#Home" onClick={handleClick("Home")}>
           Home
         </NavLink>
@@ -162,14 +161,14 @@ const NavBar = () => {
               {user.user_metadata.avatar_url ? (
                 <UserPicture
                   src={user.user_metadata.avatar_url}
-                  alt="avatar"
-                />
-                ):(
+                  alt="user"
+                />) : (
                 <UserPicture
                   src={avatar}
-                  alt="avatar"
+                  alt="user"
                 />
-              )}
+                )
+              }
             </HStack>
           </VStack>
           )
@@ -226,7 +225,7 @@ const NavBar = () => {
           </MenuItem>
           {!user ? (
             <MenuItem
-              onClick={login}
+            onClick={login}
             >
               Login / Sign Up
             </MenuItem>

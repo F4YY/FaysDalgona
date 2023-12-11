@@ -33,7 +33,10 @@ export const StyledImage = styled(Image)`
 export const UserPicture = styled(Image)`
   display: flex;
   width: 30px;
-  height:auto;
+  height:30px;
+  object-fit: cover;
+  object-position: center;
+  aspect-ratio: 1/1;
   border-radius: 50%;
 `;
 export const StyledHeading = styled(Heading)`
