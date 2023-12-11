@@ -150,13 +150,16 @@ function Main() {
         id: newId,
         name: user?.user_metadata.full_name,
         prof_pic: user?.user_metadata.avatar_url,
-        email: user?.app_metadata.email,
+        email: user?.app_metadata?.email,
         menu_pic: menuPic,
         menu_name: menuName,
         star_rating: currentRating,
         review: feedbackValue
       };
 
+      console.log('User:', user);
+      console.log('App Metadata:', user?.app_metadata);
+      console.log('Email:', user?.app_metadata?.email);
       // Send a POST request to the server endpoint
       const postResponse = await fetch("https://fays-dalgona.onrender.com/Testimonials", {
         method: "POST",
