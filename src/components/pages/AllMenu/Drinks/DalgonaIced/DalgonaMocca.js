@@ -57,7 +57,9 @@ export const DalgonaMocca = ({
   handleRateMenu,
   handleSubmit,
   showAlert,
-  setShowAlert
+  setShowAlert,
+  feedbackValue,
+  setFeedbackValue
 }) => {
   const navigate = useNavigate();
   const handleClick = (anchor) => {
@@ -190,6 +192,8 @@ export const DalgonaMocca = ({
         </YellowStars>
         <FeedbackArea
           placeholder="Leave your review here..."
+          value={feedbackValue}
+          onChange={(event) => setFeedbackValue(event.target.value)}
         >
         </FeedbackArea>
         <SubmitRating
