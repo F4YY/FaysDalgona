@@ -150,7 +150,7 @@ function Main() {
         id: newId,
         name: user?.user_metadata.full_name,
         prof_pic: user?.user_metadata.avatar_url,
-        email: user?.app_metadata?.email,
+        email: user?.user_metadata?.email || "NA",
         menu_pic: menuPic,
         menu_name: menuName,
         star_rating: currentRating,
