@@ -74,8 +74,8 @@ function Main() {
   const {user, authReady} = useContext(AuthContext);
   const [showAlert, setShowAlert] = React.useState(false);
   const [feedbackValue, setFeedbackValue] = React.useState('');
-  const [menuPic, setMenuPic] = React.useState(null);
-  const [menuName, setMenuName] = React.useState(null);
+  const [menuPic, setMenuPic] = React.useState(undefined);
+  const [menuName, setMenuName] = React.useState(undefined);
 
   const handleRateMenu = (e) => {
     if(user){
