@@ -74,8 +74,8 @@ function Main() {
   const {user, authReady} = useContext(AuthContext);
   const [showAlert, setShowAlert] = React.useState(false);
   const [feedbackValue, setFeedbackValue] = React.useState('');
-  const [menuPic, setMenuPic] = React.useState('');
-  const [menuName, setMenuName] = React.useState('');
+  const [menuPic, setMenuPic] = React.useState('Dalg_ChocSilv,jpg');
+  const [menuName, setMenuName] = React.useState('Dalgona Chocolate Silverqueen');
 
   const handleRateMenu = (e) => {
     if(user){
