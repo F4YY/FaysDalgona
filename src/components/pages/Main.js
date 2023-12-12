@@ -100,25 +100,25 @@ function Main() {
       let menuPic = "";
       if (rateMenu) {
         if (DalgonaCapu) {
-          menuPic = require("../images/Dalg_Capu.jpg");
+          menuPic = "Dalg_Capu.jpg";
         } else if (DalgonaChocMilo) {
-          menuPic = require("../images/Dalg_ChocMilo.jpg");
+          menuPic = "Dalg_ChocMilo.jpg";
         } else if (DalgonaChocSilv) {
-          menuPic = require("../images/Dalg_ChocSilv.jpg");
+          menuPic = "Dalg_ChocSilv.jpg";
         } else if (DalgonaGreenTea) {
-          menuPic = require("../images/Dalg_Greentea.jpg");
+          menuPic = "Dalg_Greentea.jpg";
         } else if (DalgonaMocca) {
-          menuPic = require("../images/Dalg_Moca.jpg");
+          menuPic = "Dalg_Moca.jpg";
         } else if (DalgonaNescafe) {
-          menuPic = require("../images/Dalg_Nescafe.jpg");
+          menuPic = "Dalg_Nescafe.jpg";
         } else if (DalgonaOriThaiTea) {
-          menuPic = require("../images/Dalg_Orithaitea.jpg");
+          menuPic = "Dalg_Orithaitea.jpg";
         } else if (DalgonaRedV) {
-          menuPic = require("../images/Dalg_RedV.jpg");
+          menuPic = "Dalg_RedV.jpg";
         } else if (DalgonaTaro) {
-          menuPic = require("../images/Dalg_Taro.jpg");
+          menuPic = "Dalg_Taro.jpg";
         } else if (DalgonaTira) {
-          menuPic = require("../images/Dalg_Tira.jpg");
+          menuPic = "Dalg_Tira.jpg";
         }
       }
 
@@ -172,8 +172,8 @@ function Main() {
       // Check if the request was successful
       if (postResponse.ok) {
         alert("Thank you for your feedback!");
-        setFeedbackValue("");
         setRateMenu(false);
+        setFeedbackValue("");
         setCurrentRating(0);
       } else {
         alert("Error submitting feedback. Please try again.");

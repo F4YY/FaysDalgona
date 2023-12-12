@@ -56,7 +56,7 @@ return (
       {testi.slice(0, 5).map((feedback, index) => (
         <Testicard key={index}>
           <TestiProfpicName>
-            <Profpic loading='lazy' src={require(`../images/${feedback.prof_pic}`)} alt={feedback.name} />
+            <Profpic loading='lazy' src={feedback.prof_pic} alt={feedback.name} />
             <p>{feedback.name}</p>
           </TestiProfpicName>
           <MenuAndRating>
