@@ -200,11 +200,10 @@ export const DalgonaMocca = ({
         </FeedbackArea>
         <SubmitRating
           onClick={() => {
-            setMenuPic("Dalg_Moca.jpg");
-            setMenuName("Dalgona Moccaccino");
+            setMenuPic('Dalg_Moca.jpg');
+            setMenuName(props.items[0].list[5].name);
             handleSubmit();
-          }
-          }
+          }}
         >
           Submit
         </SubmitRating>
