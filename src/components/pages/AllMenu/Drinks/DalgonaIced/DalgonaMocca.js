@@ -68,6 +68,12 @@ export const DalgonaMocca = ({
     navigate(anchor);
     scrollToTop();
   }
+  const handleMenuPic = () => {
+    setMenuPic('Dalg_Moca.jpg');
+  }
+  const handleMenuName = () => {
+    setMenuName('Dalgona Moccaccino');
+  }
   const scrollToTop = () => {
     const mainMenuContainer = document.getElementById("main-menu-container");
     if (mainMenuContainer) {
@@ -201,11 +207,9 @@ export const DalgonaMocca = ({
         <SubmitRating
           onClick={() => {
             console.log('setMenuPic:', setMenuPic);
-            setTimeout(() => {
-              setMenuPic('Dalg_Moca.jpg');
-              setMenuName(props.items[0].list[5].name);
-              handleSubmit();
-            })
+            handleMenuPic();
+            handleMenuName();
+            handleSubmit();
           }}
         >
           Submit

@@ -102,8 +102,8 @@ function Main() {
         name: user?.user_metadata.full_name,
         prof_pic: user?.user_metadata.avatar_url || "avatar.jpg",
         email: user?.email || "NA",
-        menu_pic: menuPic? menuPic : "Dalg_Moca.jpg",
-        menu_name: menuName? menuName : "Dalgona Moccaccino",
+        menu_pic: menuPic,
+        menu_name: menuName,
         star_rating: currentRating,
         review: feedbackValue
       };
