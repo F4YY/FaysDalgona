@@ -69,7 +69,8 @@ export const DalgonaMocca = ({
     scrollToTop();
   }
   const handleMenuPic = () => {
-    setMenuPic('Dalg_Moca.jpg');
+    const menuPic = 'Dalg_Moca.jpg';
+    setMenuPic(menuPic);
   }
   const handleMenuName = () => {
     setMenuName('Dalgona Moccaccino');
