@@ -94,8 +94,6 @@ function Main() {
       const response = await fetch("https://fays-dalgona.onrender.com/Testimonials");
       const responseData = await response.json();
       const testimonials = responseData;
-
-      // Get the last ID
       const lastId = testimonials[testimonials.length - 1].id;
       const newId = lastId + 1;
 
@@ -110,10 +108,6 @@ function Main() {
         review: feedbackValue
       };
 
-      console.log('User:', user);
-      console.log('App Metadata:', user?.app_metadata);
-      console.log('Email:', user?.app_metadata?.email);
-      // Send a POST request to the server endpoint
       const postResponse = await fetch("https://fays-dalgona.onrender.com/Testimonials", {
         method: "POST",
         headers: {
@@ -121,8 +115,6 @@ function Main() {
         },
         body: JSON.stringify(postData)
       });
-
-      // Check if the request was successful
       if (postResponse.ok) {
         alert("Thank you for your feedback!");
         setRateMenu(false);
