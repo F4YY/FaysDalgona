@@ -90,6 +90,7 @@ function Main() {
   //   setCurrentRating(0);
   // }
   const handleSubmit = (e) => {
+    e.preventDefault();
     try {
       const response = fetch("https://fays-dalgona.onrender.com/Testimonials");
       const responseData = response.json();
