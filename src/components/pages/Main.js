@@ -74,7 +74,7 @@ function Main() {
   const {user, authReady} = useContext(AuthContext);
   const [showAlert, setShowAlert] = React.useState(false);
   const [feedbackValue, setFeedbackValue] = React.useState('');
-  const [menuPic, setMenuPic] = React.useState('');
+  const [currentItem, setCurrentItem] = React.useState('');
   const [menuName, setMenuName] = React.useState('');
 
   const handleRateMenu = (e) => {
@@ -97,6 +97,14 @@ function Main() {
       const lastId = testimonials[testimonials.length - 1].id;
       const newId = lastId + 1;
 
+      let menuPic = '';
+      if(currentItem === 'Dalgona Moccaccino'){
+        menuPic = 'Dalg_Moca.jpg';
+      } else if(currentItem === 'Dalgona Capuccino'){
+        menuPic = 'Dalg_Capu.jpg';
+      } else if(currentItem === 'Dalgona Choco Silverqueen'){
+        menuPic = 'Dalg_ChocSilv.jpg';
+      }
       const postData = {
         id: newId,
         name: user?.user_metadata.full_name,
@@ -147,7 +155,7 @@ function Main() {
         <Route path="Dalgona Green Tea" element={<DalgonaGreenTea stars={stars} rateMenu={rateMenu} setRateMenu={setRateMenu} currentRating={currentRating} setCurrentRating={setCurrentRating} hoverRating={hoverRating} setHoverRating={setHoverRating} authReady={authReady} handleRateMenu={handleRateMenu}  handleSubmit={handleSubmit} showAlert={showAlert} setShowAlert={setShowAlert}/>} feedbackValue={feedbackValue} setFeedbackValue={setFeedbackValue} />
         <Route path="Dalgona Original Thai Tea" element={<DalgonaOriThaiTea stars={stars} rateMenu={rateMenu} setRateMenu={setRateMenu} currentRating={currentRating} setCurrentRating={setCurrentRating} hoverRating={hoverRating} setHoverRating={setHoverRating} authReady={authReady} handleRateMenu={handleRateMenu}  handleSubmit={handleSubmit} showAlert={showAlert} setShowAlert={setShowAlert}/>} feedbackValue={feedbackValue} setFeedbackValue={setFeedbackValue} />
         <Route path="Dalgona Choco Milo" element={<DalgonaChocMilo stars={stars} rateMenu={rateMenu} setRateMenu={setRateMenu} currentRating={currentRating} setCurrentRating={setCurrentRating} hoverRating={hoverRating} setHoverRating={setHoverRating} authReady={authReady} handleRateMenu={handleRateMenu}  handleSubmit={handleSubmit} showAlert={showAlert} setShowAlert={setShowAlert}/>} feedbackValue={feedbackValue} setFeedbackValue={setFeedbackValue} />
-        <Route path="Dalgona Moccaccino" element={<DalgonaMocca stars={stars} rateMenu={rateMenu} setRateMenu={setRateMenu} currentRating={currentRating} setCurrentRating={setCurrentRating} hoverRating={hoverRating} setHoverRating={setHoverRating} authReady={authReady} handleRateMenu={handleRateMenu}  handleSubmit={handleSubmit} showAlert={showAlert} setShowAlert={setShowAlert}/>} feedbackValue={feedbackValue} setFeedbackValue={setFeedbackValue} setMenuPic={setMenuPic} setMenuName={setMenuName}/>
+        <Route path="Dalgona Moccaccino" element={<DalgonaMocca stars={stars} rateMenu={rateMenu} setRateMenu={setRateMenu} currentRating={currentRating} setCurrentRating={setCurrentRating} hoverRating={hoverRating} setHoverRating={setHoverRating} authReady={authReady} handleRateMenu={handleRateMenu}  handleSubmit={handleSubmit} showAlert={showAlert} setShowAlert={setShowAlert}/>} feedbackValue={feedbackValue} setFeedbackValue={setFeedbackValue} setCurrentItem={setCurrentItem} setMenuName={setMenuName}/>
         <Route path="Dalgona Red Velvet" element={<DalgonaRedV stars={stars} rateMenu={rateMenu} setRateMenu={setRateMenu} currentRating={currentRating} setCurrentRating={setCurrentRating} hoverRating={hoverRating} setHoverRating={setHoverRating} authReady={authReady} handleRateMenu={handleRateMenu}  handleSubmit={handleSubmit} showAlert={showAlert} setShowAlert={setShowAlert}/>} feedbackValue={feedbackValue} setFeedbackValue={setFeedbackValue} />
         <Route path="Dalgona Taro" element={<DalgonaTaro stars={stars} rateMenu={rateMenu} setRateMenu={setRateMenu} currentRating={currentRating} setCurrentRating={setCurrentRating} hoverRating={hoverRating} setHoverRating={setHoverRating} authReady={authReady} handleRateMenu={handleRateMenu}  handleSubmit={handleSubmit} showAlert={showAlert} setShowAlert={setShowAlert}/>} feedbackValue={feedbackValue} setFeedbackValue={setFeedbackValue} />
         <Route path="Dalgona Nescafe Classic" element={<DalgonaNescafe stars={stars} rateMenu={rateMenu} setRateMenu={setRateMenu} currentRating={currentRating} setCurrentRating={setCurrentRating} hoverRating={hoverRating} setHoverRating={setHoverRating} authReady={authReady} handleRateMenu={handleRateMenu}  handleSubmit={handleSubmit} showAlert={showAlert} setShowAlert={setShowAlert}/>} feedbackValue={feedbackValue} setFeedbackValue={setFeedbackValue} />
