@@ -74,8 +74,8 @@ function Main() {
   const {user, authReady} = useContext(AuthContext);
   const [showAlert, setShowAlert] = React.useState(false);
   const [feedbackValue, setFeedbackValue] = React.useState('');
-  const [menuPic, setMenuPic] = React.useState(undefined);
-  const [menuName, setMenuName] = React.useState(undefined);
+  const [menuPic, setMenuPic] = React.useState('');
+  const [menuName, setMenuName] = React.useState('');
 
   const handleRateMenu = (e) => {
     if(user){
@@ -104,8 +104,8 @@ function Main() {
         name: user?.user_metadata.full_name,
         prof_pic: user?.user_metadata.avatar_url || "avatar.jpg",
         email: user?.email || "NA",
-        menu_pic: menuPic,
-        menu_name: menuName,
+        menu_pic: menuPic? menuPic : "Dalg_Moca.jpg",
+        menu_name: menuName? menuName : "Dalgona Moccaccino",
         star_rating: currentRating,
         review: feedbackValue
       };
