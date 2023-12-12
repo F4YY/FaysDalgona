@@ -91,41 +91,36 @@ function Main() {
   // }
   const handleSubmit = (e) => {
     e.preventDefault();
-    try {
-      const response = fetch("https://fays-dalgona.onrender.com/Testimonials");
-      const responseData = response.json();
-      const testimonials = responseData;
-      const lastId = testimonials[testimonials.length - 1].id;
-      const newId = lastId + 1;
+    const response = fetch("https://fays-dalgona.onrender.com/Testimonials");
+    const responseData = response.json();
+    const testimonials = responseData;
+    const lastId = testimonials[testimonials.length - 1].id;
+    const newId = lastId + 1;
 
-      const postData = {
-        id: newId,
-        name: user?.user_metadata.full_name,
-        prof_pic: user?.user_metadata.avatar_url || "avatar.jpg",
-        email: user?.email || "NA",
-        menu_pic: menuPic,
-        menu_name: menuName,
-        star_rating: currentRating,
-        review: feedbackValue
-      };
+    const postData = {
+      id: newId,
+      name: user?.user_metadata.full_name,
+      prof_pic: user?.user_metadata.avatar_url || "avatar.jpg",
+      email: user?.email || "NA",
+      menu_pic: menuPic,
+      menu_name: menuName,
+      star_rating: currentRating,
+      review: feedbackValue
+    };
 
-      const postResponse = fetch("https://fays-dalgona.onrender.com/Testimonials", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify(postData)
-      });
-      if (postResponse.ok) {
-        alert("Thank you for your feedback!");
-        setRateMenu(false);
-        setFeedbackValue("");
-        setCurrentRating(0);
-      } else {
-        alert("Error submitting feedback. Please try again.");
-      }
-    } catch (error) {
-      console.error("Error:", error);
+    const postResponse = fetch("https://fays-dalgona.onrender.com/Testimonials", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(postData)
+    });
+    if (postResponse.ok) {
+      alert("Thank you for your feedback!");
+      setRateMenu(false);
+      setFeedbackValue("");
+      setCurrentRating(0);
+    } else {
       alert("Error submitting feedback. Please try again.");
     }
   };
