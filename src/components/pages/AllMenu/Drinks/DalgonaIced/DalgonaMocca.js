@@ -193,6 +193,7 @@ export const DalgonaMocca = ({
         <FeedbackArea
           placeholder="Leave your review here..."
           value={feedbackValue}
+          onChange={(e) => setFeedbackValue(e.target.value)}
         >
         </FeedbackArea>
         <SubmitRating

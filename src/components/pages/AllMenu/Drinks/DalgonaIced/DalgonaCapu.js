@@ -193,7 +193,6 @@ export const DalgonaCapu = ({
         <FeedbackArea
           placeholder="Leave your review here..."
           value={feedbackValue}
-          onChange={(event) => setFeedbackValue(event.target.value)}
         >
         </FeedbackArea>
         <SubmitRating

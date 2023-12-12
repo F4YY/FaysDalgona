@@ -4,6 +4,7 @@ import ReserveTable from './ReserveTable';
 import Testimonials from './Testimonials';
 import About from './About';
 import Menu from './AllMenu/Menu';
+import menudata from './../database/menu.json';
 import { MainMenu } from './AllMenu/MainMenu';
 import { DalgonaIced } from './AllMenu/Drinks/DalgonaIced/DalgonaIced';
 import { RegularIced } from './AllMenu/Drinks/RegularIced/RegularIced';
@@ -98,26 +99,28 @@ function Main() {
       const newId = lastId + 1;
 
       let menuPic = "";
-      if (rateMenu) {
-        if (DalgonaCapu) {
-          menuPic = "Dalg_Capu.jpg";
-        } else if (DalgonaChocMilo) {
-          menuPic = "Dalg_ChocMilo.jpg";
-        } else if (DalgonaChocSilv) {
+      const props = menudata.menu.find((menu) => menu.category === "Drinks" && menu.items[0].name === "Dalgona Iced");
+
+      if (props) {
+        if (props.items[0].list[0].name === "Dalgona Choco Silverqueen") {
           menuPic = "Dalg_ChocSilv.jpg";
-        } else if (DalgonaGreenTea) {
+        } else if (props.items[0].list[1].name === "Dalgona Capuccino") {
+          menuPic = "Dalg_Capu.jpg";
+        } else if (props.items[0].list[2].name === "Dalgona Green Tea") {
           menuPic = "Dalg_Greentea.jpg";
-        } else if (DalgonaMocca) {
-          menuPic = "Dalg_Moca.jpg";
-        } else if (DalgonaNescafe) {
-          menuPic = "Dalg_Nescafe.jpg";
-        } else if (DalgonaOriThaiTea) {
+        } else if (props.items[0].list[3].name === "Dalgona Original Thai Tea") {
           menuPic = "Dalg_Orithaitea.jpg";
-        } else if (DalgonaRedV) {
+        } else if (props.items[0].list[4].name === "Dalgona Choco Milo") {
+          menuPic = "Dalg_ChocMilo.jpg";
+        } else if (props.items[0].list[5].name === "Dalgona Moccaccino") {
+          menuPic = "Dalg_Moca.jpg";
+        } else if (props.items[0].list[6].name === "Dalgona Red Velvet") {
           menuPic = "Dalg_RedV.jpg";
-        } else if (DalgonaTaro) {
+        } else if (props.items[0].list[7].name === "Dalgona Taro") {
           menuPic = "Dalg_Taro.jpg";
-        } else if (DalgonaTira) {
+        } else if (props.items[0].list[8].name === "Dalgona Nescafe Classic") {
+          menuPic = "Dalg_Nescafe.jpg";
+        } else if (props.items[0].list[9].name === "Dalgona Tira") {
           menuPic = "Dalg_Tira.jpg";
         }
       }
