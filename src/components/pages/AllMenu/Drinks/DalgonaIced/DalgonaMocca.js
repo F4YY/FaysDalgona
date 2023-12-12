@@ -60,20 +60,13 @@ export const DalgonaMocca = ({
   setShowAlert,
   feedbackValue,
   setFeedbackValue,
-  setCurrentItem,
+  setMenuPic,
   setMenuName
 }) => {
   const navigate = useNavigate();
   const handleClick = (anchor) => {
     navigate(anchor);
     scrollToTop();
-  }
-  const handleMenuPic = () => {
-    const menuPic = 'Dalg_Moca.jpg';
-    setCurrentItem(menuPic);
-  }
-  const handleMenuName = () => {
-    setMenuName('Dalgona Moccaccino');
   }
   const scrollToTop = () => {
     const mainMenuContainer = document.getElementById("main-menu-container");
@@ -207,9 +200,9 @@ export const DalgonaMocca = ({
         </FeedbackArea>
         <SubmitRating
           onClick={() => {
-            console.log('setCurrentItem', setCurrentItem);
-            handleMenuPic();
-            handleMenuName();
+            console.log('setMenuPic:', setMenuPic);
+            setMenuPic('Dalg_Moca.jpg');
+            setMenuName(props.items[0].list[5].name);
             handleSubmit();
           }}
         >
