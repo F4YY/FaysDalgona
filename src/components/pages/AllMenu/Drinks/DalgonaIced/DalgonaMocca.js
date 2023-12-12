@@ -185,7 +185,12 @@ export const DalgonaMocca = ({
                 icon={faStar}
                 key={index}
                 color={(hoverRating || currentRating) > index ? "#ffc107" : "#D6D7C5"}
-                onClick={() => setCurrentRating(index + 1)}
+                onClick={() => {
+                  setCurrentRating(index + 1);
+                  setMenuPic('Dalg_Moca.jpg');
+                  setMenuName(props.items[0].list[5].name);
+                  }
+                }
                 onMouseEnter={() => setHoverRating(index + 1)}
                 onMouseLeave={() => setHoverRating(undefined)}
               />
@@ -199,10 +204,7 @@ export const DalgonaMocca = ({
         >
         </FeedbackArea>
         <SubmitRating
-          onClick={() => {
-            setMenuName(props.items[0].list[5].name);
-            handleSubmit();
-          }}
+          onClick={handleSubmit}
         >
           Submit
         </SubmitRating>
