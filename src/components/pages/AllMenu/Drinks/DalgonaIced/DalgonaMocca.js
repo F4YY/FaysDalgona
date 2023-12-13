@@ -79,7 +79,7 @@ export const DalgonaMocca = ({
 
   React.useEffect(() => {
     scrollToTop();
-  }, [menuPic, menuName]);
+  }, []);
 
   const props = menudata.menu.find((menu) => menu.category === "Drinks" && menu.items[0].name === "Dalgona Iced" && menu.items[0].list[5].name === "Dalgona Moccaccino");
   return (

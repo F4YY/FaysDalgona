@@ -89,10 +89,6 @@ function Main() {
   //   setRateMenu(false);
   //   setCurrentRating(0);
   // }
-  React.useEffect(() => {
-    console.log("Updated menuPic:", menuPic);
-    console.log("Updated menuName:", menuName);
-  }, [menuPic, menuName]);
   const handleSubmit = () => {
     fetch("https://fays-dalgona.onrender.com/Testimonials")
       .then(response => response.json())

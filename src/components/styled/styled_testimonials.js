@@ -80,7 +80,7 @@ export const TestiProfpicName = styled.div`
   border-radius: 3rem;
   background-color: azure;
   p{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: hsl(217, 19%, 24%);
     padding: 0 .5rem 0 0;
   }
@@ -93,9 +93,9 @@ export const Profpic = styled.img`
   object-position: center;
   border-radius: 50%;
   aspect-ratio: 1/1;
-  padding: 0.5rem;
+  padding: 0.3rem;
   @media (max-width: 991px) {
-    width: 90px;
+    width: 80px;
   }
 `
 export const MenuAndRating = styled.div`
@@ -145,7 +145,7 @@ export const MenuNameRating = styled.div`
   justify-content: center;
   width: 100%;
   height: auto;
-  gap: .7rem;
+  gap: .5rem;
   p{
     color: ghostwhite;
   }
