@@ -61,7 +61,9 @@ export const DalgonaCapu = ({
   showAlert,
   setShowAlert,
   feedbackValue,
-  setFeedbackValue
+  setFeedbackValue,
+  setMenuPic,
+  setMenuName
 }) => {
   const navigate = useNavigate();
   const handleClick = (anchor) => {
@@ -193,10 +195,15 @@ export const DalgonaCapu = ({
         <FeedbackArea
           placeholder="Leave your review here..."
           value={feedbackValue}
+          onChange={(event) => setFeedbackValue(event.target.value)}
         >
         </FeedbackArea>
         <SubmitRating
-          onClick={handleSubmit}
+          onClick={()=>{
+            setMenuPic('Dalg_Capu.jpg');
+            setMenuName(props.items[0].list[1].name);
+            handleSubmit();
+          }}
         >
           Submit
         </SubmitRating>
