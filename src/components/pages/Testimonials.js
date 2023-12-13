@@ -20,7 +20,7 @@ const Testimonials = () => {
   const [testi, setTesti] = React.useState([]);
 
 React.useEffect(() => {
-  fetch('https://fays-dalgona.onrender.com/Testimonials')
+  fetch('https://fays-dalgona.onrender.com/Testimonials?_sort=id&_order=desc')
     .then(res => {
       return res.json();
     })
