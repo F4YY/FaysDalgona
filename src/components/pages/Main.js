@@ -113,7 +113,7 @@ function Main() {
 
   React.useEffect(() => {
     // Check if menuPic and menuName are not empty, then make the API call
-    if (menuPic && menuName && postData) {
+    if (menuPic && menuName) {
       fetch("https://fays-dalgona.onrender.com/Testimonials", {
         method: "POST",
         headers: {
@@ -123,10 +123,14 @@ function Main() {
       })
         .then((postResponse) => {
           if (postResponse.ok) {
+            alert("Thank you for submitting your feedback!");
             // Use the callback functions to ensure the state is updated before executing the next steps
             setRateMenu(false);
             setFeedbackValue("");
             setCurrentRating(0);
+            // Optionally, reset menuPic and menuName here if needed
+            // setMenuPic('');
+            // setMenuName('');
           } else {
             alert("Error submitting feedback. Please try again.");
           }
@@ -137,6 +141,7 @@ function Main() {
         });
     }
   }, [menuPic, menuName, postData]);
+
   return (
     <main>
       <Routes>
