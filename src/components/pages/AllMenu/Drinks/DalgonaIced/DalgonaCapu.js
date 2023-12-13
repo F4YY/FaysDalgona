@@ -62,7 +62,9 @@ export const DalgonaCapu = ({
   setShowAlert,
   feedbackValue,
   setFeedbackValue,
+  menuPic,
   setMenuPic,
+  menuName,
   setMenuName
 }) => {
   const navigate = useNavigate();
@@ -78,7 +80,7 @@ export const DalgonaCapu = ({
   };
   useEffect(() => {
     scrollToTop();
-  }, []);
+  }, [menuPic, menuName]);
   const props = menudata.menu.find((menu) => menu.category === "Drinks" && menu.items[0].name === "Dalgona Iced" && menu.items[0].list[1].name === "Dalgona Capuccino");
   return (
     <>

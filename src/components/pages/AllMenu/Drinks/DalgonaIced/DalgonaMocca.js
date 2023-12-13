@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import menudata from "../../../../database/menu.json";
 import {
   BackButton,
@@ -60,7 +60,9 @@ export const DalgonaMocca = ({
   setShowAlert,
   feedbackValue,
   setFeedbackValue,
+  menuPic,
   setMenuPic,
+  menuName,
   setMenuName
 }) => {
   const navigate = useNavigate();
@@ -75,9 +77,9 @@ export const DalgonaMocca = ({
     }
   };
 
-  useEffect(() => {
+  React.useEffect(() => {
     scrollToTop();
-  }, []);
+  }, [menuPic, menuName]);
 
   const props = menudata.menu.find((menu) => menu.category === "Drinks" && menu.items[0].name === "Dalgona Iced" && menu.items[0].list[5].name === "Dalgona Moccaccino");
   return (
