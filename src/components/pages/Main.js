@@ -119,11 +119,10 @@ function Main() {
       })
       .then(postResponse => {
         if (postResponse.ok) {
-          // Use the callback functions to ensure the state is updated before executing the next steps
-          setRateMenu(false, () => {
-            setFeedbackValue("");
-            setCurrentRating(0);
-          });
+          alert('Thank you for your feedback!');
+          setRateMenu(false);
+          setFeedbackValue("");
+          setCurrentRating(0);
         } else {
           alert("Error submitting feedback. Please try again.");
         }

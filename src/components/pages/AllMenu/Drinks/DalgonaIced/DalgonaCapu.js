@@ -187,7 +187,11 @@ export const DalgonaCapu = ({
                 icon={faStar}
                 key={index}
                 color={(hoverRating || currentRating) > index ? "#ffc107" : "#D6D7C5"}
-                onClick={() => setCurrentRating(index + 1)}
+                onClick={() => {
+                  setCurrentRating(index + 1)
+                  setMenuPic('Dalg_Capu.jpg');
+                  setMenuName(props.items[0].list[1].name);
+                }}
                 onMouseEnter={() => setHoverRating(index + 1)}
                 onMouseLeave={() => setHoverRating(undefined)}
               />
@@ -201,11 +205,7 @@ export const DalgonaCapu = ({
         >
         </FeedbackArea>
         <SubmitRating
-          onClick={()=>{
-            setMenuPic('Dalg_Capu.jpg');
-            setMenuName(props.items[0].list[1].name);
-            handleSubmit();
-          }}
+          onClick={handleSubmit}
         >
           Submit
         </SubmitRating>
