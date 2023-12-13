@@ -208,7 +208,7 @@ export const DalgonaCapu = ({
         <SubmitRating
           onClick={handleSubmit}
         >
-          {isSubmitting? 'Submit' : 'Submitting...'}
+          {!isSubmitting? 'Submit' : 'Submitting...'}
         </SubmitRating>
       </RatingStar>
     )}
