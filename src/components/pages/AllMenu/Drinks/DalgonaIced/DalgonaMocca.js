@@ -60,7 +60,6 @@ export const DalgonaMocca = ({
   setShowAlert,
   feedbackValue,
   setFeedbackValue,
-  menuPic,
   setMenuPic,
   setMenuName
 }) => {
@@ -201,6 +200,8 @@ export const DalgonaMocca = ({
         </FeedbackArea>
         <SubmitRating
           onClick={() => {
+            setMenuPic('Dalg_Moca.jpg');
+            setMenuName(props.items[0].list[5].name);
             handleSubmit();
           }}
         >
