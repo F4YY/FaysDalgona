@@ -89,8 +89,7 @@ function Main() {
   //   setRateMenu(false);
   //   setCurrentRating(0);
   // }
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = () => {
     fetch("https://fays-dalgona.onrender.com/Testimonials")
       .then(response => response.json())
       .then(testimonials => {
