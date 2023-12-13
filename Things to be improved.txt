@@ -1,0 +1,7 @@
+Things to be improved:
+- submit button will be submitting when data isPending (see video tutorial net ninja)
+- change respon alert to toasty or alert chakra ui with time delay 2000 before auto close
+- rateMenu will be disabled if user and desired item name is listed in db.json
+- star rating input is required
+- text area input is required
+- text area min char 2, max char 70

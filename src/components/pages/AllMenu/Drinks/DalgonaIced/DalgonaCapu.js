@@ -60,6 +60,7 @@ export const DalgonaCapu = ({
   handleSubmit,
   showAlert,
   setShowAlert,
+  isSubmitting,
   feedbackValue,
   setFeedbackValue,
   menuPic,
@@ -207,7 +208,7 @@ export const DalgonaCapu = ({
         <SubmitRating
           onClick={handleSubmit}
         >
-          Submit
+          {isSubmitting? 'Submit' : 'Submitting...'}
         </SubmitRating>
       </RatingStar>
     )}
