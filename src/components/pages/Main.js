@@ -115,10 +115,13 @@ function Main() {
       })
       .then(postResponse => {
         if (postResponse.ok) {
-          alert("Thank you for your feedback!");
-          setRateMenu(false);
-          setFeedbackValue("");
-          setCurrentRating(0);
+          // Use the callback functions to ensure the state is updated before executing the next steps
+          setRateMenu(false, () => {
+            setFeedbackValue("");
+            setCurrentRating(0);
+            setMenuPic("Dalg_Moca.jpg");
+            setMenuName("Dalgona Moccaccino");
+          });
         } else {
           alert("Error submitting feedback. Please try again.");
         }
