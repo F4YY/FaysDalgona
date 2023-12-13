@@ -131,6 +131,12 @@ function Main() {
         alert("Error submitting feedback. Please try again.");
       });
   };
+
+  React.useEffect(() => {
+    // The state has changed, you can now perform additional actions
+    console.log("Updated menuPic:", menuPic);
+    console.log("Updated menuName:", menuName);
+  }, [menuPic, menuName]);
   return (
     <main>
       <Routes>
