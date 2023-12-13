@@ -207,7 +207,7 @@ function Main() {
         <Route path="/About" element={<About />} />
         <Route path="/Reservation" element={<ReserveTable />} />
       </Routes>
-      {showAlert && (
+      {showNotif && (
         <Alert status="success" variant="subtle" timeout={2000}>
           <AlertIcon />
           <AlertTitle mr={2}>Thank you for your feedback!</AlertTitle>
