@@ -199,7 +199,8 @@ export const DalgonaMocca = ({
         >
         </FeedbackArea>
         <SubmitRating
-          onClick={() => {
+          onClick={(e) => {
+            e.preventDefault();
             setMenuPic('Dalg_Moca.jpg');
             setMenuName(props.items[0].list[5].name);
             handleSubmit();
