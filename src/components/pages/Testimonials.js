@@ -20,7 +20,7 @@ const Testimonials = () => {
   const [testi, setTesti] = React.useState([]);
 
 React.useEffect(() => {
-  fetch('https://fays-dalgona.onrender.com/Testimonials?_sort=id&_order=desc')
+  fetch('https://fays-dalgona.onrender.com/Testimonials?star_rating_gte=4&_sort=id&_order=desc')
     .then(res => {
       return res.json();
     })
@@ -56,7 +56,7 @@ return (
       {testi.slice(0, 5).map((feedback, index) => (
         <Testicard key={index}>
           <TestiProfpicName>
-            <Profpic loading='lazy' src={feedback.prof_pic? feedback.prof_pic : require(`../images/avatar.jpg`)} alt={feedback.name} />
+            <Profpic loading='lazy' src={feedback.prof_pic? feedback.prof_pic : require(`../images/${feedback.prof_pic}`)} alt={feedback.name} />
             <p>{feedback.name}</p>
           </TestiProfpicName>
           <MenuAndRating>
