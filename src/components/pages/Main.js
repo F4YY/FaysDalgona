@@ -74,6 +74,7 @@ function Main() {
   const {user, authReady} = useContext(AuthContext);
   const [showAlert, setShowAlert] = React.useState(false);
   const [feedbackValue, setFeedbackValue] = React.useState('');
+  const [postData, setPostData] = React.useState(null);
   const [menuPic, setMenuPic] = React.useState('');
   const [menuName, setMenuName] = React.useState('');
 
@@ -95,7 +96,9 @@ function Main() {
       .then(testimonials => {
         const lastId = testimonials[testimonials.length - 1].id;
         const newId = lastId + 1;
-        const postData = {
+
+        // Set the postData state
+        setPostData({
           id: newId,
           name: user?.user_metadata.full_name,
           prof_pic: user?.user_metadata.avatar_url || "avatar.jpg",
@@ -104,37 +107,36 @@ function Main() {
           menu_name: menuName,
           star_rating: currentRating,
           review: feedbackValue
-        };
-        return fetch("https://fays-dalgona.onrender.com/Testimonials", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json"
-          },
-          body: JSON.stringify(postData)
         });
-      })
-      .then(postResponse => {
-        if (postResponse.ok) {
-          // Use the callback functions to ensure the state is updated before executing the next steps
-          setRateMenu(false, () => {
-            setFeedbackValue("");
-            setCurrentRating(0);
-          });
-        } else {
-          alert("Error submitting feedback. Please try again.");
-        }
-      })
-      .catch(error => {
-        console.error("Error:", error);
-        alert("Error submitting feedback. Please try again.");
       });
   };
 
   React.useEffect(() => {
-    // The state has changed, you can now perform additional actions
-    console.log("Updated menuPic:", menuPic);
-    console.log("Updated menuName:", menuName);
-  }, [menuPic, menuName]);
+    // Check if menuPic and menuName are not empty, then make the API call
+    if (menuPic && menuName && postData) {
+      fetch("https://fays-dalgona.onrender.com/Testimonials", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(postData),
+      })
+        .then((postResponse) => {
+          if (postResponse.ok) {
+            // Use the callback functions to ensure the state is updated before executing the next steps
+            setRateMenu(false);
+            setFeedbackValue("");
+            setCurrentRating(0);
+          } else {
+            alert("Error submitting feedback. Please try again.");
+          }
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+          alert("Error submitting feedback. Please try again.");
+        });
+    }
+  }, [menuPic, menuName, postData]);
   return (
     <main>
       <Routes>
