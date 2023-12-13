@@ -120,6 +120,8 @@ function Main() {
         setRateMenu(false);
         setFeedbackValue("");
         setCurrentRating(0);
+        setMenuPic("Dalg_Moca.jpg");
+        setMenuName("Dalgona Moccaccino");
       } else {
         alert("Error submitting feedback. Please try again.");
       }
