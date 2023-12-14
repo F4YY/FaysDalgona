@@ -131,10 +131,16 @@ export const DalgonaCapu = ({
                 {props.items[0].list[1].reviews}&nbsp;reviews
               </text>
             </StarsReview>
-            {authReady && (
+            {authReady && !showNotif && (
               <h2
-                onClick={handleAfterSubmit}
-                style={{ pointerEvents: showNotif ? 'none' : 'auto', opacity: showNotif ? 0.5 : 1 }}
+                onClick={handleRateMenu}
+              >
+                Rate this menu
+              </h2>
+            )}
+            {authReady && showNotif && (
+              <h2
+                disabled
               >
                 Rate this menu
               </h2>
