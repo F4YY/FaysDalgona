@@ -60,7 +60,7 @@ export const DalgonaCapu = ({
   handleSubmit,
   showAlert,
   setShowAlert,
-  isSubmitting,
+  isPending,
   feedbackValue,
   setFeedbackValue,
   menuPic,
@@ -205,12 +205,13 @@ export const DalgonaCapu = ({
           onChange={(event) => setFeedbackValue(event.target.value)}
         >
         </FeedbackArea>
-        {!isSubmitting && <SubmitRating
+        {!isPending && <SubmitRating
           onClick={handleSubmit}
         >
           Submit
         </SubmitRating>}
-        {isSubmitting && <SubmitRating
+        {isPending && <SubmitRating
+          disabled
         >
           is Submitting...
         </SubmitRating>}

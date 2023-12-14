@@ -75,7 +75,7 @@ function Main() {
   const {user, authReady} = useContext(AuthContext);
   const [showAlert, setShowAlert] = React.useState(false);
   const [showNotif, setShowNotif] = React.useState(false);
-  const [isSubmitting, setIsSubmitting] = React.useState(false);
+  const [isPending, setIsPending] = React.useState(false);
   const [feedbackValue, setFeedbackValue] = React.useState('');
   const [menuPic, setMenuPic] = React.useState('');
   const [menuName, setMenuName] = React.useState('');
@@ -92,7 +92,7 @@ function Main() {
   React.useEffect (() => {
     if (showNotif) {
       const timeout = setTimeout(() => {
-        setShowNotif(false);
+        setShowNotif(true);
       }, 2000);
       return () => clearTimeout(timeout);
     }
@@ -123,7 +123,7 @@ function Main() {
       })
       .then(postResponse => {
         if (postResponse.ok) {
-          setIsSubmitting(true);
+          setIsPending(false);
           setShowNotif(true);
           setRateMenu(false);
           setFeedbackValue("");
