@@ -56,8 +56,8 @@ export const DalgonaCapu = ({
   hoverRating,
   setHoverRating,
   authReady,
-  handleRateMenu,
-  handleAfterSubmit,
+  handleOnceSubmit,
+  isClickable,
   handleSubmit,
   showAlert,
   showNotif,
@@ -131,16 +131,10 @@ export const DalgonaCapu = ({
                 {props.items[0].list[1].reviews}&nbsp;reviews
               </text>
             </StarsReview>
-            {authReady && !showNotif && (
+            {authReady && (
               <h2
-                onClick={handleRateMenu}
-              >
-                Rate this menu
-              </h2>
-            )}
-            {authReady && showNotif && (
-              <h2
-                disabled
+                onClick={handleOnceSubmit}
+                style={!isClickable ? { pointerEvents: 'none', opacity: 0.5 } : null}
               >
                 Rate this menu
               </h2>
