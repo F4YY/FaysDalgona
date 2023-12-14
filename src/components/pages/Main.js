@@ -89,6 +89,7 @@ function Main() {
   }
   const handleSubmit = () => {
     setIsSubmitting(true);
+    setShowNotif(true);
     fetch("https://fays-dalgona.onrender.com/Testimonials")
       .then(response => response.json())
       .then(testimonials => {
