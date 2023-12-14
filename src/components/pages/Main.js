@@ -1,4 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
+import { Toast, ToastContainer } from 'react-bootstrap';
 import React, { useContext } from 'react';
 import ReserveTable from './ReserveTable';
 import Testimonials from './Testimonials';
@@ -65,7 +66,6 @@ import { ComboDuo2 } from './AllMenu/Combo/Combo123/ComboDuo2';
 import { ComboTrio1 } from './AllMenu/Combo/Combo123/ComboTrio1';
 import { ComboTrio2 } from './AllMenu/Combo/Combo123/ComboTrio2';
 import AuthContext from '../../context/authContext';
-import { Alert, AlertIcon, AlertTitle } from '@chakra-ui/react';
 
 function Main() {
   const stars = Array(5).fill(0);
@@ -88,15 +88,6 @@ function Main() {
       setShowAlert(true);
     }
   }
-
-  React.useEffect (() => {
-    if (showNotif) {
-      const timeout = setTimeout(() => {
-        setShowNotif(true);
-      }, 2000);
-      return () => clearTimeout(timeout);
-    }
-  }, [showNotif]);
   const handleSubmit = () => {
     fetch("https://fays-dalgona.onrender.com/Testimonials")
       .then(response => response.json())
@@ -140,6 +131,14 @@ function Main() {
 
   return (
     <main>
+      <ToastContainer position="top-end">
+        <Toast show={showNotif} onClose={() => setShowNotif(false)} delay={2000} autohide>
+          <Toast.Header>
+            <strong className="mr-auto">Success</strong>
+          </Toast.Header>
+          <Toast.Body>Thank you for your feedback!</Toast.Body>
+        </Toast>
+      </ToastContainer>
       <Routes>
         <Route path="/AllMenu" element={<Menu/>}>
           <Route path="MainMenu" element={<MainMenu />} />
@@ -207,12 +206,6 @@ function Main() {
         <Route path="/About" element={<About />} />
         <Route path="/Reservation" element={<ReserveTable />} />
       </Routes>
-      {showNotif && (
-        <Alert status="success" variant="solid" timeout={2000}>
-          <AlertIcon />
-          <AlertTitle mr={2}>Thank you for your feedback!</AlertTitle>
-        </Alert>
-      )}
     </main>
   );
 }
