@@ -87,7 +87,8 @@ function Main() {
       setShowAlert(true);
     }
   }
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
     setIsSubmitting(true);
     setShowNotif(true);
     fetch("https://fays-dalgona.onrender.com/Testimonials")
