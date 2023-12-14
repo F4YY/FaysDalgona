@@ -133,6 +133,7 @@ export const DalgonaCapu = ({
             {authReady && (
               <h2
                 onClick={handleRateMenu}
+                disabled={showNotif}
               >
                 Rate this menu
               </h2>
