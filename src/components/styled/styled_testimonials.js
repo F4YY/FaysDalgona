@@ -39,7 +39,15 @@ export const Testifeeds = styled.div`
   align-items: flex-start;
   width: 100%;
   height: 100%;
+  overflow: scroll;
   gap: 2rem;
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: transparent;
+  }
   @media (max-width: 991px) {
     flex-direction: column;
   }
@@ -101,6 +109,7 @@ export const Profpic = styled.img`
 export const MenuAndRating = styled.div`
   display: flex;
   flex-direction: column;
+  width: 300px;
   border-radius: 1rem;
   border: .3rem solid hsl(240, 53%, 75%);
   padding: .5rem 0;
@@ -112,14 +121,15 @@ export const MenuAndRating = styled.div`
       font-size: 1.5rem;
     }
   }
+  @media (max-width: 991px) {
+    width: 100%;
+  }
 `;
 export const MenuPicName = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  width: 100%;
-  height: 100%;
   gap: 1rem;
   padding: 1rem;
 `;
@@ -143,8 +153,6 @@ export const MenuNameRating = styled.div`
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  width: 100%;
-  height: auto;
   gap: .5rem;
   p{
     color: ghostwhite;

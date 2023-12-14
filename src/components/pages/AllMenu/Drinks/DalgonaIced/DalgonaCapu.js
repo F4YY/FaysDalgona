@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Toast, ToastContainer } from 'react-bootstrap';
 import menudata from "../../../../database/menu.json";
 import {
   BackButton,
@@ -59,6 +60,8 @@ export const DalgonaCapu = ({
   handleRateMenu,
   handleSubmit,
   showAlert,
+  showNotif,
+  setShowNotif,
   setShowAlert,
   isPending,
   feedbackValue,
@@ -85,6 +88,14 @@ export const DalgonaCapu = ({
   const props = menudata.menu.find((menu) => menu.category === "Drinks" && menu.items[0].name === "Dalgona Iced" && menu.items[0].list[1].name === "Dalgona Capuccino");
   return (
     <>
+    <ToastContainer position="top-end">
+        <Toast show={showNotif} onClose={() => setShowNotif(false)} delay={2000} autohide>
+          <Toast.Header>
+            <strong className="mr-auto">Success</strong>
+          </Toast.Header>
+          <Toast.Body>Thank you for your feedback!</Toast.Body>
+        </Toast>
+      </ToastContainer>
     <ProductDetail
       id="main-menu-container"
       rateMenu={rateMenu}
