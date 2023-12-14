@@ -80,9 +80,8 @@ function Main() {
   const [menuPic, setMenuPic] = React.useState('');
   const [menuName, setMenuName] = React.useState('');
 
-  const handleRateMenu = (e) => {
+  const handleRateMenu = () => {
     if(user){
-      e.preventDefault();
       setRateMenu(true);
     } else {
       setShowAlert(true);
