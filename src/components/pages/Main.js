@@ -90,7 +90,6 @@ function Main() {
   const handleSubmit = (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    setShowNotif(true);
     fetch("https://fays-dalgona.onrender.com/Testimonials")
       .then(response => response.json())
       .then(testimonials => {
@@ -117,6 +116,7 @@ function Main() {
       .then(postResponse => {
         if (postResponse.ok) {
           setIsSubmitting(false);
+          setShowNotif(true);
           setRateMenu(false);
           setFeedbackValue("");
           setCurrentRating(0);

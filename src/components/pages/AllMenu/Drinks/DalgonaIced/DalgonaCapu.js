@@ -45,7 +45,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import { faClose } from '@fortawesome/free-solid-svg-icons';
-import { Alert, AlertDescription, AlertIcon, AlertTitle } from '@chakra-ui/react';
+import { Alert, AlertDescription, AlertIcon, AlertTitle, HStack } from '@chakra-ui/react';
 
 export const DalgonaCapu = ({
   stars,
@@ -83,7 +83,14 @@ export const DalgonaCapu = ({
   };
   useEffect(() => {
     scrollToTop();
-  }, [menuPic, menuName]);
+    if (showNotif) {
+      const timer = setTimeout(() => {
+        setShowNotif(false);
+      }, 2000);
+
+      return () => clearTimeout(timer);
+    }
+  }, [menuPic, menuName, showNotif, setShowNotif]);
   const props = menudata.menu.find((menu) => menu.category === "Drinks" && menu.items[0].name === "Dalgona Iced" && menu.items[0].list[1].name === "Dalgona Capuccino");
   return (
     <>
@@ -241,8 +248,10 @@ export const DalgonaCapu = ({
             onClick={() => setShowAlert(false)}
           />
         </div>
-        <AlertIcon />
-        <AlertTitle>You're not logged in!</AlertTitle>
+        <HStack gap={2}>
+          <AlertIcon />
+          <AlertTitle>You're not logged in!</AlertTitle>
+        </HStack>
         <AlertDescription>Please login to rate a menu.</AlertDescription>
       </Alert>
     )}
