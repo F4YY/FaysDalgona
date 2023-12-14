@@ -63,7 +63,7 @@ export const DalgonaCapu = ({
   showNotif,
   setShowNotif,
   setShowAlert,
-  isPending,
+  isSubmitting,
   feedbackValue,
   setFeedbackValue,
   menuPic,
@@ -88,14 +88,16 @@ export const DalgonaCapu = ({
   const props = menudata.menu.find((menu) => menu.category === "Drinks" && menu.items[0].name === "Dalgona Iced" && menu.items[0].list[1].name === "Dalgona Capuccino");
   return (
     <>
+    {showNotif && (
     <ToastContainer position="top-end">
-        <Toast show={showNotif} onClose={() => setShowNotif(false)} delay={2000} autohide>
-          <Toast.Header>
-            <strong className="mr-auto">Success</strong>
-          </Toast.Header>
-          <Toast.Body>Thank you for your feedback!</Toast.Body>
-        </Toast>
-      </ToastContainer>
+      <Toast onClose={() => setShowNotif(false)} delay={2000} autohide>
+        <Toast.Header>
+          <strong className="mr-auto">Success</strong>
+        </Toast.Header>
+        <Toast.Body>Thank you for your feedback!</Toast.Body>
+      </Toast>
+    </ToastContainer>
+    )}
     <ProductDetail
       id="main-menu-container"
       rateMenu={rateMenu}
@@ -216,16 +218,11 @@ export const DalgonaCapu = ({
           onChange={(event) => setFeedbackValue(event.target.value)}
         >
         </FeedbackArea>
-        {!isPending && <SubmitRating
+        <SubmitRating
           onClick={handleSubmit}
         >
-          Submit
-        </SubmitRating>}
-        {isPending && <SubmitRating
-          disabled
-        >
-          is Submitting...
-        </SubmitRating>}
+          {isSubmitting ? "Submitting..." : "Submit"}
+        </SubmitRating>
       </RatingStar>
     )}
     {showAlert && (
