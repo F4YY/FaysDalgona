@@ -121,7 +121,6 @@ function Main() {
       .then(postResponse => {
         if (postResponse.ok) {
           setIsSubmitting(false);
-          setShowNotif(true);
           setRateMenu(false);
           setFeedbackValue("");
           setCurrentRating(0);
@@ -137,6 +136,7 @@ function Main() {
         console.error("Error:", error);
         alert("Error submitting feedback. Please try again.");
       });
+    setShowNotif(true);
   };
 
   return (
