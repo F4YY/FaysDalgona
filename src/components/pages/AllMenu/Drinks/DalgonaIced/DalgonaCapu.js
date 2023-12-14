@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import { Toast, ToastContainer } from 'react-bootstrap';
 import menudata from "../../../../database/menu.json";
 import {
   BackButton,
@@ -46,7 +45,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import { faClose } from '@fortawesome/free-solid-svg-icons';
-import { Alert, AlertDescription, AlertIcon, AlertTitle } from '@chakra-ui/react';
+import { Alert, AlertDescription, AlertIcon, AlertTitle, CloseButton } from '@chakra-ui/react';
 
 export const DalgonaCapu = ({
   stars,
@@ -89,14 +88,11 @@ export const DalgonaCapu = ({
   return (
     <>
     {showNotif && (
-    <ToastContainer position="top-end">
-      <Toast onClose={() => setShowNotif(false)} delay={2000} autohide>
-        <Toast.Header>
-          <strong className="mr-auto">Success</strong>
-        </Toast.Header>
-        <Toast.Body>Thank you for your feedback!</Toast.Body>
-      </Toast>
-    </ToastContainer>
+      <Alert status="success" variant="subtle" position="top-end" onClose={() => setShowNotif(false)}>
+        <AlertIcon />
+        Thank you for your feedback!
+        <CloseButton position="absolute" right="8px" top="8px" onClick={() => setShowNotif(false)} />
+      </Alert>
     )}
     <ProductDetail
       id="main-menu-container"
