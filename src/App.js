@@ -8,6 +8,7 @@ import HeroSection from './components/pages/HeroSection';
 import Highlight from './components/pages/Highlight';
 import FootNav from './components/pages/FootNav';
 import Alert from './components/alert/Alert';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
