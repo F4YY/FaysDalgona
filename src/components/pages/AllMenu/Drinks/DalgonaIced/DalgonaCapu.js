@@ -130,10 +130,9 @@ export const DalgonaCapu = ({
                 {props.items[0].list[1].reviews}&nbsp;reviews
               </text>
             </StarsReview>
-            {authReady && (
+            {authReady && !showNotif && (
               <h2
                 onClick={handleRateMenu}
-                disabled={showNotif}
               >
                 Rate this menu
               </h2>
@@ -268,9 +267,9 @@ export const DalgonaCapu = ({
         display={{base:"flex",md:"flex",lg:"flex"}}
         flexDir={{base:'column', md:'row', lg:'row'}}
       >
-        <HStack>
+        <HStack m={2}>
           <AlertIcon />
-          <AlertTitle m={2}>Thank you!</AlertTitle>
+          <AlertTitle>Thank you!</AlertTitle>
         </HStack>
         <AlertDescription>Your review has been submitted.</AlertDescription>
       </Alert>
