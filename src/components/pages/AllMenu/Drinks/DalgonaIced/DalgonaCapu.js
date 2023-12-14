@@ -248,10 +248,8 @@ export const DalgonaCapu = ({
             onClick={() => setShowAlert(false)}
           />
         </div>
-        <HStack gap={2}>
-          <AlertIcon />
-          <AlertTitle>You're not logged in!</AlertTitle>
-        </HStack>
+        <AlertIcon />
+        <AlertTitle>You're not logged in!</AlertTitle>
         <AlertDescription>Please login to rate a menu.</AlertDescription>
       </Alert>
     )}
@@ -269,21 +267,10 @@ export const DalgonaCapu = ({
         display={{base:"flex",md:"flex",lg:"flex"}}
         flexDir={{base:'column', md:'row', lg:'row'}}
       >
-        <div style={{
-          position: 'absolute',
-          top: '1rem',
-          right: '1rem',
-          }}
-        >
-          <FontAwesomeIcon
-            size='lg'
-            cursor="pointer"
-            icon={faClose}
-            onClick={() => setShowNotif(false)}
-          />
-        </div>
-        <AlertIcon />
-        <AlertTitle>Thank you!</AlertTitle>
+        <HStack gap={2}>
+          <AlertIcon />
+          <AlertTitle>Thank you!</AlertTitle>
+        </HStack>
         <AlertDescription>Your review has been submitted.</AlertDescription>
       </Alert>
     )}
