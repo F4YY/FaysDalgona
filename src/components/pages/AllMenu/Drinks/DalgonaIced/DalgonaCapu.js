@@ -87,13 +87,6 @@ export const DalgonaCapu = ({
   const props = menudata.menu.find((menu) => menu.category === "Drinks" && menu.items[0].name === "Dalgona Iced" && menu.items[0].list[1].name === "Dalgona Capuccino");
   return (
     <>
-    {showNotif && (
-      <Alert status="success" variant="subtle" position="top-end" onClose={() => setShowNotif(false)}>
-        <AlertIcon />
-        Thank you for your feedback!
-        <CloseButton position="absolute" right="8px" top="8px" onClick={() => setShowNotif(false)} />
-      </Alert>
-    )}
     <ProductDetail
       id="main-menu-container"
       rateMenu={rateMenu}
@@ -251,6 +244,38 @@ export const DalgonaCapu = ({
         <AlertIcon />
         <AlertTitle>You're not logged in!</AlertTitle>
         <AlertDescription>Please login to rate a menu.</AlertDescription>
+      </Alert>
+    )}
+    {showNotif && (
+      <Alert
+        position='fixed'
+        top='50%'
+        left='50%'
+        transform='translate(-50%, -50%)'
+        status='success'
+        justifyContent='center'
+        w={{base:"95%",md:"60%",lg:"40%"}}
+        minH={{base:"30%",md:"40%",lg:"40%"}}
+        borderRadius='1rem'
+        display={{base:"flex",md:"flex",lg:"flex"}}
+        flexDir={{base:'column', md:'row', lg:'row'}}
+      >
+        <div style={{
+          position: 'absolute',
+          top: '1rem',
+          right: '1rem',
+          }}
+        >
+          <FontAwesomeIcon
+            size='lg'
+            cursor="pointer"
+            icon={faClose}
+            onClick={() => setShowNotif(false)}
+          />
+        </div>
+        <AlertIcon />
+        <AlertTitle>Thank you!</AlertTitle>
+        <AlertDescription>Your review has been submitted.</AlertDescription>
       </Alert>
     )}
     </>

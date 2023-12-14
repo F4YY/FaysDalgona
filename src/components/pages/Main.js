@@ -116,7 +116,6 @@ function Main() {
       .then(postResponse => {
         if (postResponse.ok) {
           setIsSubmitting(false);
-          setShowNotif(true);
           setRateMenu(false);
           setFeedbackValue("");
           setCurrentRating(0);
