@@ -130,10 +130,12 @@ export const DalgonaCapu = ({
                 {props.items[0].list[1].reviews}&nbsp;reviews
               </text>
             </StarsReview>
-            {authReady && !showNotif && (
-              <h2
-                onClick={handleRateMenu}
-              >
+            {authReady && !showNotif ? (
+              <h2 onClick={handleRateMenu}>
+                Rate this menu
+              </h2>
+            ) : (
+              <h2 disabled>
                 Rate this menu
               </h2>
             )}
