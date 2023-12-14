@@ -267,9 +267,9 @@ export const DalgonaCapu = ({
         display={{base:"flex",md:"flex",lg:"flex"}}
         flexDir={{base:'column', md:'row', lg:'row'}}
       >
-        <HStack gap={2}>
+        <HStack>
           <AlertIcon />
-          <AlertTitle>Thank you!</AlertTitle>
+          <AlertTitle m={2}>Thank you!</AlertTitle>
         </HStack>
         <AlertDescription>Your review has been submitted.</AlertDescription>
       </Alert>
