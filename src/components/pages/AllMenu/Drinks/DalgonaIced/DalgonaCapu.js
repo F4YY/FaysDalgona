@@ -86,7 +86,7 @@ export const DalgonaCapu = ({
     if (showNotif) {
       const timer = setTimeout(() => {
         setShowNotif(false);
-      }, 2000);
+      }, 3000);
 
       return () => clearTimeout(timer);
     }
