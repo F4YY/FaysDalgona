@@ -43,7 +43,7 @@ import {
 import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft, faClose, faStar } from '@fortawesome/free-solid-svg-icons';
-import { Alert, AlertDescription, AlertIcon, AlertTitle } from '@chakra-ui/react';
+import { Alert, AlertDescription, AlertIcon, AlertTitle, HStack } from '@chakra-ui/react';
 
 export const DalgonaMocca = ({
   stars,
@@ -54,10 +54,14 @@ export const DalgonaMocca = ({
   hoverRating,
   setHoverRating,
   authReady,
-  handleRateMenu,
+  handleOnceSubmit,
+  isClickable,
   handleSubmit,
   showAlert,
+  showNotif,
+  setShowNotif,
   setShowAlert,
+  isSubmitting,
   feedbackValue,
   setFeedbackValue,
   menuPic,
@@ -76,11 +80,16 @@ export const DalgonaMocca = ({
       mainMenuContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   };
-
   React.useEffect(() => {
     scrollToTop();
-  }, []);
+    if (showNotif) {
+      const timer = setTimeout(() => {
+        setShowNotif(false);
+      }, 3000);
 
+      return () => clearTimeout(timer);
+    }
+  }, [menuPic, menuName, showNotif, setShowNotif]);
   const props = menudata.menu.find((menu) => menu.category === "Drinks" && menu.items[0].name === "Dalgona Iced" && menu.items[0].list[5].name === "Dalgona Moccaccino");
   return (
     <>
@@ -122,7 +131,8 @@ export const DalgonaMocca = ({
             </StarsReview>
             {authReady && (
               <h2
-                onClick={handleRateMenu}
+                onClick={handleOnceSubmit}
+                style={!isClickable ? { pointerEvents: 'none', opacity: 0.5 } : null}
               >
                 Rate this menu
               </h2>
@@ -241,6 +251,27 @@ export const DalgonaMocca = ({
         <AlertIcon />
         <AlertTitle>You're not logged in!</AlertTitle>
         <AlertDescription>Please login to rate a menu.</AlertDescription>
+      </Alert>
+    )}
+    {showNotif && (
+      <Alert
+        position='fixed'
+        top='50%'
+        left='50%'
+        transform='translate(-50%, -50%)'
+        status='success'
+        justifyContent='center'
+        w={{base:"95%",md:"60%",lg:"40%"}}
+        minH={{base:"30%",md:"40%",lg:"40%"}}
+        borderRadius='1rem'
+        display={{base:"flex",md:"flex",lg:"flex"}}
+        flexDir={{base:'column', md:'row', lg:'row'}}
+      >
+        <HStack m={2}>
+          <AlertIcon />
+          <AlertTitle>Thank you!</AlertTitle>
+        </HStack>
+        <AlertDescription>Your review has been submitted.</AlertDescription>
       </Alert>
     )}
     </>

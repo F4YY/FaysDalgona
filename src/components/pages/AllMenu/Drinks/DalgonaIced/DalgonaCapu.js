@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import menudata from "../../../../database/menu.json";
 import {
   BackButton,
@@ -82,7 +82,7 @@ export const DalgonaCapu = ({
       mainMenuContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   };
-  useEffect(() => {
+  React.useEffect(() => {
     scrollToTop();
     if (showNotif) {
       const timer = setTimeout(() => {
