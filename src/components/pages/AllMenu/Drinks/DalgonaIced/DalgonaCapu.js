@@ -205,11 +205,15 @@ export const DalgonaCapu = ({
           onChange={(event) => setFeedbackValue(event.target.value)}
         >
         </FeedbackArea>
-        <SubmitRating
+        {!isSubmitting && <SubmitRating
           onClick={handleSubmit}
         >
-          {!isSubmitting? 'Submit' : 'Submitting...'}
-        </SubmitRating>
+          Submit
+        </SubmitRating>}
+        {isSubmitting && <SubmitRating
+        >
+          is Submitting...
+        </SubmitRating>}
       </RatingStar>
     )}
     {showAlert && (

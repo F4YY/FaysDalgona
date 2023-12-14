@@ -123,7 +123,7 @@ function Main() {
       })
       .then(postResponse => {
         if (postResponse.ok) {
-          setIsSubmitting(false);
+          setIsSubmitting(true);
           setShowNotif(true);
           setRateMenu(false);
           setFeedbackValue("");
@@ -208,7 +208,7 @@ function Main() {
         <Route path="/Reservation" element={<ReserveTable />} />
       </Routes>
       {showNotif && (
-        <Alert status="success" variant="subtle" timeout={2000}>
+        <Alert status="success" variant="solid" timeout={2000}>
           <AlertIcon />
           <AlertTitle mr={2}>Thank you for your feedback!</AlertTitle>
         </Alert>

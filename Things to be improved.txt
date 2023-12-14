@@ -5,3 +5,4 @@ Things to be improved:
 - star rating input is required
 - text area input is required
 - text area min char 2, max char 70
+- test page expand beyond max width screen desktop
