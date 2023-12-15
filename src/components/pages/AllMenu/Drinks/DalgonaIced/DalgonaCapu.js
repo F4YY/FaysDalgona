@@ -95,7 +95,7 @@ export const DalgonaCapu = ({
   }, [menuPic, menuName, showNotif, setShowNotif]);
   const props = menudata.menu.find((menu) => menu.category === "Drinks" && menu.items[0].name === "Dalgona Iced" && menu.items[0].list[1].name === "Dalgona Capuccino");
   const [isClickable, setIsClickable] = React.useState(true);
-  if (itemSubmitted) {
+  if (itemSubmitted === true) {
     setIsClickable(false);
   } else {
     setIsClickable(true);
