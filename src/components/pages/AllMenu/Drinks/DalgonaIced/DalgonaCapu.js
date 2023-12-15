@@ -92,14 +92,15 @@ export const DalgonaCapu = ({
 
       return () => clearTimeout(timer);
     }
-  }, [menuPic, menuName, showNotif, setShowNotif]);
+    if (itemSubmitted) {
+      setIsClickable(false);
+    } else {
+      setIsClickable(true);
+    }
+  }, [menuPic, menuName, showNotif, setShowNotif, itemSubmitted]);
   const props = menudata.menu.find((menu) => menu.category === "Drinks" && menu.items[0].name === "Dalgona Iced" && menu.items[0].list[1].name === "Dalgona Capuccino");
   const [isClickable, setIsClickable] = React.useState(true);
-  if (itemSubmitted === true) {
-    setIsClickable(false);
-  } else {
-    setIsClickable(true);
-  }
+
   return (
     <>
     <ProductDetail
