@@ -56,7 +56,7 @@ export const DalgonaCapu = ({
   hoverRating,
   setHoverRating,
   authReady,
-  handleOnceSubmit,
+  handleRateMenu,
   isClickable,
   handleSubmit,
   showAlert,
@@ -133,7 +133,7 @@ export const DalgonaCapu = ({
             </StarsReview>
             {authReady && (
               <h2
-                onClick={handleOnceSubmit}
+                onClick={handleRateMenu}
                 style={!isClickable ? { pointerEvents: 'none', opacity: 0.5 } : null}
               >
                 Rate this menu

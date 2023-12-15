@@ -54,7 +54,7 @@ export const DalgonaMocca = ({
   hoverRating,
   setHoverRating,
   authReady,
-  handleOnceSubmit,
+  handleRateMenu,
   isClickable,
   handleSubmit,
   showAlert,
@@ -131,7 +131,7 @@ export const DalgonaMocca = ({
             </StarsReview>
             {authReady && (
               <h2
-                onClick={handleOnceSubmit}
+                onClick={handleRateMenu}
                 style={!isClickable ? { pointerEvents: 'none', opacity: 0.5 } : null}
               >
                 Rate this menu
@@ -217,7 +217,7 @@ export const DalgonaMocca = ({
         <SubmitRating
           onClick={handleSubmit}
         >
-          Submit
+          {isSubmitting ? "Submitting..." : "Submit"}
         </SubmitRating>
       </RatingStar>
     )}
