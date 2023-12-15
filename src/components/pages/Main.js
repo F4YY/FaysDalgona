@@ -80,8 +80,9 @@ function Main() {
   const [menuPic, setMenuPic] = React.useState('');
   const [menuName, setMenuName] = React.useState('');
 
-  const handleRateMenu = () => {
+  const handleRateMenu = (e) => {
     if(user){
+      e.preventDefault();
       setRateMenu(true);
     } else {
       setShowAlert(true);
@@ -120,15 +121,18 @@ function Main() {
           setRateMenu(false);
           setFeedbackValue("");
           setCurrentRating(0);
-          if (user && user.name && user.menu_name) {
-            setIsClickable(false);
-          }
         } else {
           alert("Error submitting feedback. Please try again.");
           setIsSubmitting(false);
           setRateMenu(false);
           setFeedbackValue("");
           setCurrentRating(0);
+        }
+        return postResponse.json();
+      })
+      .then(data => {
+        if (user && user.name && user.menu_name) {
+          setIsClickable(false);
         }
       })
       .catch(error => {
