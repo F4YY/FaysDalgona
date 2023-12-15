@@ -57,7 +57,6 @@ export const DalgonaCapu = ({
   setHoverRating,
   authReady,
   handleRateMenu,
-  isClickable,
   handleSubmit,
   showAlert,
   showNotif,
@@ -69,7 +68,8 @@ export const DalgonaCapu = ({
   menuPic,
   setMenuPic,
   menuName,
-  setMenuName
+  setMenuName,
+  user
 }) => {
   const navigate = useNavigate();
   const handleClick = (anchor) => {
@@ -93,6 +93,12 @@ export const DalgonaCapu = ({
     }
   }, [menuPic, menuName, showNotif, setShowNotif]);
   const props = menudata.menu.find((menu) => menu.category === "Drinks" && menu.items[0].name === "Dalgona Iced" && menu.items[0].list[1].name === "Dalgona Capuccino");
+  const[isClickable, setIsClickable] = React.useState(true);
+  if (user === user.name && user.menu_name === 'Dalgona Capuccino') {
+    setIsClickable(false);
+  } else {
+    setIsClickable(true);
+  }
   return (
     <>
     <ProductDetail
