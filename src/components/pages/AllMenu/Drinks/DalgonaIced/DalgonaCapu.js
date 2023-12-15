@@ -96,6 +96,7 @@ export const DalgonaCapu = ({
   const[isClickable, setIsClickable] = React.useState(true);
   if (user.name && user.menu_name === 'Dalgona Capuccino') {
     setIsClickable(false);
+    console.log('user name: ', user.name);
   } else {
     setIsClickable(true);
   }
