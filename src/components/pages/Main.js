@@ -74,7 +74,7 @@ function Main() {
   const {user, authReady} = useContext(AuthContext);
   const [showAlert, setShowAlert] = React.useState(false);
   const [showNotif, setShowNotif] = React.useState(false);
-  // const [isClickable, setIsClickable] = React.useState(true);
+  const [itemSubmitted, setItemSubmitted] = React.useState(false);
   const [isSubmitting, setIsSubmitting] = React.useState(false);
   const [feedbackValue, setFeedbackValue] = React.useState('');
   const [menuPic, setMenuPic] = React.useState('');
@@ -116,6 +116,7 @@ function Main() {
       })
       .then(postResponse => {
         if (postResponse.ok) {
+          setItemSubmitted(true);
           setIsSubmitting(false);
           setShowNotif(true);
           setRateMenu(false);
@@ -156,7 +157,7 @@ function Main() {
           <Route path="Sate Bakso Seafood" element={<SateSeafood />} />
         </Route>
         <Route path="Dalgona Choco Silverqueen" element={<DalgonaChocSilv stars={stars} rateMenu={rateMenu} setRateMenu={setRateMenu} currentRating={currentRating} setCurrentRating={setCurrentRating} hoverRating={hoverRating} setHoverRating={setHoverRating} authReady={authReady} handleRateMenu={handleRateMenu} handleSubmit={handleSubmit} isSubmitting={isSubmitting} showNotif={showNotif} setShowNotif={setShowNotif} showAlert={showAlert} setShowAlert={setShowAlert} feedbackValue={feedbackValue} setFeedbackValue={setFeedbackValue} menuPic={menuPic} setMenuPic={setMenuPic} menuName={menuName} setMenuName={setMenuName} />} />
-        <Route path="Dalgona Capuccino" element={<DalgonaCapu user={user} stars={stars} rateMenu={rateMenu} setRateMenu={setRateMenu} currentRating={currentRating} setCurrentRating={setCurrentRating} hoverRating={hoverRating} setHoverRating={setHoverRating} authReady={authReady} handleRateMenu={handleRateMenu} handleSubmit={handleSubmit} isSubmitting={isSubmitting} showNotif={showNotif} setShowNotif={setShowNotif} showAlert={showAlert} setShowAlert={setShowAlert} feedbackValue={feedbackValue} setFeedbackValue={setFeedbackValue} menuPic={menuPic} setMenuPic={setMenuPic} menuName={menuName} setMenuName={setMenuName}/>} />
+        <Route path="Dalgona Capuccino" element={<DalgonaCapu user={user} stars={stars} rateMenu={rateMenu} setRateMenu={setRateMenu} currentRating={currentRating} setCurrentRating={setCurrentRating} hoverRating={hoverRating} setHoverRating={setHoverRating} authReady={authReady} handleRateMenu={handleRateMenu} handleSubmit={handleSubmit} itemSubmitted={itemSubmitted} isSubmitting={isSubmitting} showNotif={showNotif} setShowNotif={setShowNotif} showAlert={showAlert} setShowAlert={setShowAlert} feedbackValue={feedbackValue} setFeedbackValue={setFeedbackValue} menuPic={menuPic} setMenuPic={setMenuPic} menuName={menuName} setMenuName={setMenuName}/>} />
         <Route path="Dalgona Green Tea" element={<DalgonaGreenTea stars={stars} rateMenu={rateMenu} setRateMenu={setRateMenu} currentRating={currentRating} setCurrentRating={setCurrentRating} hoverRating={hoverRating} setHoverRating={setHoverRating} authReady={authReady} handleRateMenu={handleRateMenu}  handleSubmit={handleSubmit} showAlert={showAlert} setShowAlert={setShowAlert} feedbackValue={feedbackValue} setFeedbackValue={setFeedbackValue}/>} />
         <Route path="Dalgona Original Thai Tea" element={<DalgonaOriThaiTea stars={stars} rateMenu={rateMenu} setRateMenu={setRateMenu} currentRating={currentRating} setCurrentRating={setCurrentRating} hoverRating={hoverRating} setHoverRating={setHoverRating} authReady={authReady} handleRateMenu={handleRateMenu}  handleSubmit={handleSubmit} showAlert={showAlert} setShowAlert={setShowAlert} feedbackValue={feedbackValue} setFeedbackValue={setFeedbackValue}/>} />
         <Route path="Dalgona Choco Milo" element={<DalgonaChocMilo stars={stars} rateMenu={rateMenu} setRateMenu={setRateMenu} currentRating={currentRating} setCurrentRating={setCurrentRating} hoverRating={hoverRating} setHoverRating={setHoverRating} authReady={authReady} handleRateMenu={handleRateMenu}  handleSubmit={handleSubmit} showAlert={showAlert} setShowAlert={setShowAlert} feedbackValue={feedbackValue} setFeedbackValue={setFeedbackValue}/>} />
