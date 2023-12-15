@@ -114,9 +114,9 @@ export const MenuAndRating = styled.div`
   border: .3rem solid hsl(240, 53%, 75%);
   padding: .5rem 0;
   q{
-    font-size: 1.8rem;
-    font-family: Ubuntu, sans-serif;
-    color: azure;
+    font-size: 2.1rem;
+    font-family: 'Kumbh Sans', sans-serif;
+    color: darkgoldenrod;
     @media (max-width: 991px) {
       font-size: 1.5rem;
     }

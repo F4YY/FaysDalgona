@@ -69,7 +69,11 @@ return (
                 </StarRating>
               </MenuNameRating>
             </MenuPicName>
-            <q>{feedback.review}</q>
+            <q>
+              <p>
+              {feedback.review}
+              </p>
+            </q>
           </MenuAndRating>
         </Testicard>
       ))}
