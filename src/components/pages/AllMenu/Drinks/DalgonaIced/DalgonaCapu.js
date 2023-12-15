@@ -94,9 +94,8 @@ export const DalgonaCapu = ({
   }, [menuPic, menuName, showNotif, setShowNotif]);
   const props = menudata.menu.find((menu) => menu.category === "Drinks" && menu.items[0].name === "Dalgona Iced" && menu.items[0].list[1].name === "Dalgona Capuccino");
   const[isClickable, setIsClickable] = React.useState(true);
-  if (user.menu_name === 'Dalgona Capuccino') {
+  if (user && user.name && user.menu_name === 'Dalgona Capuccino') {
     setIsClickable(false);
-    console.log('user name: ', user.name);
   } else {
     setIsClickable(true);
   }
