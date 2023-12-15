@@ -13,7 +13,7 @@ import {
   Testipage
 } from '../styled/styled_testimonials';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faStar } from '@fortawesome/free-solid-svg-icons';
+import { faQuoteLeft, faQuoteRight, faStar } from '@fortawesome/free-solid-svg-icons';
 
 const Testimonials = () => {
   const scrollRef = React.useRef(null);
@@ -69,11 +69,27 @@ return (
                 </StarRating>
               </MenuNameRating>
             </MenuPicName>
-            <q>
-              <p>
+            <h4>
+              <FontAwesomeIcon
+                icon={faQuoteLeft}
+                size="md"
+                color='hsl(273, 75%, 46%)'
+                style={{
+                  marginRight: '0.5rem',
+                  marginBottom: '0.5rem',
+                }}
+              />
               {feedback.review}
-              </p>
-            </q>
+              <FontAwesomeIcon
+                icon={faQuoteRight}
+                size="md"
+                color='hsl(273, 75%, 46%)'
+                style={{
+                  marginLeft: '0.5rem',
+                  marginBottom: '0.5rem',
+                }}
+              />
+            </h4>
           </MenuAndRating>
         </Testicard>
       ))}
