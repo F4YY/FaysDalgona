@@ -130,7 +130,7 @@ function Main() {
         }
         return postResponse.json();
       })
-      .then(data => {
+      .then(user => {
         if (user && user.name && user.menu_name) {
           setIsClickable(false);
         }
