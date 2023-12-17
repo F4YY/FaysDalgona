@@ -55,7 +55,6 @@ export const DalgonaMocca = ({
   setHoverRating,
   authReady,
   handleRateMenu,
-  isClickable,
   handleSubmit,
   showAlert,
   showNotif,
@@ -64,10 +63,9 @@ export const DalgonaMocca = ({
   isSubmitting,
   feedbackValue,
   setFeedbackValue,
-  menuPic,
   setMenuPic,
-  menuName,
-  setMenuName
+  setMenuName,
+  user
 }) => {
   const navigate = useNavigate();
   const handleClick = (anchor) => {
@@ -80,6 +78,9 @@ export const DalgonaMocca = ({
       mainMenuContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   };
+
+  const [isClickable, setIsClickable] = React.useState(true);
+
   React.useEffect(() => {
     scrollToTop();
     if (showNotif) {
@@ -89,7 +90,21 @@ export const DalgonaMocca = ({
 
       return () => clearTimeout(timer);
     }
-  }, [menuPic, menuName, showNotif, setShowNotif]);
+    fetch("https://fays-dalgona.onrender.com/Testimonials")
+    .then(response => response.json())
+    .then(data => {
+      const matchingObject = data.find(obj => obj.name === user?.user_metadata.full_name && obj.menu_name === "Dalgona Moccaccino");
+      if (matchingObject) {
+        setIsClickable(false);
+        console.log(user?.user_metadata.full_name);
+      } else {
+        setIsClickable(true);
+      }
+    })
+    .catch(error => {
+      console.error("Error fetching Testimonials:", error);
+    });
+  }, [showNotif, setShowNotif, user?.user_metadata.full_name]);
   const props = menudata.menu.find((menu) => menu.category === "Drinks" && menu.items[0].name === "Dalgona Iced" && menu.items[0].list[5].name === "Dalgona Moccaccino");
   return (
     <>

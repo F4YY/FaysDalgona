@@ -62,13 +62,10 @@ export const DalgonaCapu = ({
   showNotif,
   setShowNotif,
   setShowAlert,
-  itemSubmitted,
   isSubmitting,
   feedbackValue,
   setFeedbackValue,
-  menuPic,
   setMenuPic,
-  menuName,
   setMenuName,
   user
 }) => {
@@ -83,6 +80,9 @@ export const DalgonaCapu = ({
       mainMenuContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   };
+
+  const [isClickable, setIsClickable] = React.useState(true);
+
   React.useEffect(() => {
     scrollToTop();
     if (showNotif) {
@@ -92,14 +92,22 @@ export const DalgonaCapu = ({
 
       return () => clearTimeout(timer);
     }
-    if (itemSubmitted) {
-      setIsClickable(false);
-    } else {
-      setIsClickable(true);
-    }
-  }, [menuPic, menuName, showNotif, setShowNotif, itemSubmitted]);
+    fetch("https://fays-dalgona.onrender.com/Testimonials")
+    .then(response => response.json())
+    .then(data => {
+      const matchingObject = data.find(obj => obj.name === user?.user_metadata.full_name && obj.menu_name === "Dalgona Capuccino");
+      if (matchingObject) {
+        setIsClickable(false);
+        console.log(user?.user_metadata.full_name);
+      } else {
+        setIsClickable(true);
+      }
+    })
+    .catch(error => {
+      console.error("Error fetching Testimonials:", error);
+    });
+  }, [showNotif, setShowNotif, user?.user_metadata.full_name]);
   const props = menudata.menu.find((menu) => menu.category === "Drinks" && menu.items[0].name === "Dalgona Iced" && menu.items[0].list[1].name === "Dalgona Capuccino");
-  const [isClickable, setIsClickable] = React.useState(true);
 
   return (
     <>

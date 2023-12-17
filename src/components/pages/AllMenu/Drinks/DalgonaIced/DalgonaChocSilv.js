@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import menudata from "../../../../database/menu.json";
 import {
   BackButton,
@@ -43,7 +43,7 @@ import {
 import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft, faClose, faStar } from '@fortawesome/free-solid-svg-icons';
-import { Alert, AlertDescription, AlertIcon, AlertTitle } from '@chakra-ui/react';
+import { Alert, AlertDescription, AlertIcon, AlertTitle, HStack } from '@chakra-ui/react';
 
 export const DalgonaChocSilv = ({
   stars,
@@ -57,7 +57,15 @@ export const DalgonaChocSilv = ({
   handleRateMenu,
   handleSubmit,
   showAlert,
-  setShowAlert
+  showNotif,
+  setShowNotif,
+  setShowAlert,
+  isSubmitting,
+  feedbackValue,
+  setFeedbackValue,
+  setMenuPic,
+  setMenuName,
+  user
 }) => {
   const navigate = useNavigate();
   const handleClick = (anchor) => {
@@ -71,9 +79,32 @@ export const DalgonaChocSilv = ({
     }
   };
 
-  useEffect(() => {
+  const [isClickable, setIsClickable] = React.useState(true);
+
+  React.useEffect(() => {
     scrollToTop();
-  }, []);
+    if (showNotif) {
+      const timer = setTimeout(() => {
+        setShowNotif(false);
+      }, 3000);
+
+      return () => clearTimeout(timer);
+    }
+    fetch("https://fays-dalgona.onrender.com/Testimonials")
+    .then(response => response.json())
+    .then(data => {
+      const matchingObject = data.find(obj => obj.name === user?.user_metadata.full_name && obj.menu_name === "Dalgona Choco Silverqueen");
+      if (matchingObject) {
+        setIsClickable(false);
+        console.log(user?.user_metadata.full_name);
+      } else {
+        setIsClickable(true);
+      }
+    })
+    .catch(error => {
+      console.error("Error fetching Testimonials:", error);
+    });
+  }, [showNotif, setShowNotif, user?.user_metadata.full_name]);
 
   const props = menudata.menu.find((menu) => menu.category === "Drinks" && menu.items[0].name === "Dalgona Iced" && menu.items[0].list[0].name === "Dalgona Choco Silverqueen");
   return (
@@ -117,6 +148,7 @@ export const DalgonaChocSilv = ({
             {authReady && (
               <h2
                 onClick={handleRateMenu}
+                style={!isClickable ? { pointerEvents: 'none', opacity: 0.5 } : null}
               >
                 Rate this menu
               </h2>
@@ -181,7 +213,11 @@ export const DalgonaChocSilv = ({
                 icon={faStar}
                 key={index}
                 color={(hoverRating || currentRating) > index ? "#ffc107" : "#D6D7C5"}
-                onClick={() => setCurrentRating(index + 1)}
+                onClick={() => {
+                  setCurrentRating(index + 1)
+                  setMenuPic('Dalg_ChocSilv.jpg');
+                  setMenuName(props.items[0].list[0].name);
+                }}
                 onMouseEnter={() => setHoverRating(index + 1)}
                 onMouseLeave={() => setHoverRating(undefined)}
               />
@@ -190,12 +226,14 @@ export const DalgonaChocSilv = ({
         </YellowStars>
         <FeedbackArea
           placeholder="Leave your review here..."
+          value={feedbackValue}
+          onChange={(event) => setFeedbackValue(event.target.value)}
         >
         </FeedbackArea>
         <SubmitRating
           onClick={handleSubmit}
         >
-          Submit
+          {isSubmitting ? "Submitting..." : "Submit"}
         </SubmitRating>
       </RatingStar>
     )}
@@ -229,6 +267,27 @@ export const DalgonaChocSilv = ({
         <AlertIcon />
         <AlertTitle>You're not logged in!</AlertTitle>
         <AlertDescription>Please login to rate a menu.</AlertDescription>
+      </Alert>
+    )}
+    {showNotif && (
+      <Alert
+        position='fixed'
+        top='50%'
+        left='50%'
+        transform='translate(-50%, -50%)'
+        status='success'
+        justifyContent='center'
+        w={{base:"95%",md:"60%",lg:"40%"}}
+        minH={{base:"30%",md:"40%",lg:"40%"}}
+        borderRadius='1rem'
+        display={{base:"flex",md:"flex",lg:"flex"}}
+        flexDir={{base:'column', md:'row', lg:'row'}}
+      >
+        <HStack m={2}>
+          <AlertIcon />
+          <AlertTitle>Thank you!</AlertTitle>
+        </HStack>
+        <AlertDescription>Your review has been submitted.</AlertDescription>
       </Alert>
     )}
     </>
