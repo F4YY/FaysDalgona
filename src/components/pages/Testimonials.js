@@ -1,19 +1,20 @@
 import React from 'react';
 import '../styles/Testimonials.css';
 import {
+  LeftQuote,
   MenuAndRating,
   MenuNameRating,
   MenuPicName,
   Menupic,
   Profpic,
+  RightQuote,
   StarRating,
+  StarsAreBlind,
   TestiProfpicName,
   Testicard,
   Testifeeds,
   Testipage
 } from '../styled/styled_testimonials';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faQuoteLeft, faQuoteRight, faStar } from '@fortawesome/free-solid-svg-icons';
 
 const Testimonials = () => {
   const scrollRef = React.useRef(null);
@@ -33,11 +34,8 @@ const renderStarRating = (rating) => {
   const starIcons = [];
   for (let i = 0; i < rating; i++) {
     starIcons.push(
-      <FontAwesomeIcon
+      <StarsAreBlind
         key={i}
-        icon={faStar}
-        size='xl'
-        color='#FFC107'
       />
     );
   }
@@ -56,12 +54,12 @@ return (
       {testi.slice(0, 5).map((feedback, index) => (
         <Testicard key={index}>
           <TestiProfpicName>
-            <Profpic loading='lazy' src={feedback.prof_pic.includes('http') ? feedback.prof_pic : require(`../images/${feedback.prof_pic}`)} alt={feedback.name} />
+            <Profpic src={feedback.prof_pic.includes('http') ? feedback.prof_pic : require(`../images/${feedback.prof_pic}`)} alt={feedback.name} />
             <p>{feedback.name}</p>
           </TestiProfpicName>
           <MenuAndRating>
             <MenuPicName>
-              <Menupic loading='lazy' src={require(`../images/${feedback.menu_pic}`)} alt={feedback.menu_name} />
+              <Menupic src={require(`../images/${feedback.menu_pic}`)} alt={feedback.menu_name} />
               <MenuNameRating>
                 <p>{feedback.menu_name}</p>
                 <StarRating>
@@ -70,25 +68,9 @@ return (
               </MenuNameRating>
             </MenuPicName>
             <h4>
-              <FontAwesomeIcon
-                icon={faQuoteLeft}
-                size="md"
-                color='hsl(273, 75%, 46%)'
-                style={{
-                  marginRight: '0.5rem',
-                  marginBottom: '0.5rem',
-                }}
-              />
-              {feedback.review}
-              <FontAwesomeIcon
-                icon={faQuoteRight}
-                size="md"
-                color='hsl(273, 75%, 46%)'
-                style={{
-                  marginLeft: '0.5rem',
-                  marginBottom: '0.5rem',
-                }}
-              />
+              <LeftQuote/>
+                {feedback.review}
+              <RightQuote/>
             </h4>
           </MenuAndRating>
         </Testicard>

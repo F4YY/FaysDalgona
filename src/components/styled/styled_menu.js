@@ -1,4 +1,7 @@
-import styled, { keyframes } from "styled-components";
+import { Alert } from "@chakra-ui/react";
+import { faClose, faStar } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import styled, { keyframes, css } from "styled-components";
 
 //For Main Menu:
 
@@ -717,7 +720,7 @@ export const OrderNowText = styled.div`
   }
 `;
 
-export const RatingStar = styled.div`
+export const RatingStar = styled.form`
   position: fixed;
   top: 50%;
   left: 50%;
@@ -781,7 +784,10 @@ export const RatingItemName = styled.div`
   text-align: center;
 `;
 
-export const FeedbackArea = styled.textarea`
+export const FeedbackArea = styled.textarea.attrs((props) => ({
+  placeholder: 'Leave your review here...',
+  required: props.isrequired ? true : undefined,
+}))`
   display: flex;
   width: 100%;
   min-height: 5rem;
@@ -789,6 +795,9 @@ export const FeedbackArea = styled.textarea`
   border: 1px solid grey;
   border-radius: 6px;
   padding: 8px 10px;
+  &:invalid {
+    border-color: red;
+  }
 `;
 
 export const YellowStars = styled.div`
@@ -805,7 +814,15 @@ export const YellowStars = styled.div`
   }
 `;
 
-export const SubmitRating = styled.a`
+export const StarIcon = styled(FontAwesomeIcon).attrs({
+  icon: faStar,
+})`
+  width: 2rem;
+  height: auto;
+  margin: 0 5px;
+`;
+
+export const SubmitRating = styled.button`
   display: flex;
   width: 100%;
   justify-content: center;
@@ -818,6 +835,12 @@ export const SubmitRating = styled.a`
   cursor: pointer;
   padding: 5px;
   margin: 15px auto;
+  ${(props) =>
+    props.disabled &&
+    css`
+      opacity: 0.5;
+      cursor: not-allowed;
+    `}
   &:hover {
     color: darkcyan;
     background: linear-gradient(
@@ -950,3 +973,53 @@ export const Img3 = styled.img`
     width: 50%;
   }
 `;
+
+export const ErrorAlert = styled(Alert).attrs({
+  status: 'error',
+  position: 'fixed',
+  width: "",
+})`
+  display: flex;
+  flex-direction: row;
+  top: 50%;
+  left: 50%;
+  width: 40%;
+  min-height: 40%;
+  transform: translate(-50%, -50%);
+  justify-content: center;
+  border-radius: 1rem;
+  @media screen and (max-width: 991px) {
+    width: 60%;
+    min-height: 40%;
+  }
+  @media screen and (max-width: 640px) {
+    flex-direction: column;
+    width: 95%;
+    min-height: 30%;
+  }
+`
+export const NotifAlert = styled(ErrorAlert).attrs({
+  status: 'success'
+})``;
+
+export const AlertWrapper = styled.div`
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+`;
+
+export const AlertCloseButton = styled(FontAwesomeIcon).attrs({
+  icon: faClose,
+  size: 'lg',
+})`
+  position: absolute;
+  top: -5px;
+  right: 0;
+  color: darkslategray;
+  font-size: 1.5rem;
+  cursor: pointer;
+`
+export const RatingCloseButton = styled(AlertCloseButton)`
+  top: 8px;
+  right: 12px;
+`

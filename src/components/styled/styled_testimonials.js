@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import bgintrodesktop from "../images/bg-pattern-intro-desktop.svg";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faQuoteLeft, faQuoteRight, faStar } from "@fortawesome/free-solid-svg-icons";
 
 export const Testipage = styled.div`
   display: flex;
@@ -14,7 +16,7 @@ export const Testipage = styled.div`
   h1{
     font-size: 38px;
     font-weight: bold;
-    color: darkorange;
+    color: hsl(273, 75%, 46%);
     margin: 40px 0;
     @media (max-width: 991px) {
       font-size: 30px;
@@ -110,21 +112,24 @@ export const MenuAndRating = styled.div`
   display: flex;
   flex-direction: column;
   width: 300px;
+  height: 320px;
   border-radius: 1rem;
   border: .3rem solid hsl(240, 53%, 75%);
   padding: .5rem 0;
+  margin: .5rem 0 0;
   h4{
     font-size: 1.8rem;
     font-family: Ubuntu, sans-serif;
     text-align: center;
     color: azure;
-    padding: 0 1rem;
+    padding: .5rem .5rem;
     @media (max-width: 991px) {
       font-size: 1.5rem;
     }
   }
   @media (max-width: 991px) {
     width: 100%;
+    height: auto;
   }
 `;
 export const MenuPicName = styled.div`
@@ -133,7 +138,7 @@ export const MenuPicName = styled.div`
   align-items: center;
   justify-content: flex-start;
   gap: 1rem;
-  padding: 1rem;
+  padding: .5rem 1rem;
 `;
 export const Menupic = styled.img`
   display: flex;
@@ -160,10 +165,31 @@ export const MenuNameRating = styled.div`
     color: ghostwhite;
   }
 `;
+
+export const StarsAreBlind = styled(FontAwesomeIcon).attrs({
+  icon: faStar,
+  size: 'xl'
+})`
+  color: #FFC107;
+`
 export const StarRating = styled.div`
   display: flex;
   flex-direction: row;
   width: 100%;
   height: auto;
   gap: .5rem;
+`
+export const LeftQuote = styled(FontAwesomeIcon).attrs({
+  icon: faQuoteLeft,
+  size: 'lg',
+})`
+  color: hsl(273, 75%, 46%);
+  margin: 0 .5rem .5rem 0;
+`
+export const RightQuote = styled(FontAwesomeIcon).attrs({
+  icon: faQuoteRight,
+  size: 'lg',
+})`
+  color: hsl(273, 75%, 46%);
+  margin: 0 0 .5rem .5rem;
 `

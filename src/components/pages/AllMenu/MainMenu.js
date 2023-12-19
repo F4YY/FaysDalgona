@@ -17,30 +17,26 @@ export const MainMenu = ({scrollToTop}) => {
   }
   return (
     <div>
-    {menudata.menu.map((menu) => (
-      <>
-        <MenuCategory>
-          {menu.category}
-        </MenuCategory>
-        <MenuCategoryGroup>
-          {menu.items.map((item) => (
-          <MenuItemGroup key={item.name}>
-            <MenuItemImage
-              loading="lazy"
-              src={require(`../../images/${item.imageUrl}`)}
-              alt={item.name}
-              onClick={() => handleClick('/AllMenu/' + item.name)}
-            />
-            <MenuItemText
-              onClick={() => handleClick('/AllMenu/' + item.name)}
-            >
-              {item.name}
-            </MenuItemText>
-          </MenuItemGroup>
-          ))}
-        </MenuCategoryGroup>
-      </>
-    ))}
+      {menudata.menu.map((menu, menuIndex) => (
+        <React.Fragment key={menuIndex}>
+          <MenuCategory>{menu.category}</MenuCategory>
+          <MenuCategoryGroup>
+            {menu.items.map((item, itemIndex) => (
+              <MenuItemGroup key={itemIndex}>
+                <MenuItemImage
+                  loading="lazy"
+                  src={require(`../../images/${item.imageUrl}`)}
+                  alt={item.name}
+                  onClick={() => handleClick('/AllMenu/' + item.name)}
+                />
+                <MenuItemText onClick={() => handleClick('/AllMenu/' + item.name)}>
+                  {item.name}
+                </MenuItemText>
+              </MenuItemGroup>
+            ))}
+          </MenuCategoryGroup>
+        </React.Fragment>
+      ))}
     </div>
   )
 }

@@ -1,17 +1,21 @@
 import React from 'react';
 import menudata from "../../../../database/menu.json";
 import {
+  AlertCloseButton,
+  AlertWrapper,
   BackButton,
   ButtonOrder,
   Calory,
   CategoryText,
   DetailDesc,
   DrinkText,
+  ErrorAlert,
   FeedbackArea,
   Img,
   ItemName,
   ItemText,
   MenuText,
+  NotifAlert,
   OrderNowText,
   Path,
   PathAndBackButton,
@@ -20,6 +24,7 @@ import {
   ProductHero,
   ProductInfoOrder,
   Rating,
+  RatingCloseButton,
   RatingImg,
   RatingItemName,
   RatingMenuWrap,
@@ -29,6 +34,7 @@ import {
   SizeDesc,
   SizeText,
   Slash,
+  StarIcon,
   StarsReview,
   SubmitRating,
   Topping,
@@ -42,8 +48,8 @@ import {
 } from '../../../../styled/styled_menu';
 import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronLeft, faClose, faStar } from '@fortawesome/free-solid-svg-icons';
-import { Alert, AlertDescription, AlertIcon, AlertTitle, HStack } from '@chakra-ui/react';
+import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
+import { AlertDescription, AlertIcon, AlertTitle, HStack } from '@chakra-ui/react';
 
 export const DalgonaMocca = ({
   stars,
@@ -80,6 +86,7 @@ export const DalgonaMocca = ({
   };
 
   const [isClickable, setIsClickable] = React.useState(true);
+  const [feedbackTouched, setFeedbackTouched] = React.useState(false);
 
   React.useEffect(() => {
     scrollToTop();
@@ -106,6 +113,7 @@ export const DalgonaMocca = ({
     });
   }, [showNotif, setShowNotif, user?.user_metadata.full_name]);
   const props = menudata.menu.find((menu) => menu.category === "Drinks" && menu.items[0].name === "Dalgona Iced" && menu.items[0].list[5].name === "Dalgona Moccaccino");
+
   return (
     <>
     <ProductDetail
@@ -194,10 +202,12 @@ export const DalgonaMocca = ({
     </ProductDetail>
     {rateMenu && (
       <RatingStar>
-        <FontAwesomeIcon
-          className="close"
-          icon={faClose}
-          onClick={() => setRateMenu(false)}
+        <RatingCloseButton
+          onClick={() => {
+            setRateMenu(false);
+            setCurrentRating(0);
+            setFeedbackValue('');
+          }}
         />
         <p>Tell others what you think.</p>
         <RatingMenuWrap>
@@ -207,11 +217,9 @@ export const DalgonaMocca = ({
         <YellowStars>
           {stars.map((_, index) => {
             return (
-              <FontAwesomeIcon
-                className="star"
-                icon={faStar}
+              <StarIcon
                 key={index}
-                color={(hoverRating || currentRating) > index ? "#ffc107" : "#D6D7C5"}
+                color={(hoverRating || currentRating) > index ? "#ffc107" : "#C7C8B9"}
                 onClick={() => {
                   setCurrentRating(index + 1)
                   setMenuPic('Dalg_Moca.jpg');
@@ -224,12 +232,30 @@ export const DalgonaMocca = ({
           })}
         </YellowStars>
         <FeedbackArea
-          placeholder="Leave your review here..."
           value={feedbackValue}
           onChange={(e) => setFeedbackValue(e.target.value)}
+          onBlur={() => setFeedbackTouched(true)}
+          isrequired={feedbackTouched}
         >
         </FeedbackArea>
+        <HStack justify="flex-end">
+          {(currentRating === 0 && feedbackTouched) && (
+            <i
+              style={{ display: "block", color: "red", fontSize: ".8rem", textAlign: "right", marginTop: ".15rem" }}
+            >
+              Please give star rating
+            </i>
+          )}
+          {(feedbackValue.length < 1 && feedbackTouched) && (
+            <i
+              style={{ display: "block", color: "red", fontSize: ".8rem", textAlign: "right", marginTop: ".15rem" }}
+            >
+              Please give review
+            </i>
+          )}
+        </HStack>
         <SubmitRating
+          disabled={currentRating === 0 || feedbackValue.length <= 1}
           onClick={handleSubmit}
         >
           {isSubmitting ? "Submitting..." : "Submit"}
@@ -237,57 +263,25 @@ export const DalgonaMocca = ({
       </RatingStar>
     )}
     {showAlert && (
-      <Alert
-        position='fixed'
-        top='50%'
-        left='50%'
-        transform='translate(-50%, -50%)'
-        status='error'
-        justifyContent='center'
-        w={{base:"95%",md:"60%",lg:"40%"}}
-        minH={{base:"30%",md:"40%",lg:"40%"}}
-        borderRadius='1rem'
-        display={{base:"flex",md:"flex",lg:"flex"}}
-        flexDir={{base:'column', md:'row', lg:'row'}}
-      >
-        <div style={{
-          position: 'absolute',
-          top: '1rem',
-          right: '1rem',
-          }}
-        >
-          <FontAwesomeIcon
-            size='lg'
-            cursor="pointer"
-            icon={faClose}
+      <ErrorAlert>
+        <AlertWrapper>
+          <AlertCloseButton
             onClick={() => setShowAlert(false)}
           />
-        </div>
+        </AlertWrapper>
         <AlertIcon />
         <AlertTitle>You're not logged in!</AlertTitle>
         <AlertDescription>Please login to rate a menu.</AlertDescription>
-      </Alert>
+      </ErrorAlert>
     )}
     {showNotif && (
-      <Alert
-        position='fixed'
-        top='50%'
-        left='50%'
-        transform='translate(-50%, -50%)'
-        status='success'
-        justifyContent='center'
-        w={{base:"95%",md:"60%",lg:"40%"}}
-        minH={{base:"30%",md:"40%",lg:"40%"}}
-        borderRadius='1rem'
-        display={{base:"flex",md:"flex",lg:"flex"}}
-        flexDir={{base:'column', md:'row', lg:'row'}}
-      >
+      <NotifAlert>
         <HStack m={2}>
           <AlertIcon />
           <AlertTitle>Thank you!</AlertTitle>
         </HStack>
         <AlertDescription>Your review has been submitted.</AlertDescription>
-      </Alert>
+      </NotifAlert>
     )}
     </>
   )

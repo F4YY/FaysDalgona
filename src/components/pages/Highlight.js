@@ -33,7 +33,7 @@ const Highlight = () => {
         <HighlightHeading id="Menu-section">
             This Weeks Specials!
         </HighlightHeading>
-        <OrderButton variant="outline" color="yellow" fontWeight="bold" _hover={{ color: "azure", border: "2px solid azure" }} href="https://gofood.link/a/yHFDprE" target="_blank" rel="noreferrer">
+        <OrderButton href="https://gofood.link/a/yHFDprE" target="_blank" rel="noreferrer">
           Order Online
         </OrderButton>
       </ThisWeekandOrder>
