@@ -1,2 +1,4 @@
 Things to be improved:
-- rateMenu will be disabled if user and desired item name is listed in db.json
+- make color preference of app: var-1,2,3; bg color; etc
+- migrate all chakra ui css into styled-components
+- navbar component -> add style hover effect

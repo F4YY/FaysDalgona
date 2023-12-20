@@ -1,5 +1,4 @@
 import React from 'react';
-import '../styles/Testimonials.css';
 import {
   LeftQuote,
   MenuAndRating,
