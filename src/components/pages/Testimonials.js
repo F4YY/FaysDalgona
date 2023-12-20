@@ -14,6 +14,7 @@ import {
   Testifeeds,
   Testipage
 } from '../styled/styled_testimonials';
+import { useNavigate } from 'react-router-dom';
 
 const Testimonials = () => {
   const scrollRef = React.useRef(null);
@@ -41,6 +42,11 @@ const renderStarRating = (rating) => {
   return starIcons;
 };
 
+const navigate = useNavigate();
+const handleClick = (anchor) => {
+  navigate(anchor);
+};
+
 return (
   <Testipage>
     <h1
@@ -58,9 +64,15 @@ return (
           </TestiProfpicName>
           <MenuAndRating>
             <MenuPicName>
-              <Menupic src={require(`../images/${feedback.menu_pic}`)} alt={feedback.menu_name} />
+              <Menupic
+                src={require(`../images/${feedback.menu_pic}`)}
+                alt={feedback.menu_name}
+                onClick={() => handleClick(`/${feedback.menu_name}`)}
+              />
               <MenuNameRating>
-                <p>{feedback.menu_name}</p>
+                <p
+                  onClick={() => handleClick(`/${feedback.menu_name}`)}
+                >{feedback.menu_name}</p>
                 <StarRating>
                   {renderStarRating(parseInt(feedback.star_rating))}
                 </StarRating>
@@ -76,6 +88,6 @@ return (
       ))}
     </Testifeeds>
   </Testipage>
-);
+  );
 }
 export default Testimonials;

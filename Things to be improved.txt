@@ -1,4 +1,7 @@
 Things to be improved:
 - make color preference of app: var-1,2,3; bg color; etc
 - migrate all chakra ui css into styled-components
-- navbar component -> add style hover effect
+- navbar component -> add style underlined when on current page
+- If connection lost why db.jsom that have been post is become empty again?
+- Add light dark theme
+- Add choose language Indonesian and English

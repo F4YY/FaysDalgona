@@ -57,7 +57,10 @@ export const StyledHeading = styled(Heading)`
 `;
 export const StyledLink = styled.a`
   text-decoration: none;
-  color: inherit;
+  color: rgb(203, 89, 6, 0.8);
+  &:hover {
+    color: rgb(150, 63, 1, 1);
+  }
 `;
 export const StyledButton = styled(Button).attrs({
   size: "md",

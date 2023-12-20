@@ -148,6 +148,11 @@ export const Menupic = styled.img`
   object-position: center;
   border-radius: 20%;
   aspect-ratio: 1/1;
+  cursor: pointer;
+  &:hover{
+    transform: scale(1.05);
+    transition: all .3s ease-in-out;
+  }
   @media (max-width: 991px) {
     width: 10%;
   }
@@ -163,6 +168,10 @@ export const MenuNameRating = styled.div`
   gap: .5rem;
   p{
     color: ghostwhite;
+    cursor: pointer;
+    &:hover{
+      color: bisque;
+    }
   }
 `;
 
