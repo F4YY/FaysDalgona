@@ -8,7 +8,7 @@ export const Footer = styled.footer`
   width: 100%;
   height: 100%;
   gap: 2.5rem;
-  background-color: #18181b;
+  background-color: var(--darkblue);
   padding: 1.8rem;
 `
 export const FootWrapper = styled.div`
@@ -30,7 +30,7 @@ export const VisitSosmed = styled.div`
   align-items: flex-start;
   font-size: 1.1rem;
   gap: 1rem;
-  color: #fff;
+  color: var(--white);
   @media screen and (max-width: 991px) {
     font-size: 1rem;
   }
@@ -41,12 +41,12 @@ export const SocialMedia = styled.div`
   width: 100%;
   justify-content: center;
   align-items: center;
-  color: #fff;
+  color: var(--white);
   text-decoration: none;
   .icon {
     margin: 0 0.3rem;
     &:hover {
-      color: #D15B05;
+      color: var(--orange);
     }
   }
 `
@@ -57,11 +57,11 @@ export const Contact = styled.div`
   gap: .5rem;
   h1{
     font-size: 1.1rem;
-    color: #fff;
+    color: var(--white);
   }
   p{
     font-size: 1rem;
-    color: grey;
+    color: var(--lightgrey);
   }
   @media screen and (max-width: 991px) {
     h1{
@@ -82,11 +82,11 @@ export const OpenHours = styled.div`
   gap: .5rem;
   h2{
     font-size: 1.1rem;
-    color: #fff;
+    color: var(--white);
   }
   p{
     font-size: 1rem;
-    color: grey;
+    color: var(--lightgrey);
   }
   @media screen and (max-width: 991px) {
     h2{
@@ -107,7 +107,7 @@ export const Copyright = styled.div`
   justify-content: center;
   align-items: center;
   gap: 16px;
-  color: #fff;
+  color: var(--white);
 `
 export const FDlogo = styled.img`
   width: 15%;

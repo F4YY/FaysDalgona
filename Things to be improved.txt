@@ -5,3 +5,4 @@ Things to be improved:
 - If connection lost why db.jsom that have been post is become empty again?
 - Add light dark theme
 - Add choose language Indonesian and English
+- make code snippets shortcut for every important component

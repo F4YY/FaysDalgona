@@ -28,9 +28,9 @@ const Highlight = () => {
   };
 
   return (
-    <HighlightContainer>
+    <HighlightContainer id="Menu-section">
       <ThisWeekandOrder>
-        <HighlightHeading id="Menu-section">
+        <HighlightHeading>
             This Weeks Specials!
         </HighlightHeading>
         <OrderButton href="https://gofood.link/a/yHFDprE" target="_blank" rel="noreferrer">

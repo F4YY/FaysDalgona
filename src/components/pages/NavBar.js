@@ -2,23 +2,31 @@ import React ,{ useContext, useEffect, useRef } from "react";
 import FD_Header from "../images/FD_Header.png";
 import avatar from "../images/avatar.jpg";
 import { GiHamburgerMenu } from 'react-icons/gi';
-import { MdOutlineLogin, MdOutlineLogout, MdOutlineRestaurantMenu } from 'react-icons/md';
-import { Button, HStack, Heading, Link, List, ListItem, Text, VStack } from "@chakra-ui/react";
+import { MdOutlineLogin, MdOutlineLogout } from 'react-icons/md';
+import { HStack, VStack } from "@chakra-ui/react";
 import { useNavigate } from 'react-router-dom';
 import AuthContext from "../../context/authContext";
 import {
+  AnimatedWrappedMobileMenu,
+  BurgerButton,
+  LoginButton,
+  LogoutButton,
   MobileMenuButton,
-  StyledHeading,
+  SpoonForkIcon,
   StyledImage,
-  StyledLink,
+  StyledLi,
+  StyledLiMobile,
   StyledNavbar,
-  UserPicture
+  StyledUl,
+  StyledUlmobile,
+  UserName,
+  UserPicture,
 } from "../styled/styled_navbar";
 
 const NavBar = () => {
   const NavBarRef = useRef(null);
 
-  const {user, login, logout, authReady} = useContext(AuthContext);
+  const {user, login, logout, authReady } = useContext(AuthContext);
   console.log(user);
 
   useEffect(() => {
@@ -44,7 +52,8 @@ const NavBar = () => {
   },[]);
 
   const handleClick = (anchor) => () => {
-    navigate(anchor)
+    setCurrentPage(anchor);
+    navigate(anchor);
     const id = `${anchor}-section`;
     const element = document.getElementById(id);
       if (element) {
@@ -54,41 +63,9 @@ const NavBar = () => {
         });
       }
   };
-
   const [toggleMenu, setToggleMenu] = React.useState(false);
+  const [currentPage, setCurrentPage] = React.useState('Home');
   const navigate = useNavigate();
-
-  const NavLink = ({ href, onClick, children }) => {
-    return (
-      <StyledHeading as="h1">
-        <StyledLink href={href} onClick={onClick}>
-          {children}
-        </StyledLink>
-      </StyledHeading>
-    );
-  };
-
-  const MenuItem = ({ href, onClick, children }) => {
-    const buttonClick = () => {
-      setToggleMenu(false);
-      onClick();
-    };
-
-    return (
-      <ListItem>
-        <Link href={href}>
-          <MobileMenuButton
-            onClick={buttonClick}
-            colorScheme="orange"
-            variant="outline"
-            minWidth='280px'
-          >
-            {children}
-          </MobileMenuButton>
-        </Link>
-      </ListItem>
-    );
-  };
 
   return (
     <StyledNavbar
@@ -100,148 +77,355 @@ const NavBar = () => {
         alt="app__logo"
       />
       {authReady && (
-      <>
-        <NavLink href="#Home" onClick={handleClick("Home")}>
-          Home
-        </NavLink>
-        <NavLink href="#AllMenu-section" onClick={handleClick("AllMenu")}>
-          Menu
-        </NavLink>
-        <NavLink href="#OrderOnline" onClick={handleClick("Menu")}>
-          Order online
-        </NavLink>
-        <NavLink href="#Testimonials-section" onClick={handleClick("Testimonials")}>
-          Testimonials
-        </NavLink>
-        <NavLink href="#About-section" onClick={handleClick("About")}>
-          About us
-        </NavLink>
-        <NavLink href="#Reservation-section" onClick={handleClick("Reservation")}>
-          Reserve a table
-        </NavLink>
-        {!user?(
-          <Button
-            size='md'
-            colorScheme="blue"
-            variant="outline"
-            leftIcon={<MdOutlineLogin/>}
-            as="h2"
-            onClick={login}
-            display={{base:"none",md:"flex",lg:"flex"}}
-            fontSize={{base:"10px", md: "13px", lg:"20px"}}
-            cursor="pointer"
-          >
-            Login/Sign Up
-          </Button>
-          ) : (
-          <VStack>
-            <Button
-              size='md'
-              colorScheme="red"
-              variant="outline"
-              leftIcon={<MdOutlineLogout/>}
-              as="h2"
-              onClick={logout}
-              display={{base:"none",md:"flex",lg:"flex"}}
-              fontSize={{base:"10px", md: "13px", lg:"20px"}}
-              cursor="pointer"
-            >
-              logout
-            </Button>
-            <HStack>
-              <Text
-                fontSize={{base: "14px", md: "14px", lg:"15px"}}
-                fontWeight='light'
-                fontFamily="calibri light, sans-serif"
-                color='orange.600'
-                marginTop={{base:"0.1rem",md:"0.1rem",lg:"0.2rem"}}
-              >
-                Welcome <b>{user.user_metadata.full_name}</b>
-              </Text>
-              {user.user_metadata.avatar_url ? (
-                <UserPicture
-                  src={user.user_metadata.avatar_url}
-                  alt="user"
-                />) : (
-                <UserPicture
-                  src={avatar}
-                  alt="user"
-                />
-                )
-              }
-            </HStack>
-          </VStack>
-          )
-        }
-      </>
-      )}
-      <Heading display={{base:"flex",md:"none",lg:"none"}}>
-        <GiHamburgerMenu color="rgb(183,94,87)"  fontSize={27} onClick={() => setToggleMenu(true)} />
-      </Heading>
-      {toggleMenu && (
-      <VStack
-        position="fixed"
-        top="0"
-        left="0"
-        width="100%"
-        height="180vh"
-        zIndex="5"
-        background="azure"
-        justifyContent="flex-start"
-        style={{
-          animation: toggleMenu ? 'slide-in 0.5s ease-out forwards' : 'slide-out 0.5s ease-out forwards',
-        }}
-      >
-        <MdOutlineRestaurantMenu
-          fontSize={27}
-          style={{
-            color: "darkorange",
-            cursor: "pointer",
-            position: "absolute",
-            top: "17px",
-            right: "28px",
-          }}
-          onClick={() => setToggleMenu(false)}
-        />
-        <List style={{ margin: "5rem auto", display: "fixed", listStyle: "none" }}>
-          <MenuItem href="#Home" onClick={handleClick("Home")}>
+        <StyledUl>
+          <StyledLi href="#Home" onClick={handleClick("Home")} current={currentPage === "Home"}>
             Home
-          </MenuItem>
-          <MenuItem href="#AllMenu-section" onClick={handleClick("AllMenu")}>
+          </StyledLi>
+          <StyledLi href="#AllMenu-section" onClick={handleClick("AllMenu")} current={currentPage === "AllMenu"}>
             Menu
-          </MenuItem>
-          <MenuItem href="#OrderOnline" onClick={handleClick("Menu")}>
+          </StyledLi>
+          <StyledLi href="#OrderOnline" onClick={handleClick("Menu")} current={currentPage === "Menu"}>
             Order online
-          </MenuItem>
-          <MenuItem
-            href="#Testimonials-section" onClick={handleClick("Testimonials")}>
+          </StyledLi>
+          <StyledLi href="#Testimonials-section" onClick={handleClick("Testimonials")} current={currentPage === "Testimonials"}>
             Testimonials
-          </MenuItem>
-          <MenuItem href="#About-section" onClick={handleClick("About")}>
+          </StyledLi>
+          <StyledLi href="#About-section" onClick={handleClick("About")} current={currentPage === "About"}>
             About us
-          </MenuItem>
-          <MenuItem href="#Reservation-section" onClick={handleClick("Reservation")}>
+          </StyledLi>
+          <StyledLi href="#Reservation-section" onClick={handleClick("Reservation")} current={currentPage === "Reservation"}>
             Reserve a table
-          </MenuItem>
-          {!user ? (
-            <MenuItem
-            onClick={login}
+          </StyledLi>
+          {!user?(
+            <LoginButton
+              onClick={login}
             >
-              Login / Sign Up
-            </MenuItem>
+              <MdOutlineLogin/>&nbsp;Login/Sign Up
+            </LoginButton>
             ) : (
-            <MenuItem
-            onClick={logout}
-            >
-              Logout
-            </MenuItem>
+            <VStack>
+              <LogoutButton
+                onClick={logout}
+              >
+                <MdOutlineLogout/>&nbsp;logout
+              </LogoutButton>
+              <HStack>
+                <UserName>
+                  Welcome&nbsp;<b>{user.user_metadata.full_name}</b>
+                </UserName>
+                {user.user_metadata.avatar_url ? (
+                  <UserPicture
+                    src={user.user_metadata.avatar_url}
+                    alt="user"
+                  />) : (
+                  <UserPicture
+                    src={avatar}
+                    alt="user"
+                  />
+                  )
+                }
+              </HStack>
+            </VStack>
             )
           }
-        </List>
-      </VStack>
-    )}
+        </StyledUl>
+      )}
+      <BurgerButton>
+        <GiHamburgerMenu onClick={() => setToggleMenu(true)} />
+      </BurgerButton>
+      {toggleMenu && (
+        <AnimatedWrappedMobileMenu toggleMenu={toggleMenu}>
+          <SpoonForkIcon
+            onClick={() => setToggleMenu(false)}
+          />
+          <StyledUlmobile>
+            <StyledLiMobile>
+              <MobileMenuButton href="#Home" onClick={() => {handleClick("Home")();setToggleMenu(false)}}>
+                Home
+              </MobileMenuButton>
+              <MobileMenuButton href="#AllMenu-section" onClick={() => {setToggleMenu(false);handleClick("AllMenu")()}}>
+                Menu
+              </MobileMenuButton>
+              <MobileMenuButton href="#OrderOnline" onClick={() => {handleClick("Menu")();setToggleMenu(false)}}>
+                Order Online
+              </MobileMenuButton>
+              <MobileMenuButton href="#Testimonials-section" onClick={() => {handleClick("Testimonials")();setToggleMenu(false)}}>
+                Testimonials
+              </MobileMenuButton>
+              <MobileMenuButton href="#About-section" onClick={() => {handleClick("About")();setToggleMenu(false)}}>
+                About Us
+              </MobileMenuButton>
+              <MobileMenuButton href="#Reservation-section" onClick={() => {handleClick("Reservation")();setToggleMenu(false)}}>
+                Reserve a table
+              </MobileMenuButton>
+              {!user ? (
+                <MobileMenuButton
+                  onClick={() => {login();setToggleMenu(false)}}
+                >
+                  Login / Sign Up
+                </MobileMenuButton>
+                ) : (
+                <MobileMenuButton
+                  onClick={() => {logout();setToggleMenu(false)}}
+                >
+                  Logout
+                </MobileMenuButton>
+                )
+              }
+            </StyledLiMobile>
+          </StyledUlmobile>
+        </AnimatedWrappedMobileMenu>
+      )}
     </StyledNavbar>
   );
 };
 
 export default NavBar;
+
+// import React ,{ useContext, useEffect, useRef } from "react";
+// import FD_Header from "../images/FD_Header.png";
+// import avatar from "../images/avatar.jpg";
+// import { GiHamburgerMenu } from 'react-icons/gi';
+// import { MdOutlineLogin, MdOutlineLogout, MdOutlineRestaurantMenu } from 'react-icons/md';
+// import { Button, HStack, Heading, Link, List, ListItem, Text, VStack } from "@chakra-ui/react";
+// import { useNavigate } from 'react-router-dom';
+// import AuthContext from "../../context/authContext";
+// import {
+//   MobileMenuButton,
+//   StyledHeading,
+//   StyledImage,
+//   StyledLink,
+//   StyledNavbar,
+//   UserPicture
+// } from "../styled/styled_navbar";
+
+// const NavBar = () => {
+//   const NavBarRef = useRef(null);
+
+//   const {user, login, logout, authReady} = useContext(AuthContext);
+//   console.log(user);
+
+//   useEffect(() => {
+//     let prevScrollPos = window.scrollY;
+//   const handleScroll = () => {
+//     const currentScrollPos = window.scrollY;
+//     const NavBarElement = NavBarRef.current;
+//     if (!NavBarElement) {
+//       return;
+//       }
+//     if (prevScrollPos > currentScrollPos) {
+//       NavBarElement.style.transform = "translateY(0)";
+//       } else {
+//       NavBarElement.style.transform = "translateY(-200px)";
+//       }
+//       prevScrollPos = currentScrollPos;
+//     }
+//       window.addEventListener('scroll', handleScroll)
+
+//       return() => {
+//           window.removeEventListener('scroll', handleScroll)
+//       }
+//   },[]);
+
+//   const handleClick = (anchor) => () => {
+//     navigate(anchor)
+//     const id = `${anchor}-section`;
+//     const element = document.getElementById(id);
+//       if (element) {
+//         element.scrollIntoView({
+//         behavior: "smooth",
+//         block: "start",
+//         });
+//       }
+//   };
+
+//   const [toggleMenu, setToggleMenu] = React.useState(false);
+//   const navigate = useNavigate();
+
+//   const NavLink = ({ href, onClick, children }) => {
+//     return (
+//       <StyledHeading as="h1">
+//         <StyledLink href={href} onClick={onClick}>
+//           {children}
+//         </StyledLink>
+//       </StyledHeading>
+//     );
+//   };
+
+//   const MenuItem = ({ href, onClick, children }) => {
+//     const buttonClick = () => {
+//       setToggleMenu(false);
+//       onClick();
+//     };
+
+//     return (
+//       <ListItem>
+//         <Link href={href}>
+//           <MobileMenuButton
+//             onClick={buttonClick}
+//             colorScheme="orange"
+//             variant="outline"
+//             minWidth='280px'
+//           >
+//             {children}
+//           </MobileMenuButton>
+//         </Link>
+//       </ListItem>
+//     );
+//   };
+
+//   return (
+//     <StyledNavbar
+//       ref={NavBarRef}
+//       translateY="0"
+//     >
+//       <StyledImage
+//         src={FD_Header}
+//         alt="app__logo"
+//       />
+//       {authReady && (
+//       <>
+//         <NavLink href="#Home" onClick={handleClick("Home")}>
+//           Home
+//         </NavLink>
+//         <NavLink href="#AllMenu-section" onClick={handleClick("AllMenu")}>
+//           Menu
+//         </NavLink>
+//         <NavLink href="#OrderOnline" onClick={handleClick("Menu")}>
+//           Order online
+//         </NavLink>
+//         <NavLink href="#Testimonials-section" onClick={handleClick("Testimonials")}>
+//           Testimonials
+//         </NavLink>
+//         <NavLink href="#About-section" onClick={handleClick("About")}>
+//           About us
+//         </NavLink>
+//         <NavLink href="#Reservation-section" onClick={handleClick("Reservation")}>
+//           Reserve a table
+//         </NavLink>
+//         {!user?(
+//           <Button
+//             size='md'
+//             colorScheme="blue"
+//             variant="outline"
+//             leftIcon={<MdOutlineLogin/>}
+//             as="h2"
+//             onClick={login}
+//             display={{base:"none",md:"flex",lg:"flex"}}
+//             fontSize={{base:"10px", md: "13px", lg:"20px"}}
+//             cursor="pointer"
+//           >
+//             Login/Sign Up
+//           </Button>
+//           ) : (
+//           <VStack>
+//             <Button
+//               size='md'
+//               colorScheme="red"
+//               variant="outline"
+//               leftIcon={<MdOutlineLogout/>}
+//               as="h2"
+//               onClick={logout}
+//               display={{base:"none",md:"flex",lg:"flex"}}
+//               fontSize={{base:"10px", md: "13px", lg:"20px"}}
+//               cursor="pointer"
+//             >
+//               logout
+//             </Button>
+//             <HStack>
+//               <Text
+//                 fontSize={{base: "14px", md: "14px", lg:"15px"}}
+//                 fontWeight='light'
+//                 fontFamily="calibri light, sans-serif"
+//                 color='orange.600'
+//                 marginTop={{base:"0.1rem",md:"0.1rem",lg:"0.2rem"}}
+//               >
+//                 Welcome <b>{user.user_metadata.full_name}</b>
+//               </Text>
+//               {user.user_metadata.avatar_url ? (
+//                 <UserPicture
+//                   src={user.user_metadata.avatar_url}
+//                   alt="user"
+//                 />) : (
+//                 <UserPicture
+//                   src={avatar}
+//                   alt="user"
+//                 />
+//                 )
+//               }
+//             </HStack>
+//           </VStack>
+//           )
+//         }
+//       </>
+//       )}
+//       <Heading display={{base:"flex",md:"none",lg:"none"}}>
+//         <GiHamburgerMenu color="rgb(183,94,87)"  fontSize={27} onClick={() => setToggleMenu(true)} />
+//       </Heading>
+//       {toggleMenu && (
+//       <VStack
+//         position="fixed"
+//         top="0"
+//         left="0"
+//         width="100%"
+//         height="180vh"
+//         zIndex="5"
+//         background="azure"
+//         justifyContent="flex-start"
+//         style={{
+//           animation: toggleMenu ? 'slide-in 0.5s ease-out forwards' : 'slide-out 0.5s ease-out forwards',
+//         }}
+//       >
+//         <MdOutlineRestaurantMenu
+//           fontSize={27}
+//           style={{
+//             color: "darkorange",
+//             cursor: "pointer",
+//             position: "absolute",
+//             top: "17px",
+//             right: "28px",
+//           }}
+//           onClick={() => setToggleMenu(false)}
+//         />
+//         <List style={{ margin: "5rem auto", display: "fixed", listStyle: "none" }}>
+//           <MenuItem href="#Home" onClick={handleClick("Home")}>
+//             Home
+//           </MenuItem>
+//           <MenuItem href="#AllMenu-section" onClick={handleClick("AllMenu")}>
+//             Menu
+//           </MenuItem>
+//           <MenuItem href="#OrderOnline" onClick={handleClick("Menu")}>
+//             Order online
+//           </MenuItem>
+//           <MenuItem
+//             href="#Testimonials-section" onClick={handleClick("Testimonials")}>
+//             Testimonials
+//           </MenuItem>
+//           <MenuItem href="#About-section" onClick={handleClick("About")}>
+//             About us
+//           </MenuItem>
+//           <MenuItem href="#Reservation-section" onClick={handleClick("Reservation")}>
+//             Reserve a table
+//           </MenuItem>
+//           {!user ? (
+//             <MenuItem
+//             onClick={login}
+//             >
+//               Login / Sign Up
+//             </MenuItem>
+//             ) : (
+//             <MenuItem
+//             onClick={logout}
+//             >
+//               Logout
+//             </MenuItem>
+//             )
+//           }
+//         </List>
+//       </VStack>
+//     )}
+//     </StyledNavbar>
+//   );
+// };
+
+// export default NavBar;

@@ -3,13 +3,7 @@ import menudata from "../../database/menu.json";
 import {
   AuxNavList,
   AuxiliaryNavigation,
-  FindStore,
-  JoinButton,
   LeftMenu,
-  LeftNav,
-  LocationIcon,
-  LocationText,
-  Logo,
   MainContent,
   MenuHeader,
   MenuItem,
@@ -17,9 +11,6 @@ import {
   MenuSection,
   MenuTitle,
   RightMenu,
-  RightNav,
-  SignInButton,
-  TopNavigation,
   Wrapper,
 } from "../../styled/styled_menu";
 import { MainMenu } from "./MainMenu";
@@ -47,7 +38,7 @@ export default function Menu() {
   };
   return (
     <Wrapper id='AllMenu-section'>
-      <TopNavigation >
+      {/* <TopNavigation >
         <LeftNav>
           <Logo loading="lazy" src={require("../../images/FD_Header.png")} alt="logo" />
           <MenuItem onClick={() => handleClick("MainMenu")}>Menu</MenuItem>
@@ -62,7 +53,7 @@ export default function Menu() {
           <SignInButton>Sign in</SignInButton>
           <JoinButton>Join now</JoinButton>
         </RightNav>
-      </TopNavigation>
+      </TopNavigation> */}
       <AuxiliaryNavigation>
         <AuxNavList>
           <MenuItem onClick={() => handleClick("MainMenu")}>Menu</MenuItem>

@@ -9,19 +9,21 @@ import Highlight from './components/pages/Highlight';
 import FootNav from './components/pages/FootNav';
 import Alert from './components/alert/Alert';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Container } from './components/styled/styled_container';
 
 function App() {
   return (
     <ChakraProvider>
       <AlertProvider>
         <AuthContextProvider>
-          <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
-          <NavBar />
-          <HeroSection />
-          <Highlight/>
-          <Main/>
-          <FootNav />
-          <Alert />
+          <Container>
+            <NavBar />
+            <HeroSection />
+            <Highlight/>
+            <Main/>
+            <FootNav />
+            <Alert />
+          </Container>
         </AuthContextProvider>
       </AlertProvider>
     </ChakraProvider>

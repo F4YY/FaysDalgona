@@ -14,9 +14,13 @@ export const Testipage = styled.div`
   padding: 0 40px;
   margin: 0 auto 40px;
   h1{
-    font-size: 38px;
-    font-weight: bold;
-    color: hsl(273, 75%, 46%);
+    font-size: 2.7rem;
+    font-weight: var(--bold);
+    background: linear-gradient(45deg, var(--darkorange), var(--darkred));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 0.1rem;
     margin: 40px 0;
     @media (max-width: 991px) {
       font-size: 30px;
@@ -68,12 +72,13 @@ export const Testicard = styled.div`
   gap: 1rem;
   padding: 1rem;
   border-radius: 10px;
-  background-image: url(${bgintrodesktop}),linear-gradient(135deg, hsl(273, 75%, 66%), hsl(240, 73%, 65%));
-  box-shadow: 0 10px 15px 5px rgba(0, 0, 0, 0.2);
+  background-image: linear-gradient(135deg, rgba(139, 0, 0, 0.7), rgba(255, 140, 0, 0.7)), url(${bgintrodesktop});
+  backdrop-filter: blur(5px);
+  box-shadow: 3px 10px 10px 5px rgba(0, 0, 0, 0.5);
   q{
     font-size:2em;
     text-align:center;
-    color: hsl(217, 19%, 24%);
+    color: var(--white);
     margin: 0 1rem;
   }
   @media (max-width: 991px) {
@@ -88,10 +93,11 @@ export const TestiProfpicName = styled.div`
   width: auto;
   height: auto;
   border-radius: 3rem;
-  background-color: azure;
+  background-color: var(--white);
   p{
-    font-size: 1.2rem;
-    color: hsl(217, 19%, 24%);
+    font-size: 1.1rem;
+    font-weight: var(--medium);
+    color: var(--darkorange);
     padding: 0 .5rem 0 0;
   }
 `;
@@ -114,14 +120,14 @@ export const MenuAndRating = styled.div`
   width: 300px;
   height: 320px;
   border-radius: 1rem;
-  border: .3rem solid hsl(240, 53%, 75%);
+  border: .3rem solid var(--orange);
   padding: .5rem 0;
   margin: .5rem 0 0;
   h4{
     font-size: 1.8rem;
-    font-family: Ubuntu, sans-serif;
+    font-weight: var(--medium);
     text-align: center;
-    color: azure;
+    color: var(--white);
     padding: .5rem .5rem;
     @media (max-width: 991px) {
       font-size: 1.5rem;
@@ -167,7 +173,8 @@ export const MenuNameRating = styled.div`
   justify-content: center;
   gap: .5rem;
   p{
-    color: ghostwhite;
+    color: var(--white);
+    font-weight: var(--regular);
     cursor: pointer;
     &:hover{
       color: bisque;
@@ -192,13 +199,13 @@ export const LeftQuote = styled(FontAwesomeIcon).attrs({
   icon: faQuoteLeft,
   size: 'lg',
 })`
-  color: hsl(273, 75%, 46%);
+  color: var(--darkred);
   margin: 0 .5rem .5rem 0;
 `
 export const RightQuote = styled(FontAwesomeIcon).attrs({
   icon: faQuoteRight,
   size: 'lg',
 })`
-  color: hsl(273, 75%, 46%);
+  color: var(--darkred);
   margin: 0 0 .5rem .5rem;
 `

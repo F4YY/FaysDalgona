@@ -65,9 +65,6 @@ import { ComboDuo2 } from './AllMenu/Combo/Combo123/ComboDuo2';
 import { ComboTrio1 } from './AllMenu/Combo/Combo123/ComboTrio1';
 import { ComboTrio2 } from './AllMenu/Combo/Combo123/ComboTrio2';
 import AuthContext from '../../context/authContext';
-import HeroSection from './HeroSection';
-import Highlight from './Highlight';
-
 function Main() {
   const stars = Array(5).fill(0);
   const [currentRating, setCurrentRating] = React.useState(0);
@@ -138,10 +135,8 @@ function Main() {
   };
 
   return (
-    <main>
+    <>
       <Routes>
-        <Route path="/Home" element={<HeroSection />} />
-        <Route path="/Menu" element={<Highlight />} />
         <Route path="/AllMenu/*" element={<Menu/>}>
           <Route path="MainMenu" element={<MainMenu />} />
           <Route path="Dalgona Iced" element={<DalgonaIced />} />
@@ -208,7 +203,7 @@ function Main() {
         <Route path="/About" element={<About />} />
         <Route path="/Reservation" element={<ReserveTable />} />
       </Routes>
-    </main>
+    </>
   );
 }
 

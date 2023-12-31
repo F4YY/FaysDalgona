@@ -5,7 +5,7 @@ export const HighlightContainer = styled.div`
   flex-wrap: wrap;
   width: 100%;
   min-height: 100vh;
-  background: linear-gradient(to bottom right, rgba(209, 100, 32, 1), rgba(165, 72, 32, 1), rgba(209, 91, 20, 1));
+  background-color:rgba(255, 204, 144, 0.5);
 `;
 
 export const ThisWeekandOrder = styled.div`
@@ -13,46 +13,40 @@ export const ThisWeekandOrder = styled.div`
   width: 100%;
   align-items: center;
   justify-content: space-between;
-  margin: 20px 100px;
+  margin: 6rem 5rem 2rem;
   @media (max-width: 991px) {
     margin: 20px 40px;
   }
   @media (max-width: 640px) {
-    margin: 20px 15px;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 2rem auto;
   }
 `;
 
 export const HighlightHeading = styled.h1`
-  display: flex;
-  font-size: 36px;
-  color: azure;
+  font-size: 2.5rem;
+  font-weight: var(--medium);
+  color: var(--darkorange);
   @media (max-width: 991px) {
-    font-size: 30px;
-  }
-  @media (max-width: 640px) {
-    font-size: 24px;
+    font-size: 2rem;
   }
 `;
 
 export const OrderButton = styled.a`
-  display: flex;
-  font-size: 22px;
-  color: yellow;
-  font-weight: bold;
-  width: auto;
+  width: fit-content;
+  color: var(--darkorange);
+  font-size: 1.1rem;
+  font-weight: var(--bold);
+  text-decoration: none;
+  border: 2px outset var(--darkorange);
   border-radius: 10px;
-  padding: 10px 15px;
-  border: 1px solid yellow;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
   &:hover {
-    color: azure;
-    border: 2px solid azure;
-  }
-  @media (max-width: 991px) {
-    font-size: 20px;
-  }
-  @media (max-width: 640px) {
-    font-size: 16px;
-    padding: 5px 8px;
+    color: var(--white);
+    background-color: var(--darkorange);
+    border: 2px inset var(--darkorange);
   }
 `;
 
@@ -61,18 +55,38 @@ export const SpecialMenu = styled.div`
   flex-direction: row;
   width: 100%;
   min-height: 100vh;
-  justify-content: center;
+  justify-content: space-around;
   align-items: flex-start;
-  flex-wrap: wrap;
-  gap: 30px;
-  margin: 20px 0;
+  overflow: scroll;
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: transparent;
+  }
+  gap: 4rem;
+  margin: 2rem 5rem;
+  @media (max-width: 991px) {
+    justify-content: flex-start;
+    gap: 2rem;
+    margin: auto auto 4rem;
+  }
+  @media (max-width: 640px) {
+    flex-direction: column;
+    align-items: center;
+    overflow: initial;
+    gap: 3rem;
+  }
 `
-
 export const SpecialItem = styled.div`
   display: flex;
   flex-direction: column;
-  background-color: azure;
+  background: transparent;
+  backdrop-filter: blur(15px);
   border-radius: 20px 20px 0 0;
+  border: 1px solid var(--lightgrey);
+  box-shadow: 4px 4px 4px var(--lightgrey);
   @media (max-width: 640px) {
     width: 95%;
   }
@@ -87,7 +101,9 @@ export const StyledImage = styled.img`
   border-radius: 20px 20px 0 0;
   cursor: pointer;
   &:hover {
-    opacity: 80%;
+    opacity: 90%;
+    transform: scale(1.02);
+    transition: transform 0.3s ease;
   }
   @media (max-width: 640px) {
     width: 100%;
@@ -99,8 +115,6 @@ export const TopMenuDesc = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  color: rgba(51, 51, 51, 1);
-  background-color: azure;
   width: 340px;
   padding: 10px;
   min-height: 180px;
@@ -115,18 +129,22 @@ export const NameAndPrice = styled.div`
   align-items: center;
   width: 100%;
   height: auto;
+  margin: 5px 0;
   h3{
-    font-size: 1.15rem;
+    font-size: 1.1rem;
+    font-weight: var(--medium);
+    color: var(--darkblue);
   }
   h4{
-    font-size: 1.12rem;
-    color: rgba(238,153,114,1);
+    font-size: 1rem;
+    font-weight: var(--medium);
+    color: var(--orange);
   }
 `
-export const MenuDescription = styled.div`
-  display: flex;
+export const MenuDescription = styled.p`
   font-size: .95rem;
-  color: #64748b;
+  font-weight: var(--medium);
+  color: var(--lightgrey);
 `;
 
 export const BottomRow = styled.div`
@@ -139,10 +157,9 @@ export const BottomRow = styled.div`
 `;
 
 export const OrderDelivery = styled.a`
-  display: flex;
   font-size: 1.3rem;
-  color: #333333;
-  font-family: 'Poppins', sans-serif;
+  font-weight: var(--bold);
+  color: var(--darkgrey);
   cursor: pointer;
   &:hover {
     color: rgba(238,153,114,1);

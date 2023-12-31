@@ -8,21 +8,13 @@ import styled, { keyframes, css } from "styled-components";
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  background-color: #fff;
-  --Very-dark-desaturated-blue: hsl(238, 29%, 16%);
-  --Soft-red: hsl(14, 88%, 85%);
-  --Soft-violet: hsl(273, 75%, 66%);
-  --Soft-blue: hsl(240, 73%, 65%);
-  --Very-dark-grayish-blue: hsl(237, 12%, 33%);
-  --Dark-grayish-blue: hsl(240, 6%, 50%);
-  --Light-grayish-blue: hsl(240, 5%, 91%);
-  --Main-font: Roboto, sans-serif;
-  --Secondary-font: var(--secondary-font);
-  --reguler: 400;
-  --semibold: 500;
-  --bold: 700;
-  --bg_joinbutton: linear-gradient(180deg, #D15B05, #963F01 100%);
-  margin: 20px 0 0;
+  width: 100%;
+  background-color: rgba(245, 245, 245, .7);
+  backdrop-filter: blur(5px);
+  margin: 0 auto 4rem;
+  @media (max-width: 991px) {
+    margin: 0 auto 1rem;
+  }
 `;
 
 export const TopNavigation = styled.div`
@@ -62,22 +54,24 @@ export const Logo = styled.img`
 `;
 
 export const MenuItem = styled.h2`
-  color: var(--Very-dark-grayish-blue);
+  color: var(--darkred);
   font-weight: (--reguler);
   line-height: 105%;
+  letter-spacing: .1rem;
   cursor: pointer;
   &:hover {
-    color: #D15B05;
+    color: var(--orange);
   }
 `;
 
 export const MenuItemList = styled.h2`
-  color: var(--Dark-grayish-blue);
-  font-weight: (--reguler);
+  color: var(--darkblue);
+  font-weight: (--regular);
   line-height: 105%;
+  letter-spacing: .03rem;
   cursor: pointer;
   &:hover {
-    color: #D15B05;
+    color: var(--red);
   }
 `;
 
@@ -178,12 +172,11 @@ export const JoinButton = styled.div`
 `;
 
 export const AuxiliaryNavigation = styled.div`
-  background-color: var(--Soft-red);
-  font-size: 1.1rem;
-  font-weight: var(--semibold);
   display: flex;
+  border-radius: 0.5rem;
+  border: 2px solid var(--darkred);
   padding: 17px 20px;
-
+  margin: 2rem 0 0;
   @media (max-width: 991px) {
     max-width: 100%;
   }
@@ -194,6 +187,8 @@ export const AuxiliaryNavigation = styled.div`
 
 export const AuxNavList = styled.ul`
   display: flex;
+  font-size: 1rem;
+  font-weight: var(--medium);
   justify-content: space-between;
   gap: 40px;
   margin: 0 0 0 40px;
@@ -243,24 +238,33 @@ export const MenuSection = styled.div`
 `;
 
 export const MenuTitle = styled.div`
-  color: var(--Very-dark-desaturated-blue);
-  font-family: var(--secondary-font);
+  color: var(--darkblue);
   font-size: 1.2rem;
-  font-weight: var(--semibold);
+  font-weight: var(--bold);
   line-height: 109.61%;
-  letter-spacing: 0.16px;
+  letter-spacing: 0.04rem;
   align-self: start;
-  max-width: 100%;
 `;
 
 export const fadeInLeft = keyframes`
   from {
     opacity: 0;
-    transform: translateX(30px);
+    transform: translateX(100%);
   }
   to {
     opacity: 1;
     transform: translateX(0);
+  }
+`;
+
+export const fadeInRight = keyframes`
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(100%);
   }
 `;
 
@@ -278,14 +282,13 @@ export const RightMenu = styled.div`
 `;
 
 export const MenuHeader = styled.div`
-  color: #fff;
-  font-family: var(--main-font);
+  color: var(--white);
   font-size: 1.35rem;
-  font-weight: var(--semibold);
+  font-weight: var(--bold);
   line-height: 121.19%;
-  letter-spacing: 0.16px;
+  letter-spacing: .2rem;
   align-self: start;
-  width: 890px;
+  width: 950px;
   align-items: flex-start;
   border-radius: 10px 0px 0px 10px;
   background: linear-gradient(180deg,rgba(214, 192, 0, 0.9) 0%,rgba(184, 165, 0, 0.9) 100%);
@@ -315,12 +318,11 @@ export const MenuCategory = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  color: var(--Very-dark-desaturated-blue);
-  font-family: var(--secondary-font);
+  color: var(--darkblue);
   font-size: 1.2rem;
-  font-weight: var(--semibold);
+  font-weight: var(--bold);
   line-height: 138.46%;
-  letter-spacing: 0.16px;
+  letter-spacing: 0.04rem;
   margin: 30px 0 0;
 `;
 
@@ -374,17 +376,16 @@ export const MenuItemImage = styled.img`
 `;
 
 export const MenuItemText = styled.h2`
-  color: var(--Dark-grayish-blue);
-  font-family: var(--secondary-font);
-  font-weight: var(--reguler);
+  color: var(--darkblue);
+  font-weight: var(--regular);
   line-height: 142.5%;
-  letter-spacing: 0.16px;
+  letter-spacing: 0.03rem;
   align-self: center;
   width: auto;
   cursor: pointer;
   animation: ${fadeInLeft} 1s ease-in-out;
   &:hover {
-    color: #D15B05;
+    color: var(--red);
   }
 `;
 

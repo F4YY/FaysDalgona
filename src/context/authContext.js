@@ -19,6 +19,10 @@ export const AuthContextProvider = ({ children }) => {
             console.log('login event');
         })
 
+        netlifyIdentity.on('close', () => {
+            console.log('Netlify Identity modal closed');
+          });
+
         netlifyIdentity.on('logout', () => {
             setUser(null);
             netlifyIdentity.close();
