@@ -54,11 +54,10 @@ export const FDdesc = styled.p`
   margin: 2rem 0;
   @media (max-width: 991px) {
     font-size: .9rem;
-    line-height: 1.8rem;
+    line-height: 1.6rem;
   }
   @media (max-width: 640px) {
     width: 100%;
-    line-height: 1.5rem;
     margin: 0 auto 1.5rem;
   }
 `

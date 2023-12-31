@@ -78,6 +78,7 @@ const ReserveTable = (onSubmit) => {
       display="flex"
       onSubmit={handleSubmit}
       id="Reservation-section"
+      width='100%'
     >
       {!user? (
         <Alert

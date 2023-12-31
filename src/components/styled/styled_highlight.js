@@ -29,7 +29,7 @@ export const HighlightHeading = styled.h1`
   font-weight: var(--medium);
   color: var(--darkorange);
   @media (max-width: 991px) {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 `;
 
@@ -70,13 +70,14 @@ export const SpecialMenu = styled.div`
   @media (max-width: 991px) {
     justify-content: flex-start;
     gap: 2rem;
-    margin: auto auto 4rem;
+    margin: auto 2rem 4rem;
   }
   @media (max-width: 640px) {
     flex-direction: column;
     align-items: center;
     overflow: initial;
     gap: 3rem;
+    margin: auto auto 4rem;
   }
 `
 export const SpecialItem = styled.div`

@@ -3,7 +3,7 @@ import { Text, Heading, Box, HStack, VStack, Image } from "@chakra-ui/react";
 import FD_AboutUs from "../images/FD_AboutUs.jpg";
 
 const About = () => (
-  <Box backgroundColor="rgb(51,51,51)">
+  <Box backgroundColor="rgb(51,51,51)" width='100%' height='auto'>
     <VStack pt={5} pb={5} justifyContent="center">
       <Heading as="h1" id="About-section" fontSize={{base: "25px", md: "30px", lg:"36px"}} color="white">
         About Us
