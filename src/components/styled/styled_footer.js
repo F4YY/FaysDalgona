@@ -10,6 +10,9 @@ export const Footer = styled.footer`
   gap: 2.5rem;
   background-color: var(--darkblue);
   padding: 1.8rem;
+  @media screen and (max-width: 991px) {
+    padding: 1.2rem;
+  }
 `
 export const FootWrapper = styled.div`
   display: flex;

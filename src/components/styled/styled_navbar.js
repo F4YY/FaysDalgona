@@ -19,7 +19,7 @@ export const StyledNavbar = styled(HStack)`
   border-bottom: .3rem groove rgb(255, 129, 0.5);
   z-index:5;
   @media (max-width: 991px) {
-    font-size: .8rem;
+    font-size: .75rem;
   }
 `
 export const StyledImage = styled(Image)`
@@ -37,6 +37,7 @@ export const StyledImage = styled(Image)`
 export const UserName = styled.h4`
   font-size: .8rem;
   font-weight: var(--regular);
+  text-align: center;
 `;
 export const UserPicture = styled.img`
   display: flex;
@@ -55,6 +56,9 @@ export const StyledUl = styled.ul`
   justify-content: space-around;
   align-items: center;
   gap: .5rem;
+  @media (max-width: 991px) {
+    gap: .3rem;
+  }
 `;
 export const StyledUlmobile = styled(StyledUl)`
   display: flex;
@@ -67,9 +71,6 @@ export const StyledLi = styled.a`
     color: var(--darkblue);
     line-height: 105%;
   }
-  @media (max-width: 640px) {
-    display: none;
-  }
   ${props =>
     props.current && css`
     background-color: var(--white);
@@ -77,7 +78,15 @@ export const StyledLi = styled.a`
       border: 1px solid rgba(255, 140, 0, 0.05);
       border-radius: 10px;
       padding: 0.4rem .8rem;
-  `}
+    @media (max-width: 991px) {
+      border-radius: 5px;
+      padding: 0.3rem .5rem;
+    }
+  `
+}
+  @media (max-width: 640px) {
+    display: none;
+  }
 `;
 export const StyledLiMobile = styled(StyledLi)`
   display: flex;
