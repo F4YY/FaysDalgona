@@ -21,7 +21,7 @@ export const FootWrapper = styled.div`
   align-items: flex-start;
   width: 100%;
   height: 100%;
-  @media screen and (max-width: 640px) {
+  @media screen and (max-width: 991px) {
     flex-direction: column;
     align-items: center;
     gap: 2rem;
@@ -67,15 +67,13 @@ export const Contact = styled.div`
     color: var(--lightgrey);
   }
   @media screen and (max-width: 991px) {
+    align-items: center;
     h1{
       font-size: 1rem;
     }
     p{
       font-size: .9rem;
     }
-  }
-  @media screen and (max-width: 640px) {
-    align-items: center;
   }
 `
 export const OpenHours = styled.div`
@@ -92,15 +90,13 @@ export const OpenHours = styled.div`
     color: var(--lightgrey);
   }
   @media screen and (max-width: 991px) {
+    align-items: center;
     h2{
       font-size: 1rem;
     }
     p{
       font-size: .9rem;
     }
-  }
-  @media screen and (max-width: 640px) {
-    align-items: center;
   }
 `
 export const Copyright = styled.div`

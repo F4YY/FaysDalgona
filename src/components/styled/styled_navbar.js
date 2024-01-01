@@ -18,9 +18,6 @@ export const StyledNavbar = styled(HStack)`
   padding: 0.5rem 1.2rem;
   border-bottom: .3rem groove rgb(255, 129, 0.5);
   z-index:5;
-  @media (max-width: 991px) {
-    font-size: .75rem;
-  }
 `
 export const StyledImage = styled(Image)`
   display: flex;
@@ -56,9 +53,6 @@ export const StyledUl = styled.ul`
   justify-content: space-around;
   align-items: center;
   gap: .5rem;
-  @media (max-width: 991px) {
-    gap: .3rem;
-  }
 `;
 export const StyledUlmobile = styled(StyledUl)`
   display: flex;
@@ -78,13 +72,9 @@ export const StyledLi = styled.a`
       border: 1px solid rgba(255, 140, 0, 0.05);
       border-radius: 10px;
       padding: 0.4rem .8rem;
-    @media (max-width: 991px) {
-      border-radius: 5px;
-      padding: 0.3rem .5rem;
-    }
   `
 }
-  @media (max-width: 640px) {
+  @media (max-width: 991px) {
     display: none;
   }
 `;
@@ -108,7 +98,7 @@ export const LoginButton = styled.button`
     background-color: var(--lightblue);
   }
   @media (max-width: 991px) {
-    font-size: .8rem;
+    display: none;
   }
   @media (max-width: 640px) {
     display: none;
@@ -120,19 +110,19 @@ export const BurgerButton = styled.div`
   display: none;
   font-size: 1.6rem;
   color: var(--darkorange);
-  @media (max-width: 640px) {
+  @media (max-width: 991px) {
     display: flex;
   }
 `;
 export const WrappedMobileMenu = styled.div`
   display: none;
-  @media (max-width: 640px) {
+  @media (max-width: 991px) {
     display: flex;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
+    min-height: 150vh;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;

@@ -22,7 +22,7 @@ export const AboutText = styled.h1`
   font-weight: var(--bold);
   letter-spacing: 0.1rem;
   text-align: center;
-  margin: 40px 0 50px;
+  margin: 20px 0 50px;
   @media (max-width: 991px) {
     font-size: 2rem;
   }
@@ -108,6 +108,5 @@ export const Aboutdesc = styled.p`
   @media (max-width: 640px) {
     font-size: .92rem;
     line-height: 1.6rem;
-    text-align: center;
   }
 `;
